@@ -1,0 +1,351 @@
+GuardMen.MG:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.Comon.Animation
+	Inherits@StatBase.weapons: ^GuardMen.MG.Federation.Stat.weapons
+	Report: draugr_riflegun_01.aud, draugr_riflegun_02.aud, draugr_riflegun_03.aud, draugr_riflegun_04.aud
+
+GuardMen.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^GuardMen.Missile.Federation.Stat.weapons
+	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
+
+locustGrenade:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Federation.Grenade.Weapons.default
+	Inherits@StatBase.weapons: ^locust.Grenade.Federation.Stat.weapons
+	Report: tick_fire01.aud, tick_fire02.aud, tick_fire03.aud
+	
+locustAutocanon:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Cobra.Weapons.default
+	Inherits@StatBase.weapons: ^locust.Autocanon.Federation.Stat.weapons
+	Report: cobraflakfire01.aud, cobraflakfire02.aud, cobraflakfire03.aud
+	
+SniperWolf.Gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.medium.Comon.Animation
+	Inherits@StatBase.weapons: ^SniperWolf.Gun.Federation.Stat.weapons
+	Report: silvergun01.aud, silvergun02.aud, silvergun03.aud
+
+Surricate.M60:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Federation.M60.Weapons.default
+	Inherits@StatBase.weapons: ^Surricate.M60.Federation.Stat.weapons
+	Report: suricatefire01.aud, suricatefire02.aud, suricatefire03.aud
+
+Tick.gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Tick.Weapons.default
+	Inherits@StatBase.weapons: ^Tick.gun.Federation.Stat.weapons
+	Report: tick_fire01.aud, tick_fire02.aud, tick_fire03.aud
+
+Cobra_Dca:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Cobra.Weapons.default
+	Inherits@StatBase.weapons: ^Cobra_Dca.Federation.Stat.weapons
+	Report: cobraflakfire01.aud, cobraflakfire02.aud, cobraflakfire03.aud
+
+Cobra_DcaAA:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Cobra.WeaponsAA.default
+	Inherits@StatBase.weapons: ^Cobra_Dca.Federation.Stat.weapons
+	Report: cobraflakfire01.aud, cobraflakfire02.aud, cobraflakfire03.aud
+
+Lynx.M60:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Federation.M60.Weapons.default
+	Inherits@StatBase.weapons: ^Lynx.M60.Federation.Stat.weapons
+	Report: lynx_fire.aud
+
+120mm.mongoose:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Mongoose.Weapons.default
+	Inherits@StatBase.weapons: ^120mm.mongoose.Federation.Stat.weapons
+	Report: mongoose_fire.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
+
+Rhino_gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Rhino.Weapons.default
+	Inherits@StatBase.weapons: ^Rhino_gun.Federation.Stat.weapons
+	Report: rhinogun01.aud, rhinogun02.aud, rhinogun03.aud
+
+Rhino_gunspeed:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Rhino.Weapons.default
+	Inherits@StatBase.weapons: ^Rhino_gunspeed.Federation.Stat.weapons
+	Report: rhinogun01.aud, rhinogun02.aud, rhinogun03.aud
+
+Anaconda_gatling:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Anaconda.Weapons.default
+	Inherits@StatBase.weapons: ^Anaconda_gatling.Federation.Stat.weapons
+	Report: chaingunfire01.aud, chaingunfire02.aud, chaingunfire03.aud
+
+Anaconda.Target:
+	Inherits@default.weapons: ^Anaconda.Target.default
+	Inherits@StatBase.weapons: ^Anaconda.Target.Federation.Stat.weapons
+	Warhead@bitean: GrantExternalCondition
+		ValidTargets: Air
+		Range: 0c512
+		Duration: 6
+		Condition: Anaconda.Range.Modifier
+
+#//// Crocodile Arty Canon ////
+Mantis.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Mantis.Weapons.default
+	Inherits@StatBase.weapons: ^Mantis.missile.Federation.Stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Report: crocodile_fire1a.aud, crocodile_fire1b.aud, crocodile_fire1c.aud
+	Warhead@Cluster01: CreateEffect
+		Delay: 50
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c512
+		
+Mantis.missileShock:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@StatBase.weapons: ^Mantis.missile.Federation.Shock.weapons
+	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
+	Projectile: InstantExplode
+	Warhead@13ShakeFire: ShakeScreen
+		Delay: 55
+		Duration: 4
+		Intensity: 2
+		Multiplier: 0.2,0.3
+	Warhead@3EffWater: CreateEffect
+		Explosions: shock_smokelarge01, shock_smokelarge02, shock_smokelarge03
+		ExplosionPalette: flameeffect50
+		ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
+		
+Goliath.PrimaryGunCanon:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Goliath.PrimaryCanon.Weapons.default
+	Inherits@StatBase.weapons: ^Goliath.PrimaryGunCanon.Stat.weapons
+	Report: goliathfire01.aud, goliathfire02.aud, goliathfire03.aud
+	
+Goliath.SecondaryGunCanon:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Goliath.PrimaryCanon.Weapons.default
+	Inherits@StatBase.weapons: ^Goliath.SecondaryGunCanon.Stat.weapons
+	Report: goliathfiresec01.aud, goliathfiresec02.aud, goliathfiresec03.aud
+
+mosquito.autogun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Autogun.Comon.Animation
+	Inherits@StatBase.weapons: ^mosquito.autogun.Stat.weapons
+	Report: impuls_autogun.aud
+    
+silverfish.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^silverfish.missile.Federation.Stat.weapons
+	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
+
+vulture.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Vulture.Weapons.default
+	Range: 9c0
+	ReloadDelay: 4
+	Report: vultureroquette.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 260
+		Versus:
+			Infantry: 22
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 45
+			
+Fortress.maingun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Tick.Weapons.default
+	Inherits@StatBase.weapons: ^Fortress.gun.Federation.Stat.weapons
+	Report: tick_fire01.aud, tick_fire02.aud, tick_fire03.aud
+
+#//////////////////////// Power Abillity Weapons //////////////////////////////
+
+Mantis.missile.AbillityPower:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Mantis.Weapons.default
+	Inherits@StatBase.weapons: ^Mantis.missile.AbillityPower.Federation.Stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Report: crocodile_fire1a.aud, crocodile_fire1b.aud, crocodile_fire1c.aud
+	Warhead@Cluster01: CreateEffect
+		Delay: 50
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c512
+			
+ThunderStrike.AbillityPower:
+	Warhead@ClusterImpact01: FireCluster
+		Delay: 75
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 1
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@ClusterImpact02: FireCluster
+		Delay: 90
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 1
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@Shake01: ShakeScreen
+		Delay: 80
+		Duration: 7
+		Intensity: 4
+		Multiplier: 0.7,0.5
+	Warhead@ClusterImpact03: FireCluster
+		Delay: 110
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 2
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@Shake02: ShakeScreen
+		Delay: 100
+		Duration: 7
+		Intensity: 4
+		Multiplier: 0.7,0.5
+	Warhead@ClusterImpact04: FireCluster
+		Delay: 125
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 1
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@ClusterImpact01: FireCluster
+		Delay: 140
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 2
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@Shake03: ShakeScreen
+		Delay: 135
+		Duration: 7
+		Intensity: 4
+		Multiplier: 0.7,0.5
+	Warhead@ClusterImpact01: FireCluster
+		Delay: 165
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 1
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+	Warhead@ClusterImpact01: FireCluster
+		Delay: 175
+		Weapon: Mantis.missile.AbillityPower
+		RandomClusterCount: 2
+		Dimensions: 9,9
+		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
+
+Mantis.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Mantis.Weapons.default
+	Inherits@StatBase.weapons: ^Mantis.missile.Federation.Stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Report: crocodile_fire1a.aud, crocodile_fire1b.aud, crocodile_fire1c.aud
+	Warhead@Cluster01: CreateEffect
+		Delay: 50
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c512
+
+fedbomber.fire:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Anaconda.Weapons.default
+	Range: 8c0
+	ValidTargets: Ground
+	Burst: 20
+	ReloadDelay: 70
+	Range: 14c0
+	Report: anaconda_fire.aud
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground
+		Damage: 80
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 80
+			Concrete: 60
+			
+fed_capertbomb:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^GravityBomb.Federation.bomber.abillitie.Animation
+	Inherits@StatBase.weapons: ^Carpetbomb.Federation.Stat.weapons
+	Warhead@13Shake: ShakeScreen
+		Duration: 7
+		Intensity: 3
+		Multiplier: 0.7,0.6
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c512
+
+fixedTech.tabsUpgrade:
+	ReloadDelay: 30
+	Warhead@Actor: SpawnBuilding
+		Buildings: fixed.federation.tech
+		SkipMakeAnims: true
+
+# SuperWeapons de base
+federation.superweapon.debarquement:
+	ReloadDelay: 25
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@drop2: FireShrapnel
+		Delay: 20
+		Weapon: aircraft.fed.desending01
+		Amount: 1
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@drop3: FireShrapnel
+		Delay: 45
+		Weapon: aircraft.fed.desending01
+		Amount: 2
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+
+# SuperWeapons | atterissange de base
+^aircraft.fed.desending:
+	ReloadDelay: 8
+	Range: 4c0
+	MinRange: 1c0
+	Projectile: AthenaProjectile
+		Altitude: 10000
+	Warhead@op: FireShrapnel
+		Weapon: ^droppod.charging.base
+		ImpactActors: false
+		AimChance: 25
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Air
+
+# SuperWeapons | Debarquement d'unité
+^aircraft.fed.charging.base:
+	ReloadDelay: 3
+	Range: 3c0
+	Report: mine_expl03.aud
+	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry
+	Projectile: BulletAS
+		Speed: 200
+		Image: aicraft_carier.superweapons
+		Palette: player
+		Shadow: true
+		Inaccuracy: 600
+		ContrailLength: 12
+		ContrailColor: EECCAA77
+		ContrailWidth: 40
+		ContrailDelay: 0
+		
+# Composition du debarquement
+
+# ----- Drop pod 01 ----- 
+aircraft.fed.desending01:
+	Inherits: ^aircraft.fed.desending
+	Warhead@op: FireShrapnel
+		Weapon: debarquement.federation.infanterie
+		ImpactActors: false
+
+debarquement.federation.infanterie:
+	Inherits: ^aircraft.fed.charging.base
+	Warhead@5Actor: SpawnActor
+		Actors: aicraft_cariersupport, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen
+		Range: 1

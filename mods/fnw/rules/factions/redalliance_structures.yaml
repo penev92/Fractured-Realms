@@ -1,0 +1,983 @@
+arwall:
+	Inherits: ^Wall
+	Buildable:
+		Queue: nope.redalliance
+		BuildPaletteOrder: 30
+		Description: Stop units and blocks enemy fire.
+	Valued:
+		Cost: 200
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Health:
+		HP: 4000
+	Armor:
+		Type: Concrete
+	Crushable:
+		CrushClasses: heavywall
+	BlocksProjectiles:
+	LineBuild:
+		NodeTypes: concrete
+	LineBuildNode:
+		Types: concrete
+	WithWallSpriteBody:
+		Type: concrete
+
+aracnst:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^7x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^gigante.mcv.stat.building.fixe
+	# / Inherit option Unite /
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@AiBot.cheat: ^aibotcheat.module
+	Selectable:
+		Bounds: 7168, 3072, 0, 0
+	Building:
+		Footprint: =xxxxx= xxxxxx= ==xxx==
+		Dimensions: 7,3
+		BuildSounds: makebuild.wav
+	WithProductionDoorOverlay@0:
+		RequiresCondition: !build-incomplete
+		Sequence: make-drop
+	WithProductionDoorOverlay@1:
+		RequiresCondition: !build-incomplete
+		Sequence: build
+	Production:
+		Produces: Building.redalliance, Defence.redalliance
+		PauseOnCondition: empdisable || build-incomplete
+	GrantConditionOnBotOwner:
+		Condition: BotOwner
+		Bots: rush, normal, turtle
+	ProvidesPrerequisite@Bot:
+		Prerequisite: BotOwnerBuild
+		RequiresCondition: BotOwner
+	Transforms:
+		IntoActor: armcv
+		Offset: 3,1
+		Facing: 640
+	ProductionQueue@Building:
+		Type: Building.redalliance
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		ReadyAudio: BuildingReady
+		CancelledAudio: Cancelled
+	Exit@1:
+		SpawnOffset: -50,50,0
+		ExitCell: 0,3
+		ExitDelay: 45
+	BaseBuilding:
+	ProductionBar@Building:
+		ProductionType: Building.redalliance
+	GivesBuildableArea:
+		AreaTypes: building
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	WithBuildingPlacedAnimation:
+	ProvidesPrerequisite@buildingname:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	SmokeParticleEmitter@01:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01, smoke_ar02, smoke_ar03
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 15, 22
+		Speed: 1
+		Gravity: 35
+		Offset: 1400,-4000,1050
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@02:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01, smoke_ar02, smoke_ar03
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 17, 23
+		Speed: 1
+		Gravity: 35
+		Offset: 1800,-3600,1050
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@03:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01, smoke_ar02, smoke_ar03
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 15, 21
+		Speed: 4
+		Gravity: 35
+		Offset: 2200,-3200,1050
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: aracnst.RevealPowerType
+		ValidRelationships: Enemy
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealaracnst
+		Condition: aracnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealaracnst
+	HitShape:
+
+arpowr:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^3x2Shape
+	Buildable:
+		Queue: nope.redalliance
+		BuildPaletteOrder: 10
+		Prerequisite: aracnst
+		BuildDurationModifier: 5
+		Description: Provides power for other structures.
+		IconPalette: RedAlliance.Icon
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Power Plant
+	Selectable:
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		BuildSounds: makebuild.wav
+		Adjacent: 10
+	Health:
+		HP: 5000
+	Armor:
+		Type: Concrete
+	Power:
+		Amount: 100
+	InfiltrateForPowerOutage:
+	WithIdleOverlay@Smoke:
+		Offset: -545, 480, 1630
+		Sequence: smoke_cheminal
+		Palette: effect
+		RequiresCondition: !build-incomplete
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	HitShape:
+
+arhighpowr:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^5x4Shape
+	Buildable:
+		Queue: nope.redalliance
+		BuildPaletteOrder: 130
+		Prerequisites: BuildOrderBase.redalliance, Mobile.Orbital.Relay
+		BuildDurationModifier: 30
+		Description: Much more efficient than the regular power plant.
+		IconPalette: RedAlliance.Icon
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Super Power Plant
+	Selectable:
+	Building:
+		Footprint: xxxxx xxxxx xxxxx
+		Dimensions: 5,3
+		Adjacent: 10
+		BuildSounds: makebuild.wav
+	Health:
+		HP: 8000
+	Armor:
+		Type: Concrete
+	Power:
+		Amount: 350
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	HitShape:
+
+arproc:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building.fixe
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 80
+		Prerequisites: aracnst, ~BotOwnerBuild
+		IconPalette: RedAlliance.Icon
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		BuildSounds: makebuild.wav
+		Adjacent: 10
+	Selectable:
+		Bounds: 3072, 3072, 0, 0
+	SelectionDecorations:
+		VisualBounds: 3072, 3072, 0, 0
+	Sellable:
+		RefundPercent: 90
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Refinery@1:
+		DockAngle: 164
+		DockOffset: 2,2
+		UseStorage: false
+	FreeActor:
+		Actor: t1_harvester
+		SpawnOffset: 1,2
+		Facing: 164
+		RequiresCondition: !build-incomplete
+	CustomSellValue:
+		Value: 600
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+		Notification: credit1.aud
+	Transforms:
+		IntoActor: refinery.seconddeploy
+		Offset: 1,1
+		Facing: 32
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arproc
+	Power:
+		Amount: 0
+	WithDeathAnimation:
+	SmokeParticleEmitter@01:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: 80,-3000,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@02:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: 390,-2900,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@03:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: -1250,-2900,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	HitShape:
+
+arproc.seconddeploy:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building.fixe
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		BuildSounds: makebuild.wav
+		Adjacent: 10
+	Selectable:
+		Bounds: 3072, 3072, 0, 0
+	SelectionDecorations:
+		VisualBounds: 3072, 3072, 0, 0
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Refinery@1:
+		DockAngle: 640
+		DockOffset: 4,2
+		UseStorage: false
+	StoresResources:
+		PipCount: 0
+		Capacity: 500000
+	CustomSellValue:
+		Value: 600
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+		Notification: credit1.aud
+	Transforms:
+		IntoActor: refinery.seconddeploy
+		Offset: 1,1
+		Facing: 164
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arproc
+	Power:
+		Amount: 0
+	WithDeathAnimation:
+	RenderSprites:
+		Image: arproc
+	SmokeParticleEmitter@01:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: 80,-3000,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@02:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: 390,-2900,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	SmokeParticleEmitter@03:
+		Image: redalliance_smoke
+		Sequences: smoke_ar01min, smoke_ar02min, smoke_ar03min
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 19
+		Speed: 1
+		Gravity: 35
+		Offset: -1250,-2900,50
+		Palette: effectalpha45
+		Duration: 70
+		RandomFacing: True
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	HitShape:
+
+arbarr:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^5x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^barrack.redalliance.stat.building.fixe
+	# / Inherit option Unite /
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 5120, 3072, 0, 0
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 80
+		Prerequisites: aracnst, ~BotOwnerBuild
+		BuildDurationModifier: 20
+		IconPalette: RedAlliance.Icon
+	Building:
+		Footprint: =xxx= xxxx= =xxxx
+		Dimensions: 5,3
+		BuildSounds: makebuild.wav
+		Adjacent: 10
+	Production:
+		Produces: Infantry.redalliance
+		PauseOnCondition: empdisable || build-incomplete
+	ProductionQueue@Infantry:
+		Type: Infantry.redalliance
+		Group: Infantry
+		LowPowerModifier: 200
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionBar@HeavyInfantry:
+		ProductionType: Infantry.redalliance
+	Transforms:
+		IntoActor: arnahand
+		Offset: 1,1
+		Facing: 370
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,3
+	WithBuildingPlacedAnimation:
+	Voiced:
+		VoiceSet: arbarr_voice
+	Power:
+		Amount: 0
+	ProximityExternalCondition@HEAL:
+		Condition: HealInfantry
+		Range: 5c0
+		AffectsParent: true
+	WithRangeCircle@BuildingHeal:
+		Type: HealInfantry
+		Color: ff6600
+		Range: 5c0
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arbarr
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arbarr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarbarr
+		Condition: arbarr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarbarr
+	HitShape:
+
+arweap:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^6x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^factory.redalliance.stat.building.fixe
+	# / Inherit option Unite /
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 6144, 4096, 0, 0
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arweap
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 80
+		Prerequisites: arproc, ~BotOwnerBuild
+		IconPalette: RedAlliance.Icon
+	Building:
+		Footprint: xxxx__ xxxxxx xxxxx= __xx==
+		Dimensions: 6,4
+		BuildSounds: makebuild.wav
+		Adjacent: 10
+	RevealsShroud:
+		Range: 4c0
+	Exit:
+		SpawnOffset: -50,-50,0
+		ExitCell: 5,4
+	WithRangeCircle@BuildingRepair:
+		Type: FactoryRepairVehicle
+		Color: fcb415
+		Range: 7c0
+	ProximityExternalCondition@BuildingRepair:
+		Condition: FactoryRepairVehicle
+		Range: 7c0
+		AffectsParent: true
+		PauseOnCondition: empdisable
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	Production:
+		Produces: Vehicle.redalliance
+		PauseOnCondition: empdisable || build-incomplete
+	ProductionQueue@Vehicle:
+		Type: Vehicle.redalliance
+		Group: Vehicle
+		LowPowerModifier: 200
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	Transforms:
+		IntoActor: arnaweap
+		Offset: 2,1
+		Facing: 640
+	ProductionBar@Vehicle:
+		ProductionType: Vehicle.redalliance
+	Voiced:
+		VoiceSet: arweap_voice
+	Power:
+		Amount: 0
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@Smoke:
+		Offset: 0, 0, 0
+		Sequence: smoke
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarweap
+		Condition: arweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarweap
+	# smoke
+	HitShape:
+
+artech:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech2.redalliance.stat.building.fixe
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 4096, 3072, 0, 0
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 80
+		Prerequisites: arproc, ~BotOwnerBuild
+		IconPalette: RedAlliance.Icon
+	Building:
+		Footprint: =xx= xxxx xxxx
+		Dimensions: 4,3
+		Adjacent: 10
+		BuildSounds: makebuild.wav
+		Description: Unlocks tier 2 units, upgrades and structures
+	RevealsShroud:
+		Range: 4c0
+	Transforms:
+		IntoActor: mobilerelay
+		Offset: 1,1
+		Facing: 164
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	ProvidesRadar:
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: artech
+	Voiced:
+		VoiceSet: artech_voice
+	Power:
+		Amount: 0
+	WithDeliveryAnimation:
+		ActiveSequence: idle
+	WithIdleOverlay@Smoke:
+		Offset: 0, 0, 0
+		Sequence: smoke
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: artech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealartech
+		Condition: artech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealartech
+	HitShape:
+
+arlab:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^5x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^spec.redalliance.stat.building.fixe
+	Inherits@3: ^DisablePowerDown
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Locked.redalliance
+		BuildPaletteOrder: 80
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Bounds: 5120, 4096, 0, 0
+	Building:
+		Footprint: =xxx= xxxxx xxxxx =xxx=
+		Dimensions: 5,4
+		Adjacent: 10
+		BuildSounds: makebuild.wav
+	Transforms:
+		IntoActor: t1_defence_hq
+		Offset: 1,1
+		Facing: 98
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	Voiced:
+		VoiceSet: artech_voice
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	ProvidesPrerequisite@buildingame:
+	ProductionBar@Research.RedAlliance:
+		ProductionType: Research.RedAlliance
+	Production:
+		Produces: Research.RedAlliance
+		MoveIntoWorld: false
+		PauseOnCondition: empdisable || build-incomplete
+	ProductionQueue@Research:
+		Type: Research.RedAlliance
+		Group: Research
+		BuildDurationModifier: 80
+		LowPowerModifier: 200
+		QueuedAudio: Research
+		ReadyAudio: ResearchReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	Exit:
+	Power:
+		Amount: 0
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: ardeftech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealardeftech
+		Condition: ardeftech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealardeftech
+	HitShape:
+
+t3_commandbuilding:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech3.redalliance.stat.building.fixe
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 80
+		Prerequisites: artech, ~BotOwnerBuild
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Bounds: 7168, 4096, 0, 0
+	Building:
+		Footprint: __xxx__ _xxxxxx _xxxxxx __xxx__
+		Dimensions: 7,4
+		Adjacent: 10
+		BuildSounds: makebuild.wav
+		TerrainTypes: Clear, Road, Rough, Concrete, Tree
+	Transforms:
+		IntoActor: t2_command_relais
+		Offset: 2,1
+		Facing: 98
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite@buildingame:
+	RenderSprites:
+	Power:
+		Amount: 0
+	WithDeliveryAnimation:
+		ActiveSequence: idle
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: t3_commandbuilding.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarcommandbuilding
+		Condition: t3_commandbuilding.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarcommandbuilding
+	HitShape:
+
+t3_annihilator_deployed:
+	Inherits@1: ^Defence
+	Inherits@2: ^1x1Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@3: ^ConditioneffetGeneralsUnit
+	Inherits@4: ^ConditionGeneralBuildDefense
+	Valued:
+		Cost: 0
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Tooltip:
+		Name: Deployed Annihilator
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 8000
+	Transforms:
+		IntoActor: t3_annihilator
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+	GrantConditionOnAttack@TargetRailgun:
+		ArmamentNames: primary
+		RevokeOnNewTarget: true
+		RequiredShotsPerInstance: 160
+		Condition: Target
+	Armament@muzzle:
+		Weapon: Ann.muzzle
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2950,90,1850
+		RequiresCondition: !Target
+		MuzzleSequence: muzzle.target
+		MuzzlePalette: flammeeffectblue
+	Armament@target01:
+		Weapon: Ann.target01
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2950,90,1850
+		RequiresCondition: !Target
+	Armament@target02:
+		Weapon: Ann.target02
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2950,90,1850
+		RequiresCondition: !Target
+	Armament@railgun:
+		Weapon: RailgunAnn
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2950,90,1850
+		RequiresCondition: Target
+		MuzzleSequence: muzzle.fire
+		MuzzlePalette: powereffect
+	Armament@PRIMARYSHOCK:
+		Name: primary
+		Weapon: RailgunAnnShock
+		LocalOffset: 0,0,0
+		RequiresCondition: Target
+	WithMuzzleOverlay:
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
+	WithRangeCircle:
+		Color: FF0000
+		Range: 19c0
+	Armor:
+		Type: Heavy
+	AttackTurreted:
+		PauseOnCondition: empdisable
+		RequiresCondition: !(build-incomplete  || stunweapons)
+	Turreted:
+		TurnSpeed: 15
+		InitialFacing: 370
+		RealignDelay: -1
+		PauseOnCondition: stunweapons
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	-MustBeDestroyed:
+	HitShape:
+
+t2_predator_deployed:
+	Inherits@1: ^Defence
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_predator.redalliance.stat.support
+	Inherits@2: ^1x1Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Buildable:
+		Queue: Locked.redalliance
+		BuildPaletteOrder: 40
+		Prerequisites: arbarr
+		IconPalette: RedAlliance.Icon
+	RequiresBuildableArea:
+		AreaTypes: defense
+		Adjacent: 16
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		Adjacent: 10
+	Transforms:
+		IntoActor: t2_predator_mobile
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+		NoTransformSounds:
+	Armament@gun:
+		Weapon: Predator.gun
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 150,0,200
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || stunweapons || disabled
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: -1
+		Offset: 0,0,160
+		PauseOnCondition: stunweapons
+	WithSpriteTurret:
+	-MustBeDestroyed:
+	HitShape:
+
+t2_tarantula_deployed:
+	Inherits@1: ^Defence
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_tarantula.stat.unite
+	Inherits@2: ^1x1Shape
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Buildable:
+		Queue: Locked.redalliance
+		BuildPaletteOrder: 40
+		BuildDurationModifier: 15
+		Prerequisites: arbarr
+		Description: Tier 2 anti-air defensive structure\n> Strong vs Aircraft\n> Weak vs Infantry, Vehicles
+		IconPalette: RedAlliance.Icon
+	RequiresBuildableArea:
+		AreaTypes: defense
+		Adjacent: 16
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		Adjacent: 10
+	Transforms:
+		IntoActor: t2_tarantula_mobile
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+		NoTransformSounds:
+	Armament@gun:
+		Weapon: AP_Tarantula
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 1550,280,850, 1550,-280,850
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || stunweapons || disabled
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: -1
+		Offset: -400,280,0
+		PauseOnCondition: stunweapons
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	-MustBeDestroyed:
+	HitShape:
+
+t3_doomtowerbuild:
+	Inherits@1: ^Defence
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_doomtowerbuild.stat.unite
+	Inherits@2: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@EMPDisable: ^EmpDisable
+	Inherits@EMPSpeedDisable: ^EmpSpeedDisable
+	Buildable:
+		Queue: Locked.redalliance
+		BuildPaletteOrder: 40
+		Prerequisites: arbarr, t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || stunweapons || disabled
+	RequiresBuildableArea:
+		AreaTypes: defense
+		Adjacent: 16
+	Turreted:
+		TurnSpeed: 255
+		Offset: 128,128,384
+		PauseOnCondition: stunweapons
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		Adjacent: 10
+	WithSpriteBody:
+		PauseOnCondition: build-incomplete || empdisable || disabled
+	Transforms:
+		IntoActor: t3_doomtower_mobile
+		Offset: 0,0
+		Facing: 164
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	Armament@gun:
+		Weapon: DoomTower.Gun
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 0,0,3200
+	WithIdleOverlay@lightning:
+		Offset: 0, 0, 0
+		Sequence: Lighting-effect
+		Palette: effect
+		RequiresCondition: !build-incomplete || empdisable || disabled
+	-MustBeDestroyed:
+	HitShape:
+
+arheli:
+	Inherits@1: ^BaseBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^heliport.redalliance.stat.building.fixe
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 3092, 2048, 0, 0
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 110
+		Prerequisites: artech, ~BotOwnerBuild
+		BuildDurationModifier: 10
+		Description: Produces and repairs aircraft
+		IconPalette: RedAlliance.Icon
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Airfield
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 5000
+	Armor:
+		Type: Concrete
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 0,256,0
+		ExitCell: 0,0
+		Facing: 640
+	ProximityExternalCondition@BuildingRepair:
+		Condition: FactoryRepairAircraft
+		Range: 5c0
+		AffectsParent: true
+	Production:
+		Produces: Aircraft.redalliance
+		PauseOnCondition: empdisable
+		RequiresCondition: !build-incomplete
+	ProductionQueue@Aircraft:
+		Type: Aircraft.redalliance
+		Group: Aircraft
+		LowPowerModifier: 200
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionBar@Aircraft:
+		ProductionType: Aircraft.redalliance
+	WithBuildingPlacedAnimation:
+	ProvidesPrerequisite@buildingname:
+	Transforms:
+		IntoActor: t2_airfield
+		Offset: 1,1
+		Facing: 164
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	Voiced:
+		VoiceSet: arheli_voice
+	Power:
+		Amount: 0
+	Reservable:
+	ProximityExternalCondition@AMMOCRAFT:
+		Condition: Ammocraft
+		Range: 5c0
+		AffectsParent: true
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arheli.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarheli
+		Condition: arheli.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarheli
+	HitShape:

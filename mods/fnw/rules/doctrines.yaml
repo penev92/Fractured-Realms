@@ -1,0 +1,165 @@
+## //////////////////////////////////////////////////////////
+
+## ////////////// Comon Doctrines  //////////////////
+
+## ////////////// Actor Power  //////////////////
+
+star_beam:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Selectable:
+		Bounds: 750, 1250, 0, 0
+	SelectionDecorations:
+	Tooltip:
+		Name: Flame Beam
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	Aircraft:
+		TurnSpeed: 1023
+		Speed: 60
+		CruiseAltitude: 0c1
+		IdealSeparation: 0c512
+		TakeOffOnResupply: true
+		MaximumPitch: 255
+		VTOL: true
+		CanHover: True
+		CanSlide: True
+	HiddenUnderFog:
+		Type: CenterPosition
+	Cloak@PlayerView:
+		UncloakOn: Demolish
+		CloakDelay: 0
+		InitialDelay: 0
+		Palette: powereffect
+		IsPlayerPalette: false
+	WithIdleOverlay@direction:
+		Offset: 0,0,0
+		Sequence: directon
+		IsDecoration: true
+		Palette: powereffect80
+	RenderSprites:
+		Image: target_conclave_actor
+		Palette: powereffect
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	PeriodicExplosion@Beam:
+		Weapon: orbital_stair
+		LocalOffset: 0,0,0c0
+		ResetReloadWhenEnabled: false
+	KillsSelf:
+		RemoveInstead: true
+		Delay: 375
+		
+target_mine:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Selectable:
+		Bounds: 750, 1250, 0, 0
+	SelectionDecorations:
+	Tooltip:
+		Name: Target Mine
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	Aircraft:
+		TurnSpeed: 1023
+		Speed: 110
+		CruiseAltitude: 0c1
+		IdealSeparation: 0c512
+		TakeOffOnResupply: true
+		MaximumPitch: 255
+		VTOL: true
+		CanHover: True
+		CanSlide: True
+	HiddenUnderFog:
+		Type: CenterPosition
+	Cloak@PlayerView:
+		UncloakOn: Demolish
+		CloakDelay: 0
+		InitialDelay: 0
+		Palette: powereffect
+		IsPlayerPalette: false
+	WithIdleOverlay@direction:
+		Offset: 0,0,0
+		Sequence: directon
+		IsDecoration: true
+		Palette: powereffect80
+	RenderSprites:
+		Image: target_mine
+		Palette: powereffect
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	PeriodicExplosion@Beam:
+		Weapon: strike_mine
+		LocalOffset: 0,0,0c0
+		ResetReloadWhenEnabled: false
+	KillsSelf:
+		RemoveInstead: true
+		Delay: 420
+
+Flame_beam:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Selectable:
+		Bounds: 750, 1250, 0, 0
+	SelectionDecorations:
+	Tooltip:
+		Name: Flame Beam
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	Aircraft:
+		TurnSpeed: 1023
+		Speed: 60
+		CruiseAltitude: 0c1
+		IdealSeparation: 0c512
+		TakeOffOnResupply: true
+		MaximumPitch: 255
+		VTOL: true
+		CanHover: True
+		CanSlide: True
+	HiddenUnderFog:
+		Type: CenterPosition
+	RenderSprites:
+		Image: flamebeam
+		Palette: flameeffect
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	PeriodicExplosion@Beam:
+		Weapon: fusion.missile
+		LocalOffset: 0,0,0c0
+		ResetReloadWhenEnabled: false
+	WithIdleOverlay@ImpactEffect:
+		Offset: 0,0,0
+		Sequence: flameActorEffect
+		Palette: flameeffect
+	AmbientSound@start:
+		SoundFiles: start_rayfusion.wav
+		Delay: 0
+		Interval: 900 # play this only once
+	AmbientSound@loop:
+		SoundFiles: loop_rayfusion.wav
+		Delay: 50
+		Interval: 50
+	KillsSelf:
+		RemoveInstead: true
+		Delay: 375
+
+## renforcement physique
+Power_Repairarea:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	RenderSprites:
+		Image: power_repair
+	WithIdleOverlay:
+		Offset: 0,0,0
+		Sequence: idle
+		Palette: flameeffect

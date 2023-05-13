@@ -1,0 +1,210 @@
+t1_fedharv:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_fedharv.shp
+		Facings: 64
+	harvest:
+		Filename: harvest_anim.shp
+		Length: *
+		BlendMode: Additive
+	dock:
+		Filename: t1_fedharv.shp
+	dock-loop:
+		Filename: t1_fedharv.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_fedgharvicon.shp
+	
+t1_stalker:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_stalker.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_stalkericon.shp
+
+t1_tick:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_60mm.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t1_tick.shp
+		Facings: 64
+	turret:
+		Filename: t1_ticktur.shp
+		Facings: 64
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	barrel:
+		Filename: t1_tickbarl.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_tickicon.shp
+	
+t1_suricate:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	idle:
+		Filename: t1_suricate.shp
+		Facings: 64
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t1_suricatetur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_surricateicon.shp
+	
+t2_cobra:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t2_cobra.shp
+		Facings: 64
+	turretair:
+		Filename: t2_cobratur.shp
+		Facings: 64
+	turretground:
+		Filename: t2_cobraturg.shp
+		Facings: 64
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t2_cobraicon.shp
+	
+t2_lynx:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t2_lynx.shp
+		Facings: 64
+	turret:
+		Filename: t2_lynxtur.shp
+		Facings: 64
+	circle_effet:
+		Filename: circle_effet_federation_charge.shp
+		Length: *
+		BlendMode: additive
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t2_lynxicon.shp
+	
+t3_rhino:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_80mm01.shp
+		Length: *
+	idle:
+		Filename: t3_rhino.shp
+		Facings: 64
+	turret:
+		Filename: t3_rhinotur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t3_rhinoicon.shp
+	
+t3_porcupine:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_190mm.shp
+		Length: *
+	idle:
+		Filename: t3_porcupine.shp
+		Facings: 64
+	turret:
+		Filename: t3_porcupinetur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t3_porcupineicon.shp
+	
+t3_mantis:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_190mm.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t3_mantis.shp
+		Facings: 64
+	empty-idle:
+		Filename: t3_mantislaunch.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t3_mantisicon.shp
+
+t4_colossus:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t4_colossus.shp
+		Facings: 64
+	turret:
+		Filename: t4_colossustur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t4_colossusicon.shp
+
+t2_mongoose:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t2_mongoose.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_60mm.shp
+		Length: *
+		BlendMode: Additive
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t2_mongoosetur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t2_mongooseicon.shp

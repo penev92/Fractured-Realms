@@ -1,0 +1,1296 @@
+# //////////// INHERIT CHROME //////////////////////
+^Sidebar:
+	Image: sidebar.png
+
+^Dialog:
+	Image: dialog.png
+	
+^panel-base:
+	Image: chrome.png
+
+^Glyphs:
+	Image: glyphs.png
+	Image2x: glyphs-2x.png
+	Image3x: glyphs-3x.png
+	
+# //////////// COMMAND BUTTON //////////////////////
+command-button:
+	Image: buttons.png
+	PanelRegion: 600, 620, 0, 0, 34, 26, 0, 0
+command-button-hover: buttons.png
+	background: 0,0,34,26
+command-button-pressed: buttons.png
+	background: 24,0,34,26
+command-button-highlighted: buttons.png
+	background: 0,0,34,26
+command-button-highlighted-hover: buttons.png
+	background: 0,0,34,26
+command-button-highlighted-pressed: buttons.png
+	background: 0,0,34,26
+command-button-disabled: buttons.png
+	background: 34,0,34,26
+command-button-highlighted-disabled: buttons.png
+	background: 34,0,34,26
+
+# //////////// RED ALLIANCE //////////////////////
+^SidebarRedalliance:
+	Image: alliance_hub.png
+	
+sidebar: side_factions.png
+	Image: side_factions.png
+	Regions:
+		background-iconrow: 622,26,402,73
+		background-bottom: 0,0,0,0
+		background-overtop: 289,0,350,8
+		background-supportoverlay: 289,224,64,48
+		commandbar-background: 300,207,256,83
+		cashproduction-background: 599,99,425,54
+		generalspower-background: 536, 237, 489, 276
+		abilitieunite-background: 241, 290, 226, 170
+		
+	
+sidebar-redalliance:
+	Inherits: ^SidebarRedalliance
+	Regions:
+		background-top: 0,0,300,289
+		background-iconrow: 622,26,402,73
+		commandbar-background: 300,207,256,83
+		productiontabs-background: 622,0,403,25
+		cashproduction-background: 622,99,403,54
+		generalspower-background: 536, 237, 489, 276
+		abilitieunite-background: 241, 290, 146, 98
+
+sidebar-button-redalliance:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-redalliance-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-redalliance-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-redalliance-highlighted:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-redalliance-highlighted-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-redalliance-highlighted-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-redalliance-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-redalliance-highlighted-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 356,0,0,0,28,28,0,0
+	
+	
+type-button-redalliance:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,61,0,0,60,33,0,0
+type-button-redalliance-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-redalliance-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-redalliance-highlighted:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-redalliance-highlighted-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-redalliance-highlighted-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-redalliance-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,92,0,0,60,33,0,0
+type-button-redalliance-highlighted-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 300,92,0,0,60,33,0,0
+
+
+doctrine-button-redalliance:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,142,0,0,121,34,0,0
+doctrine-button-redalliance-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-redalliance-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-redalliance-highlighted:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-redalliance-highlighted-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-redalliance-highlighted-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-redalliance-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,174,0,0,121,34,0,0
+doctrine-button-redalliance-highlighted-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 419,174,0,0,121,34,0,0
+
+doctrineclose-button-redalliance:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-redalliance-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-redalliance-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-redalliance-highlighted:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-redalliance-highlighted-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-redalliance-highlighted-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-redalliance-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-redalliance-highlighted-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 301,174,0,0,121,34,0,0
+
+
+button-redalliance:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 0, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 30, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 60, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 90, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-highlighted:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 120, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-highlighted-hover:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 150, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-highlighted-pressed:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 180, 290, 1, 1, 28, 23, 1, 1
+button-redalliance-highlighted-disabled:
+	Inherits: ^SidebarRedalliance
+	PanelRegion: 210, 290, 1, 1, 28, 23, 1, 1
+
+sideback:
+	Image: back_factions.png
+	background-side: 0,0,480,287
+	background-iconrow: 405,297,460,65
+	background-bottom: 350,345,350,8
+	background-overtop: 639,0,350,8
+	background-supportoverlay: 329,460,432,104
+
+# Conclave chrome ui //////////////////////
+^SidebarConclave:
+	Image: conclave_hub.png
+	
+sidebar-conclave:
+	Inherits: ^SidebarConclave
+	Regions:
+		background-top: 0,0,300,289
+		background-iconrow: 622,26,402,73
+		commandbar-background: 300,207,256,83
+		productiontabs-background: 622,0,403,25
+		cashproduction-background: 622,99,403,54
+		generalspower-background: 536, 237, 489, 276
+		abilitieunite-background: 241, 290, 146, 98
+
+sidebar-button-conclave:
+	Inherits: ^SidebarConclave
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-conclave-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-conclave-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-conclave-highlighted:
+	Inherits: ^SidebarConclave
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-conclave-highlighted-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-conclave-highlighted-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-conclave-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-conclave-highlighted-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 356,0,0,0,28,28,0,0
+
+type-button-conclave:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,61,0,0,60,33,0,0
+type-button-conclave-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-conclave-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-conclave-highlighted:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-conclave-highlighted-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-conclave-highlighted-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-conclave-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,92,0,0,60,33,0,0
+type-button-conclave-highlighted-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 300,92,0,0,60,33,0,0
+	
+doctrine-button-conclave:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,142,0,0,121,34,0,0
+doctrine-button-conclave-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-conclave-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-conclave-highlighted:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-conclave-highlighted-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-conclave-highlighted-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-conclave-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,174,0,0,121,34,0,0
+doctrine-button-conclave-highlighted-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 419,174,0,0,121,34,0,0
+	
+doctrineclose-button-conclave:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-conclave-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-conclave-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-conclave-highlighted:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-conclave-highlighted-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-conclave-highlighted-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-conclave-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-conclave-highlighted-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 301,174,0,0,121,34,0,0
+	
+button-conclave:
+	Inherits: ^SidebarConclave
+	PanelRegion: 0, 290, 1, 1, 28, 23, 1, 1
+button-conclave-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 30, 290, 1, 1, 28, 23, 1, 1
+button-conclave-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 60, 290, 1, 1, 28, 23, 1, 1
+button-conclave-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 90, 290, 1, 1, 28, 23, 1, 1
+button-conclave-highlighted:
+	Inherits: ^SidebarConclave
+	PanelRegion: 120, 290, 1, 1, 28, 23, 1, 1
+button-conclave-highlighted-hover:
+	Inherits: ^SidebarConclave
+	PanelRegion: 150, 290, 1, 1, 28, 23, 1, 1
+button-conclave-highlighted-pressed:
+	Inherits: ^SidebarConclave
+	PanelRegion: 180, 290, 1, 1, 28, 23, 1, 1
+button-conclave-highlighted-disabled:
+	Inherits: ^SidebarConclave
+	PanelRegion: 210, 290, 1, 1, 28, 23, 1, 1
+	
+# baneslayer chrome ui //////////////////////
+^SidebarBaneslayer:
+	Image: order_hub.png
+
+sidebar-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	Regions:
+		background-top: 0,0,300,289
+		background-iconrow: 622,26,402,73
+		commandbar-background: 300,207,256,83
+		productiontabs-background: 622,0,403,25
+		cashproduction-background: 622,99,403,54
+		generalspower-background: 536, 237, 489, 276
+		abilitieunite-background: 241, 290, 146, 98
+
+sidebar-button-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-baneslayer-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-baneslayer-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-baneslayer-highlighted:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-baneslayer-highlighted-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-baneslayer-highlighted-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-baneslayer-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-baneslayer-highlighted-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 356,0,0,0,28,28,0,0
+
+type-button-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,61,0,0,60,33,0,0
+type-button-baneslayer-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-baneslayer-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-baneslayer-highlighted:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-baneslayer-highlighted-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-baneslayer-highlighted-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-baneslayer-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,92,0,0,60,33,0,0
+type-button-baneslayer-highlighted-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 300,92,0,0,60,33,0,0
+
+doctrine-button-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,142,0,0,121,34,0,0
+doctrine-button-baneslayer-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-baneslayer-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-baneslayer-highlighted:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-baneslayer-highlighted-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-baneslayer-highlighted-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-baneslayer-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,174,0,0,121,34,0,0
+doctrine-button-baneslayer-highlighted-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 419,174,0,0,121,34,0,0
+	
+doctrineclose-button-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-baneslayer-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-baneslayer-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-baneslayer-highlighted:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-baneslayer-highlighted-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-baneslayer-highlighted-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-baneslayer-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-baneslayer-highlighted-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 301,174,0,0,121,34,0,0
+
+button-baneslayer:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 0, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 30, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 60, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 90, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-highlighted:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 120, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-highlighted-hover:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 150, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-highlighted-pressed:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 180, 290, 1, 1, 28, 23, 1, 1
+button-baneslayer-highlighted-disabled:
+	Inherits: ^SidebarBaneslayer
+	PanelRegion: 210, 290, 1, 1, 28, 23, 1, 1
+
+
+# //////////// FEDERATION //////////////////////
+^SidebarFederation:
+	Image: federation_hub.png
+
+sidebar-federation:
+	Inherits: ^SidebarFederation
+	Regions:
+		background-top: 0,0,300,289
+		background-iconrow: 622,26,402,73
+		commandbar-background: 300,207,256,83
+		productiontabs-background: 622,0,403,25
+		cashproduction-background: 622,99,403,54
+		generalspower-background: 536, 237, 489, 276
+		abilitieunite-background: 241, 290, 146, 98
+
+sidebar-button-federation:
+	Inherits: ^SidebarFederation
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-federation-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-federation-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-federation-highlighted:
+	Inherits: ^SidebarFederation
+	PanelRegion: 328,0,0,0,28,28,0,0
+sidebar-button-federation-highlighted-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-federation-highlighted-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 384,0,0,0,28,28,0,0
+sidebar-button-federation-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,0,0,0,28,28,0,0
+sidebar-button-federation-highlighted-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 356,0,0,0,28,28,0,0
+
+type-button-federation:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,61,0,0,60,33,0,0
+type-button-federation-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-federation-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-federation-highlighted:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-federation-highlighted-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-federation-highlighted-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,28,0,0,60,33,0,0
+type-button-federation-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,92,0,0,60,33,0,0
+type-button-federation-highlighted-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 300,92,0,0,60,33,0,0
+
+doctrine-button-federation:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,142,0,0,121,34,0,0
+doctrine-button-federation-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-federation-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-federation-highlighted:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-federation-highlighted-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-federation-highlighted-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,109,0,0,121,34,0,0
+doctrine-button-federation-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,174,0,0,121,34,0,0
+doctrine-button-federation-highlighted-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 419,174,0,0,121,34,0,0
+	
+doctrineclose-button-federation:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-federation-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-federation-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-federation-highlighted:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-federation-highlighted-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-federation-highlighted-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,142,0,0,121,34,0,0
+doctrineclose-button-federation-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,174,0,0,121,34,0,0
+doctrineclose-button-federation-highlighted-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 301,174,0,0,121,34,0,0
+	
+button-federation:
+	Inherits: ^SidebarFederation
+	PanelRegion: 0, 290, 1, 1, 28, 23, 1, 1
+button-federation-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 30, 290, 1, 1, 28, 23, 1, 1
+button-federation-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 60, 290, 1, 1, 28, 23, 1, 1
+button-federation-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 90, 290, 1, 1, 28, 23, 1, 1
+button-federation-highlighted:
+	Inherits: ^SidebarFederation
+	PanelRegion: 120, 290, 1, 1, 28, 23, 1, 1
+button-federation-highlighted-hover:
+	Inherits: ^SidebarFederation
+	PanelRegion: 150, 290, 1, 1, 28, 23, 1, 1
+button-federation-highlighted-pressed:
+	Inherits: ^SidebarFederation
+	PanelRegion: 180, 290, 1, 1, 28, 23, 1, 1
+button-federation-highlighted-disabled:
+	Inherits: ^SidebarFederation
+	PanelRegion: 210, 290, 1, 1, 28, 23, 1, 1
+	
+	
+power-background:
+	Image: chrome.png
+	Regions:
+		background: 0, 232, 432, 104
+	
+sidebar-bits:
+	Inherits: ^Glyphs
+	Regions:
+		production-tooltip-time: 136, 51, 16, 16
+		production-tooltip-power: 102, 51, 16, 16
+		production-tooltip-cost: 68, 51, 16, 16
+		production-tooltip-armor: 400, 0, 16, 16
+		indicator-muted: 0, 0, 0, 0
+		production-iconoverlay: 0, 0, 0, 0
+	
+production-icons:
+	Inherits: ^Glyphs
+	Regions:
+		building: 0, 68, 16, 16
+		building-disabled: 0, 85, 16, 16
+		building-alert: 0, 102, 16, 16
+		defence: 17, 68, 16, 16
+		defence-disabled: 17, 85, 16, 16
+		defence-alert: 17, 102, 16, 16
+		infantry: 34, 68, 16, 16
+		infantry-disabled: 34, 85, 16, 16
+		infantry-alert: 34, 102, 16, 16
+		vehicle: 51, 68, 16, 16
+		vehicle-disabled: 51, 85, 16, 16
+		vehicle-alert: 51, 102, 16, 16
+		aircraft: 68, 68, 16, 16
+		aircraft-disabled: 68, 85, 16, 16
+		aircraft-alert: 68, 102, 16, 16
+		research: 154, 68, 16, 16
+		research-disabled: 154, 85, 16, 16
+		research-alert: 154, 102, 16, 16
+		doctrine: 67, 141, 46, 28
+		doctrine-disabled: 114, 141, 46, 28
+		doctrine-alert: 160, 141, 46, 28
+		abillity: 67, 141, 46, 28
+		abillity-disabled: 114, 141, 46, 28
+		abillity-alert: 160, 141, 46, 28
+		
+power-icons:
+	Inherits: ^panel-base
+	Regions:
+		power-normal: 350,0,12,18
+		power-critical: 363,0,12,18
+		
+order-icons:
+	Inherits: ^Glyphs
+	Regions:
+		debug: 203, 68, 16, 16
+		debug-disabled: 203, 85, 16, 16
+		debug-active: 203, 102, 16, 16
+		diplomacy: 136, 68, 16, 16
+		diplomacy-disabled: 136, 85, 16, 16
+		diplomacy-active: 136, 102, 16, 16
+		repair: 136, 68, 16, 16
+		repair-disabled: 136, 85, 16, 16
+		repair-active: 136, 102, 16, 16
+		sell: 119, 68, 16, 16
+		sell-disabled: 119, 85, 16, 16
+		sell-active: 119, 102, 16, 16
+		options: 102, 68, 16, 16
+		options-disabled: 102, 85, 16, 16
+		options-active: 102, 102, 16, 16
+		beacon: 153, 68, 16, 16
+		beacon-disabled: 153, 85, 16, 16
+		beacon-active: 153, 102, 16, 16
+		power: 170, 68, 16, 16
+		power-disabled: 170, 85, 16, 16
+		power-active: 170, 102, 16, 16
+		stats: 204, 68, 16, 16
+		stats-disabled: 204, 85, 16, 16
+		stats-active: 204, 102, 16, 16
+
+minimap:
+	Image: chrome.png
+	PanelRegion: 227,0,202,202
+	
+stance-icons:
+	Inherits: ^Glyphs
+	Regions:
+		attack-anything: 0, 119, 16, 16
+		attack-anything-disabled: 0, 136, 16, 16
+		attack-anything-active: 0, 153, 16, 16
+		defend: 17, 119, 16, 16
+		defend-disabled: 17, 136, 16, 16
+		defend-active: 17, 153, 16, 16
+		return-fire: 34, 119, 16, 16
+		return-fire-disabled: 34, 136, 16, 16
+		return-fire-active: 34, 153, 16, 16
+		hold-fire: 51, 119, 16, 16
+		hold-fire-disabled: 51, 136, 16, 16
+		hold-fire-active: 51, 153, 16, 16
+
+stance-icons-highlighted:
+	Inherits: ^Glyphs
+	Regions:
+		attack-anything: 0, 153, 16, 16
+		attack-anything-hover: 0, 153, 16, 16
+		return-fire: 34, 153, 16, 16
+		return-fire-hover: 34, 153, 16, 16
+		defend: 17, 153, 16, 16
+		defend-hover: 17, 153, 16, 16
+		hold-fire-active: 51, 153, 16, 16
+		hold-fire: 51, 153, 16, 16
+		hold-fire-hover: 51, 153, 16, 16
+
+command-icons:
+	Inherits: ^Glyphs
+	Regions:
+		attack-move: 0, 207, 24, 24
+		attack-move-disabled: 0, 232, 24, 24
+		force-move: 25, 207, 24, 24
+		force-move-disabled: 25, 232, 24, 24
+		force-attack: 50, 207, 24, 24
+		force-attack-disabled: 50, 232, 24, 24
+		guard: 75, 207, 24, 24
+		guard-disabled: 75, 232, 24, 24
+		deploy: 100, 207, 24, 24
+		deploy-disabled: 100, 232, 24, 24
+		scatter: 125, 207, 24, 24
+		scatter-disabled: 125, 232, 24, 24
+		stop: 150, 207, 24, 24
+		stop-disabled: 150, 232, 24, 24
+		queue-orders: 175, 207, 24, 24
+		queue-orders-disabled: 175, 232, 24, 24
+		
+command-icons-highlighted:
+	Inherits: ^Glyphs
+	Regions:
+		attack-move: 0, 207, 24, 24
+		attack-move-hover: 0, 207, 24, 24
+		force-move: 25, 207, 24, 24
+		force-move-hover: 25, 207, 24, 24
+		force-attack: 50, 207, 24, 24
+		force-attack-hover: 50, 207, 24, 24
+		guard: 75, 207, 24, 24
+		guard-hover: 75, 207, 24, 24
+		deploy: 100, 207, 24, 24
+		deploy-hover: 100, 207, 24, 24
+		scatter: 125, 207, 24, 24
+		scatter-hover: 125, 207, 24, 24
+		stop: 150, 207, 24, 24
+		stop-hover: 150, 207, 24, 24
+		queue-orders: 175, 207, 24, 24
+		queue-orders-hover: 175, 207, 24, 24
+        
+
+sidebar-observer:
+	Inherits: ^Sidebar
+	Regions:
+		background: 0, 185, 238, 287
+		replay-bottom: 0, 472, 238, 40
+		observer-bottom: 0, 176, 238, 8
+		
+lobby-bits:
+	Inherits: ^Glyphs
+	Regions:
+		spawn-unclaimed: 91, 119, 22, 22
+		spawn-claimed: 68, 119, 22, 22
+		spawn-disabled: 203, 119, 22, 22
+		admin: 170, 0, 6, 5
+		colorpicker: 68, 119, 22, 22
+		huepicker: 136, 0, 7, 15
+		kick: 153, 0, 11, 11
+		protected: 0, 17, 12, 13
+		protected-disabled: 17, 17, 12, 13
+		authentication: 34, 17, 12, 13
+		authentication-disabled: 51, 17, 12, 13
+		admin-registered: 0, 51, 16, 16
+		admin-anonymous: 34, 51, 16, 16
+		player-registered: 17, 51, 16, 16
+		player-anonymous: 51, 51, 16, 16
+		
+actor-stats-bits:
+	Image: staticons.png
+	Image2x: staticons-2x.png
+	Image3x: staticons-3x.png
+	Regions:
+		actor-stats-armor: 0, 0, 16, 16
+		actor-stats-shield: 176, 0, 16, 16
+		actor-stats-sight: 32, 0, 16, 16
+		actor-stats-damage: 16, 0, 16, 16
+		actor-stats-mindcontrol: 128, 0, 16, 16
+		actor-stats-range: 48, 0, 16, 16
+		actor-stats-shortrange: 48, 0, 16, 16
+		actor-stats-longrange: 192, 0, 16, 16
+		actor-stats-spread: 96, 0, 16, 16
+		actor-stats-rof: 208, 0, 16, 16
+		actor-stats-speed: 80, 0, 16, 16
+		actor-stats-power: 224, 0, 16, 16
+		actor-stats-resources: 112, 0, 16, 16
+		actor-stats-cargo: 144, 0, 16, 16
+		actor-stats-carrier: 160, 0, 16, 16
+
+reload-icon:
+	Inherits: ^Glyphs
+	Regions:
+		enabled: 0, 34, 16, 16
+		disabled-0: 17, 34, 16, 16
+		disabled-1: 34, 34, 16, 16
+		disabled-2: 51, 34, 16, 16
+		disabled-3: 68, 34, 16, 16
+		disabled-4: 85, 34, 16, 16
+		disabled-5: 102, 34, 16, 16
+		disabled-6: 119, 34, 16, 16
+		disabled-7: 136, 34, 16, 16
+		disabled-8: 153, 34, 16, 16
+		disabled-9: 170, 34, 16, 16
+		disabled-10: 187, 34, 16, 16
+		disabled-11: 204, 34, 16, 16
+
+strategic:
+	Inherits: ^Glyphs
+	Regions:
+		unowned: 68, 119, 22, 22
+		critical_unowned: 114, 119, 22, 22
+		enemy_owned: 137, 119, 22, 22
+		player_owned: 183, 119, 22, 22
+
+flags:
+	Inherits: ^Glyphs
+	Regions:
+		redalliance: 226, 49, 30, 15
+		baneslayer: 226, 65, 30, 15
+		conclave: 226, 81, 30, 15
+		federation: 226, 97, 30, 15
+		solarrep: 226, 113, 30, 15
+		greece: 226, 129, 30, 15
+		ukraine: 226, 145, 30, 15
+		russia: 226, 161, 30, 15
+		allies: 226, 177, 30, 15
+		soviet: 226, 193, 30, 15
+		RandomSoviet: 226, 209, 30, 15
+		RandomAllies: 226, 225, 30, 15
+		Random: 226, 241, 30, 15
+		spectator: 226, 241, 30, 15
+
+music:
+	Inherits: ^Glyphs
+	Regions:
+		pause: 0, 0, 16, 16
+		stop: 17, 0, 16, 16
+		play: 34, 0, 16, 16
+		next: 51, 0, 16, 16
+		prev: 68, 0, 16, 16
+		fastforward: 85, 0, 16, 16
+
+scrollbar:
+	Inherits: ^Glyphs
+	Regions:
+		down_arrow: 68, 17, 16, 16
+		down_pressed: 85, 17, 16, 16
+		up_arrow: 102, 17, 16, 16
+		up_pressed: 119, 17, 16, 16
+		right_arrow: 136, 17, 16, 16
+		right_pressed: 153, 17, 16, 16
+		left_arrow: 170, 17, 16, 16
+		left_pressed: 187, 17, 16, 16
+		
+
+# Used for the menu
+dialog:
+	Inherits: ^Dialog
+	Regions:
+		background: 1, 1, 478, 478
+		border-r: 483, 1, 9, 151
+		border-l: 481, 1, 9, 151
+		border-b: 1, 483, 151, 9
+		border-t: 1, 481, 151, 9
+		corner-tl: 393, 481, 21, 21
+		corner-tr: 415, 481, 21, 21
+		corner-bl: 437, 481, 21, 21
+		corner-br: 459, 481, 21, 21
+
+dialog2:
+	Inherits: button
+
+dialog3:
+	Inherits: button-pressed
+
+# Same as the half transparent frame used in the Asset Browser
+dialog4:
+	Inherits: ^Dialog
+	PanelRegion: 512, 387, 6, 6, 52, 52, 6, 6
+
+#//////////////////////// observer //////////////////////// 
+
+observer-scrollpanel-button:
+	Inherits: ^Dialog
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+
+observer-scrollpanel-button-hover:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollpanel-button-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 896, 256, 1, 1, 126, 126, 1, 1
+
+observer-scrollpanel-button-disabled:
+	Inherits: ^Dialog
+	Regions:
+		background: 769, 897, 126, 126
+		border-r: 895, 897, 1, 126
+		border-l: 768, 897, 1, 126
+		border-b: 769, 511, 126, 1
+		border-t: 769, 384, 126, 1
+		corner-tl: 768, 384, 1, 1
+		corner-tr: 895, 384, 1, 1
+		corner-bl: 768, 511, 1, 1
+		corner-br: 895, 511, 1, 1
+
+observer-scrollheader:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollheader-highlighted:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem-highlighted:
+	Inherits: observer-scrollpanel-button-pressed
+
+observer-scrollitem-hover:
+	Inherits: observer-scrollpanel-button
+
+#//////////////////////// Button ////////////////////////
+button:
+	Inherits: ^Dialog
+	PanelRegion: 513, 1, 1, 1, 124, 124, 1, 1
+
+button-hover:
+	Inherits: ^Dialog
+	PanelRegion: 513, 129, 1, 1, 124, 124, 1, 1
+	
+button-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 641, 1, 1, 1, 124, 124, 1, 1
+	
+button-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 513, 257, 2, 2, 122, 122, 2, 2
+
+button-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 769, 129, 2, 2, 122, 122, 2, 2
+	
+button-highlighted-hover:
+	Inherits: button-highlighted
+
+button-highlighted-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 897, 129, 2, 2, 122, 122, 2, 2
+
+button-highlighted-disabled:
+	Inherits: button-highlighted
+	
+newsbutton:
+	Inherits: button
+
+newsbutton-hover:
+	Inherits: button
+
+newsbutton-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 769, 1, 2, 2, 122, 122, 2, 2
+
+newsbutton-highlighted-hover:
+	Inherits: newsbutton-highlighted
+
+newsbutton-highlighted-pressed:
+	Inherits: button-pressed
+
+newsbutton-pressed:
+	Inherits: button-pressed
+	
+#//////////////////////// Textfield ////////////////////////
+textfield:
+	Inherits: button-pressed
+
+textfield-hover:
+	Inherits: checkbox-hover
+
+textfield-disabled:
+	Inherits: checkbox-disabled
+
+textfield-focused:
+	Inherits: button-pressed
+	
+#//////////////////////// Progress Bar ////////////////////////
+progressbar-bg:
+	Inherits: button-pressed
+	
+progressbar-bg-black:
+	Image: healthbars.png
+	PanelRegion: 640, 128, 1, 1, 126, 126, 1, 1
+
+# A copy of dialog2 (normal button)
+progressbar-thumb:
+	Inherits: button
+
+progressbar-thumb-green:
+	Image: healthbars.png
+	PanelRegion: 512, 0, 1, 1, 126, 126, 1, 1
+
+progressbar-thumb-yellow:
+	Image: healthbars.png
+	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+
+progressbar-thumb-red:
+	Image: healthbars.png
+	PanelRegion: 768, 0, 1, 1, 126, 126, 1, 1
+
+#//////////////////////// scrollpanel ////////////////////////
+scrollpanel-bg:
+	Inherits: button-pressed
+
+scrollpanel-button:
+	Inherits: button
+
+scrollpanel-button-hover:
+	Inherits: button-hover
+
+scrollpanel-button-pressed:
+	Inherits: button-pressed
+
+scrollpanel-button-disabled:
+	Inherits: button
+
+#//////////////////////// slider ////////////////////////
+slider:
+	Inherits: ^Dialog
+	Regions:
+		tick: 513, 2, 2, 4
+
+slider-track:
+	Inherits: button
+
+slider-thumb:
+	Inherits: button
+
+slider-thumb-hover:
+	Inherits: button-hover
+
+slider-thumb-pressed:
+	Inherits: button-pressed
+
+slider-thumb-disabled:
+	Inherits: button
+	
+#//////////////////////// checkbox ////////////////////////
+checkmark-tick:
+	Image: buttons.png
+	Regions:
+		checked: 0, 157, 16, 16
+		checked-pressed: 0, 173, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 0, 173, 16, 16
+
+checkmark-tick-highlighted:
+	Inherits: checkmark-tick
+
+checkbox:
+	Inherits: button-pressed
+
+checkbox-bits:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 187, 0, 16, 16
+		checked-disabled: 204, 0, 16, 16
+		crossed: 221, 0, 16, 16
+		crossed-disabled: 238, 0, 16, 16
+
+checkbox-hover:
+	Inherits: ^Dialog
+	PanelRegion: 641, 129, 2, 2, 122, 122, 2, 2
+
+checkbox-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 641, 257, 2, 2, 122, 122, 2, 2
+
+checkbox-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 897, 1, 2, 2, 122, 122, 2, 2
+
+checkmark-cross:
+	Image: buttons.png
+	Regions:
+		checked: 116, 157, 16, 16
+		checked-pressed: 116, 173, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 116, 173, 16, 16
+
+checkmark-cross-highlighted:
+	Inherits: checkmark-cross
+
+checkmark-mute:
+	Image: buttons.png
+	Regions:
+		unchecked: 222, 239, 16, 16
+		unchecked-pressed: 239, 239, 16, 16
+		checked: 239, 239, 16, 16
+		checked-pressed: 222, 239, 16, 16
+
+checkmark-mute-highlighted:
+	Inherits: checkmark-mute
+	
+#//////////////////////// Decoration ////////////////////////
+
+
+power-meter:
+	Image: chrome.png
+	Regions:
+		power-meter-none: 249, 522, 12, 2
+		power-meter-available: 262, 522, 12, 2
+		power-meter-used: 274, 522, 12, 2
+		power-meter-danger: 286, 522, 12, 2
+		power-meter-disabled: 298, 522, 12, 2
+
+scrollpanel-decorations:
+	Image: buttons.png
+	Regions:
+		down: 836, 17, 16, 16
+		down-pressed: 836, 17, 16, 16
+		down-disabled: 853, 17, 16, 16
+		up: 870, 17, 16, 16
+		up-pressed: 870, 17, 16, 16
+		up-disabled: 887, 17, 16, 16
+		right: 904, 17, 16, 16
+		right-pressed: 904, 17, 16, 16
+		right-disabled: 921, 17, 16, 16
+		left: 938, 17, 16, 16
+		left-pressed: 938, 17, 16, 16
+		left-disabled: 955, 17, 16, 16
+
+dropdown-decorations:
+	Image: buttons.png
+	Regions:
+		marker: 836, 17, 16, 16
+		marker-pressed: 836, 17, 16, 16
+		marker-disabled: 853, 17, 16, 16
+
+dropdown-separators:
+	Inherits: ^Dialog
+	Regions:
+		separator: 513, 2, 1, 19
+		separator-hover: 513, 130, 1, 19
+		separator-pressed: 766, 2, 1, 19
+		separator-disabled: 513, 258, 1, 19
+		observer-separator: 769, 258, 1, 19
+
+#//////////////////////// scrollitem ////////////////////////
+
+scrollheader:
+	Inherits: button
+	PanelRegion: 769, 257, 1, 1, 124, 124, 1, 1
+
+scrollheader-highlighted:
+	Inherits: button
+	PanelRegion: 897, 257, 1, 1, 124, 124, 1, 1
+
+scrollitem:
+	Inherits: button
+	PanelRegion: 769, 257, 1, 1, 124, 124, 1, 1
+
+scrollitem-hover:
+	Inherits: button
+
+scrollitem-highlighted:
+	Inherits: button-pressed
+
+scrollitem-selected:
+	Inherits: button-pressed
+
+scrollitem-nohover:
+	Inherits: button
+
+scrollitem-nohover-highlighted:
+	Inherits: button
+
+scrollitem-hover:
+	Inherits: button
+	
+separator:
+	Inherits: button
+
+logos:
+	Image: loadscreen.png
+	Regions:
+		logo: 0, 0, 256, 256
+
+mainmenu-border:
+	Inherits: ^Dialog
+	PanelRegion: 650, 389, 39, 39, 38, 38, 39, 39
+	PanelSides: Edges
+
+dropdown:
+	Inherits: ^Dialog
+	Regions:
+		separator: 513, 2, 1, 19
+		observer-separator: 769, 257, 1, 19
+
+panel-black:
+	Inherits: ^panel-base
+	Regions:
+		background: 286,56,41,28
+
+panel-darkred:
+	Inherits: ^panel-base
+	Regions:
+		background: 116,3,24,24
+		border-r: 62,66,2,60
+		border-l: 0,66,2,60
+		border-b: 2,126,60,2
+		border-t: 2,64,60,2
+		corner-tl: 0,64,2,2
+		corner-tr: 62,64,2,2
+		corner-bl: 0,126,2,2
+		corner-br: 62,126,2,2
+
+panel-gray:
+	Inherits: ^panel-base
+	Regions:
+		background: 143,3,24,24
+		border-r: 126,66,2,60
+		border-l: 64,66,2,60
+		border-b: 66,126,60,2
+		border-t: 66,64,60,2
+		corner-tl: 64,64,2,2
+		corner-tr: 126,64,2,2
+		corner-bl: 64,126,2,2
+		corner-br: 126,126,2,2
+
+panel-allblack:
+	Inherits: ^panel-base
+	Regions:
+		background: 2,2,60,60
+		border-r: 62,2,2,60
+		border-l: 0,2,2,60
+		border-b: 2,62,60,2
+		border-t: 2,0,60,2
+		corner-tl: 0,0,2,2
+		corner-tr: 62,0,2,2
+		corner-bl: 0,62,2,2
+		corner-br: 62,62,2,2
+
+panel-transparent:
+	Inherits: ^panel-base
+	Regions:
+		border-r: 190,2,2,60
+		border-l: 128,2,2,60
+		border-b: 130,62,60,2
+		border-t: 130,0,60,2
+		corner-tl: 128,0,2,2
+		corner-tr: 190,0,2,2
+		corner-bl: 128,62,2,2
+		corner-br: 190,62,2,2
+
+shellmapborder:
+	Inherits: ^panel-base
+	Regions:
+		border-t: 161,128,62,33
+		border-b: 161,223,62,33
+		border-l: 128,161,33,62
+		border-r: 223,161,33,62
+		corner-tl: 128,128,33,33
+		corner-tr: 223,128,33,33
+		corner-bl: 128,223,33,33
+		corner-br: 223,223,33,33
+
+fnw_font: fnw_font.png
+	decoy1: 0,0,1024,1024

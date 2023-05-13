@@ -1,0 +1,321 @@
+t1_heidrun:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t1_heidrun.shp
+		Scale: 0.75
+	idle:
+		Facings: 64
+	turret:
+		Filename: t1_heidruntur.shp
+		Facings: 64
+	turret_miss:
+		Filename: t1_heidrun_misstur.shp
+		Facings: 64
+	turret_gun:
+		Filename: t1_heidrun_guntur.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: artemisicon.shp
+	
+t1_utgard:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_utgard.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: utgardicon.shp
+
+t2_dwarf:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_autogun_medium.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t2_dwarf.shp
+		Facings: 64
+	lightgun:
+		Filename: minbaselightcub.shp
+		Length: 4
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: achilleicon.shp
+	
+t2_dwarf2:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_dwarf2.shp
+	muzzle:
+		Filename: muzzle_autogun_medium.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	lightgun:
+		Filename: minbaselightcub.shp
+		Length: 4
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: achilleicon.shp
+
+t2_troll:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_troll.shp
+		Scale: 1.0
+	muzzle:
+		Filename: trollplasmaball.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: achilledoomicon.shp
+
+t1_ratatoskr:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_ratatoskr.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: prometheeicon.shp
+
+t2_garm:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_garm.shp
+		Scale: 0.80
+	muzzle:
+		Filename: muzzle_bluegun.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	turret:
+		Filename: t2_garmtur.shp
+		Facings: 64
+		Offset: 0,10
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: minauticon.shp
+
+t2_warg:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_warg.shp
+		Scale: 0.82
+	idle:
+		Facings: 64
+	turret:
+		Filename: t2_wargtur.shp
+		Facings: 64
+	idleamp:
+		Filename: t2_wargamp.shp
+		Facings: 64
+	muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: wargicon.shp
+
+t2_warg.husk:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_warg.husk.shp
+		Scale: 0.82
+	idle:
+
+t2_yggdrasil:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_yggdrasil.shp
+	idle:
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: yggdrasilicon.shp
+
+t2_lindwyrm:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_lindwyrm.shp
+		Scale: 0.82
+	idle:
+		Facings: 64
+	turret:
+		Filename: t2_lindwyrmtur.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_190mm.shp
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: lindwyrnicon.shp
+
+t2_lindwyrm.husk:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_lindwyrm.husk.shp
+		Scale: 0.82
+	idle:
+
+t3_doomtower_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t3_doomtower_mobile.shp
+
+t3_fafnir:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t3_fafnir.shp
+		Scale: 0.85
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	secturret:
+		Filename: fafnir_secturret.shp
+		Facings: 64
+	secturret2:
+		Filename: fafnir_secturret2.shp
+		Facings: 64
+	idle:
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: fafniricon.shp
+
+t3_loki:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t3_loki.shp
+	idle:
+		Facings: 64
+	idle-deployed:
+		Filename: null.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t3_lokideployed.shp
+		Facings: 64
+	make:
+		Filename: t3_lokimake.shp
+		Length: *
+		Tick: 30
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: lokiicon.shp
+
+t3_heimdall:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t3_heimdall.shp
+		Scale: 1.0
+	muzzle:
+		Filename: muzzle_balist_large.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle-deployed:
+		Filename: t3_heimdall_deploy.shp
+	turret:
+		Filename: t3_heimdall_deploytur.shp
+		Facings: 64
+	make:
+		Filename: t3_heimdall_deploymk.shp
+		Length: 17
+		Tick: 30
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: heimicon.shp
+
+t4_odin:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t4_odin.shp
+		Scale: 1.0
+	idle:
+		Facings: 64
+	muzzle:
+		Filename: odin_muzzlefire.shp
+		Length: *
+		BlendMode: Additive
+	muzzle_charge:
+		Filename: odin_muzzlecharge.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t4_odintur.shp
+		Facings: 64
+	turretmode:
+		Filename: t4_odinturmode.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: odinicon.shp
+
+t1_dainn:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: null.shp
+		Scale: 0.75
+	harvest:
+		Filename: harvest_anim.shp
+		Length: *
+		BlendMode: Additive
+	dock:
+		Filename: null.shp
+	dock-loop:
+		Filename: null.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: opharvicon.shp
+	
+# Federation Vehicle Sequences
+
+bull:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: bull.shp
+		Facings: 64
+	icon:
+		Filename: null.shp

@@ -1,0 +1,6254 @@
+General:
+	Name: vigile
+	Id: VIGILE
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		AcceptsSmudgeType: Gibs, Scorch, Crater, Largecrater_clear, Crater_clear
+		Color: c8e4fe
+		RestrictPlayerColor: true
+	TerrainType@Impassable:
+		Type: Impassable
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Largecrater_clear, Crater_clear
+		Color: c8e4fe
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		IsWater: True
+		Color: 1a3c89
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_clear, Crater_clear
+		Color: 493612
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 4b4b4b
+	TerrainType@Pilrock:
+		Type: Pilrock
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch
+		Color: 493612
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		IsWater: False
+		Color: 222222
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 2d4a16
+	TerrainType@Beach:
+		Type: Beach
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 314add
+	TerrainType@Concrete:
+		Type: Concrete
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 515350
+	TerrainType@Wall:
+		Type: Wall
+		TargetTypes: Ground
+		Color: aeaeae
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 323232
+	TerrainType@Diast:
+		Type: Diast
+		TargetTypes: Ground
+		Color: c55ac4
+	TerrainType@Gems:
+		Type: Diastgems
+		TargetTypes: Ground
+		Color: ffcc00
+	TerrainType@Deposit:
+		Type: Deposit
+		TargetTypes: Ground
+		Color: C7C9FA
+	TerrainType@Subterranean:
+		Type: Subterranean
+		Color: c55ac4
+
+Templates:
+	Template@0:
+		Id: 0
+		Images: t00.vig, t01.vig, t02.vig, t03.vig, t04.vig, t05.vig, t06.vig, t07.vig, t08.vig, t09.vig, t10.vig, t11.vig, t12.vig, t13.vig, t14.vig, t15.vig, t16.vig, t17.vig, t18.vig, t19.vig, t20.vig, t21.vig, t22.vig, t23.vig, t24.vig, t25.vig, t26.vig, t27.vig, t28.vig, t29.vig, t30.vig, t31.vig, t32.vig, t33.vig, t34.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@35:
+		Id: 35
+		Images: t35.vig, t36.vig, t37.vig, t38.vig, t39.vig, t40.vig, t41.vig, t42.vig, t43.vig, t44.vig, t45.vig, t46.vig, t47.vig, t48.vig, t49.vig, t50.vig, t51.vig, t52.vig, t53.vig, t54.vig, t55.vig, t56.vig, t57.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@58:
+		Id: 58
+		Images: t58.vig, t59.vig, t60.vig, t61.vig, t62.vig, t63.vig, t64.vig, t65.vig, t66.vig, t67.vig, t68.vig, t69.vig, t70.vig, t71.vig, t72.vig, t73.vig, t74.vig, t75.vig, t76.vig, t77.vig, t78.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@79:
+		Id: 79
+		Images: t79.vig, t80.vig, t81.vig, t82.vig, t83.vig, t84.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@85:
+		Id: 85
+		Images: t85.vig, t86.vig, t87.vig, t88.vig, t89.vig, t90.vig, t91.vig, t92.vig, t93.vig, t94.vig, t95.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@96:
+		Id: 96
+		Images: t96.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			2: Road
+			1: Road
+	Template@97:
+		Id: 97
+		Images: t97.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@98:
+		Id: 98
+		Images: t98.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@99:
+		Id: 99
+		Images: t99.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Clear
+			3: Road
+	Template@100:
+		Id: 100
+		Images: t100.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@101:
+		Id: 101
+		Images: t101.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@102:
+		Id: 102
+		Images: t102.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			3: Clear
+			2: Road
+	Template@103:
+		Id: 103
+		Images: t103.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@104:
+		Id: 104
+		Images: t104.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@105:
+		Id: 105
+		Images: t105.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Road
+			2: Clear
+			0: Road
+	Template@106:
+		Id: 106
+		Images: t106.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@107:
+		Id: 107
+		Images: t107.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Clear
+			0: Road
+	Template@108:
+		Id: 108
+		Images: t108.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Road
+			1: Road
+			0: Road
+	Template@109:
+		Id: 109
+		Images: t109.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+			2: Road
+	Template@110:
+		Id: 110
+		Images: t110.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@111:
+		Id: 111
+		Images: t111.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@112:
+		Id: 112
+		Images: t112.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@113:
+		Id: 113
+		Images: t113.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+	Template@114:
+		Id: 114
+		Images: t114.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+	Template@115:
+		Id: 115
+		Images: t115.vig, t116.vig, t117.vig, t118.vig, t119.vig, t120.vig, t121.vig, t122.vig, t123.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@124:
+		Id: 124
+		Images: t124.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@125:
+		Id: 125
+		Images: t125.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@126:
+		Id: 126
+		Images: t126.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			2: Water
+			0: Beach
+			3: Beach
+			1: Beach
+	Template@127:
+		Id: 127
+		Images: t127.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Water
+			1: Beach
+			3: Beach
+			2: Water
+	Template@128:
+		Id: 128
+		Images: t128.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@129:
+		Id: 129
+		Images: t129.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			3: Beach
+			2: Beach
+			0: Water
+	Template@130:
+		Id: 130
+		Images: t130.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@131:
+		Id: 131
+		Images: t131.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@132:
+		Id: 132
+		Images: t132.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+			2: Beach
+	Template@133:
+		Id: 133
+		Images: t133.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@134:
+		Id: 134
+		Images: t134.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@135:
+		Id: 135
+		Images: t135.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@136:
+		Id: 136
+		Images: t136.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+			2: Beach
+	Template@137:
+		Id: 137
+		Images: t137.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			3: Beach
+			2: Beach
+			0: Beach
+			1: Water
+	Template@138:
+		Id: 138
+		Images: t138.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			2: Beach
+			3: Beach
+			1: Beach
+			0: Clear
+	Template@139:
+		Id: 139
+		Images: t139.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			3: Beach
+			2: Beach
+	Template@140:
+		Id: 140
+		Images: t140.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			3: Beach
+			2: Beach
+			0: Beach
+	Template@141:
+		Id: 141
+		Images: t141.vig, t142.vig, t143.vig, t144.vig, t145.vig, t146.vig, t147.vig, t148.vig, t149.vig, t150.vig, t151.vig, t152.vig, t153.vig, t154.vig, t155.vig, t156.vig, t157.vig, t158.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@159:
+		Id: 159
+		Images: t159.vig, t160.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@161:
+		Id: 161
+		Images: t161.vig,  t162.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@163:
+		Id: 163
+		Images: t163.vig, t164.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@165:
+		Id: 165
+		Images: t165.vig, t166.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@167:
+		Id: 167
+		Images: t167.vig, t168.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@169:
+		Id: 169
+		Images: t169.vig, t170.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@171:
+		Id: 171
+		Images: t171.vig, t172.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@173:
+		Id: 173
+		Images: t173.vig, t174.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@175:
+		Id: 175
+		Images: t175.vig, t176.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@177:
+		Id: 177
+		Images: t177.vig, t178.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@179:
+		Id: 179
+		Images: t179.vig, t180.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@181:
+		Id: 181
+		Images: t181.vig, t182.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@183:
+		Id: 183
+		Images: t183.vig, t184.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@185:
+		Id: 185
+		Images: t185.vig,t186.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@187:
+		Id: 187
+		Images: t187.vig, t188.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@189:
+		Id: 189
+		Images: t189.vig, t190.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@191:
+		Id: 191
+		Images: t191.vig, t192.vig, t193.vig, t194.vig, t195.vig, t196.vig, t197.vig, t198.vig, t199.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@200:
+		Id: 200
+		Images: t200.vig, t201.vig, t202.vig, t203.vig, t204.vig, t205.vig, t206.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@207:
+		Id: 207
+		Images: t207.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@208:
+		Id: 208
+		Images: t208.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@209:
+		Id: 209
+		Images: t209.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@210:
+		Id: 210
+		Images: t210.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@211:
+		Id: 211
+		Images: t211.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@212:
+		Id: 212
+		Images: t212.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@213:
+		Id: 213
+		Images: t213.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@214:
+		Id: 214
+		Images: t214.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@215:
+		Id: 215
+		Images: t215.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@216:
+		Id: 216
+		Images: t216.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@217:
+		Id: 217
+		Images: t217.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@218:
+		Id: 218
+		Images: t218.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@219:
+		Id: 219
+		Images: t219.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@220:
+		Id: 220
+		Images: t220.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@221:
+		Id: 221
+		Images: t221.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@222:
+		Id: 222
+		Images: t222.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@223:
+		Id: 223
+		Images: t223.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@224:
+		Id: 224
+		Images: t224.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@225:
+		Id: 225
+		Images: t225.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@226:
+		Id: 226
+		Images: t226.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@227:
+		Id: 227
+		Images: t227.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@228:
+		Id: 228
+		Images: t228.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@229:
+		Id: 229
+		Images: t229.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@230:
+		Id: 230
+		Images: t230.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@231:
+		Id: 231
+		Images: t231.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@232:
+		Id: 232
+		Images: t232.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@233:
+		Id: 233
+		Images: t233.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@234:
+		Id: 234
+		Images: t234.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@235:
+		Id: 235
+		Images: t235.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@236:
+		Id: 236
+		Images: t236.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@237:
+		Id: 237
+		Images: t237.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@238:
+		Id: 238
+		Images: t238.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@239:
+		Id: 239
+		Images: t239.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@240:
+		Id: 240
+		Images: t240.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@241:
+		Id: 241
+		Images: t241.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@242:
+		Id: 242
+		Images: t242.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@243:
+		Id: 243
+		Images: t243.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@244:
+		Id: 244
+		Images: t244.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@245:
+		Id: 245
+		Images: t245.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@246:
+		Id: 246
+		Images: t246.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@247:
+		Id: 247
+		Images: t247.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@248:
+		Id: 248
+		Images: t248.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@249:
+		Id: 249
+		Images: t249.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@250:
+		Id: 250
+		Images: t250.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@251:
+		Id: 251
+		Images: t251.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@252:
+		Id: 252
+		Images: t252.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@253:
+		Id: 253
+		Images: t253.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@254:
+		Id: 254
+		Images: t254.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@255:
+		Id: 255
+		Images: t255.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@256:
+		Id: 256
+		Images: t256.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@257:
+		Id: 257
+		Images: t257.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@258:
+		Id: 258
+		Images: t258.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@259:
+		Id: 259
+		Images: t259.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@260:
+		Id: 260
+		Images: t260.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@261:
+		Id: 261
+		Images: t261.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@262:
+		Id: 262
+		Images: t262.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@263:
+		Id: 263
+		Images: t263.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@264:
+		Id: 264
+		Images: t264.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@265:
+		Id: 265
+		Images: t265.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@266:
+		Id: 266
+		Images: t266.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@267:
+		Id: 267
+		Images: t267.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@268:
+		Id: 268
+		Images: t268.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@269:
+		Id: 269
+		Images: t269.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@270:
+		Id: 270
+		Images: t270.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@271:
+		Id: 271
+		Images: t271.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@272:
+		Id: 272
+		Images: t272.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@273:
+		Id: 273
+		Images: t273.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@274:
+		Id: 274
+		Images: t274.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@275:
+		Id: 275
+		Images: t275.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Clear
+	Template@276:
+		Id: 276
+		Images: t276.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@277:
+		Id: 277
+		Images: t277.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@278:
+		Id: 278
+		Images: t278.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@279:
+		Id: 279
+		Images: t279.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@280:
+		Id: 280
+		Images: t280.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@281:
+		Id: 281
+		Images: t281.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@282:
+		Id: 282
+		Images: t282.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@283:
+		Id: 283
+		Images: t283.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@284:
+		Id: 284
+		Images: t284.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@285:
+		Id: 285
+		Images: t285.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@286:
+		Id: 286
+		Images: t286.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@287:
+		Id: 287
+		Images: t287.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@288:
+		Id: 288
+		Images: t288.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@289:
+		Id: 289
+		Images: t289.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@290:
+		Id: 290
+		Images: t290.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Clear
+	Template@291:
+		Id: 291
+		Images: t291.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@292:
+		Id: 292
+		Images: t292.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@293:
+		Id: 293
+		Images: t293.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@294:
+		Id: 294
+		Images: t294.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@295:
+		Id: 295
+		Images: t295.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@296:
+		Id: 296
+		Images: t296.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@297:
+		Id: 297
+		Images: t297.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@298:
+		Id: 298
+		Images: t298.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@299:
+		Id: 299
+		Images: t299.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@300:
+		Id: 300
+		Images: t300.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@301:
+		Id: 301
+		Images: t301.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@302:
+		Id: 302
+		Images: t302.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@303:
+		Id: 303
+		Images: t303.vig
+		Categories: Road
+		Size: 2,1
+		PickAny: False
+		Tiles:
+			0: Road
+			1: Road
+	Template@304:
+		Id: 304
+		Images: t304.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@305:
+		Id: 305
+		Images: t305.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@306:
+		Id: 306
+		Images: t306.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@307:
+		Id: 307
+		Images: t307.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@308:
+		Id: 308
+		Images: t308.vig
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@309:
+		Id: 309
+		Images: t309.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@310:
+		Id: 310
+		Images: t310.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@311:
+		Id: 311
+		Images: t311.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@312:
+		Id: 312
+		Images: t312.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@313:
+		Id: 313
+		Images: t313.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@314:
+		Id: 314
+		Images: t314.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@315:
+		Id: 315
+		Images: t315.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@316:
+		Id: 316
+		Images: t316.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@317:
+		Id: 317
+		Images: t317.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@318:
+		Id: 318
+		Images: t318.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@319:
+		Id: 319
+		Images: t319.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@320:
+		Id: 320
+		Images: t320.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@321:
+		Id: 321
+		Images: t321.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@322:
+		Id: 322
+		Images: t322.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@323:
+		Id: 323
+		Images: t323.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@324:
+		Id: 324
+		Images: t324.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@325:
+		Id: 325
+		Images: t325.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			6: Rough
+			7: Rough
+			8: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+			4: Rough
+	Template@326:
+		Id: 326
+		Images: t326.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Clear
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@327:
+		Id: 327
+		Images: t327.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@328:
+		Id: 328
+		Images: t328.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@329:
+		Id: 329
+		Images: t329.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			6: Rough
+			7: Rough
+			8: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+			4: Rough
+	Template@330:
+		Id: 330
+		Images: t330.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@331:
+		Id: 331
+		Images: t331.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@332:
+		Id: 332
+		Images: t332.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			1: Rough
+			2: Rough
+			5: Rough
+	Template@333:
+		Id: 333
+		Images: t333.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@334:
+		Id: 334
+		Images: t334.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@335:
+		Id: 335
+		Images: t335.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			2: Rough
+			3: Rough
+			1: Rough
+	Template@336:
+		Id: 336
+		Images: t336.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@337:
+		Id: 337
+		Images: t337.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			2: Rough
+			3: Rough
+			1: Rough
+	Template@338:
+		Id: 338
+		Images: t338.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			1: Rough
+			2: Rough
+			5: Rough
+	Template@339:
+		Id: 339
+		Images: t339.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@340:
+		Id: 340
+		Images: t340.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+			0: Clear
+			2: Clear
+	Template@341:
+		Id: 341
+		Images: t341.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@342:
+		Id: 342
+		Images: t342.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@343:
+		Id: 343
+		Images: t343.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			1: Clear
+			3: Clear
+			5: Clear
+			2: Clear
+	Template@344:
+		Id: 344
+		Images: t344.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@345:
+		Id: 345
+		Images: t345.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			1: Clear
+			3: Clear
+			2: Clear
+			0: Clear
+			4: Clear
+			5: Clear
+	Template@346:
+		Id: 346
+		Images: t346.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			3: Clear
+			1: Clear
+	Template@347:
+		Id: 347
+		Images: t347.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@348:
+		Id: 348
+		Images: t348.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			3: Clear
+			1: Clear
+			5: Clear
+	Template@349:
+		Id: 349
+		Images: t349.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@350:
+		Id: 350
+		Images: t350.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			8: Clear
+			7: Clear
+			4: Clear
+			1: Clear
+			0: Clear
+			3: Clear
+			6: Clear
+	Template@351:
+		Id: 351
+		Images: t351.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			5: Clear
+			3: Clear
+			1: Clear
+			0: Clear
+			2: Clear
+			4: Clear
+	Template@352:
+		Id: 352
+		Images: t352.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+			2: Clear
+	Template@353:
+		Id: 353
+		Images: t353.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			0: Clear
+			3: Clear
+			6: Clear
+			7: Clear
+			4: Clear
+	Template@354:
+		Id: 354
+		Images: t354.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@355:
+		Id: 355
+		Images: t355.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@356:
+		Id: 356
+		Images: t356.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@357:
+		Id: 357
+		Images: t357.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			1: Clear
+			3: Clear
+			5: Clear
+			4: Clear
+			2: Clear
+			0: Clear
+	Template@358:
+		Id: 358
+		Images: t358.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@359:
+		Id: 359
+		Images: t359.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			8: Clear
+			7: Clear
+			6: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+			4: Clear
+	Template@360:
+		Id: 360
+		Images: t360.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			6: Clear
+			7: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			8: Clear
+	Template@361:
+		Id: 361
+		Images: t361.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			5: Road
+			4: Road
+			3: Road
+	Template@362:
+		Id: 362
+		Images: t362.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@363:
+		Id: 363
+		Images: t363.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@364:
+		Id: 364
+		Images: t364.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@365:
+		Id: 365
+		Images: t365.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@366:
+		Id: 366
+		Images: t366.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@367:
+		Id: 367
+		Images: t367.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@368:
+		Id: 368
+		Images: t368.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@369:
+		Id: 369
+		Images: t369.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@370:
+		Id: 370
+		Images: t370.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@371:
+		Id: 371
+		Images: t371.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@372:
+		Id: 372
+		Images: t372.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@373:
+		Id: 373
+		Images: t373.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@374:
+		Id: 374
+		Images: t374.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@375:
+		Id: 375
+		Images: t375.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@376:
+		Id: 376
+		Images: t376.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@377:
+		Id: 377
+		Images: t377.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@378:
+		Id: 378
+		Images: t378.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@379:
+		Id: 379
+		Images: t379.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@380:
+		Id: 380
+		Images: t380.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@381:
+		Id: 381
+		Images: t381.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@382:
+		Id: 382
+		Images: t382.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@383:
+		Id: 383
+		Images: t383.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@384:
+		Id: 384
+		Images: t384.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@385:
+		Id: 385
+		Images: t385.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@386:
+		Id: 386
+		Images: t386.vig, t387.vig, t388.vig, t389.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@390:
+		Id: 390
+		Images: t390.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@391:
+		Id: 391
+		Images: t391.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@392:
+		Id: 392
+		Images: t392.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@393:
+		Id: 393
+		Images: t393.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@394:
+		Id: 394
+		Images: t394.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@395:
+		Id: 395
+		Images: t395.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@396:
+		Id: 396
+		Images: t396.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@397:
+		Id: 397
+		Images: t397.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@398:
+		Id: 398
+		Images: t398.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@399:
+		Id: 399
+		Images: t399.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@400:
+		Id: 400
+		Images: t400.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@401:
+		Id: 401
+		Images: t401.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@402:
+		Id: 402
+		Images: t402.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@403:
+		Id: 403
+		Images: t403.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@404:
+		Id: 404
+		Images: t404.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@405:
+		Id: 405
+		Images: t405.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@406:
+		Id: 406
+		Images: t406.vig, t407.vig, t408.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@409:
+		Id: 409
+		Images: t409.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+	Template@410:
+		Id: 410
+		Images: t410.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+	Template@411:
+		Id: 411
+		Images: t411.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			4: Rock
+			8: Rock
+			9: Rock
+			10: Clear
+			6: Rock
+			5: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@412:
+		Id: 412
+		Images: t412.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Clear
+			2: Clear
+			1: Rock
+			0: Rock
+	Template@413:
+		Id: 413
+		Images: t413.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Clear
+			2: Clear
+			1: Rock
+			0: Rock
+	Template@414:
+		Id: 414
+		Images: t414.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Clear
+			3: Rock
+			0: Rock
+			4: Rock
+			1: Rock
+	Template@415:
+		Id: 415
+		Images: t415.vig
+		Size: 6,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			2: Rock
+			0: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Rock
+	Template@416:
+		Id: 416
+		Images: t416.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			5: Rock
+			4: Rock
+			1: Rock
+			0: Rock
+			3: Rock
+	Template@417:
+		Id: 417
+		Images: t417.vig, t418.vig, t419.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@420:
+		Id: 420
+		Images: t420.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@421:
+		Id: 421
+		Images: t421.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			5: Clear
+			4: Rock
+			2: Rock
+	Template@422:
+		Id: 422
+		Images: t422.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Rock
+			5: Rock
+			8: Clear
+			7: Rock
+			6: Rock
+			3: Rock
+			4: Rock
+			1: Rock
+	Template@423:
+		Id: 423
+		Images: t423.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@424:
+		Id: 424
+		Images: t424.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@425:
+		Id: 425
+		Images: t425.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			3: Rock
+			1: Rock
+	Template@426:
+		Id: 426
+		Images: t426.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@427:
+		Id: 427
+		Images: t427.vig
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			9: Rock
+			12: Clear
+			13: Rock
+			14: Rock
+			11: Rock
+			8: Rock
+			7: Rock
+			10: Rock
+			4: Rock
+			1: Clear
+	Template@428:
+		Id: 428
+		Images: t428.vig, t429.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+	Template@430:
+		Id: 430
+		Images: t430.vig, t431.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@432:
+		Id: 432
+		Images: t432.vig
+		Size: 5,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			10: Rock
+			11: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			8: Rock
+			3: Rock
+			4: Rock
+	Template@433:
+		Id: 433
+		Images: t433.vig
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			14: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Clear
+			5: Rock
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+	Template@434:
+		Id: 434
+		Images: t434.vig
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			11: Rock
+			7: Rock
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			9: Rock
+			14: Clear
+			13: Rock
+			12: Rock
+			8: Rock
+			4: Rock
+			5: Rock
+	Template@435:
+		Id: 435
+		Images: t435.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Clear
+			6: Rock
+			10: Rock
+			11: Rock
+			9: Rock
+			5: Rock
+			4: Clear
+	Template@436:
+		Id: 436
+		Images: t436.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Clear
+			1: Rock
+	Template@437:
+		Id: 437
+		Images: t437.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Rock
+	Template@438:
+		Id: 438
+		Images: t438.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@439:
+		Id: 439
+		Images: t439.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Clear
+			1: Clear
+	Template@440:
+		Id: 440
+		Images: t440.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			0: Rock
+			3: Clear
+			5: Rock
+			4: Rock
+			7: Rock
+	Template@441:
+		Id: 441
+		Images: t441.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			3: Clear
+			5: Clear
+	Template@442:
+		Id: 442
+		Images: t442.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			0: Clear
+	Template@443:
+		Id: 443
+		Images: t443.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Clear
+			3: Clear
+			0: Clear
+			5: Clear
+			4: Clear
+			7: Clear
+	Template@444:
+		Id: 444
+		Images: t444.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			4: Rock
+			1: Rock
+			2: Rock
+			5: Clear
+	Template@445:
+		Id: 445
+		Images: t445.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			4: Rock
+			5: Clear
+			1: Clear
+	Template@446:
+		Id: 446
+		Images: t446.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			8: Rock
+			4: Rock
+			3: Clear
+	Template@447:
+		Id: 447
+		Images: t447.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Rock
+			5: Rock
+			2: Rock
+			4: Rock
+			3: Clear
+	Template@448:
+		Id: 448
+		Images: t448.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			4: Rock
+			6: Rock
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@449:
+		Id: 449
+		Images: t449.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			3: Rock
+			1: Clear
+	Template@450:
+		Id: 450
+		Images: t450.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			4: Clear
+	Template@451:
+		Id: 451
+		Images: t451.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@452:
+		Id: 452
+		Images: t452.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Rock
+			4: Rock
+	Template@453:
+		Id: 453
+		Images: t453.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Rock
+			4: Rock
+	Template@454:
+		Id: 454
+		Images: t454.vig
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@455:
+		Id: 455
+		Images: t455.vig
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@456:
+		Id: 456
+		Images: t456.vig
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@457:
+		Id: 457
+		Images: t457.vig
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@458:
+		Id: 458
+		Images: t458.vig, t459.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@460:
+		Id: 460
+		Images: t460.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Water
+	Template@461:
+		Id: 461
+		Images: t461.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			8: Water
+			6: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			7: Water
+	Template@462:
+		Id: 462
+		Images: t462.vig
+		Size: 4,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			12: Water
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Water
+			7: Water
+			6: Rock
+			10: Water
+			9: Rock
+			13: Water
+			5: Rock
+	Template@463:
+		Id: 463
+		Images: t463.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Water
+			2: Water
+			1: Rock
+			0: Rock
+	Template@464:
+		Id: 464
+		Images: t464.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Water
+			2: Water
+			1: Rock
+			0: Rock
+	Template@465:
+		Id: 465
+		Images: t465.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			8: Water
+			7: Rock
+			6: Rock
+			3: Rock
+			0: Rock
+			4: Rock
+			1: Water
+	Template@466:
+		Id: 466
+		Images: t466.vig
+		Size: 6,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Water
+	Template@467:
+		Id: 467
+		Images: t467.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			5: Rock
+			4: Rock
+			1: Rock
+			0: Rock
+			2: Water
+	Template@468:
+		Id: 468
+		Images: t468.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@469:
+		Id: 469
+		Images: t469.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@470:
+		Id: 470
+		Images: t470.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@471:
+		Id: 471
+		Images: t471.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+			0: Water
+	Template@472:
+		Id: 472
+		Images: t472.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Water
+			5: Rock
+			4: Water
+			3: Water
+			6: Rock
+			9: Rock
+			10: Rock
+			7: Rock
+			8: Rock
+	Template@473:
+		Id: 473
+		Images: t473.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@474:
+		Id: 474
+		Images: t474.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@475:
+		Id: 475
+		Images: t475.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			7: Rock
+			6: Water
+			4: Rock
+	Template@476:
+		Id: 476
+		Images: t476.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+	Template@477:
+		Id: 477
+		Images: t477.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			0: Rock
+			4: Rock
+			6: Rock
+			8: Water
+			9: Rock
+			7: Rock
+			5: Rock
+			3: Clear
+	Template@478:
+		Id: 478
+		Images: t478.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Water
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@479:
+		Id: 479
+		Images: t479.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Water
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@480:
+		Id: 480
+		Images: t480.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@481:
+		Id: 481
+		Images: t481.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@482:
+		Id: 482
+		Images: t482.vig
+		Size: 4,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			17: Water
+			13: Rock
+			12: Water
+			8: Rock
+			4: Rock
+			0: Rock
+			5: Rock
+			1: Clear
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+			14: Rock
+			9: Rock
+	Template@483:
+		Id: 483
+		Images: t483.vig
+		Size: 4,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			7: Rock
+			11: Rock
+			15: Water
+			14: Rock
+			18: Water
+			17: Rock
+			16: Rock
+			12: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			2: Rock
+			10: Rock
+	Template@484:
+		Id: 484
+		Images: t484.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+			6: Rock
+			7: Water
+			11: Rock
+			10: Rock
+			5: Rock
+			4: Rock
+	Template@485:
+		Id: 485
+		Images: t485.vig
+		Size: 5,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			5: Water
+			10: Rock
+			11: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			2: Water
+			3: Rock
+			8: Rock
+			4: Rock
+	Template@486:
+		Id: 486
+		Images: t486.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+	Template@487:
+		Id: 487
+		Images: t487.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+	Template@488:
+		Id: 488
+		Images: t488.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@489:
+		Id: 489
+		Images: t489.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@490:
+		Id: 490
+		Images: t490.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@491:
+		Id: 491
+		Images: t491.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@492:
+		Id: 492
+		Images: t492.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rough
+	Template@493:
+		Id: 493
+		Images: t493.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rough
+	Template@494:
+		Id: 494
+		Images: t494.vig
+		Size: 4,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			4: Rock
+			8: Rock
+			9: Rock
+			1: Rock
+			2: Rock
+			3: Rough
+			6: Rock
+			5: Rock
+			10: Rough
+			12: Rough
+	Template@495:
+		Id: 495
+		Images: t495.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Rough
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@496:
+		Id: 496
+		Images: t496.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Rough
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@497:
+		Id: 497
+		Images: t497.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Rough
+			5: Rough
+			4: Rock
+			3: Rock
+			0: Rock
+			1: Rock
+	Template@498:
+		Id: 498
+		Images: t498.vig
+		Size: 6,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Rock
+	Template@499:
+		Id: 499
+		Images: t499.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			4: Rock
+			5: Rock
+			2: Rough
+			1: Rock
+			0: Rock
+			3: Rock
+	Template@500:
+		Id: 500
+		Images: t500.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@501:
+		Id: 501
+		Images: t501.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@502:
+		Id: 502
+		Images: t502.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@503:
+		Id: 503
+		Images: t503.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+	Template@504:
+		Id: 504
+		Images: t504.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			5: Rock
+			4: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			1: Rock
+	Template@505:
+		Id: 505
+		Images: t505.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@506:
+		Id: 506
+		Images: t506.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@507:
+		Id: 507
+		Images: t507.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+			4: Rock
+			2: Rock
+	Template@508:
+		Id: 508
+		Images: t508.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+			6: Rough
+	Template@509:
+		Id: 509
+		Images: t509.vig
+		Size: 3,5
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Clear
+			1: Clear
+			6: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			14: Rock
+			13: Rock
+			10: Rock
+			9: Rough
+	Template@510:
+		Id: 510
+		Images: t510.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@511:
+		Id: 511
+		Images: t511.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@512:
+		Id: 512
+		Images: t512.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@513:
+		Id: 513
+		Images: t513.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@514:
+		Id: 514
+		Images: t514.vig
+		Size: 5,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			11: Rock
+			10: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			8: Rock
+			3: Rock
+			4: Rock
+	Template@515:
+		Id: 515
+		Images: t515.vig
+		Size: 4,5
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			14: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Rock
+			5: Rock
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+	Template@516:
+		Id: 516
+		Images: t516.vig
+		Size: 4,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			11: Rock
+			7: Rock
+			3: Rock
+			2: Rock
+			6: Rock
+			5: Rock
+			4: Rock
+			8: Rock
+			12: Rock
+			13: Rock
+			14: Rock
+			10: Rock
+			9: Rock
+	Template@517:
+		Id: 517
+		Images: t517.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rough
+			6: Rock
+			5: Rock
+			4: Clear
+			9: Clear
+			10: Rock
+			11: Rock
+	Template@518:
+		Id: 518
+		Images: t518.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+	Template@519:
+		Id: 519
+		Images: t519.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+	Template@520:
+		Id: 520
+		Images: t520.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@521:
+		Id: 521
+		Images: t521.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@522:
+		Id: 522
+		Images: t522.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@523:
+		Id: 523
+		Images: t523.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@524:
+		Id: 524
+		Images: t524.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@525:
+		Id: 525
+		Images: t525.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Clear
+			2: Rock
+			1: Rock
+			0: Road
+	Template@526:
+		Id: 526
+		Images: t526.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			8: Clear
+			6: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Road
+			5: Rock
+			7: Clear
+	Template@527:
+		Id: 527
+		Images: t527.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			8: Clear
+			6: Rock
+			7: Clear
+			5: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@528:
+		Id: 528
+		Images: t528.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			9: Clear
+			6: Rock
+			7: Clear
+			4: Rock
+			3: Rock
+			0: Rock
+			1: Rock
+			5: Rock
+			8: Clear
+			2: Rock
+	Template@529:
+		Id: 529
+		Images: t529.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@530:
+		Id: 530
+		Images: t530.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Clear
+			3: Rock
+	Template@531:
+		Id: 531
+		Images: t531.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@532:
+		Id: 532
+		Images: t532.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@533:
+		Id: 533
+		Images: t533.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@534:
+		Id: 534
+		Images: t534.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			2: Rock
+			0: Rock
+	Template@535:
+		Id: 535
+		Images: t535.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@536:
+		Id: 536
+		Images: t536.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@537:
+		Id: 537
+		Images: t537.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@538:
+		Id: 538
+		Images: t538.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@539:
+		Id: 539
+		Images: t539.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			4: Rock
+			5: Rock
+	Template@540:
+		Id: 540
+		Images: t540.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@541:
+		Id: 541
+		Images: t541.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			4: Rock
+			3: Rock
+			7: Rock
+			8: Rock
+			6: Clear
+			11: Clear
+	Template@542:
+		Id: 542
+		Images: t542.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Clear
+	Template@543:
+		Id: 543
+		Images: t543.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Clear
+	Template@544:
+		Id: 544
+		Images: t544.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@545:
+		Id: 545
+		Images: t545.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@546:
+		Id: 546
+		Images: t546.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Road
+			3: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rough
+			4: Rock
+			2: Rock
+	Template@547:
+		Id: 547
+		Images: t547.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@548:
+		Id: 548
+		Images: t548.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@549:
+		Id: 549
+		Images: t549.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			0: Rock
+			1: Clear
+	Template@550:
+		Id: 550
+		Images: t550.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@551:
+		Id: 551
+		Images: t551.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@552:
+		Id: 552
+		Images: t552.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@553:
+		Id: 553
+		Images: t553.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@554:
+		Id: 554
+		Images: t554.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+	Template@555:
+		Id: 555
+		Images: t555.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			1: Rock
+			0: Rock
+	Template@556:
+		Id: 556
+		Images: t556.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			7: Rock
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			4: Rock
+			6: Road
+			9: Clear
+	Template@557:
+		Id: 557
+		Images: t557.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+	Template@558:
+		Id: 558
+		Images: t558.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+	Template@559:
+		Id: 559
+		Images: t559.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			10: Road
+			6: Rock
+			9: Road
+	Template@560:
+		Id: 560
+		Images: t560.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			10: Rock
+	Template@561:
+		Id: 561
+		Images: t561.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			5: Rock
+			6: Rock
+			10: Rock
+			11: Road
+			7: Road
+			9: Rock
+	Template@562:
+		Id: 562
+		Images: t562.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			2: Clear
+			7: Clear
+			11: Rock
+			10: Rock
+			9: Road
+	Template@563:
+		Id: 563
+		Images: t563.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@564:
+		Id: 564
+		Images: t564.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@565:
+		Id: 565
+		Images: t565.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			1: Rock
+			4: Rock
+			3: Rock
+			5: Clear
+	Template@566:
+		Id: 566
+		Images: t566.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@567:
+		Id: 567
+		Images: t567.vig
+		Size: 4,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Road
+			7: Clear
+			6: Road
+			5: Rock
+			4: Rock
+			0: Clear
+			1: Rock
+			2: Rock
+	Template@568:
+		Id: 568
+		Images: t568.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			5: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+	Template@569:
+		Id: 569
+		Images: t569.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			5: Rock
+			2: Rock
+			7: Rock
+			6: Rock
+			10: Road
+			9: Rock
+	Template@570:
+		Id: 570
+		Images: t570.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Rock
+			8: Rock
+			11: Road
+			10: Road
+			9: Rock
+			6: Rock
+			7: Rock
+			4: Rock
+			1: Road
+	Template@571:
+		Id: 571
+		Images: t571.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Clear
+			4: Clear
+	Template@572:
+		Id: 572
+		Images: t572.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Clear
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+			4: Clear
+	Template@573:
+		Id: 573
+		Images: t573.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Clear
+	Template@574:
+		Id: 574
+		Images: t574.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Clear
+	Template@575:
+		Id: 575
+		Images: t575.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Road
+			3: Rock
+			1: Road
+	Template@576:
+		Id: 576
+		Images: t576.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			4: Road
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@577:
+		Id: 577
+		Images: t577.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@578:
+		Id: 578
+		Images: t578.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@579:
+		Id: 579
+		Images: t579.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			0: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			10: Clear
+			11: Rock
+			9: Clear
+	Template@580:
+		Id: 580
+		Images: t580.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			10: Rock
+			11: Rock
+			8: Rock
+			7: Rock
+			4: Rock
+			3: Rock
+			0: Rock
+	Template@581:
+		Id: 581
+		Images: t581.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			9: Rock
+			10: Rock
+			11: Rock
+			7: Clear
+			6: Rock
+			5: Rock
+			1: Rock
+			0: Rock
+	Template@582:
+		Id: 582
+		Images: t582.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			11: Rock
+			10: Rock
+			6: Rock
+			5: Rock
+			1: Rock
+			2: Clear
+			0: Rock
+			4: Rock
+			9: Road
+	Template@583:
+		Id: 583
+		Images: t583.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@584:
+		Id: 584
+		Images: t584.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			4: Road
+			5: Road
+			3: Road
+	Template@585:
+		Id: 585
+		Images: t585.vig
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Road
+			4: Rock
+			3: Rock
+			1: Rock
+	Template@586:
+		Id: 586
+		Images: t586.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@587:
+		Id: 587
+		Images: t587.vig
+		Size: 4,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			4: Rock
+			0: Clear
+			1: Rock
+			2: Rock
+			3: Rock
+			7: Road
+			6: Road
+	Template@588:
+		Id: 588
+		Images: t588.vig
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			5: Rock
+			9: Rock
+			4: Rock
+			8: Clear
+	Template@589:
+		Id: 589
+		Images: t589.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rock
+			10: Clear
+			9: Rock
+	Template@590:
+		Id: 590
+		Images: t590.vig
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			9: Rock
+			10: Clear
+			7: Rock
+			4: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			8: Rock
+			11: Clear
+	Template@591:
+		Id: 591
+		Images: t591.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@592:
+		Id: 592
+		Images: t592.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@593:
+		Id: 593
+		Images: t593.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Clear
+			0: Rock
+	Template@594:
+		Id: 594
+		Images: t594.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Clear
+	Template@595:
+		Id: 595
+		Images: t595.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@596:
+		Id: 596
+		Images: t596.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+	Template@597:
+		Id: 597
+		Images: t597.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+			3: Rock
+			1: Clear
+	Template@598:
+		Id: 598
+		Images: t598.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@599:
+		Id: 599
+		Images: t599.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@600:
+		Id: 600
+		Images: t600.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Road
+			3: Rock
+			2: Rock
+			4: Clear
+			6: Clear
+			8: Clear
+			7: Rock
+			5: Rock
+	Template@601:
+		Id: 601
+		Images: t601.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@602:
+		Id: 602
+		Images: t602.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@603:
+		Id: 603
+		Images: t603.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			3: Rock
+	Template@604:
+		Id: 604
+		Images: t604.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@605:
+		Id: 605
+		Images: t605.vig
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rough
+			9: Clear
+	Template@606:
+		Id: 606
+		Images: t606.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rough
+			4: Rough
+			2: Rock
+	Template@607:
+		Id: 607
+		Images: t607.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@608:
+		Id: 608
+		Images: t608.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rough
+			4: Rough
+	Template@609:
+		Id: 609
+		Images: t609.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rough
+			3: Rock
+			1: Rough
+	Template@610:
+		Id: 610
+		Images: t610.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rough
+			2: Rock
+			4: Rough
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@611:
+		Id: 611
+		Images: t611.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@612:
+		Id: 612
+		Images: t612.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Water
+	Template@613:
+		Id: 613
+		Images: t613.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@614:
+		Id: 614
+		Images: t614.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Water
+	Template@615:
+		Id: 615
+		Images: t615.vig
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+	Template@616:
+		Id: 616
+		Images: t616.vig
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+	Template@617:
+		Id: 617
+		Images: t617.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Rock
+			5: Rock
+	Template@618:
+		Id: 618
+		Images: t618.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+	Template@619:
+		Id: 619
+		Images: t619.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Water
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+	Template@620:
+		Id: 620
+		Images: t620.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@621:
+		Id: 621
+		Images: t621.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@622:
+		Id: 622
+		Images: t622.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+			4: Water
+			2: Rock
+	Template@623:
+		Id: 623
+		Images: t623.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Water
+	Template@624:
+		Id: 624
+		Images: t624.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Water
+			5: Water
+			3: Rock
+			1: Rock
+	Template@625:
+		Id: 625
+		Images: t625.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@626:
+		Id: 626
+		Images: t626.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+			4: Water
+			2: Rock
+	Template@627:
+		Id: 627
+		Images: t627.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Clear
+			4: Rock
+			1: Rock
+			2: Clear
+			5: Clear
+	Template@628:
+		Id: 628
+		Images: t628.vig
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			4: Rock
+			1: Clear
+	Template@629:
+		Id: 629
+		Images: t629.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@630:
+		Id: 630
+		Images: t630.vig
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@631:
+		Id: 631
+		Images: t631.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@632:
+		Id: 632
+		Images: t632.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@633:
+		Id: 633
+		Images: t633.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@634:
+		Id: 634
+		Images: t634.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@635:
+		Id: 635
+		Images: t635.vig, t636.vig, t637.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@638:
+		Id: 638
+		Images: t638.vig, t639.vig, t640.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@641:
+		Id: 641
+		Images: t641.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@642:
+		Id: 642
+		Images: t642.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@643:
+		Id: 643
+		Images: t643.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@644:
+		Id: 644
+		Images: t644.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@645:
+		Id: 645
+		Images: t645.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@646:
+		Id: 646
+		Images: t646.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@647:
+		Id: 647
+		Images: t647.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@648:
+		Id: 648
+		Images: t648.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@649:
+		Id: 649
+		Images: t649.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@650:
+		Id: 650
+		Images: t650.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@651:
+		Id: 651
+		Images: t651.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@652:
+		Id: 652
+		Images: t652.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@653:
+		Id: 653
+		Images: t653.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@654:
+		Id: 654
+		Images: t654.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@655:
+		Id: 655
+		Images: t655.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@656:
+		Id: 656
+		Images: t656.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@657:
+		Id: 657
+		Images: t657.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Clear
+			4: Rock
+			2: Rock
+	Template@658:
+		Id: 658
+		Images: t658.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			4: Rough
+			2: Rock
+	Template@659:
+		Id: 659
+		Images: t659.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@660:
+		Id: 660
+		Images: t660.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@661:
+		Id: 661
+		Images: t661.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@662:
+		Id: 662
+		Images: t662.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@663:
+		Id: 663
+		Images: t663.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@664:
+		Id: 664
+		Images: t664.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@665:
+		Id: 665
+		Images: t665.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@666:
+		Id: 666
+		Images: t666.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@667:
+		Id: 667
+		Images: t667.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@668:
+		Id: 668
+		Images: t668.vig
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Rock
+			8: Rock
+			10: Rock
+	Template@669:
+		Id: 669
+		Images: t669.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Clear
+	Template@670:
+		Id: 670
+		Images: t670.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@671:
+		Id: 671
+		Images: t671.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@672:
+		Id: 672
+		Images: t672.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@673:
+		Id: 673
+		Images: t673.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@674:
+		Id: 674
+		Images: t674.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@675:
+		Id: 675
+		Images: t675.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@676:
+		Id: 676
+		Images: t676.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@677:
+		Id: 677
+		Images: t677.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@678:
+		Id: 678
+		Images: t678.vig
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@679:
+		Id: 679
+		Images: t679.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@680:
+		Id: 680
+		Images: t680.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@681:
+		Id: 681
+		Images: t681.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@682:
+		Id: 682
+		Images: t682.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@683:
+		Id: 683
+		Images: t683.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@684:
+		Id: 684
+		Images: t684.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@685:
+		Id: 685
+		Images: t685.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@686:
+		Id: 686
+		Images: t686.vig
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@687:
+		Id: 687
+		Images: t687.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			2: Rock
+			4: Rock
+			3: Rock
+			1: Rock
+	Template@688:
+		Id: 688
+		Images: t688.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+	Template@689:
+		Id: 689
+		Images: t689.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@690:
+		Id: 690
+		Images: t690.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Rock
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@691:
+		Id: 691
+		Images: t691.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@692:
+		Id: 692
+		Images: t692.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@693:
+		Id: 693
+		Images: t693.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@694:
+		Id: 694
+		Images: t694.vig
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@695:
+		Id: 695
+		Images: t695.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@696:
+		Id: 696
+		Images: t696.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@697:
+		Id: 697
+		Images: t697.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Water
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@698:
+		Id: 698
+		Images: t698.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Water
+	Template@699:
+		Id: 699
+		Images: t699.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@700:
+		Id: 700
+		Images: t700.vig
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@701:
+		Id: 701
+		Images: t701.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@702:
+		Id: 702
+		Images: t702.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@703:
+		Id: 703
+		Images: t703.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Rock
+	Template@704:
+		Id: 704
+		Images: t704.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@705:
+		Id: 705
+		Images: t705.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Rock
+	Template@706:
+		Id: 706
+		Images: t706.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@707:
+		Id: 707
+		Images: t707.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@708:
+		Id: 708
+		Images: t708.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@709:
+		Id: 709
+		Images: t709.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@710:
+		Id: 710
+		Images: t710.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@711:
+		Id: 711
+		Images: t711.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@712:
+		Id: 712
+		Images: t712.vig
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock

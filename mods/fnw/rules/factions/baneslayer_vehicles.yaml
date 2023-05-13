@@ -1,0 +1,759 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Vehicles Baneslayer Rules ///////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+t1_dainn:
+	Inherits: ^VoxelVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_dainn.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@harvester: ^Harvester.rules
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 10
+		InitialActivity: FindResources
+	# //////// Turret Trait System //////////
+	-AutoTarget:
+	WithSpriteBody:
+	# //////// Custom Effet Unite //////////
+
+t1_heidrun:
+	Inherits: ^ShapeVehicleLight
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_heidrun.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 1048, 1048, 0, 0
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 20
+		IconPalette: Baneslayer.Icon
+	# //////// Trait Mechanics Unite //////////
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		PassengerConditions:
+			roquetteorderinf: if-at
+			soldierop: if-ap
+			jotun: if-fl
+			t1_opengineer: if-rep
+	WithRangeCircle@DetectCloack:
+		Range: 7c0
+		Color: FFFFFF65
+	# //////// Turret Trait System - multi weapons / infantry //////////
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+		ShowShadow: false
+		Turret: matrice
+		RequiresCondition: !(if-at || if-ap || if-fl || if-rep)
+	AttackTurreted:
+		Armaments: APgun, missile, AT_armament, AP_armament, flamer_gun, repair_gun
+		Turrets: matrice, AT_armament, AP_armament, flamer_gun, repair_gun
+		RequiresCondition: !(empdisable || stunweapons)
+	# //////// Turret Sprites traits //////////   
+	WithSpriteTurret@AT:
+		ShowShadow: false
+		Sequence: turret_miss
+		Turret: AT_armament
+		RequiresCondition: if-at
+	WithSpriteTurret@AP:
+		ShowShadow: false
+		Sequence: turret_gun
+		Turret: AP_armament
+		RequiresCondition: if-ap
+	WithSpriteTurret@FL:
+		ShowShadow: false
+		Sequence: turret_gun
+		Turret: flamer_gun
+		RequiresCondition: if-fl
+	WithSpriteTurret@REP:
+		ShowShadow: false
+		Sequence: turret_gun
+		Turret: repair_gun
+		RequiresCondition: if-rep
+	# //////// Turret system/link-weapons traits //////////   
+	Turreted:
+		Turret: matrice
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+		RequiresCondition: !(if-at || if-ap || if-fl || if-rep)
+	Turreted@AT:
+		Turret: AT_armament
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: -340,0,480
+		PauseOnCondition: stunweapons
+	Turreted@AP:
+		Turret: AP_armament
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: -340,0,480
+		PauseOnCondition: stunweapons
+	Turreted@FL:
+		Turret: flamer_gun
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: -340,0,480
+		PauseOnCondition: stunweapons
+	Turreted@REP:
+		Turret: repair_gun
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: -340,0,480
+		PauseOnCondition: stunweapons
+	# //////// Armement base - multi weapons / infantry //////////
+	Armament@Gun:
+		Name: APgun
+		Weapon: Minigun.matrice
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 250,0,450
+		MuzzleSequence: muzzle
+		RequiresCondition: !(if-at || if-ap || if-fl || if-rep)
+	Armament@Missile:
+		Name: missile
+		Weapon: Missile.matrice
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 60,25,450
+		MuzzleSequence: muzzle
+	Armament@miss:
+		Name: AT_armament
+		Weapon: Einherjar.missile
+		Turret: AT_armament
+		LocalOffset: 128,0,424
+		RequiresCondition: if-at
+	Armament@gun:
+		Name: AP_armament
+		Weapon: Supergun.matrice
+		Turret: AP_armament
+		LocalOffset: 128,0,424
+		RequiresCondition: if-ap
+	Armament@flamer:
+		Name: flamer_gun
+		Weapon: plasma.jotuun.mode2
+		Turret: flamer_gun
+		LocalOffset: 128,0,424
+		RequiresCondition: if-fl
+	Armament@repair:
+		Name: repair_gun
+		Weapon: Repair.laser
+		Turret: repair_gun
+		LocalOffset: 128,0,424
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+		RequiresCondition: if-rep
+
+t2_garm:
+	Inherits: ^ShapeHoverMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_garm.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 40
+		IconPalette: Baneslayer.Icon
+	# //////// Turret Trait System //////////
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -80,0,480
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	# //////// Armement base //////////
+	Armament@PRIMARYDEFAULT:
+		Name: primary
+		Weapon: Garm.Railgun
+		Recoil: 400
+		MuzzleSequence: muzzle
+		RecoilRecovery: 400
+		LocalOffset: 1600,180,250
+	# //// Protocole Fonction ////
+	JamsMissiles@ProtocoleShield:
+		Range: 3c128
+		DeflectionRelationships: Enemy, Neutral
+		RequiresCondition: PShield.Activated
+	WithRangeCircle@JamsShield:
+		Range: 3c128
+		Color: FF990065
+		RequiresCondition: PShield.Activated
+
+t2_warg:
+	Inherits: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_warg.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPips: ^CargoPips
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAir
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 50
+	Mobile:
+		Locomotor: amphibious
+	# //////// Trait Mechanics Unite //////////
+	Cargo:
+		Types: Infantry
+		MaxWeight: 10
+		PipCount: 5
+		PassengerFacing: -1
+	# //////// Turret Trait System //////////
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: 0,0,600
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	# //////// Armement base //////////*
+	Armament@PRIMARY:
+		Weapon: Warg_AA
+		Recoil: 400
+		RecoilRecovery: 400
+		LocalOffset: 200,-300,600, 200,300,600
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	# //////// Sprites Condition Water //////////
+	GrantConditionOnTerrain@Water:
+		Condition: amphibie
+		TerrainTypes: Water
+	WithFacingSpriteBody:
+		RequiresCondition: !amphibie
+	WithFacingSpriteBody@AmphMode:
+		Sequence: idleamp
+		RequiresCondition: amphibie
+		
+t2_lindwyrm:
+	Inherits: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_lindwyrm.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 60
+		IconPalette: Baneslayer.Icon
+	# //////// Turret Trait System //////////
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -30,0,520
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	# //////// Armement CCircle Range //////////
+	WithRangeCircle@MinAreaFire:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFire:
+		Color: FF990065
+	# //////// Armement base //////////
+	Armament@primary:
+		Weapon: 120mm.lindwyrm
+		LocalOffset: 1230,0,1050
+		RequiresCondition: !SwitchFireMode
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@primary:
+		Weapon: 120mm.lindwyrm
+		LocalOffset: 1230,0,1050
+		RequiresCondition: !SwitchFireMode
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@PRIMARYSHOCK:
+		Name: primary
+		Turret: primary
+		Weapon: 120mm_lindwyrmShock
+		LocalOffset: 0,0,0
+	Armament@primaryplasma:
+		Name: secondary
+		Weapon: 120mm.lindwyrm.secondfire
+		AmmoPoolName: secondary
+		LocalOffset: 1230,0,1050
+		RequiresCondition: SwitchFireMode
+		PauseOnCondition: !ammo
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	ReloadArmamentsBar:
+
+t2_yggdrasil:
+	Inherits: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_lindwyrm.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableSupportUnit
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+		Priority: 4
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 70
+		Prerequisites: optech
+		Description: Mobile Construction Vehicle
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Yggdrasil (Mcv)
+	Health:
+		HP: 5000
+	-AutoTarget:
+	# //////// MCV mechanics //////////
+	Transforms:
+		IntoActor: opcacnst
+		Offset: -3,-2
+		Facing: 370
+		PauseOnCondition: empdisable || stunweapons
+		TransformSounds: placbldg.aud, build5.aud
+		NoTransformSounds: nodeply1.aud:
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	# //////// Custom Effet Unite //////////
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 870,625,-10
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 870,-625,-10
+		
+t2_troll:
+	Inherits: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_troll.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 80
+		IconPalette: Baneslayer.Icon
+	-AutoTarget:
+	# //////// Abillity Deploy Mechanics //////////
+	Transforms:
+		IntoActor: t2_troll_deployed
+		TransformSounds: troll_deploy.aud
+		PauseOnCondition: empdisable || stunweapons
+		Offset: 0,0
+		Facing: 370
+	# //////// Custom Effet Unite //////////
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,625,-10
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,-625,-10
+
+t3_fafnir:
+	Inherits: ^ShapeHoverHeavy
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_fafnir.stat.unite
+	# / Inherit Option Unite /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Hover.vehicle.move
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@Cargo.pips: ^CargoPips
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 2648, 2648, 0, 0
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 90
+	# //////// Turret Garrisoned Trait System //////////
+	AttackGarrisoned:
+		Name: garrisonedturret
+		Armaments: garrisoned
+		Turret: turretbunk
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 488, 488, 488, 488, 488, 488
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		TurnSpeed: 255
+		PauseOnCondition: stunweapons
+	# //////// Abillity Cargo / AutoHeal Mechanics //////////
+	Cargo:
+		Types: Infantry
+		MaxWeight: 15
+		PipCount: 15
+	ChangesHealth@Base:
+		Step: 25
+		Delay: 8
+		StartIfBelow: 50
+		DamageCooldown: 60
+	# //////// Custom Effet Unite //////////
+	GrantConditionOnMovement@MOUVSOUND:
+		Condition: mouvsnd
+	LeavesTrails@01:
+		Image: smoke_movelarge
+		Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
+		Palette: flameeffect20
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 570,655,-10
+	LeavesTrails@02:
+		Image: smoke_movelarge
+		Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
+		Palette: flameeffect20
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 570,-655,-10
+
+t3_heimdall:
+	Inherits: ^ShapeVehicleHeavy
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_heimdall.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 100
+	-AutoTarget:
+	# //////// Abillity Deploy Mechanics //////////
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
+	Transforms:
+		IntoActor: t3_heimdall_deploy
+		TransformSounds: troll_deploy.aud
+		PauseOnCondition: empdisable || stunweapons
+		Offset: 0,0
+		Facing: 370
+	# //////// Custom Effet Unite //////////
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,625,-10
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,-625,-10
+
+t3_loki:
+	Inherits: ^ShapeHoverMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_loki.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Hover.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 110
+		HP: 2800
+	# //////// Turret Trait System //////////
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable || stunweapons
+	Passenger:
+		RequireForceMoveCondition: !undeployed
+	WithMuzzleOverlay:
+	# //////// Armement IEM Contion Fire Delay //////////
+	GrantConditionOnAttack@TargetRailgun:
+		ArmamentNames: primary
+		RevokeOnNewTarget: true
+		RequiredShotsPerInstance: 46
+		Condition: Target
+	Armament@Target01:
+		Weapon: Loki.target01
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 650,0,280
+		RequiresCondition: !Target
+	Armament@Target02:
+		Weapon: Loki.target02
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 650,0,280
+		RequiresCondition: !Target
+	Armament@IEM:
+		Weapon: Loki.Iem
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 650,0,280
+		RequiresCondition: Target
+
+t4_odin:
+	Inherits: ^ShapeVehicleHeavy
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t4_odin.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HeavyTracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.baneslayer
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+	GrantConditionOnAttack@Target:
+		ArmamentNames: primary
+		RevokeOnNewTarget: true
+		IsCyclic: True
+		RevokeDelay: 12
+		RequiredShotsPerInstance: 10
+		Condition: Target
+	Armament@MATTERMUZZLE:
+		Weapon: OdinWeapon.muzzle
+		LocalOffset: 1800,540,420, 1800,-540,420
+		MuzzleSequence: muzzle_charge
+		MuzzlePalette: powereffect
+		RequiresCondition: !mode2 && !Target
+	Armament@MATTER:
+		Weapon: OdinWeapon.target
+		LocalOffset: 1600,540,420, 1600,-540,420
+		RequiresCondition: !mode2 && !Target
+	Armament@MATTERFIRE:
+		Weapon: Dark.Matter
+		LocalOffset: 1600,540,420, 1600,-540,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+		RequiresCondition: !mode2 && Target
+	WithMuzzleOverlay:
+	Armament@ION:
+		Weapon: Ion.Matter
+		LocalOffset: 1600,540,420, 1600,-540,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+		RequiresCondition: mode2
+	GrantConditionOnDeploy:
+		DeployedCondition: mode2
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret@MATTER:
+		RequiresCondition: !mode2
+		Sequence: turret
+	WithSpriteTurret@ION:
+		RequiresCondition: mode2
+		Sequence: turretmode
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: 0,0,500
+		PauseOnCondition: stunweapons
+	SpawnActorOnDeath:
+		Actor: t4_odin.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
+	PeriodicExplosion@ShakeRoll:
+		Weapon: ^Shake_roll_effect_min
+		LocalOffset: 0,0,0c0
+		ResetReloadWhenEnabled: false
+		RequiresCondition: move_unit
+	GrantConditionOnMovement:
+		Condition: move_unit
+	GrantConditionWhileAiming:
+		Condition: bruiser
+	AmbientSound@1:
+		SoundFiles: odin_bruisingaim.aud
+		Interval: 175
+		RequiresCondition: bruiser
+	AmbientSound@2:
+		SoundFiles: odin_bruisingaim.aud
+		Interval: 175
+		RequiresCondition: bruiser
+	AmbientSound@3:
+		SoundFiles: odin_bruisingaim.aud
+		Interval: 175
+		RequiresCondition: bruiser
+	LeavesTrails@01:
+		Image: smoke_movelarge
+		Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 570,655,-10
+	LeavesTrails@02:
+		Image: smoke_movelarge
+		Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 570,-655,-10
+
+# ////////////////////////////////////////////// < Obsolete Unite > //////////////////////////////////////////////
+
+t2_dwarf:
+	Inherits: ^ShapeVehicleMedium
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_loki.stat.unite
+	# / Inherit Option Unite /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Hover.vehicle.move
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@UniteCarryable: ^UniteCarryable
+	# / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
+	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+	# / < Stat Unite Base > /
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Buildable:
+		Queue: Locked.baneslayer
+		BuildPaletteOrder: 90
+		Prerequisites: optechtempt3
+		HP: 2800
+	RenderSprites:
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable || stunweapons
+	Passenger:
+		RequireForceMoveCondition: !undeployed
+	WithFacingSpriteBody:
+	Armament@01:
+		Weapon: dwarf.gun.mode1
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 650,0,280
+		RequiresCondition: !Target
+	WithMuzzleOverlay:
+	RenderSprites:

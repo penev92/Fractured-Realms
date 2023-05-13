@@ -1,0 +1,52 @@
+parasite:
+	Inherits@1: ^Civilian
+	# / < Stat Unite Base > /
+	Health:
+		HP: 250
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+	AttackLeap:
+		
+	HitShape:
+
+civ4:
+	Inherits@1: ^Civilian
+	# / < Stat Unite Base > /
+	Health:
+		HP: 250
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+	HitShape:
+
+civ5:
+	Inherits@1: ^Civilian
+	# / < Stat Unite Base > /
+	Health:
+		HP: 250
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+	HitShape:
+
+civ6:
+	Inherits@1: ^Civilian
+	# / < Stat Unite Base > /
+	Health:
+		HP: 250
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+	HitShape:
+
+civ7:
+	Inherits@1: ^Civilian
+	# / < Stat Unite Base > /
+	Health:
+		HP: 250
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+	HitShape:
+	

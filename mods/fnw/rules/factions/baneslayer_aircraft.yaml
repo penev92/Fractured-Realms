@@ -1,0 +1,224 @@
+baneslayerattackaircraft:
+	Inherits: ^Aircraftshape
+	Tooltip:
+		Name: Bomber
+	Valued:
+		Cost: 2000
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 520
+		Repulsable: False
+		IdleBehavior: LeaveMap
+	AttackBomber:
+		Armaments: bombs
+	DamageMultiplier:
+		Modifier: 80
+	Health:
+		HP: 1500
+	WithMuzzleOverlay:
+	Targetable:
+	RejectsOrders:
+	-RevealsShroud:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: carpet.blast.Aircraft
+		LocalOffset: 0,0,0
+	-ExternalCondition@Stase.bubble:
+	-SpeedMultiplier@move.bubble:
+	-PowerMultiplier@Stase.bubble:
+	-DamageMultiplier@Stase.bubble:
+	-GrantCondition@Stase.bubble.Bait:
+	-GrantCondition@Stase.bubble.notmobile.turret:
+
+t2_nidhogg:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_nidhogg.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^NidhoggAutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.baneslayer
+		BuildPaletteOrder: 40
+	Armament@PRIMARY:
+		Name: secondary
+		Weapon: minigun.Nidhogg
+		LocalOffset: 280,-260,20, 280,260,20
+		MuzzleSequence: muzzle
+	Armament@Secondary:
+		Weapon: Nidhogg.StunCannon
+		LocalOffset: 980,0,-30
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+		PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t2_nidhogg.Husk
+
+t2_nidhogg.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Nidhogg
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 186
+	RenderSprites:
+		Image: t2_nidhogg
+
+t3_thor:
+	Inherits: ^Aircraftshape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_thor.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGround
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.baneslayer
+		BuildPaletteOrder: 50
+		Prerequisites: optechtempt3
+	Armament:
+		Weapon: Thor.TwinRailgun01
+		LocalOffset: -110,350,-80
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	Armament@2:
+		Weapon: Thor.TwinRailgun02
+		LocalOffset: -110,-350,-10
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 25
+		PauseOnCondition: stunweapons
+	Repairable:
+		Voice: Move
+		RepairActors: opheli
+	Rearmable:
+		RearmActors: opheli
+	AmmoPool:
+		Ammo: 3
+		ReloadDelay: 100
+		AmmoCondition: ammo
+	Aircraft:
+		InitialFacing: 192
+		IdleTurnSpeed: 10
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t3_thor.Husk
+
+t3_thor.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Thor
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t3_thor
+
+t3_valkyrie:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_thor.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
+	Inherits@DropAircraft: ^UniteAircraft.drop
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGround
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.baneslayer
+		BuildPaletteOrder: 40
+		Prerequisites: oplabtech
+	Aircraft:
+		InitialFacing: 192
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+	SpeedMultiplier:
+		Modifier: 0
+		RequiresCondition: deployed
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	ProximityExternalCondition@valkyrieRepair:
+		Condition: UniteRepairVehicle
+		Range: 6c0
+		AffectsParent: true
+	WithFacingSpriteBody:
+	# Multi Turret support
+	Armament@TurretGun1:
+		Weapon: Valkyrie.StunCannon
+		ReloadingCondition: reloading
+		LocalOffset: 800,0,-50, 800,200,150
+	AttackTurreted:
+	WithSpriteTurret:
+		Sequence: Gun.Turret01
+	Turreted:
+		TurnSpeed: 8
+		InitialFacing: 96
+		RealignDelay: 20
+		Offset: 440,0,-150
+		PauseOnCondition: stunweapons
+	# Repair Function
+	ProximityExternalCondition@REPAIRAIRCRAFT:
+		Condition: UniteRepairAircraft
+		Range: 4c0
+		AffectsParent: true
+	GrantCondition@Airborne:
+		RequiresCondition: airborne
+		Condition: airborneValid
+	WithIdleOverlay@EngineSPOT:
+		Offset: -15,0,-4250
+		Sequence: pulse_repair
+		Palette: powereffect20
+		RequiresCondition: airborneValid
+	ReloadArmamentsBar:
+		Color: 00CCFF
+	RenderSprites:
+		Scale: 1.00
+	SpawnActorOnDeath:
+		Actor: t3_valkyrie.Husk
+
+t3_valkyrie.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: valkyrie
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	RenderSprites:
+		Image: t3_valkyrie

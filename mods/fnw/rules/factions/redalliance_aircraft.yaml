@@ -1,0 +1,437 @@
+t0_transportship:
+	Inherits: ^Aircraft
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cargo
+	Health:
+		HP: 15000
+	DamageMultiplier@INVULNERABLE:
+		Modifier: 0
+	Aircraft:
+		InitialFacing: 30
+		TurnSpeed: 3
+		Speed: 680
+		RepulsionSpeed: 25
+		MaximumPitch: 46
+		IdleBehavior: LeaveMap
+	Targetable:
+		TargetTypes: NoAircraftTarget
+		RequiresForceFire: true
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	RejectsOrders:
+	HiddenUnderFog:
+		AlwaysVisibleStances: None
+		Type: CenterPosition
+	RenderVoxels:
+		Scale: 1.0
+	GrantConditionOnMovement@EngineMove:
+		Condition: EngineMove
+	WithIdleOverlay@EngineSTAND:
+		Offset: -500,-605,0
+		Sequence: engine
+		Palette: bluelight
+		RequiresCondition: EngineMove || !SmokeCamoActivate
+	WithIdleOverlay@Engine2STAND:
+		Offset: -500,605,0
+		Sequence: engine
+		Palette: bluelight
+		RequiresCondition: EngineMove || !SmokeCamoActivate
+	WithVoxelBody:
+		ShowShadow: false
+
+t2_wyvern:
+	Inherits: ^Aircraftshape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_wyvern.stat.unite
+	# / Inherit option Unite /
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@Target: ^AutoTargetAir
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Buildable:
+		Queue: Aircraft.redalliance
+		BuildPaletteOrder: 10
+		IconPalette: RedAlliance.Icon
+	Armament:
+		Weapon: AP_Wyvern
+		LocalOffset: 0,-640,0, 0,640,0
+		LocalYaw: -40, 24
+	AttackAircraft:
+		FacingTolerance: 24
+		AttackTurnDelay: 15
+		PauseOnCondition: stunweapons
+	GrantConditionOnPrerequisite@Upgrade.Supersonic.Redalliance.Aircraft:
+		Prerequisites: research.Supersonic.Redalliance.Aircraft
+		Condition: upgrade.Supersonic.Redalliance.Aircraft
+	SpeedMultiplier@SupersonicAircraft:
+		Modifier: 150
+		RequiresCondition: Supersonic.Alliance && upgrade.Supersonic.Redalliance.Aircraft
+	Aircraft:
+		InitialFacing: 192
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t2_wyvern.husk
+	-AppearsOnRadar:
+
+t2_wyvern.husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: wyvern
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t2_wyvern
+	RenderVoxels:
+		Image: t2_wyvern
+
+t2_chimera:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_chimera.stat.unite
+	# / Inherit option Unite /
+	Inherits@DropAircraft: ^UniteAircraft.drop
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
+	Buildable:
+		Queue: Aircraft.redalliance
+		BuildPaletteOrder: 20
+		Prerequisites: artech
+		IconPalette: RedAlliance.Icon
+	Armament@PRIMARY:
+		Weapon: AP_chimera
+		LocalOffset: 290,-213,-85, 290,213,-85
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+		PauseOnCondition: stunweapons
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t2_chimera.Husk
+
+
+t2_chimera.husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: chimera
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	RenderSprites:
+		Image: t2_chimera
+
+t3_archdemon:
+	Inherits: ^Aircraftshape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_archdemon.stat.unite
+	# / Inherit option Unite /
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Buildable:
+		Queue: Aircraft.redalliance
+		BuildAtProductionType: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	AppearsOnRadar:
+		UseLocation: False
+	Armament@LEFT:
+		Weapon: therombomb
+		AmmoPoolName: primary
+		LocalOffset: 0,-640,0, 0,640,0
+		LocalYaw: -40, 24
+	AttackAircraft:
+		FacingTolerance: 20
+		PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AmmoPool@initial:
+		Ammo: 1
+		PipCount: 1
+		ReloadCount: 500
+		ReloadDelay: 500
+		SelfReloads: true
+		AmmoCondition: ammo
+	Rearmable:
+		RearmActors: t2_airfield, arheli
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	Selectable:
+		Bounds: 1224, 1224, 0, 0
+	RenderSprites:
+		Scale: 0.65
+	SpawnActorOnDeath:
+		Actor: t3_archdemon.Husk
+
+t3_archdemon.husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: archdemon
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t3_archdemon
+		Scale: 0.65
+	RenderVoxels:
+		Image: t3_archdemon
+
+t2_command_relais:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech3.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 90
+		Prerequisites: artech
+		IconPalette: RedAlliance.Icon
+	RevealsShroud:
+		Range: 12c0
+	AttackFrontal:
+		FacingTolerance: 2
+	DetectCloaked:
+		Range: 8c0
+		CloakTypes: Cloak, Mine
+	RenderDetectionCircle:
+	Aircraft:
+		InitialFacing: 192
+		Speed: 60
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	Transforms:
+		IntoActor: t3_commandbuilding
+		Offset: -3,-2
+		Facing: 98
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Voiced:
+		VoiceSet: CommandCenterVoice
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	WithIdleOverlay@EngineSTAND:
+		Offset: 0,0,0
+		Sequence: engine
+		Palette: light
+		RequiresCondition: EngineMove || !SmokeCamoActivate
+	WithIdleOverlay@EngineSPOT:
+		Offset: 0,0,0
+		Sequence: spot
+		Palette: light
+	RenderSprites:
+		Scale: 0.50
+	SpawnActorOnDeath:
+		Actor: t2_command_relais.Husk
+
+t2_command_relais.husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: command relais
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	RenderSprites:
+		Image: t2_command_relais
+		Scale: 0.65
+	RenderVoxels:
+		Image: t2_command_relais
+
+t4_cruiser:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_cruiser.stat.unite
+	# / Inherit option Unite /
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 120
+		Prerequisites: t3_commandbuilding
+		BuildLimit: 1
+		IconPalette: RedAlliance.Icon
+	Armament@primary:
+		Turret: borde01
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,900,200, 490,900,200, 140,900,200, -210,900,200, -560,900,200
+	Armament@secondary:
+		Delay: 8
+		Turret: borde02
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,-900,200, 490,-900,200, 140,-900,200, -210,-900,200, -560,-900,200
+	Armament@LASER:
+		Turret: laser_des
+		Weapon: laserdefence
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 950,200,700, 950,-200,700
+	AttackTurreted:
+		Turrets: borde01, borde02, laser_des
+		PauseOnCondition: stunweapons
+	Turreted:
+		Turret: borde01
+		Offset: 750,1800,-50
+		PauseOnCondition: stunweapons
+	Turreted@borde02:
+		Turret: borde02
+		Offset: 750,1500,-50
+		PauseOnCondition: stunweapons
+	Turreted@borde02:
+		Turret: laser_des
+		Offset: 950,0,0
+		PauseOnCondition: stunweapons
+	RenderSprites:
+		Scale: 1.15
+	Aircraft:
+		InitialFacing: 192
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	ProximityExternalCondition@FlakBATTERY:
+		Condition: FlakCruiser
+		ValidRelationships: Enemy
+		Range: 9c0
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	ProvidesPrerequisite:
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	GrantConditionOnMovement@EngineMove:
+		Condition: EngineMove
+	WithIdleOverlay@EngineSTAND:
+		Offset: 0,0,0
+		Sequence: engine
+		Palette: light
+		RequiresCondition: EngineMove || !SmokeCamoActivate
+	WithIdleOverlay@EngineSPOT:
+		Offset: 0,0,0
+		Sequence: spot
+		Palette: light
+		RequiresCondition: !SmokeCamoActivate
+	HitShape:
+	GrantConditionOnDamageState@Damage01:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
+	GrantConditionOnDamageState@Damage02:
+		Condition: Critical.damage
+		ValidDamageStates: Critical
+	LeavesTrails@01:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 650,445,580
+		RequiresCondition: heavy.damage || Critical.damage
+	LeavesTrails@02:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -380,-405,670
+		RequiresCondition: Critical.damage
+	LeavesTrails@03:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -80,505,670
+		RequiresCondition: Critical.damage
+	NukePower@NukeMissile:
+		OrderName: Nuke.Redalliance
+		Cursor: nuke
+		PauseOnCondition: disabled || chronodisable
+		Prerequisites:
+			1: t4_cruiser
+		Icons:
+			1: nukeallianceicons
+		IconPalette: flameeffect
+		ChargeInterval: 8000
+		Names:
+			1: Wrath of God
+		Descriptions:
+			1: Please select the section of the map you want to obliterate
+		LaunchSound:
+		SelectTargetSpeechNotification:
+		MissileWeapons:
+			1: nuke.alliance.missile
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		MissileImage: nuke.alliance.missile
+		MissilePalette: player
+		IsPlayerPalette: true
+		CameraRange: 8c0
+		CameraRemoveDelay: 200
+		FlightVelocity: 1c0
+		FlightDelay: 100
+		DisplayBeacon: False
+		BeaconPosters:
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleRanges:
+			1: 5c0
+		CircleColor: FFFFFFFF
+		CircleBorderColor: 00000060
+	SpawnActorOnDeath:
+		Actor: t4_cruiser.Husk
+
+t4_cruiser.husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: cruiser
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 116
+	RenderSprites:
+		Image: t4_cruiser
+		Scale: 1.15
+	FallsToEarth:
+		Velocity: 15
+	FallsToEarth:
+		Explosion: therombomb
+	SmokeParticleEmitter:
+		Image: building_smokeparticle
+		Sequences: idle01, idle02
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 2, 8
+		Speed: 15
+		Gravity: 70
+		Offset: 25, 341, 550, 87, -341, 450, 152, -341, 50
+		Palette: flameeffect60
+		Duration: 75
+		RandomFacing: True

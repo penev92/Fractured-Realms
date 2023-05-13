@@ -1,0 +1,17 @@
+Player:
+	-ConquestVictoryConditions:
+
+World:
+	LuaScript:
+		Scripts: intro-shellmap.lua
+	-CrateSpawner:
+	-SpawnStartingUnits:
+	-MapStartingLocations:
+	MusicPlaylist:
+		BackgroundMusic: intro
+		DisableWorldSounds: true
+	-StartGameNotification:
+	GlobalLightingPaletteEffect:
+		Red: 0.8
+		Green: 0.7
+		Ambient: 0.275

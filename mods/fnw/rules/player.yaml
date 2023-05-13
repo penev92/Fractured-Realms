@@ -1,0 +1,89 @@
+^GeneralsPower:
+	ClassicProductionQueue@Doctrine:
+		Type: Doctrine
+		Group: Doctrine
+		DisplayOrder: 0
+		LowPowerModifier: 300
+		QueuedAudio: Research
+		ReadyAudio: ResearchReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	Production:
+		Produces: Doctrine
+		PauseOnCondition: empdisable || disabled || build-incomplete
+		MoveIntoWorld: false
+
+^BasePlayer:
+	AlwaysVisible:
+	Shroud:
+	PlayerResources:
+		ResourceValues:
+			Diast: 25
+			Diastgems: 50
+	
+EditorPlayer:
+	Inherits: ^BasePlayer
+
+Player:
+	Inherits@Base: ^BasePlayer
+	Inherits@Power: ^GeneralsPower
+	PlaceBuilding:
+		NewOptionsNotification: NewOptions
+		CannotPlaceNotification: BuildingCannotPlaceAudio
+	SupportPowerManager:
+	AutoDeployManager:
+	TechTree:
+	ScriptTriggers:
+	MissionObjectives:
+		WinNotification: Win
+		LoseNotification: Lose
+		LeaveNotification: Leave
+	ConquestVictoryConditions:
+	PowerManager:
+		SpeechNotification: LowPower
+	AllyRepair:
+	PlayerResources:
+		InsufficientFundsNotification: InsufficientFunds
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown
+	DeveloperMode:
+	BaseAttackNotifier:
+	GrantConditionOnPrerequisiteManager:
+	Shroud:
+		ExploredMapCheckboxLocked: true
+		ExploredMapCheckboxEnabled: true
+		ExploredMapCheckboxVisible: false
+	FrozenActorLayer:
+	HarvesterAttackNotifier:
+	PlayerStatistics:
+	PlaceBeacon:
+	ProvidesTechPrerequisite@low:
+		Name: Low
+		Prerequisites: techlevel.infonly, techlevel.low
+		Id: low
+	ProvidesTechPrerequisite@medium:
+		Name: Medium
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
+		Id: medium
+	ProvidesTechPrerequisite@high:
+		Name: No Superweapons
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
+		Id: nosuperweapons
+	ProvidesTechPrerequisite@unrestricted:
+		Name: Unrestricted
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
+		Id: unrestricted
+	ExternalCondition@AirDock:
+		Condition: airdock
+	ProvidesPrerequisite@enoughair:
+		Prerequisite: prerequisite.enoughair
+		RequiresCondition: padaircraft >= airdock
+	EnemyWatcher:
+	ResourceStorageWarning:
+	PlayerExperience:
+	GameSaveViewportManager:
+	PlayerRadarTerrain:
+	Inherits@RedAlliance.PowerAbilities: ^BuildingGivePower.Alliance
+	Inherits@Baneslayer.PowerAbilities: ^BuildingGivePower.Baneslayer
+	Inherits@Conclave.PowerAbilities: ^BuildingGivePower.Conclave
+	Inherits@Federation.PowerAbilities: ^BuildingGivePower.Federation

@@ -1,0 +1,1023 @@
+tree01:
+	Defaults:
+		Filename: tree01.shp
+	idle:
+
+tree02:
+	Defaults:
+		Filename: tree02.shp
+	idle:
+
+tree03:
+	Defaults:
+		Filename: tree03.shp
+	idle:
+
+tree04:
+	Defaults:
+		Filename: tree04.shp
+	idle:
+
+tree05:
+	Defaults:
+		Filename: tree05.shp
+	idle:
+
+tree06:
+	Defaults:
+		Filename: tree06.shp
+	idle:
+
+tree07:
+	Defaults:
+		Filename: tree07.shp
+	idle:
+
+tree08:
+	Defaults:
+		Filename: tree08.shp
+	idle:
+
+tree09:
+	Defaults:
+		Filename: tree09.shp
+	idle:
+
+tree10:
+	Defaults:
+		Filename: tree10.shp
+	idle:
+
+tree11:
+	Defaults:
+		Filename: tree11.shp
+	idle:
+
+tree12:
+	Defaults:
+		Filename: tree12.shp
+	idle:
+
+tree13:
+	Defaults:
+		Filename: tree13.shp
+	idle:
+
+tree14:
+	Defaults:
+		Filename: tree14.shp
+	idle:
+
+tree15:
+	Defaults:
+		Filename: tree15.shp
+	idle:
+
+tree16:
+	Defaults:
+		Filename: tree16.shp
+	idle:
+
+tree17:
+	Defaults:
+		Filename: tree17.shp
+	idle:
+
+tree18:
+	Defaults:
+		Filename: tree18.shp
+	idle:
+
+tree19:
+	Defaults:
+		Filename: tree19.shp
+	idle:
+
+tree20:
+	Defaults:
+		Filename: tree20.shp
+	idle:
+
+tree21:
+	Defaults:
+		Filename: tree21.shp
+	idle:
+
+tree22:
+	Defaults:
+		Filename: tree22.shp
+	idle:
+
+tree23:
+	Defaults:
+		Filename: tree23.shp
+	idle:
+
+tree24:
+	Defaults:
+		Filename: tree24.shp
+	idle:
+
+tree25:
+	Defaults:
+		Filename: tree25.shp
+	idle:
+
+tree26:
+	Defaults:
+		Filename: tree26.shp
+	idle:
+
+tree27:
+	Defaults:
+		Filename: tree27.shp
+	idle:
+
+tree28:
+	Defaults:
+		Filename: tree28.shp
+	idle:
+
+tree29:
+	Defaults:
+		Filename: tree29.shp
+	idle:
+
+tree30:
+	Defaults:
+		Filename: tree30.shp
+	idle:
+
+tree31:
+	Defaults:
+		Filename: tree31.shp
+	idle:
+
+tree32:
+	Defaults:
+		Filename: tree32.shp
+	idle:
+
+tree33:
+	Defaults:
+		Filename: tree33.shp
+	idle:
+
+tree34:
+	Defaults:
+		Filename: tree34.shp
+	idle:
+
+tree35:
+	Defaults:
+		Filename: tree35.shp
+	idle:
+
+tree36:
+	Defaults:
+		Filename: tree36.shp
+	idle:
+	
+tree37:
+	Defaults:
+		Filename: tree37.shp
+	idle:
+	
+tree38:
+	Defaults:
+		Filename: tree38.shp
+	idle:
+	
+tree39:
+	Defaults:
+		Filename: tree39.shp
+	idle:
+	
+tree40:
+	Defaults:
+		Filename: tree40.shp
+	idle:
+	
+treebionte01:
+	Defaults:
+		Filename: treebionte01.shp
+	idle:
+	
+treebionte02:
+	Defaults:
+		Filename: treebionte02.shp
+	idle:
+	
+treebionte03:
+	Defaults:
+		Filename: treebionte03.shp
+	idle:
+	
+treebionte04:
+	Defaults:
+		Filename: treebionte04.shp
+	idle:
+	
+orga_tree01:
+	Defaults:
+		Filename: orga_tree01.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree02:
+	Defaults:
+		Filename: orga_tree02.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree03:
+	Defaults:
+		Filename: orga_tree03.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree04:
+	Defaults:
+		Filename: orga_tree04.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree05:
+	Defaults:
+		Filename: orga_tree05.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree06:
+	Defaults:
+		Filename: orga_tree06.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree07:
+	Defaults:
+		Filename: orga_tree07.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree08:
+	Defaults:
+		Filename: orga_tree08.shp
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+	
+orga_tree09:
+	Defaults:
+		Filename: orga_tree09.shp
+	treeroot:
+		Start: 1
+	idle:
+	
+orga_tree10:
+	Defaults:
+		Filename: orga_tree10.shp
+		ShadowStart: 2
+	treeroot:
+		Start: 1
+	idle:
+		ShadowStart: 2
+		
+toxintree01:
+	Defaults:
+		Filename: toxintree01.shp
+	idle:
+	treeroot:
+		Start: 1
+		
+toxintree02:
+	Defaults:
+		Filename: toxintree02.shp
+	idle:
+	treeroot:
+		Start: 1
+		
+toxintree03:
+	Defaults:
+		Filename: toxintree03.shp
+	idle:
+	treeroot:
+		Start: 1
+		
+toxintree04:
+	Defaults:
+		Filename: toxintree04.shp
+	idle:
+	treeroot:
+		Start: 1
+		
+toxintree05:
+	Defaults:
+		Filename: toxintree05.shp
+	idle:
+	treeroot:
+		Start: 1
+		
+toxintree06:
+	Defaults:
+		Filename: toxintree06.shp
+	idle:
+	treeroot:
+		Start: 1
+
+crystal_tree01:
+	Defaults:
+		Filename: crystal_tree01.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+		
+crystal_rockfly01:
+	Defaults:
+		Filename: crystal_rockfly01.shp
+	idle:
+		Start: 0
+		Tick: 40
+		Length: 120
+	idle02:
+		Start: 0
+		Tick: 50
+		Length: 120
+	idle03:
+		Start: 0
+		Tick: 55
+		Length: 120
+	effect:
+		Filename: crystal_rockflyeffect1.shp
+		Length: *
+		BlendMode: Additive
+
+crystal_tree02:
+	Defaults:
+		Filename: crystal_tree02.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree03:
+	Defaults:
+		Filename: crystal_tree03.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree04:
+	Defaults:
+		Filename: crystal_tree04.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree05:
+	Defaults:
+		Filename: crystal_tree05.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree06:
+	Defaults:
+		Filename: crystal_tree06.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree07:
+	Defaults:
+		Filename: crystal_tree07.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+
+crystal_tree08:
+	Defaults:
+		Filename: crystal_tree08.shp
+	treeroot:
+		Start: 1
+	light:
+		Start: 3
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	idle:
+		ShadowStart: 2
+		
+crystal_prisoners01:
+	idle:
+		Filename: crystal_prisoners01.shp
+	
+crystal_prisoners02:
+	idle:
+		Filename: crystal_prisoners02.shp
+	
+crystal_prisoners03:
+	idle:
+		Filename: crystal_prisoners03.shp
+	
+bluefaune01:
+	Defaults:
+		Filename: bluefaune01.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune02:
+	Defaults:
+		Filename: bluefaune02.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune03:
+	Defaults:
+		Filename: bluefaune03.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune04:
+	Defaults:
+		Filename: bluefaune04.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune05:
+	Defaults:
+		Filename: bluefaune05.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune06:
+	Defaults:
+		Filename: bluefaune06.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune07:
+	Defaults:
+		Filename: bluefaune07.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune08:
+	Defaults:
+		Filename: bluefaune08.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+bluefaune09:
+	Defaults:
+		Filename: bluefaune09.shp
+	idle:
+	light:
+		Start: 1
+		BlendMode: Additive
+	effect:
+		Filename: crystaltree_effet.shp
+		Start: 2
+		Offset: 0, -75
+		Tick: 15
+		Length: 7
+		BlendMode: Additive
+	spore:
+		Start: 2
+		Length: 7
+		BlendMode: Additive
+		
+rock_olitrax1:
+	idle:
+		Filename: rock_olitrax1.shp
+
+rock_olitrax2:
+	idle:
+		Filename: rock_olitrax2.shp
+
+rock_olitrax3:
+	idle:
+		Filename: rock_olitrax3.shp
+	
+toxinegg01:
+	idle:
+		Filename: toxinegg01.shp
+	spore:
+		Filename: spore01.shp
+		Length: *
+		Tick: 55
+		BlendMode: Additive
+	
+toxinegg02:
+	idle:
+		Filename: toxinegg02.shp
+	spore:
+		Filename: spore02.shp
+		Length: *
+		Tick: 75
+		BlendMode: Additive
+	
+toxinegg03:
+	idle:
+		Filename: toxinegg03.shp
+	spore:
+		Filename: spore03.shp
+		Length: *
+		Tick: 50
+		BlendMode: Additive
+	
+toxinegg04:
+	idle:
+		Filename: toxinegg04.shp
+	spore:
+		Filename: spore01.shp
+		Length: *
+		Tick: 65
+		BlendMode: Additive
+	
+toxinegg05:
+	idle:
+		Filename: toxinegg05.shp
+	spore:
+		Filename: spore02.shp
+		Length: *
+		Tick: 55
+		BlendMode: Additive
+		
+	
+
+massif_rock01:
+	idle:
+		Filename: rocks.shp
+		Start: 0
+		
+massif_rock02:
+	idle:
+		Filename: rocks.shp
+		Start: 1
+		
+massif_rock03:
+	idle:
+		Filename: rocks.shp
+		Start: 2
+		
+massif_rock04:
+	idle:
+		Filename: rocks.shp
+		Start: 3
+		
+destructible_rocks01:
+	idle:
+		Filename: destructiblerocks.shp
+		Start: 0
+	damaged-build:
+		Filename: destructiblerocks.shp
+		Start: 1
+		
+destructible_rocks02:
+	idle:
+		Filename: destructiblerocks.shp
+		Start: 2
+	damaged-build:
+		Filename: destructiblerocks.shp
+		Start: 3
+		
+destructible_rocks03:
+	idle:
+		Filename: destructiblerocks.shp
+		Start: 4
+	damaged-build:
+		Filename: destructiblerocks.shp
+		Start: 5
+	
+skulldecoy01:
+	idle:
+		Filename: skulldecoy01.shp
+	
+skulldecoy02:
+	idle:
+		Filename: skulldecoy02.shp
+	
+skulldecoy03:
+	idle:
+		Filename: skulldecoy03.shp
+	
+urbanlamp_01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: lamp01.shp
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+		
+megaspot01:
+	Defaults:
+		Filename: megaspot01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+
+megaspot02:
+	Defaults:
+		Filename: megaspot02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+		
+megaspot03:
+	Defaults:
+		Filename: megaspot03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+		
+megaspot04:
+	Defaults:
+		Filename: megaspot04.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+
+urbandecoy_01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_01.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	Neon1:
+		Start: 2
+		Length: 2
+		BlendMode: Additive
+	Neon2:
+		Start: 5
+		Length: 2
+		BlendMode: Additive
+
+urbandecoy_02:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_02.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	Neon1:
+		Start: 2
+		Length: 2
+		BlendMode: Additive
+	Neon2:
+		Start: 5
+		Length: 2
+		BlendMode: Additive
+
+urbandecoy_03:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_03.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	idle2:
+		Start: 2
+	damaged-idle2:
+		Start: 3
+
+panel_road01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 0
+	light:
+		Start: 1
+		Length: 2
+		BlendMode: Additive
+
+panel_road02:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 3
+	damaged-idle:
+		Start: 3
+	light:
+		Start: 4
+		Length: 2
+		BlendMode: Additive
+
+panel_road03:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 6
+	damaged-idle:
+		Start: 6
+	light:
+		Start: 7
+		Length: 2
+		BlendMode: Additive
+
+panel_road04:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 9
+	damaged-idle:
+		Start: 9
+	light:
+		Start: 10
+		Length: 2
+		BlendMode: Additive
+
+panel_popup01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 12
+		Offset: 0, -10
+	damaged-idle:
+		Start: 13
+		Offset: 0, -10
+
+panel_popup02:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 14
+		Offset: 0, -10
+	damaged-idle:
+		Start: 15
+		Offset: 0, -10
+
+panel_popup03:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 16
+		Offset: 0, -10
+	damaged-idle:
+		Start: 17
+		Offset: 0, -10
+
+panel_popup04:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 18
+		Offset: 0, -10
+	damaged-idle:
+		Start: 19
+		Offset: 0, -10
+
+panel_popupiso01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 20
+	damaged-idle:
+		Start: 21
+
+panel_popupiso02:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 22
+	damaged-idle:
+		Start: 23
+
+panel_popupiso03:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 24
+	damaged-idle:
+		Start: 25
+		
+relais01:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 26
+	damaged-idle:
+		Start: 26
+	light:
+		Start: 27
+		BlendMode: Additive
+
+relais02:
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: urbandecoy_04.shp
+	idle:
+		Start: 28
+	damaged-idle:
+		Start: 28
+	light:
+		Start: 29
+		BlendMode: Additive

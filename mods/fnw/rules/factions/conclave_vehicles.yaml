@@ -1,0 +1,413 @@
+tcmcv:
+	Inherits: ^ShapeWalkerMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^tcmcv.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Select - Target type /
+	Inherits@Select: ^SelectableMassiveSupportUnit
+	# / < Stat Unite Base > /
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 70
+		BuildDurationModifier: 25
+		IconPalette: Conclave.Icon
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		Facing: 96
+		IntoActor: tccacnst
+		Offset: -4,-2
+		TransformSounds: makebuild.wav
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite@MCV.ExistStanceVisibility:
+		Prerequisite: MCVMobile.Visibility
+	SelectionDecorations:
+		VisualBounds: 1544, 2509, 0, -289
+	BaseBuilding:
+	-AutoTarget:
+	ChangesHealth:
+		Step: 5
+		Ticks: 3
+		StartIfBelow: 50
+
+prospecteur:
+	Inherits: ^ShapeHoverMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^prospecteur.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover.conclave
+	Inherits@harvester: ^Harvester.rules
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPassenger: ^VehiclePassenger
+	# / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 10
+		InitialActivity: FindResources
+		IconPalette: Conclave.Icon
+	WithHarvestOverlay:
+	-AutoTarget:
+	WithDockingAnimation:
+
+t2_rodeur:
+	Inherits: ^ShapeWalkerMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_rodeur.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPassenger: ^VehiclePassenger
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 40
+		IconPalette: Conclave.Icon
+	Armament@gun:
+		Weapon: Rodeur.Dual.LightLaser
+		MuzzleSequence: muzzle
+		LocalOffset: 450,260,650, 450,-260,650
+		RequiresCondition: !upgrade.Base.Rodeur.Conclave
+	Armament@gunAlpha:
+		Weapon: Rodeur.Dual.LightLaser.Alpha01
+		MuzzleSequence: muzzle
+		LocalOffset: 450,260,650
+		RequiresCondition: upgrade.Alpha.Rodeur.Conclave
+	Armament@gunAlpha2:
+		Weapon: Rodeur.Dual.LightLaser.Alpha02
+		MuzzleSequence: muzzle
+		LocalOffset: 450,-260,650
+		RequiresCondition: upgrade.Alpha.Rodeur.Conclave
+	Armament@gunOmega:
+		Weapon: Rodeur.Dual.LightLaser.Omega
+		MuzzleSequence: muzzle_omega
+		MuzzlePalette: powereffect
+		LocalOffset: 450,260,650
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
+	Armament@gunOmega2:
+		Weapon: Rodeur.Dual.LightLaser.Omega
+		MuzzleSequence: muzzle_omega
+		MuzzlePalette: powereffect
+		LocalOffset: 450,-260,650
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
+	GrantConditionOnAttack@Omega:
+		Condition: Omega.drain
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
+	ChangesHealth@Omega.drain:
+		Step: 140
+		Delay: 25
+		StartIfBelow: 100
+		RequiresCondition: Omega.drain
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+		RequiresCondition: !upgrade.Base.Rodeur.Conclave
+	WithSpriteTurret@phie:
+		Sequence: turretPhie
+		RequiresCondition: upgrade.Alpha.Rodeur.Conclave
+	WithSpriteTurret@Omega:
+		Sequence: turretOmega
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -30,0,0
+		PauseOnCondition: stunweapons
+	GrantConditionOnPrerequisite@Base:
+		Prerequisites: research.Base.Rodeur.Conclave
+		Condition: upgrade.Base.Rodeur.Conclave
+	GrantConditionOnPrerequisite@Alpha:
+		Prerequisites: research.Alpha.Rodeur.Conclave
+		Condition: upgrade.Alpha.Rodeur.Conclave
+	GrantConditionOnPrerequisite@Omega:
+		Prerequisites: research.Omega.Rodeur.Conclave
+		Condition: upgrade.Omega.Rodeur.Conclave
+	WithDecoration@ModuleHealthInfantry:
+		Image: heal.infantry
+		Sequence: idle
+		ReferencePoint: Top, Center
+		Palette: effect
+		ValidStances: Enemy, Neutral, Ally
+		RequiresCondition: Omega.drain && upgrade.Omega.Rodeur.Conclave
+	Explodes:
+		Weapon: tank.blue.explode
+		EmptyWeapon: tank.blue.explode
+
+t3_surveyor:
+	Inherits: ^ShapeWalkerMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_surveyor.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@TrailEffect: ^Trails.Walker.effect.smoke
+	# / Select - Target type /
+	Inherits@Select: ^SelectableHeightCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 110
+		IconPalette: Conclave.Icon
+	Mobile:
+		PauseOnCondition: empdisable && !upgrade.Omega.Arpenteur.Conclave
+	Armament@left:
+		Weapon: ExconvectorGun.lateral
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 400,320,50
+	Armament@right:
+		Weapon: ExconvectorGun.lateral
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 400,-320,50
+	Armament@Primaris:
+		Weapon: ExconvectorGun.primaris
+		Recoil: 150
+		FireDelay: 6
+		RecoilRecovery: 15
+		LocalOffset: 800,0,50
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret:
+	AutoDeployer:
+		DeployTicks: 100
+		UndeployTicks: 100
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons) || upgrade.Omega.Arpenteur.Conclave
+	GrantConditionOnPrerequisite@Alpha:
+		Prerequisites: research.Alpha.Arpenteur.Conclave
+		Condition: upgrade.Omega.Arpenteur.Conclave
+	GrantConditionOnPrerequisite@Omega:
+		Prerequisites: research.Omega.Arpenteur.Conclave
+		Condition: upgrade.Alpha.Arpenteur.Conclave
+	ExternalCondition@Speed.Zenith:
+		Condition: Speed.Zenith
+	SpeedMultiplier@Speed.Arpenteur.Conclave:
+		Modifier: 120
+		RequiresCondition: upgrade.Omega.Arpenteur.Conclave
+	DamageMultiplier@Armor.Arpenteur.Conclave:
+		Modifier: 85
+		RequiresCondition: upgrade.Alpha.Arpenteur.Conclave
+	ReloadDelayMultiplier@Reload.Arpenteur.Conclave:
+		Modifier: 85
+		RequiresCondition: upgrade.Alpha.Arpenteur.Conclave
+	WithColoredOverlay@EMPDISABLE:
+		RequiresCondition: empdisable && !upgrade.Omega.Arpenteur.Conclave
+	WithIdleOverlay@EMPDISABLE:
+		RequiresCondition: empdisable && !upgrade.Omega.Arpenteur.Conclave
+	WithIdleOverlay@HammerEradicatorStunVehicle:
+		RequiresCondition: HammerEradicatorStun && upgrade.Omega.Arpenteur.Conclave
+	SpeedMultiplier@HammerEradicatorStunVehicle:
+		RequiresCondition: HammerEradicatorStun && upgrade.Omega.Arpenteur.Conclave
+	WithIdleOverlay@PhieAura:
+		Offset: 0,0,10
+		Sequence: aura_omega
+		Palette: powereffect60
+		RequiresCondition: upgrade.Alpha.Arpenteur.Conclave
+	WithIdleOverlay@OmegaAura:
+		Offset: 0,0,10
+		Sequence: aura_phie
+		Palette: powereffect60
+		RequiresCondition: upgrade.Omega.Arpenteur.Conclave
+	Turreted:
+		Offset: 0,0,2700
+		PauseOnCondition: stunweapons
+	# // Shield System //
+	GrantTimedConditionOnDeploy@SHIELD:
+		DeployedCondition: deployed
+		CooldownTicks: 2000
+		DeployedTicks: 150
+		StartsFullyCharged: true
+		PauseOnCondition: Disable
+		RequiresCondition: upgrade.Alpha.Arpenteur.Conclave
+	ExplodeWeapon@SHIELD:
+		Weapon: ShieldWarhead.Active
+		RequiresCondition: deployed
+	ExternalCondition@Shield:
+		Condition: ShieldActivate
+	DamageMultiplier@Shield:
+		Modifier: 0
+		RequiresCondition: ShieldActivate && upgrade.Alpha.Arpenteur.Conclave
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, C4
+	WithColoredOverlay@Shield:
+		RequiresCondition: ShieldActivate && upgrade.Alpha.Arpenteur.Conclave
+	HitShape:
+	Explodes:
+		Weapon: tank.blue.explode
+		EmptyWeapon: tank.blue.explode
+
+activate.Shield:
+	Inherits: ^Capacity.system.active
+	Interactable:
+	Explodes:
+		Weapon: ShieldWarhead.Active
+
+t2_pilgrim:
+	Inherits: ^ShapeHoverMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_pilgrim.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover.conclave
+	Inherits@Carryable: ^UniteCarryable
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 60
+		IconPalette: Conclave.Icon
+	Passenger:
+		RequireForceMoveCondition: !undeployed
+	GrantConditionOnDeploy:
+		PauseOnCondition: empdisable || being-captured
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 370
+		AllowedTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+		Voice: Move
+	WithFacingSpriteBody:
+		StartSequence: make
+		RequiresCondition: !deployed
+	WithSpriteBody@deployed:
+		StartSequence: make
+		Sequence: idle-deployed
+		RequiresCondition: deployed
+	Mobile:
+		PauseOnCondition: deployed
+	Hovers:
+		RequiresCondition: !deployed
+	WithShadow:
+		RequiresCondition: !deployed
+	WithShadow@deploy:
+		Offset: 320,-150, -100
+		ZOffset: -300
+		RequiresCondition: deployed
+	WithSpriteTurret:
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
+	WithRangeCircle@MinAreaFireModeArty:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFireModeArty:
+		Color: FF990065
+	#Mode AA/Move
+	WithRangeCircle@MaxAreaFireModeAAMove:
+		Color: FF990065
+		RequiresCondition: !deployed
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyMove:
+		Color: FF000065
+		RequiresCondition: !deployed
+	WithRangeCircle@MaxAreaFireModeArtyMove:
+		Color: FF990065
+		RequiresCondition: !deployed
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyAA:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFireModeArtyAA:
+		Color: FF990065
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -650,0,125
+		PauseOnCondition: stunweapons
+	# ///// Upgrade ,Conclave /////
+	GrantConditionOnPrerequisite@Phie:
+		Prerequisites: research.Alpha.Pelerin.Conclave
+		Condition: upgrade.Alpha.Pelerin.Conclave
+	GrantConditionOnPrerequisite@Omega:
+		Prerequisites: research.Omega.Pelerin.Conclave
+		Condition: upgrade.Omega.Pelerin.Conclave
+	Armament@gun:
+		Weapon: Photo_MissileAA
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalYaw: 100, -100
+		LocalOffset: 250,100,200, 250,-100,200
+	Armament@deployed:
+		Weapon: Photo_MissileArty
+		LocalOffset: 820,0,1386
+		RequiresCondition: deployed
+		MuzzleSequence: muzzle
+	Armament@gunPhie:
+		Weapon: Photo_MissileMinArty
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalYaw: 100, -100
+		LocalOffset: 250,100,200, 250,-100,200
+		RequiresCondition: upgrade.Alpha.Pelerin.Conclave
+	Armament@deployedOmega:
+		Weapon: Photo_MissileAAArty
+		LocalOffset: 820,0,1386
+		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
+		MuzzleSequence: muzzle
+	ReloadArmamentsBar:
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 0.85
+	RevealOnFire:
+		ArmamentNames: deployed
+	LeavesTrails@01:
+		Image: smoke_hovermove
+		Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
+		Palette: powereffect
+		Type: CenterPosition
+		MovingInterval: 6
+		Offsets: -20,0,-15
+	Explodes:
+		Weapon: tank.blue.explode
+		EmptyWeapon: tank.blue.explode
+
+stase.actor:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Selectable:
+		Bounds: 250, 150, 0, -75
+	SelectionDecorations:
+	Tooltip:
+		Name: Stase
+	RevealsShroud:
+		Range: 5c0
+		Type: CenterPosition
+	ProximityExternalCondition@Stase:
+		Condition: Stase.bubble
+		Range: 4c0
+		AffectsParent: false
+		ValidRelationships: Ally, Enemy
+	Immobile:
+		OccupiesSpace: False
+	DetectCloaked:
+		Range: 4c0
+		CloakTypes: Cloak, Mine
+	WithIdleOverlay@EngineSPOT:
+		Offset: 0,0,0
+		Sequence: stase_range
+		Palette: powereffect20
+	HiddenUnderFog:
+		Type: CenterPosition
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+		Image: stase_effect
+	KillsSelf:
+		RemoveInstead: true
+		Delay: 875

@@ -1,0 +1,156 @@
+GenericVoice:
+	DefaultVariant: .AUD
+	Voices:
+		Select: infselect01, infselect02
+		Move: infmove01, infmove02
+		Attack: infattack01, infattack02
+		Action: infmove01, infmove02
+		Die: KILLGUY1,KILLGUY2,KILLGUY3,KILLGUY4,KILLGUY5,KILLGUY6,KILLGUY7,KILLGUY8,KILLGUY9
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Guard: I_GUARD
+	DisablePrefixes: Select, Action, Die
+	DisableVariants: Select, Action, Guard
+    
+InfantryVoice:
+	Voices:
+		Select: infselect01, infselect02
+		Move: infmove01, infmove02
+		Attack: infattack01, infattack02
+		Action: infmove01, infmove02
+		Die: death0
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Infburn: infscream
+        InfIonDeath: iondeathinf
+        InfPlasmaDeath: plasmadeathinf
+        InfNukeDeath: nukedeathinf
+
+AR_InfantryVoice:
+	Voices:
+		Select: ar_infantry_select01, ar_infantry_select02, ar_infantry_select03, ar_infantry_select04
+		Move: ar_infantry_move01, ar_infantry_move02, ar_infantry_move03, ar_infantry_move04
+		Attack: ar_infantry_attack01, ar_infantry_attack02, ar_infantry_attack03
+		Action: ar_infantry_move01, ar_infantry_move02, ar_infantry_move03, ar_infantry_move04
+		Die: death0
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Infburn: infscream
+        InfIonDeath: iondeathinf
+        InfPlasmaDeath: plasmadeathinf
+        InfNukeDeath: nukedeathinf
+        
+VehicleVoice:
+	Voices:
+		Select: infselect01, infselect02
+		Move: infmove01, infmove02
+		Attack: infattack01, infattack02
+		Action: infmove01, infmove02
+		Die: death0
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Infburn: infscream
+        InfIonDeath: iondeathinf
+        InfPlasmaDeath: plasmadeathinf
+        InfNukeDeath: nukedeathinf
+        
+AircraftVoice:
+	DefaultVariant: .AUD
+	Voices:
+		Select: infselect01, infselect02
+		Move: infmove01, infmove02
+		Attack: infattack01, infattack02
+		Action: infmove01, infmove02
+		Die: aircraftdie01, aircraftdie02
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Guard: I_GUARD
+        
+Civilian:
+	Voices:
+		Select:
+		Move:
+		Attack: panicman01
+		Die: dieman01, dieman02, dieman03
+        Feedback: panicman01, panicman02, panicman03, panicman04, panicman05
+		GoreExpl: goreexplosion, gibs_expl01.aud, gibs_expl02.aud, gibs_expl03.aud
+		Infburn: infscream
+        InfIonDeath: iondeathinf
+        InfPlasmaDeath: plasmadeathinf
+        InfNukeDeath: nukedeathinf
+        
+CrawlerVoice:
+	Voices:
+		Select: select_crawl01, select_crawl02, select_crawl03
+		Move: move_crawl01, move_crawl02, move_crawl03
+        Action: move_crawl01, move_crawl02, move_crawl03
+	DisablePrefixes: Select, Action, Die
+	DisableVariants: Select, Action, Guard
+        
+CommandCenterVoice:
+	Voices:
+		Select: select_command01, select_command02, select_command03
+		Move: move_command01, move_command02
+        Action: move_command01, move_command02
+	DisablePrefixes: Select, Action, Die
+	DisableVariants: Select, Action, Guard
+
+        
+# /////////// Red Alliance Building Select ///////////
+
+arbarr_voice:
+	Voices:
+		Select: select_arbarr
+        Action: move_command01, move_command02
+
+arweap_voice:
+	Voices:
+		Select: select_arweap
+        Action: move_command01, move_command02
+
+artech_voice:
+	Voices:
+		Select: select_artech
+        Action: move_command01, move_command02
+
+arheli_voice:
+	Voices:
+		Select: select_arheli
+        Action: move_command01, move_command02
+        
+# /////////// Baneslayer Order Building Select ///////////
+
+oppowr_voice:
+	Voices:
+		Select: select_oppowr
+
+opbarr_voice:
+	Voices:
+		Select: select_opbarr
+
+opweap_voice:
+	Voices:
+		Select: select_opweap
+
+optech_voice:
+	Voices:
+		Select: select_optech
+
+opavtech_voice:
+	Voices:
+		Select: select_opavtech
+
+opheli_voice:
+	Voices:
+		Select: select_opheli  
+        
+# /////////// Conclave Building Select ///////////
+
+tcpowr_voice:
+	Voices:
+		Select: select_tcpowr
+		Attack: select_tcpowr
+		Action: select_tcpowr
+
+tcgate_voice:
+	Voices:
+		Select: select_tcgate
+
+tcholotech_voice:
+	Voices:
+		Select: select_holotech  

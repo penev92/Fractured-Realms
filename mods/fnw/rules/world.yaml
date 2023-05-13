@@ -1,0 +1,481 @@
+^BaseWorld:
+	Inherits: ^Palettes
+	Inherits: ^WeatherRollMap
+	AlwaysVisible:
+	ActorMap:
+	ScreenMap:
+	Selection:
+	ControlGroups:
+	MusicPlaylist:
+		VictoryMusic: score
+		DefeatMusic: map
+	TerrainGeometryOverlay:
+	DebugVisualizations:
+	TerrainRenderer:
+	ScriptTriggers:
+	ShroudRenderer:
+		FogVariants: shroud
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: true
+	Faction@Random:
+		Name: Random
+		InternalName: Random
+		RandomFactionMembers: redalliance, baneslayer, conclave, federation
+		Description:
+	Faction@Redalliance:
+		Name: Alliance
+		InternalName: redalliance
+		Description: Red Alliance:\nRelying on units with superior raw strength and unparalleled durability but with slow movement speed and high cost, the Red Alliance is a highly powerful if somewhat inflexible war machine.
+	Faction@baneslayer:
+		Name: Order
+		InternalName: baneslayer
+		Description: Order of the Baneslayer:\nThe Order of the Baneslayer is a highly flexible faction with each unit able to perform well in a variety of roles. It is by far the most rounded faction capable of facing any threat encountered on the battlefield.
+	Faction@Conclave:
+		Name: Conclave
+		InternalName: conclave
+		Description: Conclave of the Horizon:\nA mechanically unusual faction, the Conclave of the Horizon offers a limited roster of units but makes up for it by using powerful and fast units that can adapt to many situations. Using cunning and underhanded tactics is the key to victory.
+	Faction@Federation:
+		Name: Federation
+		InternalName: federation
+		Description: Terran Federation:\nA faction using a large mass of infantry supported by vehicles ranging from crude tank series to ambush vehicles, the Federation relies primarily on mass as a force, its units are inexpensive and produced quickly, with in exchange mediocre statistics.
+	ResourceRenderer:
+		ResourceTypes:
+			Diast:
+				Sequences: diast01, diast02, diast03, diast04, diast05
+				Palette: diastgreen
+				Name: Diastim
+			Diastgems:
+				Sequences: diast01, diast02, diast03, diast04, diast05
+				Palette: diastgold
+				Name: Gold Diastim
+				
+^WeatherRollMap:
+	WeatherOverlay:
+		ParticleDensityFactor: 10
+		ChangingWindLevel: true
+		WindLevels: -5, -3, -2, 0, 2, 3, 5
+		WindTick: 120, 520
+		InstantWindChanges: false
+		UseSquares: true
+		ParticleSize: 1, 3
+		ScatterDirection: -1, 1
+		Gravity: 0.80, 1.20
+		SwingOffset: 1.0, 1.5
+		SwingSpeed: 0.001, 0.025
+		SwingAmplitude: 1.0, 1.5
+		ParticleColors: 7D4C1835, 735B4325, 855D4332
+		LineTailAlphaValue: 25
+	GlobalLightingPaletteEffect:
+		ExcludePalettes: player, powereffect60, powereffect, cursor, chrome, colorpicker, fog, shroud, alpha, flameeffect60, flameeffect, effect, greeneffect, flammeeffectblue, powereffect2, light, greenlight, purplelight
+		Red: 0.94
+		Green: 0.94
+		Blue: 0.98
+		Ambient: 0.98
+
+^colorpicker.preview:
+	ColorPickerManager:
+		PreviewActor: t2_basilisk.colorpicker
+		HsvSaturationRange: 0.25, 1.0
+		V: 1.0
+		PresetHues: 0.17, 0, 0.6, 0.3, 0.1, 0.5, 0.75, 0.85, 0.17, 0, 0.6, 0.3, 0.1, 0.5, 0.75, 0.85
+		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45
+		FactionPreviewActors:
+			federation: t1_tick.colorpicker
+			alliance: t2_basilisk.colorpicker
+			baneslayer: t2_garm.colorpicker
+			conclave: t2_rodeur.colorpicker
+		
+World:
+	Inherits@Base: ^BaseWorld
+	Inherits@Locomotor: ^Locomotor.Base.World
+	Inherits@MpStartUnit: ^MpStart.Base.World
+	Inherits@colorpicker: ^colorpicker.preview
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	PathFinderOverlay:
+	HierarchicalPathFinderOverlay:
+	PlayerCommands:
+	TauntCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionTabsWidget: PRODUCTION_TABS
+		ProductionPaletteWidget: PRODUCTION_PALETTE
+	BuildableTerrainLayer:
+	ResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Diast:
+				ResourceIndex: 1
+				TerrainType: Diast
+				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
+				MaxDensity: 70
+			Diastgems:
+				ResourceIndex: 2
+				TerrainType: Diastgems
+				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
+				MaxDensity: 85
+	ResourceClaimLayer:
+	ResourceTwinkleLayer:
+		Image: spark_diast_particle
+		Sequences: diast_spark01, diast_spark02, diast_spark03
+		Types: Diast, Diastgems
+		Palette: powereffect60
+	BridgeLayer:
+	WarheadDebugOverlay:
+	CustomTerrainDebugOverlay:
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 7
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 5
+	CreateMapPlayers:
+	MapCreeps:
+		CheckboxVisible: false
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 6
+	SpawnStartingUnits:
+		DropdownDisplayOrder: 3
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	RadarPings:
+	StartGameNotification:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+	TimeLimitManager:
+		TimeLimitDisplayOrder: 1
+		TimeLimitWarnings:
+			1: OneMinuteRemaining
+			2: TwoMinutesRemaining
+			3: ThreeMinutesRemaining
+			4: FourMinutesRemaining
+			5: FiveMinutesRemaining
+			10: TenMinutesRemaining
+			20: TwentyMinutesRemaining
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+		Palette: isotemalpha50
+		SmokeChance: 45
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
+	SmudgeLayer@CRATER_CLEAR:
+		Type: Crater_clear
+		Sequence: craters_clear
+		Palette: craterpalalpha50
+		SmokeChance: 45
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
+	SmudgeLayer@LARGECRATER_CLEAR:
+		Type: Largecrater_clear
+		Sequence: largecraters_clear
+		Palette: craterpalalpha50
+		SmokeChance: 45
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
+	SmudgeLayer@CRATER_CONCRETE:
+		Type: Crater_concrete
+		Sequence: craters_concrete
+		Palette: craterpalalpha50
+		SmokeChance: 45
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
+	SmudgeLayer@LARGECRATER_CONCRETE:
+		Type: Largecrater_concrete
+		Sequence: largecraters_concrete
+		Palette: craterpalalpha50
+		SmokeChance: 45
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
+	SmudgeLayer@SCORCH:
+		Type: Scorch
+		Sequence: scorchs
+		Palette: schorchalpha85
+		SmokeChance: 1
+		SmokeType: Scorch_flamming
+		SmokeSequences: idle01, idle02, idle03
+		SmokePalette: flameeffect60
+	SmudgeLayer@GIBS:
+		Type: Gibs
+		Sequence: ghusk
+		SmokeChance: 15
+		Palette: effect
+		SmokePalette: player
+	
+^Locomotor.Base.World:
+	Locomotor@FOOT:
+		Name: foot
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rough: 90
+			Tree: 95
+			Pilrock: 90
+			Concrete: 100
+			Diast: 90
+			Diastgems: 90
+	Locomotor@HEAVYFOOT:
+		Name: heavyfoot
+		Crushes: mine, crate
+		SharesCell: false
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rough: 95
+			Tree: 95
+			Pilrock: 90
+			Diast: 90
+			Diastgems: 90
+	JumpjetLocomotor@VehicleJumpjet:
+		Name: jumpjet
+		Crushes: mine, crate
+		SharesCell: false
+		JumpjetTransitionCost: 100
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rock: 95
+			Rough: 95
+			Tree: 90
+			Pilrock: 90
+			Concrete: 100
+			Diast: 90
+			River: 80
+			Beach: 95
+			Diastgems: 90
+			Water: 80
+			Jumpjet: 110
+	Locomotor@WHEELED:
+		Name: wheeled
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 100
+			Road: 120
+			Rough: 90
+			Concrete: 100
+			Tree: 90
+			Diast: 90
+			Diastgems: 90
+	Locomotor@TRACKED:
+		Name: tracked
+		Crushes: mine, wall, crate, infantry, husk
+		TerrainSpeeds:
+			Clear: 100
+			Road: 115
+			Rough: 90
+			Concrete: 100
+			Tree: 90
+			Diast: 90
+			Diastgems: 90
+	Locomotor@HeavyTRACKED:
+		Name: heavy.tracked
+		Crushes: mine, wall, crate, infantry, wall, husk
+		TerrainSpeeds:
+			Clear: 100
+			Road: 115
+			Rough: 90
+			Concrete: 100
+			Tree: 90
+			Diast: 90
+			Diastgems: 90
+	Locomotor@WALKER:
+		Name: walker
+		Crushes: mine, wall, crate, infantry, husk
+		TerrainSpeeds:
+			Clear: 100
+			Road: 115
+			Rough: 95
+			Concrete: 100
+			Tree: 95
+			Diast: 95
+			Diastgems: 95
+	Locomotor@AMPHIBIOUS:
+		Name: amphibious
+		Crushes: mine, wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 100
+			Road: 110
+			Rough: 90
+			Concrete: 100
+			Tree: 90
+			River: 80
+			Beach: 95
+			Diast: 90
+			Diastgems: 90
+			Water: 80
+	SubterraneanLocomotor@SUBTERRANEAN:
+		Name: subterranean
+		Crushes: mine, wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 100
+			Road: 110
+			Rough: 90
+			Concrete: 100
+			Tree: 90
+			Diast: 90
+			Diastgems: 90
+			Subterranean: 120
+		SubterraneanTransitionTerrainTypes: Clear, Rough, Road, DirtRoad, Diast, Beach, Concrete, Tree
+		SubterraneanTransitionCost: 120
+	Locomotor@HOVER:
+		Name: hover
+		Crushes: mine, wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 105
+			Road: 105
+			Rough: 90
+			Tree: 90
+			Pilrock: 80
+			Concrete: 100
+			River: 95
+			Beach: 95
+			Diast: 90
+			Diastgems: 90
+			Water: 95
+	
+^MpStart.Base.World:
+	StartingUnits@redalliance:
+		Class: none
+		ClassName: MCV only
+		Factions: redalliance
+		BaseActor: aracnst
+	StartingUnits@lightredalliance:
+		Class: light
+		ClassName: Exploration unit
+		Factions: redalliance
+		BaseActor: aracnst
+		SupportActors: t1_bike
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@heavyredalliance:
+		Class: heavy
+		ClassName: Small support
+		Factions: redalliance
+		BaseActor: aracnst
+		SupportActors: t1_scarab, t2_basilisk
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@baneslayer:
+		Class: none
+		ClassName: MCV only
+		Factions: baneslayer
+		BaseActor: opcacnst
+	StartingUnits@lightbaneslayer:
+		Class: light
+		ClassName: Exploration unit
+		Factions: baneslayer
+		BaseActor: opcacnst
+		SupportActors: t1_heidrun
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@heavybaneslayer:
+		Class: heavy
+		ClassName: Small support
+		Factions: baneslayer
+		BaseActor: opcacnst
+		SupportActors: t1_heidrun, t2_garm
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@conclave:
+		Class: none
+		ClassName: MCV only
+		Factions: conclave
+		BaseActor: tccacnst
+	StartingUnits@lightconclave:
+		Class: light
+		ClassName: Exploration unit
+		Factions: conclave
+		BaseActor: tccacnst
+		SupportActors: statis
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@heavyconclave:
+		Class: heavy
+		ClassName: Small support
+		Factions: conclave
+		BaseActor: tccacnst
+		SupportActors: statis, t2_rodeur
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@federation:
+		Class: none
+		ClassName: MCV only
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+	StartingUnits@lightfederation:
+		Class: light
+		ClassName: Exploration unit
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@heavyfederation:
+		Class: heavy
+		ClassName: Small support
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@solarrep:
+		Class: none
+		ClassName: MCV only
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+	StartingUnits@lightsolarrep:
+		Class: light
+		ClassName: Exploration unit
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	StartingUnits@heavysolarrep:
+		Class: heavy
+		ClassName: Small support
+		Factions: federation
+		BaseActor: fedcnst
+		SupportActors: t1_stalker
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorCursorLayer:
+	EditorResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Diast:
+				ResourceIndex: 1
+				TerrainType: Diast
+				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
+				MaxDensity: 70
+			Diastgems:
+				ResourceIndex: 2
+				TerrainType: Diastgems
+				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
+				MaxDensity: 85
+	EditorSelectionLayer:
+		Palette: placefootprint
+	LoadWidgetAtGameStart:
+	EditorActionManager:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Clear, Road

@@ -1,0 +1,58 @@
+#///////////////////// - Visual Effect - /////////////////////
+
+^Scorched_flame:
+	Warhead@01Smu: LeaveSmudge
+		SmudgeType: Scorch
+		Chance: 5
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@3Par: SpawnSmokeParticle
+		ValidTargets: Ground, Air, Water
+		Image: smoke
+		Sequences: single_smoke_medium01, single_smoke_medium02, single_smoke_medium03, single_smoke_darkmedium01, single_smoke_darkmedium02, single_smoke_darkmedium03
+		Palette: flameeffect10
+		Gravity: 35
+		Count: 2
+		Duration: 60
+		Speed: 12, 30
+		TurnRate: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: flame_impact01, flame_impact02, flame_impact03
+		ExplosionPalette: flameeffect60
+		ValidTargets: Ground, Infantry, Vehicle, Building
+		InvalidTargets: Water, Air
+		ImpactActors: false
+		AirThreshold: 8c0
+
+#///////////////////// - Damaged Effect unite - /////////////////////
+
+^Burned_damage_effect:
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c512
+		RangeLimit: 7c256
+		DamageTypes: Burned
+
+#///////////////////// - Garrisonnable affect weapons - /////////////////////
+
+^Garrisonnable_weapons_counter:
+	Warhead@1Garrisonable: OpenToppedDamage
+		ValidTargets: GarrisonedStructure
+		Spread: 0c800
+		Damage: 8000
+		Amount: 1
+		Versus:
+			Infantry: 100
+			LightVehicle: 0
+			ArmorTank: 0
+			Concrete: 0
+
+^Garrisonnable_weapons_all:
+	Warhead@1Garrisonable: OpenToppedDamage
+		ValidTargets: GarrisonedStructure
+		Spread: 0c800
+		Damage: 8000
+		Amount: 8
+		Versus:
+			Infantry: 100
+			LightVehicle: 0
+			ArmorTank: 0
+			Concrete: 0

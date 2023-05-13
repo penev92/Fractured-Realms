@@ -1,0 +1,338 @@
+t1_vulture:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_vulture.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	# / Upgrade Faction /
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.federation.T2, Aircraft.federation.T3
+		BuildPaletteOrder: 20
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Name: primary
+		Weapon: vulture.missile
+		AmmoPoolName: primary
+		LocalOffset: 280,-260,20, 280,260,20
+		LocalYaw: 45, -45
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	AmmoPool@initial:
+		Name: primary
+		Armaments: primary
+		Ammo: 15
+		SelfReloads: true
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 25
+		Count: 1
+		ResetOnFire: true
+	WithAmmoPipsDecoration:
+		PipCount: 5
+		Margin: 4, 3
+		Position: BottomLeft
+		RequiresSelection: true
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+		PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 25
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t1_vulture.Husk
+
+t1_vulture.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Nidhogg
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 186
+	RenderSprites:
+		Image: t1_vulture
+		
+t1_mosquito:
+	Inherits: ^Aircraftshape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_mosquito.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	# / Upgrade Faction /
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.federation, Aircraft.federation.T2, Aircraft.federation.T3
+		BuildPaletteOrder: 10
+		IconPalette: Federation.Icon
+	Armament:
+		Weapon: mosquito.autogun
+		LocalOffset: -50,-420,-40, -50,420,-80
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 25
+		PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 8
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t1_mosquito.Husk
+	
+t1_mosquito.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Mosquito
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t1_mosquito
+
+t3_trasportfed:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_Armadillo.stat.unite
+	# / Inherit Option Unite /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@CargoPipsVisual: ^CargoPips
+	# / Select - Target type /
+	Inherits@Select: ^SelectableSupportUnit
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.federation.T2, Aircraft.federation.T3
+		BuildPaletteOrder: 30
+		BuildDurationModifier: 12
+		IconPalette: Federation.Icon
+	Aircraft:
+		TurnSpeed: 35
+		Speed: 110
+		AltitudeVelocity: 140
+		CruisingCondition: cruising
+	Cargo:
+		Types: Infantry, Vehicle
+		MaxWeight: 15
+		AfterLoadDelay: 0
+		BeforeUnloadDelay: 0
+		AfterUnloadDelay: 0
+	Selectable:
+		Bounds: 1524, 1524, 0, 0
+	SpawnActorOnDeath:
+		Actor: t3_trasportfed.husk
+        
+t3_silverfish:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_silverfish.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@Cargo.pips: ^CargoPips
+	# / Upgrade Faction /
+	# / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Aircraft.federation.T3
+		BuildPaletteOrder: 40
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Name: primary
+		Weapon: silverfish.missile
+		AmmoPoolName: primary
+		LocalOffset: 280,-260,20, 280,260,20
+		LocalYaw: 45, -45
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+		PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 25
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		AltitudeVelocity: 140
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+	Cloak:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock
+		CloakDelay: 20
+		IsPlayerPalette: true
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: loading
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t3_silverfish.Husk
+        
+t3_silverfish.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Nidhogg
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 186
+	RenderSprites:
+		Image: t3_silverfish
+		
+t3_trasportfed.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Armadillo
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t3_trasportfed
+		
+t3_trasportfed.power:
+	Inherits: ^Helicoptershape
+	Tooltip:
+		Name: Armadillo
+	Health:
+		HP: 2800
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 35
+		Speed: 230
+		RepulsionSpeed: 40
+		MaximumPitch: 110
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+		IdleBehavior: Land
+	ParaDrop:
+		DropRange: 12c0
+		DropInterval: 10
+		ChuteSound:
+	Cargo:
+		MaxWeight: 40
+	-AttackMove:
+	RejectsOrders:
+	-RevealsShroud:
+	-ExternalCondition@Stase.bubble:
+	-SpeedMultiplier@move.bubble:
+	-PowerMultiplier@Stase.bubble:
+	-DamageMultiplier@Stase.bubble:
+	-GrantCondition@Stase.bubble.Bait:
+	-GrantCondition@Stase.bubble.notmobile.turret:
+	RenderSprites:
+		Image: t3_trasportfedpowr
+	SpawnActorOnDeath:
+		Actor: t3_trasportfedpowr.husk
+		
+t3_trasportfedpowr.husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Armadillo
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t3_trasportfedpowr
+
+t3_bombardfed:
+	Inherits: ^Aircraftshape
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Venom
+	Health:
+		HP: 3200
+	RejectsOrders:
+	AttackBomber:
+		Armaments: bombs3, bombs2, bombs
+	AttackOmni:
+		Armaments: aaguntur01, aaguntur02
+	Armament@aaguntur01:
+		Name: aaguntur01
+		Weapon: Anaconda_gatling
+		LocalOffset: -20,-2620,-40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	Armament@aaguntur02:
+		Name: aaguntur02
+		Weapon: Anaconda_gatling
+		LocalOffset: -20,2620,-40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	AttackBomber:
+		Armaments: bombs3, bombs2, bombs
+	Armament@bombs01:
+		Name: bombs
+		Weapon: fed_capertbomb
+		LocalOffset: -20,-2620,-40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	Armament@bombs02:
+		Name: bombs2
+		Weapon: fed_capertbomb
+		LocalOffset: 60,0,-40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	Armament@bombs03:
+		Name: bombs3
+		Weapon: fed_capertbomb
+		LocalOffset: -20,2620,-40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	AttackAircraft:
+		FacingTolerance: 20
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 8
+		Speed: 220
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	RenderSprites:
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	-RevealsShroud:
+	-ExternalCondition@Stase.bubble:
+	-SpeedMultiplier@move.bubble:
+	-PowerMultiplier@Stase.bubble:
+	-DamageMultiplier@Stase.bubble:
+	-GrantCondition@Stase.bubble.Bait:
+	-GrantCondition@Stase.bubble.notmobile.turret:

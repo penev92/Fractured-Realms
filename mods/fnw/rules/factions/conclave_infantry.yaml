@@ -1,0 +1,305 @@
+gardian:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^gardian.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Actor > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 20
+		IconPalette: Conclave.Icon
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	Armament@PRIMARY:
+		Weapon: Gardian.zap.Laser
+		LocalOffset: 180,0,260
+		MuzzleSequence: muzzle
+		MuzzlePalette: flammeeffectblue
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Gardian.zap.Laser
+		MuzzleSequence: garrison-muzzle
+	WithMuzzleOverlay:
+	HitShape:
+
+statis:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^statis.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Target type /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Actor > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 30
+		IconPalette: Conclave.Icon
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	Armament@Primary:
+		Weapon: Statis.Missile
+		LocalOffset: 450,0,260
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Statis.Missile
+		MuzzleSequence: muzzle
+	Armament@GARRISONEDFAFNIR:
+		Name: garrisoned.fafnir
+		Weapon: Statis.Missile
+		MuzzleSequence: muzzle
+	WithInfantryBody:
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	
+t3_navigator:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_navigator.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Actor > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 100
+		Prerequisites: tcholotech.navigator
+		IconPalette: Conclave.Icon
+	Mobile:
+		SharesCell: false
+		TerrainSpeeds:
+			Clear: 100
+			Road: 110
+			Rough: 90
+			Tree: 90
+			Beach: 90
+			Water: 90
+			Pilrock: 90
+			Diast: 90
+	HiddenUnderFog:
+		Type: GroundPosition
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	-Crushable:
+	WithIdleOverlay@robe:
+		Offset: 0,0,-5
+		Sequence: robe_navigator
+		Palette: powereffect
+	Armament@PRIMARY:
+		Weapon: Navigator.GravitonBall
+		MuzzleSequence: muzzle
+	WithInfantryBody:
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	RenderSprites:
+		Scale: 0.78
+	HitShape:
+
+^t4_consniper.Base:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / < Stat Unite Actor > /
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	HitShape:
+
+t4_consniper:
+	Inherits@1: ^t4_consniper.Base
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t4_consniper.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Actor > /
+	Buildable:
+		Queue: Vehicle.conclave
+		BuildPaletteOrder: 20
+		Prerequisites: tcsuperweap
+		IconPalette: Conclave.Icon
+		BuildLimit: 1
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	GrantConditionOnAttack@TargetWeapon:
+		ArmamentNames: primary
+		RevokeOnNewTarget: true
+		RequiredShotsPerInstance: 20
+		Condition: Target
+	Armament@target:
+		Weapon: vagabond.sniper.target
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 20,0,40
+		RequiresCondition: !Target
+	Armament@fire:
+		Weapon: vagabond.sniper.fire
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 50,0,10
+		RequiresCondition: Target
+	Armament@sniper:
+		Weapon: vagabond.snipergun
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 20,0,40
+	GrantTimedConditionOnDeploy@ActiveHologram:
+		DeployedCondition: ActiveHologram
+		CooldownTicks: 2000
+		DeployedTicks: 300
+		StartsFullyCharged: true
+		PauseOnCondition: Disable
+	Cloak:
+		UncloakOn: Attack, Infiltrate
+		CloakDelay: 1
+		IsPlayerPalette: true
+		CloakedCondition: cloaked
+		RequiresCondition: ActiveHologram
+	ExternalCondition@ActiveHologram:
+		Condition: ActiveHologram
+	ExplodeWeapon@Deployed:
+		Weapon: pop_mirror
+		RequiresCondition: ActiveHologram
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: ExconvectorGun.primaris
+		MuzzleSequence: garrison-muzzle
+	HitShape:
+	
+t4_consniper.Mirror:
+	Inherits@1: ^t4_consniper.Base
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_consniper.conclave.stat.mirror.unite
+	AttackFrontal:
+		FacingTolerance: 2
+	RenderSprites:
+		Image: t4_consniper
+	KillsSelf:
+		Delay: 300
+		RemoveInstead: true
+	WithDecoration@MIRROR:
+		Image: mirror
+		Sequence: mirror-1
+		Palette: effect
+		ReferencePoint: Bottom, Left
+		ValidStances: Ally
+		ZOffset: 256
+	-ActorLostNotification:
+		
+activate.Mirror:
+	Inherits: ^Capacity.system.active
+	Interactable:
+	Explodes:
+		Weapon: MirrorWarhead.Active
+	SpawnActorOnDeath:
+		Actor: t4_consniper.Mirror
+		OwnerType: Victim
+		EffectiveOwnerFromOwner: true
+
+avatar:
+	Inherits@1: ^Infantry
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Actor > /
+	Buildable:
+		Queue: Nope.conclave
+		BuildPaletteOrder: 20
+		Description: Shock troop.
+		BuildDurationModifier: 4
+		IconPalette: Conclave.Icon
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: Avatar
+	Health:
+		HP: 80000
+	DamageMultiplier:
+		Modifier: 0
+	Mobile:
+		Speed: 90
+		SharesCell: false
+		TerrainSpeeds:
+			Clear: 100
+			Road: 110
+			Rough: 90
+			Tree: 90
+			Beach: 90
+			Water: 90
+			Pilrock: 90
+			Diast: 90
+	HiddenUnderFog:
+		Type: GroundPosition
+		Amount of charge required to attack.:
+		FacingTolerance: 64
+	-Crushable:
+	AttackFrontal:
+		FacingTolerance: 4
+		PauseOnCondition: stunweapons
+	Armament@CHARGING:
+		Weapon: avatar.charging
+		LocalOffset: 1000,-2500,1500
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+	Armament@LIGHTNING:
+		FireDelay: 35
+		Weapon: Avatar.deluge
+		LocalOffset: 1000,-2500,1500
+	WithMuzzleOverlay:
+	PeriodicExplosion@Lighting:
+		Weapon: Avatar_effet
+		LocalOffset: 0,0,0c0
+		ResetReloadWhenEnabled: false
+	WithInfantryBody:
+		StandSequences: idle1
+		DefaultAttackSequence: shoot
+	WithIdleOverlay@AURA:
+		Offset: 0, 0, 300
+		Sequence: AuraAvatar
+		Palette: effectpurple
+	WithIdleOverlay@LIGHT:
+		Offset: 0, 0, 950
+		Sequence: light
+		Palette: effectpurple
+	ProximityExternalCondition@AURA.UP:
+		Condition: avatar.up
+		Range: 6c0
+		AffectsParent: false
+	RenderSprites:
+		Scale: 0.75
+	KillsSelf:
+		Delay: 1100
+	HitShape:

@@ -1,0 +1,429 @@
+Metadata:
+	Title: Fractured Realms
+	Version: v1.0 (playtest 2023.04.01)
+	Website: https://www.moddb.com/mods/fractured-realms
+	WebIcon32: https://i60.servimg.com/u/f60/16/69/66/28/logo_310.png
+	WindowTitle: OpenRA - Fractured Realms
+
+ModCredits:
+	ModTabTitle: Fractured Realms
+	ModCreditsFile: fnw|AUTHORS.FR
+
+# TODO: Rename to AudioBag once BagFile is gone from OpenRA/OpenRA
+PackageFormats: Mix, AudioBag
+
+Packages:
+	~^SupportDir|Content/fnw/
+	^EngineDir
+	^EngineDir|mods/common: common
+	~^SupportDir|Content/fnw: fnw_support
+	$fnw: fnw
+	~main.mix
+	~scores.mix
+	
+	fnw_support|bits
+	fnw_support|uibits
+
+	fnw_support|bits/icones_ingame/artwork_icones: artwork
+	fnw_support|bits/icones_ingame/
+	fnw_support|bits/icones_ingame/build_upgrades_baneslayer
+	fnw_support|bits/icones_ingame/build_upgrades_conclave
+	fnw_support|bits/icones_ingame/build_upgrades_redalliances
+	fnw_support|bits/icones_ingame/build_upgrades_federation
+	fnw_support|bits/icones_ingame/unites_baneslayer
+	fnw_support|bits/icones_ingame/unites_conclave
+	fnw_support|bits/icones_ingame/unites_redalliance
+	fnw_support|bits/icones_ingame/unites_federation
+	fnw_support|bits/icones_ingame/power_icons
+	fnw_support|bits/icones_ingame/doctrine_icons
+	fnw_support|bits/voxels
+	fnw_support|bits/palettes
+	fnw_support|bits/shp_factions
+	fnw_support|bits/shp_ingame
+	fnw_support|bits/shp_animations
+	fnw_support|bits/shp_smoke_animation
+	fnw_support|bits/shp_civilianbuilding
+	fnw_support|bits/shp_unite
+	fnw_support|bits/shp_unite/aircraft
+	fnw_support|bits/shp_unite/infantry
+	fnw_support|bits/shp_unite/vehicle
+	fnw_support|bits/stat_effect
+	fnw_support|bits/decorations
+	fnw_support|bits/decorations/cloud
+	fnw_support|bits/craters
+	fnw_support|bits/scorches
+	fnw_support|bits/gibs
+	fnw_support|bits/gibs/deadhusk
+	fnw_support|bits/gibs/splash_effects
+	fnw_support|bits/ar_notification
+	fnw_support|bits/tc_notification
+	fnw_support|bits/op_notification
+	fnw_support|bits/ft_notification
+	# Sounds Files ///
+	fnw_support|bits/sounds/ambience_building
+	fnw_support|bits/sounds/ambience_unite
+	fnw_support|bits/sounds/ambience_world
+	fnw_support|bits/sounds/explosion
+	fnw_support|bits/sounds/fire_weapons
+	fnw_support|bits/sounds/hub
+	fnw_support|bits/sounds/impact_weapons
+	fnw_support|bits/sounds/interact_unite
+	fnw_support|bits/sounds/interact_unite/building
+	fnw_support|bits/sounds/interact_power
+	fnw_support|bits/sounds/voice_unite
+	fnw_support|bits/sounds/voice_unite/ar_unite
+	# Faction Sounds weapons ///
+	fnw_support|bits/sounds/fire_weapons/redalliance
+	fnw_support|bits/sounds/fire_weapons/order
+	fnw_support|bits/sounds/fire_weapons/conclave
+	fnw_support|bits/sounds/fire_weapons/federation
+	fnw_support|bits/sounds
+	fnw_support|bits/cemarith
+	fnw_support|bits/vigile
+	fnw_support|bits/orion
+
+MapFolders:
+	fnw|maps: System
+	~^SupportDir|maps/Fnw/release2021: User
+
+Rules:
+	fnw|rules/misc.yaml
+	fnw|rules/ai.yaml
+	fnw|rules/player.yaml
+	fnw|rules/world.yaml
+	fnw|rules/palettes.yaml
+	fnw|rules/defaults.yaml
+	fnw|rules/husks.yaml
+	fnw|rules/world/trees.yaml
+	fnw|rules/world/rock.yaml
+	fnw|rules/mechanics.yaml
+	fnw|rules/doctrines.yaml
+	fnw|rules/codex.yaml
+	
+	# Comuns
+	fnw|rules/factions/comun_structures.yaml
+	fnw|rules/factions/comun_vehicles.yaml
+	fnw|rules/factions/comun_infantry.yaml
+	fnw|rules/factions/comun_aircraft.yaml
+	fnw|rules/statunite/neutral_stat.yaml
+	
+	# RedAlliance
+	fnw|rules/factions/redalliance_structures.yaml
+	fnw|rules/factions/redalliance_infantry.yaml
+	fnw|rules/factions/redalliance_vehicles.yaml
+	fnw|rules/factions/redalliance_aircraft.yaml
+	fnw|rules/factions/redalliance_researh.yaml
+	fnw|rules/factions/redalliance_mobile_building.yaml
+	fnw|rules/statunite/redalliance-stat.yaml
+	
+	# Baneslayer
+	fnw|rules/factions/baneslayer_structures.yaml
+	fnw|rules/factions/baneslayer_infantry.yaml
+	fnw|rules/factions/baneslayer_vehicles.yaml
+	fnw|rules/factions/baneslayer_aircraft.yaml
+	fnw|rules/factions/baneslayer_researh.yaml
+	fnw|rules/statunite/baneslayer-stat.yaml
+	
+	# Conclave
+	fnw|rules/factions/conclave_structures.yaml
+	fnw|rules/factions/conclave_infantry.yaml
+	fnw|rules/factions/conclave_vehicles.yaml
+	fnw|rules/factions/conclave_aircraft.yaml
+	fnw|rules/factions/conclave_researh.yaml
+	fnw|rules/statunite/conclave-stat.yaml
+
+	# Federation
+	fnw|rules/factions/federation_structures.yaml
+	fnw|rules/factions/federation_infantry.yaml
+	fnw|rules/factions/federation_vehicles.yaml
+	fnw|rules/factions/federation_aircraft.yaml
+	fnw|rules/factions/federation_researh.yaml
+	fnw|rules/statunite/federation-stat.yaml
+
+Sequences:
+	fnw|sequences/misc.yaml
+	fnw|sequences/aircraft.yaml
+	fnw|sequences/vehicles.yaml
+	fnw|sequences/infantry.yaml
+	fnw|sequences/structures.yaml
+	fnw|sequences/decorations.yaml
+	fnw|sequences/debris-gibs_seq.yaml
+	fnw|sequences/abilitie-power.yaml
+	fnw|sequences/factions/vehicles_redalliance.yaml
+	fnw|sequences/factions/vehicles_conclave.yaml
+	fnw|sequences/factions/vehicles_federation.yaml
+
+ModelSequences:
+	fnw|sequences/voxels.yaml
+
+Cursors:
+	fnw|cursors.yaml
+
+Chrome:
+	fnw|chrome.yaml
+
+Assemblies:
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.Cnc.dll
+	^BinDir|OpenRA.Mods.D2k.dll
+	^BinDir|OpenRA.Mods.RA2.dll
+	^BinDir|OpenRA.Mods.AS.dll
+
+ChromeLayout:
+	fnw|chrome/credits.yaml
+	common|chrome/ingame.yaml                           #trad Fr
+	fnw|chrome/ingame-player.yaml
+	fnw|chrome/ingame-observer.yaml                  #trad Fr
+	common|chrome/ingame-infoobjectives.yaml            #trad Fr
+	common|chrome/ingame-infostats.yaml                 #trad Fr
+	common|chrome/lobby-players.yaml                    #trad Fr
+	fnw|chrome/mainmenu.yaml                         #trad Fr
+	common|chrome/settings-hotkeys.yaml                 #trad Fr
+	fnw|chrome/tooltips.yaml
+	common|chrome/assetbrowser.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/mainmenu-prompts.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-menu.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debuginfo.yaml
+	common|chrome/ingame-debug-hpf.yaml
+	common|chrome/ingame-perf.yaml
+	common|chrome/ingame-infochat.yaml
+	common|chrome/ingame-info-lobby-options.yaml
+	common|chrome/settings.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/settings-advanced.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-servers.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/connection.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/gamesave-browser.yaml
+	common|chrome/gamesave-loading.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/editor.yaml
+	common|chrome/playerprofile.yaml
+	common|chrome/text-notifications.yaml
+	fnw|chrome/encyclopedia.yaml
+
+Weapons:
+	fnw|weapons/stat_weapons.yaml
+	fnw|weapons/effect_weapons.yaml
+	fnw|weapons/weapons.yaml
+	fnw|weapons/debris.yaml
+	fnw|weapons/gibs.yaml
+	#Inherit Weapons Faction
+	fnw|weapons/ar_weapons.yaml
+	fnw|weapons/op_weapons.yaml
+	fnw|weapons/tc_weapons.yaml
+	fnw|weapons/fed_weapons.yaml
+	#Animation Weapons
+	fnw|weapons/base_weapons.yaml
+	#Stat Weapons Faction
+	fnw|rules/statunite/redalliance-stat.yaml
+	fnw|rules/statunite/baneslayer-stat.yaml
+	fnw|rules/statunite/conclave-stat.yaml
+	fnw|rules/statunite/federation-stat.yaml
+
+Voices:
+	fnw|audio/voices.yaml
+
+Notifications:
+	fnw|audio/notifications.yaml
+
+TileSets:
+	fnw|tilesets/cemarith.yaml
+	fnw|tilesets/vigile.yaml
+	fnw|tilesets/orion.yaml
+
+Missions:
+	fnw|missions.yaml
+
+Music:
+	fnw|audio/music.yaml
+
+Translations:
+	common|languages/en.ftl
+	
+Translations:
+	en:
+	    fnw|languages/english.yaml
+	fr:
+	    fnw|languages/french.yaml
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/production-peractor.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/control-groups.yaml
+	fnw|hotkeys.yaml
+
+WorldViewportSizes:
+	AllowNativeZoom: True
+	CloseWindowHeights: 580, 700
+	MediumWindowHeights: 750, 1100
+	FarWindowHeights: 950, 1400
+
+LoadScreen: ImageLoadScreen
+	Image: fnw_support|uibits/loading.png
+	
+	
+	Width: 2048
+	Height: 1024
+	Text: (°Д°) ...Loading,(°X°) ...Loading,(°3°) ...Loading,(°U°) ...Loading,(°w°) ...Loading,(°_°) ...Loading,(°o°) ...Loading,(°O°) ...Loading,(°*°) ...Loading,(Ô_õ) ...Loading,(x_x) ...Loading,(=_=) ...Loading,( ͡° ͜ʖ ͡°) ...Loading
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+
+ChromeMetrics:
+	common|metrics.yaml
+	fnw|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 12
+		Ascender: 8
+	Small:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: fnw|steel_blade_7.ttf
+		Size: 32
+		Ascender: 26
+	Title_Codex:
+		Font: common|FreeSansBold.ttf
+		Size: 12
+		Ascender: 8
+	Small_Codex:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 7
+	InfoConso:
+		Font: common|FreeSansBold.ttf
+		Size:18
+		Ascender: 20
+
+MapGrid:
+	TileSize: 26,26
+	Type: Rectangular
+	MaximumTerrainHeight: 16
+	
+DefaultOrderGenerator: UnitOrderGenerator
+	
+SupportsMapsFrom: fnw, cnc, d2k
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA, PngSheet
+
+VideoFormats: Vqa, Wsa
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+	    SIRIUS: .sir
+	    VIGILE: .vig
+	    CEMARITH: .cem
+	    ORION: .ori
+
+ModelSequenceFormat: VoxelModelSequence
+
+AssetBrowser:
+	SupportedExtensions: .shp, .sir, .cem, .vig, .ori, .vqa, .png
+	VideoExtensions: .vqa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: Slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: Slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: Normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: Fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: Faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: Fastest
+			Timestep: 20
+			OrderLatency: 6
+		ludicrous:
+			Name: Ludicrous
+			Timestep: 5
+			OrderLatency: 9
+
+#ModContent:
+#	InstallPromptMessage: Red Alert requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2008 Red Alert freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+#	QuickDownload: quickinstall
+#	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2008 freeware release of RA.
+#	Packages:
+#        music: Base Game Music
+#			TestFiles: ^SupportDir|Content/ra/v2/scores.mix
+#			Sources: ra-origin
+#	Downloads:
+#		fnw|installer/downloads.yaml
+#	Sources:
+#		fnw|installer/origin.yaml
+
+DiscordService:
+	ApplicationId: 774792282410975294

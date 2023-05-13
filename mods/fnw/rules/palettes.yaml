@@ -1,0 +1,476 @@
+^Palettes:
+	# Palette Terrain
+	PaletteFromFile@Vigile:
+		Name: terrain
+		Tileset: VIGILE
+		Filename: vigile.pal
+	PaletteFromFile@Cemarith:
+		Name: terrain
+		Tileset: CEMARITH
+		Filename: cemarith.pal
+	PaletteFromFile@Orion:
+		Name: terrain
+		Tileset: ORION
+		Filename: orion.pal
+	# Palette Player
+	PaletteFromFile@player:
+		Name: player
+		Filename: unittem.pal
+		ShadowIndex: 1
+	PlayerColorPalette:
+		BasePalette: player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PlayerColorPalette@Infantry:
+		BaseName: infantry
+		BasePalette: infantry
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PlayerColorPalette@Black:
+		BaseName: black
+		BasePalette: black
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	# Palette Player unite tileset
+	PaletteFromFile@inftem:
+		Name: infantry
+		Filename: unittem.pal
+		ShadowIndex: 1
+	PaletteFromFile@black:
+		Name: black
+		Filename: unittem.pal
+		ShadowIndex: 1
+	PaletteFromFile@player-noshadow:
+		Name: player-noshadow
+		Filename: temperat.pal
+		TransparentIndex: 0, 4
+	PaletteFromFile@DISABLED:
+		Name: disabled
+		Filename: unittemdisabled.pal
+		AllowModifiers: false
+		ShadowIndex: 1
+	# Palette ingame Hud
+	PaletteFromFile@chrome:
+		Name: chrome
+		Filename: temperat.pal
+		ShadowIndex: 3
+		AllowModifiers: false
+	PaletteFromFile@cursor:
+		Name: cursor
+		Filename: temperat.pal
+		AllowModifiers: false
+		CursorPalette: true
+	ColorPickerPalette@colorpicker:
+		Name: colorpicker
+		BasePalette: player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+		AllowModifiers: false
+	PaletteFromFile@civilianpal:
+		Name: civilianpal
+		Filename: civilpalette.pal
+		ShadowIndex: 1
+	# Palette Ressource
+	FixedColorPalette@diastgreen:
+		Base: player
+		Name: diastgreen
+		Color: af23d8
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	FixedColorPalette@diastgold:
+		Base: player
+		Name: diastgold
+		Color: ffcc00
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	# Palette Effect
+	PaletteFromFile@effect:
+		Name: effect
+		Filename: temperat.pal
+		ShadowIndex: 1
+	PaletteFromFile@Isotem:
+		Name: isotem
+		ShadowIndex: 255
+		Filename: isotem.pal
+		AllowModifiers: true
+	PaletteFromFile@craterpal:
+		Name: craterpal
+		ShadowIndex: 1
+		Filename: craterpal.pal
+		AllowModifiers: true
+	PaletteFromFile@treeorganic:
+		Name: treeorganic
+		Filename: treeorganic.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@toxintree:
+		Name: toxintree
+		Filename: toxintree.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@treebionte:
+		Name: treebionte
+		Filename: bionte_faune.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@bluefaune:
+		Name: bluefaune
+		Filename: bluefaune.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@crystaltree:
+		Name: crystaltree
+		Filename: crystaltree.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@greenpowereffect:
+		Name: greeneffect
+		Filename: greenpower.pal
+		AllowModifiers: false
+	PaletteFromFile@powereffect:
+		Name: powereffect
+		Filename: powereffect.pal
+		AllowModifiers: false
+	PaletteFromFile@scorchpal:
+		Name: schorchpal
+		ShadowIndex: 1
+		Filename: schorchpal.pal
+		AllowModifiers: false
+	PaletteFromFile@flameeffect:
+		Name: flameeffect
+		Filename: flammeeffect.pal
+		AllowModifiers: false
+	PaletteFromFile@flammeeffectblue:
+		Name: flammeeffectblue
+		Filename: flammeeffectblue.pal
+		AllowModifiers: false
+	PaletteFromFile@powerpurpleeffet:
+		Name: effectpurple
+		Filename: power_purple.pal
+		AllowModifiers: false
+	PaletteFromFile@powereffect2:
+		Name: powereffect2
+		Filename: powereffect2.pal
+		AllowModifiers: false
+	PaletteFromFile@railgunpal:
+		Name: railgunpal
+		Filename: railgunpal.pal
+		AllowModifiers: false
+	# Icons Faction Palette
+	PaletteFromFile@RedAlliance.Icon:
+		Name: RedAlliance.Icon
+		Filename: palette_color_ar.pal
+		AllowModifiers: false
+	PaletteFromFile@Baneslayer.Icon:
+		Name: Baneslayer.Icon
+		Filename: palette_color_op.pal
+		AllowModifiers: false
+	PaletteFromFile@Conclave.Icon:
+		Name: Conclave.Icon
+		Filename: palette_color_conclave.pal
+		AllowModifiers: false
+	PaletteFromFile@Conclave.Upgrade.Icon:
+		Name: Conclave.Upgrade.Icon
+		Filename: palette_upgrade_conclave.pal
+		AllowModifiers: false
+	PaletteFromFile@Federation.Icon:
+		Name: Federation.Icon
+		Filename: pallete_color_federation.pal
+		AllowModifiers: false
+	# Icons Light Palette
+	PaletteFromFile@light:
+		Name: light
+		Filename: light.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Greenlight:
+		Name: greenlight
+		Filename: greenlight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Bluelight:
+		Name: bluelight
+		Filename: bluelight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Cyanlight:
+		Name: cyanlight
+		Filename: cyanlight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Redlight:
+		Name: redlight
+		Filename: redlight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Purplelight:
+		Name: purplelight
+		Filename: purplelight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	PaletteFromFile@Voidlight:
+		Name: voidlight
+		Filename: voidlight.pal
+		AllowModifiers: false
+		ShadowIndex: 0
+	# Voxel Palette
+	VoxelNormalsPalette@normals:
+		Name: normals
+		Filename: light.pal
+		ShadowIndex: 1
+	# Variation Palette
+	PaletteFromRGBA@Upgrade_blue_effect:
+		BasePalette: effect
+		Name: Upgrade_blue_effect
+		R: 35
+		G: 35
+		B: 100
+		A: 255
+	PaletteFromRGBA@red_effect:
+		BasePalette: effect
+		Name: Red_effect
+		R: 255
+		G: 35
+		B: 50
+		A: 255
+	PaletteFromRGBA@shadow:
+		Name: shadow
+		R: 0
+		G: 0
+		B: 0
+		A: 110
+	PaletteFromRGBA@submerged:
+		Name: submerged
+		R: 0
+		G: 0
+		B: 0
+		A: 50
+	PaletteFromRGBA@highlight:
+		Name: highlight
+		R: 255
+		G: 255
+		B: 255
+		A: 128
+	PaletteFromRGBA@moveflash:
+		Name: moveflash
+		R: 255
+		G: 255
+		B: 255
+		A: 64
+	PaletteFromRGBA@Red:
+		Name: Red_color
+		R: 128
+		G: 0
+		B: 0
+		A: 128
+	PaletteFromRGBA@corossive:
+		Name: corossion
+		R: 255
+		G: 153
+		B: 0
+		A: 128
+	PaletteFromRGBA@TargetRED:
+		Name: targetred
+		R: 98
+		G: 0
+		B: 0
+		A: 128
+	PaletteFromRGBA@palStun:
+		Name: palStun
+		R: 64
+		G: 64
+		B: 200
+		A: 160
+	PaletteFromRGBA@UnitShape:
+		Name: UnitShape
+		R: 0
+		G: 0
+		B: 0
+		A: 40
+	PaletteFromRGBA@damaged:
+		Name: damaged
+		R: 0
+		G: 0
+		B: 0
+		A: 80
+	#Alpha/spec Palette
+	PaletteFromPaletteWithAlpha@craterpalalpha50:
+		Name: craterpalalpha50
+		Alpha: 0.80
+		BasePalette: craterpal
+	PaletteFromPaletteWithAlpha@Isotemalpha50:
+		Name: isotemalpha50
+		Alpha: 0.50
+		BasePalette: isotem
+	PaletteFromPaletteWithAlpha@Unitalpha30:
+		Name: unitalpha30
+		Alpha: 0.30
+		BasePalette: player
+	PaletteFromPaletteWithAlpha@Unitalpha60:
+		Name: unitalpha60
+		Alpha: 0.60
+		BasePalette: player
+	PaletteFromPaletteWithAlpha@schorchalpha85:
+		Name: schorchalpha85
+		Alpha: 0.85
+		BasePalette: schorchpal
+	PaletteFromPaletteWithAlpha@powereffect80:
+		Name: powereffect80
+		Alpha: 0.80
+		BasePalette: powereffect
+	PaletteFromPaletteWithAlpha@powereffect60:
+		Name: powereffect60
+		Alpha: 0.60
+		BasePalette: powereffect
+	PaletteFromPaletteWithAlpha@powereffect40:
+		Name: powereffect40
+		Alpha: 0.40
+		BasePalette: powereffect
+	PaletteFromPaletteWithAlpha@powereffect20:
+		Name: powereffect20
+		Alpha: 0.20
+		BasePalette: powereffect
+	PaletteFromPaletteWithAlpha@bluefaunealpha25:
+		Name: bluefaunealpha25
+		Alpha: 0.25
+		BasePalette: bluefaune
+	PaletteFromPaletteWithAlpha@bluefaunealpha45:
+		Name: bluefaunealpha45
+		Alpha: 0.45
+		BasePalette: bluefaune
+	PaletteFromPaletteWithAlpha@crystaltreealpha25:
+		Name: crystaltreealpha25
+		Alpha: 0.25
+		BasePalette: crystaltree
+	PaletteFromPaletteWithAlpha@crystaltreealpha45:
+		Name: crystaltreealpha45
+		Alpha: 0.45
+		BasePalette: crystaltree
+	PaletteFromPaletteWithAlpha@effectalpha75:
+		Name: effectalpha75
+		Alpha: 0.70
+		BasePalette: effect
+	PaletteFromPaletteWithAlpha@effectalpha45:
+		Name: effectalpha45
+		Alpha: 0.45
+		BasePalette: effect
+	PaletteFromPaletteWithAlpha@effectalpha30:
+		Name: effectalpha30
+		Alpha: 0.30
+		BasePalette: effect
+	PaletteFromPaletteWithAlpha@effectalpha10:
+		Name: effectalpha10
+		Alpha: 0.10
+		BasePalette: effect
+	PaletteFromPaletteWithAlpha@effectalpha55:
+		Name: effectalpha55
+		Alpha: 0.55
+		BasePalette: effect
+		Premultiply: false
+	PaletteFromPaletteWithAlpha@flammeeffectbluealpha50:
+		Name: flammeeffectblue50
+		Alpha: 0.50
+		BasePalette: flammeeffectblue
+		Premultiply: false
+	PaletteFromPaletteWithAlpha@powerpurpleeffetalpha80:
+		Name: effectpurple80
+		Alpha: 0.80
+		BasePalette: effectpurple
+	PaletteFromPaletteWithAlpha@flameeffectalpha5:
+		Name: flameeffect5
+		Alpha: 0.04
+		BasePalette: flameeffect
+	PaletteFromPaletteWithAlpha@flameeffectalpha10:
+		Name: flameeffect10
+		Alpha: 0.10
+		BasePalette: flameeffect
+	PaletteFromPaletteWithAlpha@flameeffectalpha20:
+		Name: flameeffect20
+		Alpha: 0.15
+		BasePalette: flameeffect
+	PaletteFromPaletteWithAlpha@flameeffectalpha30:
+		Name: flameeffect30
+		Alpha: 0.30
+		BasePalette: flameeffect
+	PaletteFromPaletteWithAlpha@flameeffectalpha50:
+		Name: flameeffect50
+		Alpha: 0.50
+		BasePalette: flameeffect
+	PaletteFromPaletteWithAlpha@flameeffectalpha60:
+		Name: flameeffect60
+		Alpha: 0.60
+		BasePalette: flameeffect
+		Premultiply: false
+	PaletteFromPaletteWithAlpha@flameeffectalpha70:
+		Name: flameeffect70
+		Alpha: 0.70
+		BasePalette: flameeffect
+		Premultiply: false
+	#Other Palette
+	PaletteFromPaletteWithAlpha@placelinesegment:
+		Name: placelinesegment
+		BasePalette: terrain
+		Alpha: 0.65
+	PaletteFromPlayerPaletteWithAlpha@placebuilding:
+		BaseName: placebuilding
+		BasePalette: player
+		Alpha: 0.55
+	PaletteFromPaletteWithAlpha@placefootprint:
+		Name: placefootprint
+		BasePalette: player
+		Alpha: 0.7
+	ShroudPalette@shroud:
+		Name: shroud
+	ShroudPalette@fog:
+		Name: fog
+		Fog: true
+	PlayerColorPalette:
+		BasePalette: player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PlayerColorPalette@NOSHADOW:
+		BaseName: player-noshadow
+		BasePalette: player-noshadow
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromPlayerPaletteWithAlpha@cloak:
+		BaseName: cloak
+		BasePalette: player
+		Alpha: 0.55
+	MenuPaletteEffect:
+	ChronoshiftPaletteEffect:
+	FlashPaletteEffect@NUKE:
+		Type: Nuke
+		Length: 90
+	IndexedPalette@CIV2:
+		Name: civilian2
+		BasePalette: player
+		Index: 7, 14, 118, 119, 159, 187, 188
+		ReplaceIndex: 209, 12, 187, 188, 209, 167, 13
+	IndexedPalette@CIV4:
+		Name: civilian4
+		BasePalette: player
+		Index: 7, 109, 111, 206, 210
+		ReplaceIndex: 187, 118, 119, 188, 182
+	IndexedPalette@CIV5:
+		Name: civilian5
+		BasePalette: player
+		Index: 7, 12, 109, 111, 200, 206, 210
+		ReplaceIndex: 109, 131, 177, 178, 111, 111, 182
+	IndexedPalette@CIV6:
+		Name: civilian6
+		BasePalette: player
+		Index: 7, 14, 118, 119, 159
+		ReplaceIndex: 120, 238, 236, 206, 111
+	IndexedPalette@CIV7:
+		Name: civilian7
+		BasePalette: player
+		Index: 14, 118, 119, 159, 187, 188
+		ReplaceIndex: 131, 157, 212, 7, 118, 119
+	IndexedPalette@CIV8:
+		Name: civilian8
+		BasePalette: player
+		Index: 7, 14, 118, 119, 159, 187, 188, 200
+		ReplaceIndex: 182, 131, 215, 7, 182, 198, 199, 111
+	IndexedPalette@CIV9:
+		Name: civilian9
+		BasePalette: player
+		Index: 14, 118, 119, 159, 187, 188
+		ReplaceIndex: 7, 163, 165, 200, 111, 13
+	IndexedPalette@CIV10:
+		Name: civilian10
+		BasePalette: player
+		Index: 7, 14, 118, 119, 159, 187, 188
+		ReplaceIndex: 137, 15, 129, 131, 137, 163, 165

@@ -1,0 +1,550 @@
+armcv:
+	Inherits@1: ^ShapeWalkerHeavy
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^gigante.mcv.stat.building
+	Inherits@selection: ^SelectableSupportUnit
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Prerequisites: artech
+		Queue: Vehicle.redalliance
+		BuildPaletteOrder: 70
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 65
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		Facing: 640
+		IntoActor: aracnst
+		Offset: -3,-1
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	SelectionDecorations:
+		VisualBounds: 1544, 2509, 0, -289
+	-AutoTarget:
+	BaseBuilding:
+	RenderSprites:
+		Scale: 0.75
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: aracnst.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealaracnst
+		Condition: aracnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealaracnst
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Building
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 64
+
+refinery:
+	Inherits: ^VoxelVehicleMedium
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		Prerequisites: aracnst
+		BuildPaletteOrder: 30
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 70
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	StoresResources:
+		PipCount: 0
+		Capacity: 2000000
+	Transforms:
+		IntoActor: arproc
+		Offset: -1,-1
+		Facing: 164
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite:
+		Prerequisite: Mobile.Refinery
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: arproc
+	-AutoTarget:
+	RenderVoxels:
+		Scale: 0.75
+	BaseBuilding:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Proc
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+refinery.seconddeploy:
+	Inherits: ^VoxelVehicleMedium
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: nope.redalliance
+		Prerequisites: BuildOrderBase.redalliance
+		BuildPaletteOrder: 38
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 70
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	StoresResources:
+		PipCount: 0
+		Capacity: 2000000
+	Transforms:
+		IntoActor: arproc.seconddeploy
+		Offset: -1,-1
+		Facing: 164
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite:
+		Prerequisite: Mobile.Refinery
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: arproc
+	-AutoTarget:
+	RenderVoxels:
+		Image: refinery
+		Scale: 0.75
+	BaseBuilding:
+	RenderSprites:
+		Image: refinery
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Proc
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+arnahand:
+	Inherits: ^VoxelVehicleHeavyWalker
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^barrack.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		Prerequisites: aracnst
+		BuildPaletteOrder: 12
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 55
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		IntoActor: arbarr
+		Offset: -1,-1
+		Facing: 370
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite:
+		Prerequisite: Mobile.Barracks
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arbarr
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		Scale: 1.1
+	BaseBuilding:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arbarr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarbarr
+		Condition: arbarr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarbarr
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Infantry
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+arnaweap:
+	Inherits: ^VoxelVehicleHeavyWalker
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^factory.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		Prerequisites: aracnst, arproc
+		BuildPaletteOrder: 42
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 55
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		IntoActor: arweap
+		Offset: -2,-1
+		Facing: 640
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	ProvidesPrerequisite@buildingame:
+		Prerequisite: arweap
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		Scale: 0.75
+	BaseBuilding:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarweap
+		Condition: arweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarweap
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Weap
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+mobilerelay:
+	Inherits: ^VoxelVehicleHeavy
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech2.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 50
+		Prerequisites: arweap
+		IconPalette: RedAlliance.Icon
+	Health:
+		HP: 3000
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: artech
+	Mobile:
+		Speed: 60
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	StoresResources:
+		PipCount: 0
+		Capacity: 2000000
+	Transforms:
+		IntoActor: artech
+		Offset: -1,-1
+		Facing: 164
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		Scale: 0.75
+	BaseBuilding:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: artech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealartech
+		Condition: artech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealartech
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: T2
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+t1_defence_hq:
+	Inherits: ^VoxelVehicleHeavy
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^spec.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Buildable:
+		Queue: Building.redalliance
+		BuildPaletteOrder: 60
+		IconPalette: RedAlliance.Icon
+	Health:
+		HP: 3000
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: ardeftech
+	Mobile:
+		Speed: 50
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		IntoActor: arlab
+		Offset: -1,-1
+		Facing: 640
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	BaseBuilding:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: ardeftech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealardeftech
+		Condition: ardeftech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealardeftech
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: T2
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+t2_airfield:
+	Inherits: ^VoxelVehicleHeavyHover
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^heliport.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Buildable:
+		Queue: Building.redalliance
+		Prerequisites: aracnst, artech
+		BuildPaletteOrder: 80
+		IconPalette: RedAlliance.Icon
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 40
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Voiced:
+		VoiceSet: CrawlerVoice
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Transforms:
+		IntoActor: arheli
+		Offset: -1,-1
+		Facing: 640
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		Scale: 1.15
+	BaseBuilding:
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arheli.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarheli
+		Condition: arheli.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarheli
+	# // Icone mobile Building Categorie //
+	WithDecoration@IconBuilding:
+		Image: icon_mobile_building
+		Sequence: Aircraft
+		Palette: effectalpha55
+		ReferencePoint: Center, Top
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 256
+
+t3_doomtower_mobile:
+	Inherits: ^VoxelVehicleHeavy
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Doom Tower (Mobile)
+	Selectable:
+		Priority: 4
+		Bounds: 1544, 2509, 0, -289
+	Health:
+		HP: 2500
+	Mobile:
+		Speed: 55
+		TurnSpeed: 6
+		Crushes: gibs, infantry, husk
+		TerrainSpeeds:
+			wall: 65
+	Transforms:
+		IntoActor: t3_doomtowerbuild
+		Offset: 0,0
+		Facing: 164
+		TransformSounds: builmakear.aud
+		NoTransformNotification: CannotDeploy
+	-AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		Scale: 0.72
+	BaseBuilding:
+
+t2_predator_mobile:
+	Inherits: ^VoxelVehicleWalker
+	-AutoTarget:
+	-AttackMove:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Cyclops Turret (Mobile)
+	Mobile:
+		Speed: 60
+		TurnSpeed: 8
+		Crushes: gibs, infantry
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Diast: 70
+	Transforms:
+		IntoActor: t2_predator_deployed
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+		NoTransformSounds:
+	WithVoxelTurret:
+	RenderVoxels:
+		Scale: 1.0
+	Health:
+		HP: 3000
+	RenderSprites:
+
+
+t2_tarantula_mobile:
+	Inherits@1: ^VoxelVehicleWalker
+	-AutoTarget:
+	-AttackMove:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Centaur Turret (Mobile)
+	Mobile:
+		Speed: 60
+		TurnSpeed: 8
+		Crushes: gibs, infantry
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Diast: 70
+	Transforms:
+		IntoActor: t2_tarantula_deployed
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+		NoTransformSounds:
+	WithVoxelTurret:
+	RenderVoxels:
+		Scale: 1.0
+	Health:
+		HP: 3000
+	RenderSprites:

@@ -1,0 +1,486 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////// Editor Actor Rules //////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+mpspawn:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	RenderSpritesEditorOnly:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: Actor
+
+waypoint:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	RenderSpritesEditorOnly:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: Actor
+
+^Particle.effect.Base:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: Actor
+	RenderSprites:
+		Image: ico_light
+
+Spotlight.Red:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Image: ico_light
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: Light
+		Palette: redlight
+		
+Spotlight.Purple:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Image: ico_light
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: Light
+		Palette: purplelight
+		
+Spotlight.Cyan:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Image: ico_light
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: Light
+		Palette: cyanlight
+		
+Spotlight.Blue:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Image: ico_light
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: Light
+		Palette: bluelight
+		
+Spotlight.Green:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Image: ico_light
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: Light
+		Palette: greenlight
+		
+# /// Water Wave Particle ///
+
+Water.Wave.n:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_n
+		Palette: effect
+
+Water.Wave.nwiso:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_nw_iso
+		Palette: effect
+		
+Water.Wave.nw:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.25
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_nw
+		Palette: effect
+		
+Water.Wave.w:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.25
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_w
+		Palette: effect
+		
+Water.Wave.swiso:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_sw_iso
+		Palette: effect
+		
+Water.Wave.sw:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_sw
+		Palette: effect
+		
+Water.Wave.s:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_s
+		Palette: effect
+
+Water.Wave.se_iso:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_se_iso
+		Palette: effect
+
+Water.Wave.se:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_se
+		Palette: effect
+		
+Water.Wave.e:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_e
+		Palette: effect
+		
+Water.Wave.ne:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_ne
+		Palette: effect
+		
+		
+Water.Wave.ne_iso:
+	Inherits: ^Particle.effect.Base
+	RenderSprites:
+		Scale: 0.45
+		Image: water_wave_particle
+	WithIdleOverlay@Wave:
+		Offset: 0, 0, 0
+		Sequence: wave_ne_iso
+		Palette: effect
+
+# // Editor Color Picker Images //
+aracnst.colorpicker:
+	Inherits: t2_basilisk
+	RenderSprites:
+		Image: t2_basilisk
+		Palette: colorpicker
+	-Buildable:
+		
+# ////////////////////////////////////////// Camera Actor Rules //////////////////////////////////////     
+camera:
+	EditorOnlyTooltip:
+		Name: (reveals area to owner)
+	AlwaysVisible:
+	Interactable:
+	Immobile:
+		OccupiesSpace: false
+	RevealsShroud:
+		Range: 8c0
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: camera
+
+Spot_effect:
+	EditorOnlyTooltip:
+		Name: (spoting effect)
+	AlwaysVisible:
+	Interactable:
+	Immobile:
+		OccupiesSpace: false
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: camera
+
+camera.scout.death:
+	Inherits: camera
+	KillsSelf:
+		Delay: 50
+	RevealsShroud:
+		Range: 6c0
+		Type: CenterPosition
+
+camera.spy:
+	Inherits: camera
+	EditorOnlyTooltip:
+		Name: (support power proxy camera)
+	DetectCloaked:
+		Range: 10c0
+		CloakTypes: Cloak, Mine
+	WithDecoration:
+		Image: revealradr
+		Sequence: idle
+		Palette: effectalpha75
+		ReferencePoint: bottom, left
+		ValidStances: Ally, Enemy, Neutral
+		ZOffset: 0
+
+camera.cloak:
+	Inherits: camera
+	EditorOnlyTooltip:
+		Name: (support power proxy camera)
+	ProximityExternalCondition:
+		Condition: cloakgenerator
+		Range: 12c0
+		EnableSound: cloak5.aud
+		DisableSound: cloak5.aud
+		AffectsParent: true
+		
+repair.zone:
+	Inherits: Spot_effect
+	EditorOnlyTooltip:
+		Name: (Repair zone)
+		
+# ////////////////////////////////////////// ColorPicker Acor Rules //////////////////////////////////////
+
+t2_basilisk.colorpicker:
+	Inherits: t2_basilisk
+	Mobile:
+		InitialFacing: 640
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: t2_basilisk
+		Palette: colorpicker
+		
+t2_garm.colorpicker:
+	Inherits: t2_garm
+	Mobile:
+		InitialFacing: 640
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: t2_garm
+		Palette: colorpicker
+		
+t2_rodeur.colorpicker:
+	Inherits: t2_rodeur
+	Mobile:
+		InitialFacing: 640
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: t2_rodeur
+		Palette: colorpicker
+		
+t1_tick.colorpicker:
+	Inherits: t1_tick
+	Mobile:
+		InitialFacing: 640
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: t1_tick
+		Palette: colorpicker
+		
+# ////////////////////////////////////////// Mine Actor Rules //////////////////////////////////////
+
+Plasma.mine:
+	Inherits: ^Mine
+	RenderSprites:
+		Image: plasmine
+	Explodes:
+		Weapon: doom.deploy.gun
+		
+# ////////////////////////////////////////// Sound Actor Rules //////////////////////////////////////
+
+soundambiance:
+	AlwaysVisible:
+	Interactable:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: Actor
+
+wind01:
+	Inherits@1: soundambiance
+	Tooltip:
+		Name: Wind Sound 01
+	RenderSpritesEditorOnly:
+		Image: soundambiance
+	AmbientSound:
+		SoundFiles: wind_fan01.aud
+		Interval: 280, 340
+		Delay: 120
+
+wind02:
+	Inherits@1: soundambiance
+	Tooltip:
+		Name: Wind Sound 02
+	RenderSpritesEditorOnly:
+		Image: soundambiance
+	AmbientSound:
+		SoundFiles: wind_fan02.aud
+		Interval: 280, 340
+		Delay: 120
+
+wind03:
+	Inherits@1: soundambiance
+	Tooltip:
+		Name: Wind Sound 03
+	RenderSpritesEditorOnly:
+		Image: soundambiance
+	AmbientSound:
+		SoundFiles: wind_fan03.aud
+		Interval: 280, 340
+		Delay: 120
+
+^UnkownPlace:
+	AlwaysVisible:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name:
+	RenderSprites:
+		Image: null
+
+^LockedPlace:
+	AlwaysVisible:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name:
+	RenderSprites:
+		Image: lockedicon
+		
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////// Ressource Spawn Actor Rules //////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DiastMine:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Interactable:
+	Tooltip:
+		Name: Diastim deposit
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Diast
+	SeedsResource:
+		ResourceType: Diast
+		Interval: 55
+	MapEditorData:
+		Categories: Resource spawn
+	RenderSprites:
+		Image: diastore
+		Palette: diastgreen
+
+DiastMine.Gold:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Interactable:
+	Tooltip:
+		Name: Gold Diastim deposit
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Diastgems
+	SeedsResource:
+		ResourceType: Diastgems
+		Interval: 50
+	MapEditorData:
+		Categories: Resource spawn
+	RenderSprites:
+		Image: diastore
+		Palette: diastgold
+		
+Gisement.Diast:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Interactable:
+	Tooltip:
+		Name: Gisement
+	WithSpriteBody:
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Diast
+	Targetable:
+		TargetTypes: gisement
+	MapEditorData:
+		Categories: Resource spawn
+	RenderSprites:
+		Image: gisement
+		
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////    Other Rules    ///////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Mine_Scar:
+	Inherits: ^Mine
+	RenderSprites:
+		Image: mine_weapon
+	Explodes:
+		Weapon: uniteanimexplode
+
+matlay01:
+	Inherits: ^terrain_mat
+	RenderSprites:
+		Image: lay_clear01
+
+matlay02:
+	Inherits: ^terrain_mat
+	RenderSprites:
+		Image: lay_clear02

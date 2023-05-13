@@ -1,0 +1,982 @@
+# =======================================================================================================================
+# ============================================== | Infantry Conclave |  =================================================
+# =======================================================================================================================   
+# |------------------------------| - GARDIAN - |------------------------------|
+#--Stat Unite--
+^gardian.conclave.stat.unite:
+	Tooltip:
+		Name: Ranger
+	Buildable:
+		Description: Infantry armed with a laser rifle that has a three shots burst\n> Strong vs Infantry\n> Weak vs Vehicles, Aircraft
+		BuildDurationModifier: 3
+	Valued:
+		Cost: 120
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 9c0
+		
+#--Weapons01--
+^Gardian.Impulsor.stat.weapons:
+	Range: 7c0
+	Burst: 3
+	BurstDelays: 2
+	ReloadDelay: 45
+	Warhead@1Dam: SpreadDamage
+		Damage: 65
+		Versus:
+			Infantry: 100
+			LightVehicle: 80
+			ArmorTank: 50
+			Concrete: 30
+
+
+# |------------------------------| - STATIS - |------------------------------|
+#--Stat Unite--
+^statis.conclave.stat.unite:
+	Tooltip:
+		Name: Pathfinder
+	Buildable:
+		Description: Infantry unit equipped with an impulse lance \n can capture the structure \n> Strong vs vehicles, planes \n> Weak vs infantry
+		BuildDurationModifier: 7
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 720
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 9c0
+		
+#--Weapons01--
+^Statis.Missile.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 9c0
+	ReloadDelay: 85
+	Warhead@1Dam: SpreadDamage
+		Damage: 600
+		Spread: 125
+		ValidTargets: Ground, Water, Air
+		Versus:
+			Infantry: 25
+			LightVehicle: 95
+			ArmorTank: 90
+			LightAerial: 110
+			HeavyAerial: 90
+			Concrete: 70
+
+# |------------------------------| - NAVIGATOR - |------------------------------|
+#--Stat Unite--
+^t3_navigator.conclave.stat.unite:
+	Tooltip:
+		Name: Navigator
+	Buildable:
+		Description: Infantry unit able to generate an energy ball affecting all enemies in its impact\n> Strong vs Infantry, Vehicles\n> Weak vs Aircraft
+		BuildDurationModifier: 12
+	Valued:
+		Cost: 900
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 2500
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 9c0
+	PortableChrono:
+		ChargeDelay: 900
+		MaxDistance: 8
+		
+#--Weapons01--
+^Graviton.Missile.conclave.stat.weapons:
+	ReloadDelay: 85
+	Range: 9c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2800
+		Spread: 1c256
+		Versus:
+			Infantry: 80
+			LightVehicle: 100
+			ArmorTank: 95
+			Concrete: 75
+
+# |------------------------------| - SNIPER - |------------------------------|
+#--Stat Unite--
+^t4_consniper.conclave.stat.unite:
+	Tooltip:
+		Name: The Wanderer
+	Buildable:
+		Description: Infantry unit equip a long range rifle, can designate an orbital strike on enemy buildings and vehicles\n> Strong vs Infantry, Vehicle\n> Weak vs Aircraft
+		BuildDurationModifier: 16
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 1800
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 12c0
+
+#--Stat Unite--
+^t4_consniper.conclave.stat.mirror.unite:
+	Tooltip:
+		Name: ...
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 6c0
+		
+#--Weapons01--
+^Vagabond.snipergun.conclave.stat.weapons:
+	ValidTargets: Infantry
+	InvalidTargets: Vehicle, Building
+	Range: 12c0
+	ReloadDelay: 60
+	Warhead@1Dam: SpreadDamage
+		Damage: 5500
+		Spread: 750
+		ValidTargets: Infantry
+		InvalidTargets: Vehicle, Building
+
+# =======================================================================================================================
+# ============================================== | Vehicle Conclave |  =================================================
+# =======================================================================================================================   
+# |------------------------------| - PROWLER MAIN BATTLE TANK - |------------------------------|
+#--Stat Unite--
+^tcmcv.conclave.stat.unite:
+	Tooltip:
+		Name: Wayfarer(MCV)
+	Buildable:
+		Description: Mobile construction vehicle
+		Prerequisites: Ion Trap X3, tcweap.first
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 105
+		TurnSpeed: 55
+	RevealsShroud:
+		Range: 8c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+
+# |------------------------------| - HAVESTER PROSPECTOR - |------------------------------|
+#--Stat Unite--
+^prospecteur.conclave.stat.unite:
+	Tooltip:
+		Name: Prospector(Harvester)
+		GenericName: Harvester
+	Buildable:
+		Description: Hover Diastim harvester
+		Prerequisites: tcproc, tcweap.first
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 105
+		TurnSpeed: 55
+	RevealsShroud:
+		Range: 8c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+
+# |------------------------------| - PROWLER MAIN BATTLE TANK - |------------------------------|
+#--Stat Unite--
+^t2_rodeur.conclave.stat.unite:
+	Tooltip:
+		Name: Prowler
+	Buildable:
+		Description: Lightly armored tank equipped with a double rapid-fire laser cannon\n> Strong against Vehicles\n> Weak against Infantry, Aircraft.
+		Prerequisites: tcholotech.rodeur
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 950
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 5600
+	Mobile:
+		Speed: 105
+		TurnSpeed: 55
+	Turreted:
+		TurnSpeed: 30
+		RealignDelay: 10
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: x_icon
+		Upgrades: upgrade.alpha.rodeur.conclave, upgrade.omega.rodeur.conclave
+		
+#--Weapons01--
+^impuls.laser.conclave.stat.weapons:
+	Range: 9c0
+	ReloadDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 95
+		Spread: 2
+		Versus:
+			Infantry: 50
+			LightVehicle: 100
+			ArmorTank: 80
+			Concrete: 50
+		
+#--Weapons01--
+^impuls.laserPhie.conclave.stat.weapons:
+	Range: 9c0
+	Burst: 20
+	BurstDelays: 1
+	ReloadDelay: 35
+	Warhead@1Dam: SpreadDamage
+		Damage: 35
+		Spread: 256
+		Versus:
+			Infantry: 130
+			LightVehicle: 35
+			ArmorTank: 20
+			Concrete: 45
+		
+#--Weapons01--
+^impuls.laserOmega.conclave.stat.weapons:
+	ValidTargets: Vehicle, Infantry, Structure, Defense
+	Range: 9c0
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Damage: 190
+		Spread: 25
+		Versus:
+			Infantry: 20
+			LightVehicle: 90
+			ArmorTank: 100
+			Concrete: 40
+		DamageTypes: Burned
+		ValidTargets: Vehicle, Infantry, Structure, Defense
+
+# |------------------------------| - PILGRIM SELF-PROPELLED ANTI-AIR GUN/ARTILLERY - |------------------------------|
+#--Stat Unite--
+^t2_pilgrim.conclave.stat.unite:
+	Tooltip:
+		Name: Pilgrim
+		RequiresCondition: !deployed
+	Tooltip@DEPLOYED:
+		Name: Pilgrim (deployed)
+		RequiresCondition: deployed
+	Buildable:
+		Description: Hover anti-aircraft missile launcher\nCan be deployed into an fixed artillery\n> Strong vs Vehicles, Aircraft\n> Weak vs Infantry.
+		Prerequisites: tcholotech.pelerin
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 2600
+	Mobile:
+		Speed: 85
+		TurnSpeed: 40
+		CanMoveBackward: true
+	Turreted:
+		TurnSpeed: 30
+		RealignDelay: 15
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArty:
+		Range: 6c0
+		RequiresCondition: deployed
+	WithRangeCircle@MaxAreaFireModeArty:
+		Range: 15c0
+		RequiresCondition: deployed
+	#Mode AA/Move
+	WithRangeCircle@MaxAreaFireModeAAMove:
+		Range: 10c0
+		RequiresCondition: !deployed && !upgrade.Alpha.Pelerin.Conclave
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyMove:
+		Range: 3c0
+		RequiresCondition: upgrade.Alpha.Pelerin.Conclave
+	WithRangeCircle@MaxAreaFireModeArtyMove:
+		Range: 9c0
+		RequiresCondition: upgrade.Alpha.Pelerin.Conclave
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyAA:
+		Range: 6c0
+		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
+	WithRangeCircle@MaxAreaFireModeArtyAA:
+		Range: 18c0
+		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.alpha.pelerin.conclave, upgrade.omega.pelerin.conclave
+		
+#--Weapons01 |missile AA Move|--
+^Photon.MissileAA.conclave.stat.weapons:
+	ValidTargets: Air
+	Range: 10c0
+	Burst: 4
+	BurstDelay: 6
+	ReloadDelay: 95
+	Warhead@1Dam: SpreadDamage
+		Damage: 450
+		Spread: 1c0
+		Versus:
+			Infantry: 60
+			LightVehicle: 65
+			ArmorTank: 65
+			LightAerial: 65
+			HeavyAerial: 65
+			Concrete: 80
+		ValidTargets: Air
+
+#--Weapons02 |Arty Missile Deploy|--
+^Photon.MissileArty.conclave.stat.weapons:
+	Range: 15c0
+	MinRange: 6c0
+	Burst: 8
+	BurstDelay: 4
+	ReloadDelay: 95
+	Warhead@1Dam: SpreadDamage
+		Damage: 450
+		Spread: 450
+		Versus:
+			Infantry: 60
+			LightVehicle: 70
+			ArmorTank: 60
+			Concrete: 80
+			
+#--Weapons01 ||--
+^Photon.Missile.conclave.stat.weapons:
+	Range: 9c0
+	MinRange: 3c0
+	Burst: 8
+	BurstDelays: 6
+	ReloadDelay: 95
+	Warhead@1Dam: SpreadDamage
+		Damage: 300
+		Spread: 450
+		Versus:
+			Infantry: 60
+			LightVehicle: 70
+			ArmorTank: 60
+			Concrete: 80
+			
+#--Weapons01--
+^Photon.MissileArtyAA.conclave.stat.weapons:
+	ValidTargets: Air
+	Range: 18c0
+	MinRange: 6c0
+	Burst: 8
+	BurstDelays: 6
+	ReloadDelay: 95
+	Warhead@1Dam: SpreadDamage
+		Damage: 400
+		Spread: 300
+		Versus:
+			Infantry: 60
+			LightVehicle: 65
+			ArmorTank: 65
+			LightAerial: 65
+			HeavyAerial: 65
+			Concrete: 80
+		ValidTargets: Air
+
+# |------------------------------| - SURVEYOR HEAVY WALKER - |------------------------------|
+#--Stat Unite--
+^t3_surveyor.conclave.stat.unite:
+	Tooltip:
+		Name: Surveyor
+	Buildable:
+		Description: Three legged heavy walker\nDeals damage based on HP percentages\n> Strong vs Vehicles, Structures\n> Weak vs Infantry, Aircraft.
+		Prerequisites: tcholotech.arpenteur
+		BuildDurationModifier: 29
+	Valued:
+		Cost: 2300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 6500
+	Mobile:
+		Speed: 85
+		TurnSpeed: 40
+	Turreted:
+		TurnSpeed: 30
+		RealignDelay: 20
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.alpha.arpenteur.conclave, upgrade.omega.arpenteur.conclave
+		
+#--Weapons01--
+^Surveyor.BeamSpect.stat.weapons:
+	Range: 10c0
+	ReloadDelay: 90
+	Warhead@1Dam: HealthPercentageDamage
+		Damage: 100
+		Versus:
+			Infantry: 20
+			LightVehicle: 20
+			ArmorTank: 20
+			Concrete: 20
+			
+# =======================================================================================================================
+# ============================================== | Defense Conclave |  =================================================
+# =======================================================================================================================   
+# |------------------------------| - Guard Needle - |------------------------------|
+
+#--Weapons01--
+^IonTrap.TelsaGun.conclave.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 8c0
+	ReloadDelay: 75
+	Warhead@1Dam: SpreadDamage
+		Damage: 400
+		Spread: 64
+		DeathType: 5
+		ValidTargets: Ground, Air, Water
+		Versus:
+			Infantry: 180
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 150
+		DamageTypes: Burned, TriggerProne
+
+# =======================================================================================================================
+# ============================================== | Aircraft Conclave |  =================================================
+# =======================================================================================================================   
+# |------------------------------| - COMET FIGHTER - |------------------------------|
+#--Stat Unite--
+^t2_comete.conclave.stat.unite:
+	Tooltip:
+		Name: Comet
+	Buildable:
+		Description: Light aircraft equipped with laser spray guns\n> Strong vs Infantry, Aircraft\n> Weak vs Vehicles
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: LightAerial
+	Health:
+		HP: 1450 # 800 Modif Divadawm
+	Aircraft:
+		Speed: 190
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.alpha.comete.conclave, upgrade.omega.comete.conclave
+		
+#--Weapons01--
+^Comete.standardGun.conclave.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 8c0
+	Burst: 10
+	BurstDelays: 3
+	ReloadDelay: 40
+	Warhead@1Dam: SpreadDamage
+		Damage: 50
+		Versus:
+			Infantry: 70
+			LightVehicle: 80
+			ArmorTank: 40
+			LightAerial: 75
+			HeavyAerial: 45
+			Concrete: 35
+		ValidTargets: Ground, Air, Water
+
+#--Weapons02 |Phie Upgrade|--
+^Comete.standardGun.conclave.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 8c0
+	Burst: 10
+	BurstDelays: 3
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Damage: 65
+		Versus:
+			Infantry: 70
+			LightVehicle: 80
+			ArmorTank: 40
+			LightAerial: 75
+			HeavyAerial: 40
+			Concrete: 35
+		ValidTargets: Ground, Air, Water
+
+#--Weapons03 |Omega Upgrade|--
+^Comete.standardGun.conclave.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 8c0
+	Burst: 10
+	BurstDelays: 3
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Damage: 65
+		Versus:
+			Infantry: 70
+			LightVehicle: 80
+			ArmorTank: 40
+			LightAerial: 75
+			HeavyAerial: 40
+			Concrete: 35
+		ValidTargets: Ground, Air, Water
+
+# |------------------------------| - ZENITH - |------------------------------|
+#--Stat Unite--
+^t2_zenith.conclave.stat.unite:
+	Tooltip:
+		Name: Zenith
+	Buildable:
+		Description: Unarmed transport aircraft\nCan transport all types of units\n> Strong vs None\n> Weak vs Everything
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 2500
+	Aircraft:
+		Speed: 180
+		TurnSpeed: 20
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.alpha.zenith.conclave, upgrade.omega.zenith.conclave
+		
+#--no weapons--
+
+# |------------------------------| - QUASAR ANTI-AIR ARTILLERY - |------------------------------|
+#--Stat Unite--
+^t3_quasar.conclave.stat.unite:
+	Tooltip:
+		Name: Quasar
+	Buildable:
+		Description: Anti-spaceship artillery\nCan deploy as stationary artillery cannon\n> Strong vs Slow Moving Aircraft\n> Weak vs Infantry, Vehicles, Fast Moving Aircraft
+		BuildDurationModifier: 28
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 3800 # 2800 Modif Divadawm
+	Aircraft:
+		Speed: 100
+		TurnSpeed: 15
+	RevealsShroud:
+		Range: 16c0
+	#Mode Artilerie déployer
+	WithRangeCircle@MaxAreaFireModeArty:
+		Range: 25c0
+		RequiresCondition: deployed
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.alpha.quasar.conclave, upgrade.omega.quasar.conclave
+		
+#--Weapons01--
+^Quasar.RailgunAA.conclave.stat.weapons:
+	ValidTargets: Air
+	Range: 9c0
+	ReloadDelay: 20
+	Warhead@1Dam: SpreadDamage
+		Damage: 2800
+		ValidTargets: Air
+		Versus:
+			Infantry: 50
+			LightVehicle: 80
+			ArmorTank: 100
+			LightAerial: 80
+			HeavyAerial: 100
+			Concrete: 70
+
+#--Weapons Arty |target|-- (doit etre identique à la portée de l'arme "Quasar.FireArty.Stat.weapons")
+^Quasar.ChargeArty.Stat.weapons:
+	Range: 25c0
+
+#--Weapons Arty Fire--
+^Quasar.FireArty.Stat.weapons:
+	ReloadDelay: 16
+	MinRange: 7c0
+	Range: 25c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 7000
+		Versus:
+			Infantry: 30
+			LightVehicle: 75
+			ArmorTank: 100
+			Concrete: 80
+
+# =======================================================================================================================
+# ============================================== | Research Conclave |  ==============================================
+# =======================================================================================================================   
+# |------------------------------| - prowler upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhieProwler.conclave.stat:
+	Tooltip:
+		Name: Stalker
+	Buildable:
+		Description: Modify Prowler's weaponry for an anti-infantry arsenal
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 800
+
+^Upgrade.OmegaProwler.conclave.stat:
+	Tooltip:
+		Name: Hunter
+	Buildable:
+		Description: modify Prowler's weaponry for a weapon that drains enemy units
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 800
+
+# |------------------------------| - pelerin upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhiePelerin.conclave.stat:
+	Tooltip:
+		Name: Wanderer
+	Buildable:
+		Description: Grants additional damage to the Pilgrim\nCan attack ground units in mobile form.
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 1000
+
+^Upgrade.OmegaPelerin.conclave.stat:
+	Tooltip:
+		Name: Settler
+	Buildable:
+		Description: Grants additional damage to the Pilgrim\nCan attack air units in deployed form.
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 1000
+
+# |------------------------------| - comete upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhieComete.conclave.stat:
+	Tooltip:
+		Name: Moonlight
+	Buildable:
+		Description: Increases the Comet's damage\nCan detect stealthed units
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 900
+
+^Upgrade.OmegaComete.conclave.stat:
+	Tooltip:
+		Name: Moon's shadow
+	Buildable:
+		Description: Increases the Comet's damage\nBecomes stealthed while not moving
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 900
+
+# |------------------------------| - Arpenteur upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhieArpenteur.conclave.stat:
+	Tooltip:
+		Name: Juggernaut
+	Buildable:
+		Description: Increases the Surveyor's speed\nCan now crush light and medium units\nBecomes immune to EMP and negative effects
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1000
+
+^Upgrade.OmegaArpenteur.conclave.stat:
+	Tooltip:
+		Name: Dreadnought
+	Buildable:
+		Description: Increases the Surveyor's HP, range and rate of fire
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1000
+
+# |------------------------------| - Zenith upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhieZenith.conclave.stat:
+	Tooltip:
+		Name: Gravity field
+	Buildable:
+		Description: Increases the Zenith's HP\nIncreases nearby allied units' speed
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+
+^Upgrade.OmegaZenith.conclave.stat:
+	Tooltip:
+		Name: Field repair
+	Buildable:
+		Description: Increases the Zenith's HP\nHeals nearby allied units
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+
+# |------------------------------| - Quasar upgrade - |------------------------------|
+#--Stat Research--
+^Upgrade.PhieQuasar.conclave.stat:
+	Tooltip:
+		Name: Death Fleet
+	Buildable:
+		Description: Increases Quasar's weapon radius density and gives a damage zone on impact
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+
+^Upgrade.OmegaQuasar.conclave.stat:
+	Tooltip:
+		Name: Golden Armada
+	Buildable:
+		Description: Drastically increases the Quasar’s HP
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+
+# ====================================================================================================================================================
+# ============================================== |     Structure Conclave      |  ====================================================================
+# ====================================================================================================================================================
+
+# |------------------------------| - Construction Yard - |------------------------------|
+^conclave.mcv.stat.building:
+	Tooltip:
+		Name: Construction Yard
+	Buildable:
+		Description: Mobile construction vehicle\nCan be outfitted with modules
+		BuildDurationModifier: 55
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 14000
+
+# |------------------------------| - Ion Trap Power - |------------------------------|
+^iontrap.conclave.stat.building:
+	Tooltip:
+		Name: Ion Trap
+	Buildable:
+		Description: Provides power for other structures, building radius and tech levels\n> 1 Ion trap = Tier 1\n> 3 Ion traps = Tier 2\n> 6 Ion traps = Tier 3
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+	Power:
+		Amount: 80
+
+# |------------------------------| - Reffinery Building - |------------------------------|
+^proc.conclave.stat.building:
+	Tooltip:
+		Name: Diastim Refinery
+	Buildable:
+		Description: Refines Diastim into credits
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Barrack Building - |------------------------------|
+^gate.conclave.stat.building:
+	Tooltip:
+		Name: Gate
+	Buildable:
+		Description: Can produce all Conclave’s units\nRequires Holo-Tech buildings to unlock them
+		BuildDurationModifier: 35
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 9000
+
+# |------------------------------| - Needle Module - |------------------------------|
+^needle.module.stat.building:
+	Tooltip:
+		Name: Guard Needle
+	Buildable:
+		Description: Must be placed on an ion trap\nElectrocutes nearby enemy ground and air units
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 700
+		
+# |------------------------------| - Vision Orb Module - |------------------------------|
+^vision.module.stat.building:
+	Tooltip:
+		Name: Vision Orb
+	Buildable:
+		Description: Must be placed on an ion trap\nGrants a large line-of-sight and a stealth detection radius
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 800
+		
+# |------------------------------| - Repair Module - |------------------------------|
+^repair.module.stat.building:
+	Tooltip:
+		Name: Restoration Ring
+	Buildable:
+		Description: Must be placed on an ion trap\nProvides a repair field around the ion trap
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 900
+
+# |------------------------------| - Holotech Prowler Building - |------------------------------|
+^holo.rodeur.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Prowler
+	Buildable:
+		Description: Unlocks the Prowler tank and its upgrades
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Pilgrim Building - |------------------------------|
+^holo.pilgrim.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Pilgrim
+	Buildable:
+		Description: Unlocks the Pilgrim missile launcher and its upgrades
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Surveyor Building - |------------------------------|
+^holo.surveyor.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Surveyor
+	Buildable:
+		Description: Unlocks the Surveyor heavy walker and its upgrades
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1400
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Comet Building - |------------------------------|
+^holo.comet.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Comet
+	Buildable:
+		Description: Unlocks the Comet aircraft and its upgrades
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Zenith Building - |------------------------------|
+^holo.zenith.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Zenith
+	Buildable:
+		Description: Unlocks the Zenith transport and its upgrades
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Quasar Building - |------------------------------|
+^holo.quasar.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Quasar
+	Buildable:
+		Description: Unlocks the Quasar spaceship and its upgrades
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Holotech Quasar Building - |------------------------------|
+^holo.navigator.conclave.stat.building:
+	Tooltip:
+		Name: Holo-Tech: Navigator
+	Buildable:
+		Description: Unlocks the Navigator advanced infantry unit and its upgrades
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# |------------------------------| - Conclave Will Building - |------------------------------|
+^spec.conclave.stat.building:
+	Tooltip:
+		Name: Will of the Conclave
+	Buildable:
+		Description: Unlocks Conclave capacity and SuperWeapons
+		BuildDurationModifier: 40
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 10000
+
+
+# ==================================================================================================================================================
+# ================================================== |     Super Weapons Avatar      |  ============================================================
+# ==================================================================================================================================================
+
+^Avatar.TelsaGun.conclave.stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 9c0
+	ReloadDelay: 15
+	Warhead@1Dam: SpreadDamage
+		Damage: 300
+		Spread: 64
+		DeathType: 5
+		ValidTargets: Ground, Air, Water
+		Versus:
+			Infantry: 180
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 150
+		DamageTypes: Burned, TriggerProne

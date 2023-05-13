@@ -1,0 +1,1415 @@
+# ================================================================================================================================================================
+# =========================================================== |     Infantry Red Alliance       |  ===============================================================
+# ================================================================================================================================================================   
+
+# |------------------------------| - COMRADE - |------------------------------|
+#--Stat Unite--
+^t1_comrade.stat.unite:
+	Tooltip:
+		Name: Shock Trooper
+	Buildable:
+		Description: Resilient and well trained infantry unit armed with a laser rifle.\n\n> Strong vs Infantry, Light Vehicles.\n> Weak vs Heavy Vehicles, Aircraft, Structures.
+		BuildDurationModifier: 4
+	Valued:
+		Cost: 130
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 9c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.range.infantry.redalliance
+		
+#--Weapons01--
+^ComradeLaser.RedAlliance.Stat.weapons:
+	Range: 6c512
+	Burst: 3
+	BurstDelay: 8
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Damage: 35
+		Spread: 64
+		Versus:
+			Infantry: 100
+			LightVehicle: 95
+			ArmorTank: 15
+			Concrete: 30
+		DamageTypes: Burned
+
+# |------------------------------| - SENTINEL - |------------------------------|
+#--Stat Unite--
+^t1_disciple.stat.unite:
+	Tooltip:
+		Name: Railgun Trooper
+	Buildable:
+		Description: Specialist heavy infantryman equipped with an anti-air/anti-vehicle railgun.\n\n> Strong vs Vehicles, Aircraft, Structures.\n> Weak vs Infantry.
+		BuildDurationModifier: 5
+	Valued:
+		Cost: 300
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 9c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.range.infantry.redalliance
+		
+#--Weapons01--
+^SentinelGun.RedAlliance.Stat.weapons:
+	ReloadDelay: 85
+	Range: 8c512
+	ValidTargets: Ground, Air, Water
+	Warhead@1Dam: SpreadDamage
+		Damage: 350
+		Spread: 50
+		Versus:
+			Infantry: 50
+			LightVehicle: 100
+			ArmorTank: 120
+			LightAerial: 100
+			HeavyAerial: 120
+			Concrete: 70
+		ValidTargets: Ground, Air, Water
+
+# |------------------------------| - TESLA MECANO - |------------------------------|
+#--Stat Unite--
+^t2_tesla.stat.unite:
+	Tooltip:
+		Name: Electro-Mecano
+	Buildable:
+		Description: Multifunctional support infantry\n Can repair vehicles \n> Can captured structures \n> Weak vs all
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 600
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 9c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades:
+
+# |------------------------------| - SABOTEUR - |------------------------------|
+#--Stat Unite--
+^t1_stealhar.stat.unite:
+	Tooltip:
+		Name: Saboteur
+	Buildable:
+		Description: Light infiltrator unit armed with a close combat anti-infantry weapon.\n\n* Can capture neutral buildings.\n* Can detect stealthed units\n* Active camouflage ability (duration: 5 sec / recharge time: 1 min).\n\n> Strong vs Infantry.\n> Weak vs Vehicles, Aircraft, Structures.
+		BuildDurationModifier: 10
+	Valued:
+		Cost: 600
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 700
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 10c0
+	WithRangeCircle@DetectCloack:
+		Range: 5c0
+	DetectCloaked:
+		Range: 5c0
+		CloakTypes: Cloak, Mine
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.range.infantry.redalliance
+		
+#--Weapons01--
+^MelleSaber.RedAlliance.Stat.weapons:
+	Range: 1c0
+	ReloadDelay: 80
+	Warhead@1Dam: SpreadDamage
+		Damage: 600
+		Versus:
+			Infantry: 100
+			LightVehicle: 20
+			ArmorTank: 20
+			Concrete: 20
+
+# |------------------------------| - DEVASTATOR - |------------------------------|
+#--Stat Unite--
+^t2_devastator.stat.unite:
+	Tooltip:
+		Name: Nuke Trooper
+	Buildable:
+		Description: Heavy support infantry equipped with a portable mortar firing nuclear shells.\n\n> Strong vs Infantry, Vehicles, Structures.\n> Weak vs Aircraft.
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 650
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 700
+	Mobile:
+		Speed: 75
+	RevealsShroud:
+		Range: 9c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.range.infantry.redalliance
+
+#--Weapons01--
+^NukeGun.RedAlliance.Stat.weapons:
+	Range: 9c0
+	ReloadDelay: 85
+	Warhead@1Dam: SpreadDamage
+		Damage: 1250
+		Versus:
+			Infantry: 250
+			LightVehicle: 80
+			ArmorTank: 40
+			Concrete: 120
+
+# |------------------------------| - ERADICATOR - |------------------------------|
+#--Stat Unite--
+^t3_eradicator.stat.unite:
+	Tooltip:
+		Name: Eradicator
+	Buildable:
+		Description: Super heavy infantry unit armed with a powerful laser repeater and a railgun.\n\n> Strong vs Everything.\n> Weak vs None.
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1300
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 70
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: xxicon
+		Upgrades: upgrade.range.infantry.redalliance
+		
+#--Weapons01--
+^Eradicator.Gatling.RedAlliance.Stat.weapons:
+	Range: 8c0
+	ReloadDelay: 6
+	Warhead@1Dam: SpreadDamage
+		Damage: 75
+		Versus:
+			Infantry: 100
+			LightVehicle: 25
+			ArmorTank: 15
+			Concrete: 20
+			
+#--Weapons02--
+^Eradicator.FusionGun.RedAlliance.Stat.weapons:
+	Range: 8c0
+	ReloadDelay: 70
+	Warhead@1Dam: SpreadDamage
+		Damage: 850
+		Versus:
+			Infantry: 100
+			LightVehicle: 150
+			ArmorTank: 120
+			Concrete: 75
+
+# ===========================================================================================================================
+# ============================================== |     Vehicle Red Alliance      | ==========================================
+# ===========================================================================================================================
+
+# |------------------------------| - LAMIA HARVESTER - |------------------------------|
+#--Stat Unite--
+^lamia.harv.stat.unite:
+	Tooltip:
+		Name: Lamia (Harvester)
+		GenericName: Harvester
+	Buildable:
+		Description: Armored harvester equipped with a heavy Autocannon\n> Strong vs Infantry\n> Weak vs Vehicles, Aircraft
+		BuildDurationModifier: 12
+		BuildPaletteOrder: 10
+	Valued:
+		Cost: 450
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 95
+		TurnSpeed: 45
+	Turreted:
+		TurnSpeed: 25
+		RealignDelay: 10
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.flak.basilisk.redalliance, upgrade.armor.purge.redalliance
+
+#--Weapons01 |minigun|--
+^LamiaMinigun.RedAlliance.Stat.weapons:
+	Range: 8c512
+	ReloadDelay: 25
+	Warhead@1Dam: SpreadDamage
+		Damage: 55
+		Spread: 50
+		Versus:
+			Infantry: 50
+			LightVehicle: 110
+			ArmorTank: 120
+			Concrete: 70
+
+#--Weapons01 |gatling|--
+^LamiaGatling.RedAlliance.Stat.weapons:
+	Range: 8c512
+	Burst: 2
+	ReloadDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 35
+		Spread: 50
+		Versus:
+			Infantry: 50
+			LightVehicle: 110
+			ArmorTank: 90
+			LightAerial: 150
+			HeavyAerial: 100
+			Concrete: 70
+
+# |------------------------------| - STRIX RECON BIKE - |------------------------------|
+#--Stat Unite--
+^t1_bike.stat.unite:
+	Tooltip:
+		Name: Satyr
+	Buildable:
+		Description: Light and fast recon vehicle armed with two missile-launchers.\n\n* Its pilot can leave (permanently) the vehicle.\n* Can detect stealthed units.\n\n> Strong vs Light Vehicles, Aircraft.\n> Weak vs Infantry, Heavy Vehicles, Structures.
+		Prerequisites: arproc
+		BuildDurationModifier: 8
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 500
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 1800
+	Mobile:
+		Speed: 160
+		TurnSpeed: 95
+		CanMoveBackward: true
+	RevealsShroud:
+		Range: 12c0
+	DetectCloaked:
+		Range: 7c0
+		CloakTypes: Cloak, Mine
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance
+
+#--Weapons01--
+^MissileSweep.RedAlliance.Stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 9c512
+	ReloadDelay: 95
+	Burst: 2
+	BurstDelay: 8
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 450
+		Versus:
+			Infantry: 20
+			LightVehicle: 110
+			ArmorTank: 90
+			LightAerial: 100
+			HeavyAerial: 100
+			Concrete: 55
+		ValidTargets: Ground, Air, Water
+
+# |------------------------------| - ARACHNE DRONE - |------------------------------|
+#--Stat Unite--
+^t1_scarab.stat.unite:
+	Tooltip:
+		Name: Arachne
+	Buildable:
+		Description: Flamethrower support vehicle.\n\n* Can be deployed and become a stealthed fixed spotter.\n* Can be redeployed.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: arproc
+		BuildDurationModifier: 8
+		BuildPaletteOrder: 30
+	Valued:
+		Cost: 600
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 135
+		TurnSpeed: 80
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance, upgrade.weapons.flamer.redalliance
+
+#--Weapons01--
+^FlammerDrone.RedAlliance.Stat.weapons:
+	Range: 2c512
+	ReloadDelay: 50
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c256
+		Damage: 400
+		Versus:
+			Infantry: 250
+			LightVehicle: 80
+			ArmorTank: 40
+			Concrete: 120
+			
+			
+#--Weapons02 : Deployed--    
+^FlammerDroneDeploy.RedAlliance.Stat.weapons:
+	Range: 4c512
+	ReloadDelay: 50
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c256
+		Damage: 400
+		Versus:
+			Infantry: 250
+			LightVehicle: 80
+			ArmorTank: 40
+			Concrete: 120
+	
+# |------------------------------| - BASILISK MAIN BATTLE TANK - |------------------------------|
+#--Stat Unite--
+^t2_basilisk.stat.unite:
+	Tooltip:
+		Name: Basilisk
+	Buildable:
+		Description: Powerful and resilient main battle tank armed with a fearsome railgun.\n\n> Strong vs Vehicles, Structures.\n> Weak vs Infantry, Aircraft.
+		Prerequisites: artech
+		BuildDurationModifier: 17
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 1100
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 6400
+	Mobile:
+		Speed: 80
+		TurnSpeed: 35
+	ReloadAmmoPool:
+		Delay: 120
+		Count: 1
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: 15
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.flak.basilisk.redalliance, upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance, upgrade.super.railgun.redalliance
+
+#--Weapons01--
+^Railgun.Basilisk.Stat.weapons:
+	Range: 10c0
+	ReloadDelay: 80
+	Warhead@1Dam: SpreadDamage
+		Damage: 1200
+		Versus:
+			Infantry: 3
+			LightVehicle: 85
+			ArmorTank: 100
+			Concrete: 40
+			
+#--Weapons01.Surcharge--
+^Surcharge.Railgun.Basilisk.Stat.weapons:
+	Range: 10c0
+	ReloadDelay: 5
+	Warhead@1Dam: SpreadDamage
+		Damage: 700
+		Versus:
+			Infantry: 3
+			LightVehicle: 90
+			ArmorTank: 110
+			Concrete: 50
+
+#--Animation stat Weapons01--      
+^basilic.Shock.weapons:
+	Range: 10c0
+	ReloadDelay: 1
+		
+#--Weapons02--
+^AAgun.upgrade.Basilisk.Stat.weapons:
+	ValidTargets: Air
+	Range: 8c512
+	Burst: 2
+	BurstDelays: 12
+	ReloadDelay: 25
+	Warhead@1Dam: SpreadDamage
+		Damage: 85
+		Versus:
+			Infantry: 80
+			LightVehicle: 100
+			ArmorTank: 80
+			LightAerial: 120
+			HeavyAerial: 90
+			Concrete: 80
+		ValidTargets: Air
+
+# |------------------------------| - HYDRA HEAVY SELF-PROPELLED ANTI-AIRCRAFT GUN - |------------------------------|
+#--Stat Unite--
+^t2_hydra.stat.unite:
+	Tooltip:
+		Name: Hydra
+	Buildable:
+		Description: Heavy self-propelled anti-aircraft gun with a main battle tank hull.\n\n> Strong vs Infantry, Aircraft.\n> Weak vs Vehicles, Structures.
+		Prerequisites: artech
+		BuildDurationModifier: 12
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 80
+		TurnSpeed: 35
+	Turreted:
+		TurnSpeed: 30
+		RealignDelay: 10
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.flak.basilisk.redalliance, upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance
+
+#--Weapons01--
+^AAgun.Hydra.Stat.weapons:
+	ReloadDelay: 9
+	Burst: 2
+	BurstDelays: 8
+	Range: 11c0
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 145
+		ValidTargets: Air
+		Spread: 5
+		DeathType: 1
+		Versus:
+			Infantry: 100
+			LightVehicle: 125
+			ArmorTank: 55
+			LightAerial: 110
+			HeavyAerial: 150
+			Concrete: 20
+		DamageTypes: Burned
+		
+#--Weapons01AP--
+^APgun.Hydra.Stat.weapons:
+	ReloadDelay: 10
+	Burst: 2
+	BurstDelays: 10
+	Range: 10c0
+	ValidTargets: Ground, Water
+	Warhead@1Dam: SpreadDamage
+		Damage: 145
+		ValidTargets: Ground, Water
+		Spread: 5
+		DeathType: 1
+		Versus:
+			Infantry: 100
+			LightVehicle: 125
+			ArmorTank: 55
+			Concrete: 20
+		DamageTypes: Burned
+		
+#--Weapons02--
+^Rocket.Hydra.Stat.weapons:
+	ReloadDelay: 4
+	Range: 12c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 656
+		Damage: 250
+		Versus:
+			Infantry: 180
+			LightVehicle: 90
+			ArmorTank: 50
+			Concrete: 100
+			
+# |------------------------------| - MANTICORE HEAVY SELF-PROPELLED GUN - |------------------------------|
+#--Stat Unite--
+^t2_manticore.stat.unite:
+	Tooltip:
+		Name: Manticore
+	Buildable:
+		Description: Heavy self-propelled artillery on a main battle tank hull.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: artech, arlab
+		BuildDurationModifier: 18
+		BuildPaletteOrder: 60
+	Valued:
+		Cost: 1300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 2500
+	Mobile:
+		Speed: 80
+		TurnSpeed: 20
+	Turreted:
+		TurnSpeed: 5
+		RealignDelay: 20
+	RevealsShroud:
+		Range: 12c0
+	WithRangeCircle@MinAreaFire:
+		Range: 6c0
+	WithRangeCircle@MaxAreaFire:
+		Range: 18c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.flak.basilisk.redalliance, upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance
+
+#--Weapons01--
+^manticoreGun.Stat.weapons:
+	Range: 18c0
+	MinRange: 6c0
+	ReloadDelay: 120
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c128
+		Damage: 1600 # 2000 -modified: Divadawm
+		Versus:
+			Infantry: 25
+			LightVehicle: 70
+			ArmorTank: 60
+			Concrete: 115
+#--Animation stat Weapons01--      
+^manticoreGun.Shock.weapons:
+	Range: 18c0
+	MinRange: 6c0
+	ReloadDelay: 1
+		
+#--Weapons02--
+^Rocket.Manticore.Stat.weapons:
+	Range: 9c0
+	Burst: 2
+	BurstDelays: 25
+	ReloadDelay: 50
+	Warhead@1Dam: SpreadDamage
+		Spread: 656
+		Damage: 400
+		Versus:
+			Infantry: 15
+			LightVehicle: 125
+			ArmorTank: 110
+			Concrete: 75
+			
+# |------------------------------| - MINOTAUR HEAVY ARMORED PERSONNEL CARRIER  - |------------------------------|
+#--Stat Unite--
+^t2_salamander.stat.unite:
+	Tooltip:
+		Name: Minotaur
+	Buildable:
+		Description: Heavy troop transport vehicle armed with a flamethrower.\n\n* Can carry up to 7 infantry units.\n* Amphibious.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: artech
+		BuildDurationModifier: 11
+		BuildPaletteOrder: 70
+	Valued:
+		Cost: 700
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4500
+	Mobile:
+		Speed: 98
+		TurnSpeed: 45
+	Turreted:
+		TurnSpeed: 35
+		RealignDelay: 25
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance
+
+#--Weapons Minotaur Gun--
+^FlamerSpay.RedAlliance.Stat.weapons:
+	ReloadDelay: 4
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 20
+		Versus:
+			Infantry: 250
+			LightVehicle: 35
+			ArmorTank: 20
+			Concrete: 120
+
+# |------------------------------| - APOCALYPSE SUPER HEAVY TANK - |------------------------------|
+#--Stat Unite--
+^t3_apocalypse.stat.unite:
+	Tooltip:
+		Name: Titan
+	Buildable:
+		Description: Super heavy tank armed with 2 railguns and 2 missile-launchers.\n\n> Strong vs Vehicles, Aircraft, Structures.\n> Weak vs Infantry.
+		Prerequisites: t3_commandbuilding
+		BuildDurationModifier: 25
+		BuildPaletteOrder: 90
+	Valued:
+		Cost: 2200
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 12000
+	Mobile:
+		Speed: 70
+		TurnSpeed: 30
+	Turreted:
+		TurnSpeed: 15
+		RealignDelay: 25
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance, upgrade.super.railgun.redalliance
+
+#--Weapons01--
+^RailgunApocalypse.RedAlliance.Stat.weapons:
+	Range: 10c0
+	Burst: 2
+	BurstDelays: 8
+	ReloadDelay: 75
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 1600
+		Versus:
+			Infantry: 25
+			LightVehicle: 70
+			ArmorTank: 100
+			Concrete: 50
+
+#--Weapons01 charged--
+^RailgunApocalypsecharged.RedAlliance.Stat.weapons:
+	Range: 10c0
+	Burst: 2
+	BurstDelays: 8
+	ReloadDelay: 75
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 1000
+		Versus:
+			Infantry: 20
+			LightVehicle: 80
+			ArmorTank: 100
+			Concrete: 55
+	
+#--Animation stat Weapons01--      
+^RailgunApocalypse.RedAlliance.Shock.weapons:
+	Range: 10c0
+	ReloadDelay: 1
+		
+#--Weapons02--
+^MissileApocalpyse.Redalliance.Stat.weapons:
+	ValidTargets: Ground, Air, Water
+	Range: 9c0
+	ReloadDelay: 150
+	Burst: 2
+	BurstDelay: 6
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 350
+		Versus:
+			Infantry: 50
+			LightVehicle: 110
+			ArmorTank: 90
+			LightAerial: 100
+			HeavyAerial: 100
+			Concrete: 50
+		ValidTargets: Ground, Air, Water
+		
+#--Weapons01--
+^CounterMeasure.RedAlliance.Stat.weapons:
+	ValidTargets: Ground, Water, Missile
+	Range: 8c512
+	ReloadDelay: 25
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 100
+		Versus:
+			Infantry: 15
+			LightVehicle: 80
+			ArmorTank: 100
+			Concrete: 50
+		ValidTargets: Ground, Water, Missile
+		
+# |------------------------------| - SALAMANDER SUPER HEAVY FLAMETHROWER TANK - |------------------------------|
+#--Stat Unite--
+^t3_purifier.stat.unite:
+	Tooltip:
+		Name: Salamander
+	Buildable:
+		Description: Super heavy armored vehicle equipped with an insanely powerful flamethrower.\n\n> Strong vs Infantry, Light Vehicles, Structures.\n> Weak vs Heavy Vehicles, Aircraft.
+		Prerequisites: t3_commandbuilding
+		BuildDurationModifier: 27
+		BuildPaletteOrder: 80
+	Valued:
+		Cost: 2300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 7500
+	Mobile:
+		Speed: 75
+		TurnSpeed: 30
+	Turreted:
+		TurnSpeed: 25
+		RealignDelay: 20
+	RevealsShroud:
+		Range: 10c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance, upgrade.weapons.flamer.redalliance
+
+#--Weapons01--
+^FlamerPurifier.RedAlliance.Stat.weapons:
+	ReloadDelay: 60
+	Range: 8c0
+	Burst: 40
+	BurstDelays: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 50
+		Versus:
+			Infantry: 250
+			LightVehicle: 75
+			ArmorTank: 50
+			Concrete: 120
+			
+# |------------------------------| - ANNIHILATOR HEAVY WALKER - |------------------------------|
+#--Stat Unite--
+^t3_annihilator.stat.unite:
+	Tooltip:
+		Name: Colossus
+	Buildable:
+		Description: Advanced nuclear artillery/support vehicle.\n\n* Can switch between close combat/artillery mode.\n\n> Strong vs Infantry, Vehicles, Structures.\n> Weak vs Aircraft.
+		Prerequisites: t3_commandbuilding
+		BuildDurationModifier: 30
+		BuildPaletteOrder: 100
+	Valued:
+		Cost: 2300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 75
+		TurnSpeed: 30
+	Turreted:
+		TurnSpeed: 20
+		RealignDelay: 20
+	RevealsShroud:
+		Range: 12c0
+	ActorStatValues:
+		SplitRanges: true
+		Icon: icon
+		Upgrades: upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance
+
+#--Weapons01--
+^Anhilihator.Gatling.Stat.weapons:
+	ReloadDelay: 3
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 60
+		DeathType: 4
+		Versus:
+			Infantry: 250
+			LightVehicle: 80
+			ArmorTank: 40
+			Concrete: 120
+
+#--Weapons |target|-- (doit etre identique à la portée de l'arme "Railgun")
+^Anhilihator.Raigun.Stat.weapons:
+	Range: 19c0
+
+
+#--Weapons02--
+^Anhilihator.Railgun.Stat.weapons:
+	ReloadDelay: 20
+	MinRange: 7c0
+	Range: 20c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 7000
+		Versus:
+			Infantry: 30
+			LightVehicle: 75
+			ArmorTank: 100
+			Concrete: 80
+#--Animation stat Weapons01--      
+^RailgunAnn.Shock.weapons:
+	Range: 20c0
+	MinRange: 7c0
+	ReloadDelay: 20
+
+# |------------------------------| - GORGON HEAVY SUPPORT TRUCK - |------------------------------|
+#--Stat Unite--
+^t3_harbinger_mobile.stat.unite:
+	Tooltip:
+		Name: Gorgon
+	Buildable:
+		Description: Advanced unarmed support vehicle capable of healing and cloaking nearby allied units when deployed\nCan detect stealthed units\n\n> Strong vs None\n> Weak vs Everything
+		Prerequisites: t3_commandbuilding
+		BuildDurationModifier: 20
+		BuildPaletteOrder: 110
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 60
+		TurnSpeed: 25
+	RevealsShroud:
+		Range: 10c0
+
+#--none--       
+# =======================================================================================================================
+# ============================================== | Defense Red Alliance |  ==============================================
+# =======================================================================================================================   
+# |------------------------------| - CYCLOPS TURRET - |------------------------------|
+
+#--Stat Unite--
+^t2_predator.redalliance.stat.support:
+	Tooltip:
+		Name: Cyclops Turret
+	Buildable:
+		Description: Tier 1 defensive structure armed with a high-caliber autocannon\n> Strong vs Vehicle\n> Weak vs Infantry, Aircraft
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 10c0
+		
+#--Weapons01--
+^predator.defense.Stat.weapons:
+	Range: 12c0
+	ReloadDelay: 75
+	Warhead@1Dam: SpreadDamage
+		Spread: 50
+		Damage: 320
+		Versus:
+			Infantry: 30
+			LightVehicle: 90
+			ArmorTank: 80
+			Concrete: 70
+
+# |------------------------------| - CENTAUR TURRET - |------------------------------|
+#--Stat Unite--
+^t2_tarantula.stat.unite:
+	Tooltip:
+		Name: Centaur Turret
+	Buildable:
+		Description: Tier 1 defensive structure armed with a high-caliber autocannon\n> Strong vs Vehicle\n> Weak vs Infantry, Aircraft
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 10c0
+	DetectCloaked:
+		Range: 6c0
+		
+#--Arme du basilisk actuellement--
+^tarantula.defense.Stat.weapons:
+	Range: 12c0
+	ReloadDelay: 10
+	Burst: 4
+	BurstDelays: 4
+	ValidTargets: Air, Ground
+	Warhead@1Dam: SpreadDamage
+		Damage: 50
+		Versus:
+			Infantry: 70
+			LightVehicle: 80
+			ArmorTank: 90
+			Concrete: 50
+		ValidTargets: Air, Ground
+
+
+# |------------------------------| - DOOM TOWER - |------------------------------|
+#--Stat Unite--
+^t3_doomtowerbuild.stat.unite:
+	Tooltip:
+		Name: Doom Tower
+	Buildable:
+		Description: Tier 3 defensive structure fitted with a massive tesla coil \ nDeals damage to all enemy ground units within a large radius \ n> Strong vs Infantry, Vehicles \ n> Weak vs Aircraft
+		BuildDurationModifier: 26
+	Valued:
+		Cost: 1500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 9000 #3000
+	RevealsShroud:
+		Range: 9c0
+	DetectCloaked:
+		Range: 6c0
+		
+#--Weapons01--
+^DoomGun.RedAlliance.Stat.weapons:
+	Range: 12c0
+	ReloadDelay: 120
+	Warhead@1Dam: SpreadDamage
+		Damage: 2400
+		Versus:
+			Infantry: 70
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 120
+
+# =======================================================================================================================
+# ============================================== | Aircraft Red Alliance |  =============================================
+# =======================================================================================================================   
+# |------------------------------| - WYVERN AIR SUPERIORITY FIGHTER - |------------------------------|
+#--Stat Unite--
+^t2_wyvern.stat.unite:
+	Tooltip:
+		Name: Harpy
+	Buildable:
+		Description: Extremely fast air superiority fighter armed with a powerful coilgun.\n\n* Does not appear on the minimap.\n* Can detect stealthed units.\n\n> Strong vs Aircraft.\n> Weak vs Infantry, Vehicles, Structures.
+		BuildDurationModifier: 11
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 1050
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 250
+	RevealsShroud:
+		Range: 14c0
+	DetectCloaked:
+		Range: 5c0
+		
+#--Weapons01--
+^AP_Wyvern.RedAlliance.Stat.weapons:
+	ValidTargets: Air
+	ReloadDelay: 60
+	Burst: 3
+	BurstDelays: 5
+	Range: 10c0
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Spread: 65
+		Damage: 225
+		Versus:
+			Infantry: 150
+			LightVehicle: 140
+			ArmorTank: 140
+			LightAerial: 140
+			HeavyAerial: 140
+			Concrete: 70
+		ValidTargets: Air
+
+# |------------------------------| - CHIMERA HEAVY GUNSHIP - |------------------------------|
+#--Stat Unite--
+^t2_chimera.stat.unite:
+	Tooltip:
+		Name: Chimera
+	Buildable:
+		Description: Heavily armored gunship equipped with dual railguns.\n\n> Strong vs Vehicles, Structures.\n> Weak vs Infantry, Aircraft.
+		BuildDurationModifier: 17
+	Valued:
+		Cost: 2000 # 1500 Modif Divadawm
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 1800
+	Aircraft:
+		TurnSpeed: 25
+		Speed: 130
+	RevealsShroud:
+		Range: 12c0
+		
+#--Weapons01--
+^chimeraGun.RedAlliance.Stat.weapons:
+	ReloadDelay: 65
+	Range: 9c0
+	Burst: 2
+	BurstDelays: 8
+	Warhead@1Dam: SpreadDamage
+		Damage: 300
+		DeathType: 4
+		Spread: 50
+		Versus:
+			Infantry: 10
+			LightVehicle: 100
+			ArmorTank: 120
+			Concrete: 65
+
+# |------------------------------| - ARCHDEMON TACTICAL BOMBER - |------------------------------|
+#--Stat Unite--
+^t3_archdemon.stat.unite:
+	Tooltip:
+		Name: Daemon
+	Buildable:
+		Description: Tactical bomber armed with nuclear bombs.\n\n* Does not appear on the minimap.\n\n> Strong vs Infantry, Vehicles, Structures.\n> Weak vs Aircraft.
+		BuildDurationModifier: 28
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 1100 # 750 Modif Divadawm
+	Aircraft:
+		TurnSpeed: 13
+		Speed: 200
+	RevealsShroud:
+		Range: 12c0
+		
+#--Weapons01--
+^Archdemon.RedAlliance.Stat.weapons:
+	ReloadDelay: 500
+	Range: 1c256
+	Warhead@1Dam: SpreadDamage
+		Damage: 3800
+		Versus:
+			Infantry: 120
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 130
+
+# |------------------------------| - ASTRO-CRUISER - |------------------------------|
+#--Stat Unite--
+^t4_cruiser.stat.unite:
+	Tooltip:
+		Name: Orion-class Space Cruiser (Superweapon)
+	Buildable:
+		Description: Aerial super-unit outfitted with an impressive array of weaponry.\n\n* Passively damages every enemy aircraft within a certain radius.\n* Can launch a tactical nuke every 5 minutes.\n* Can detect stealthed units.\n\n> Strong vs Everything.\n> Weak vs None.
+		BuildDurationModifier: 60
+	Valued:
+		Cost: 5000
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 13000
+	Aircraft:
+		TurnSpeed: 8
+		Speed: 60
+	RevealsShroud:
+		Range: 18c0
+	DetectCloaked:
+		Range: 8c0
+
+#--Weapons01--
+^CruiserGun.RedAlliance.Stat.weapons:
+	ReloadDelay: 60
+	Burst: 5
+	BurstDelays: 8
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 250
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 70
+			Concrete: 60
+
+#--Weapons02--
+^LaserCruiser.RedAlliance.Stat.weapons:
+	ReloadDelay: 160
+	Burst: 2
+	BurstDelays: 20
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 900
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 70
+			Concrete: 60
+
+# =======================================================================================================================
+# ============================================== | Research Red Alliance |  ==============================================
+# =======================================================================================================================   
+
+# |------------------------------| - Laser Infantry System - |------------------------------|
+#--Stat Research--
+^Upgrade.RangeInfantry.redalliance.stat:
+	Tooltip:
+		Name: Laser Targeting System
+	Buildable:
+		Description: Infantry units deal 30% more damage.
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+
+#--Upgrade Stat--
+^RangeInfantryStat.redalliance.apply:
+	RangeMultiplier@Up.Inf.Range:
+		Modifier: 130
+		
+# |------------------------------| - Retrofits - |------------------------------|
+#--Stat Research--
+^Upgrade.FlakBasilisk.redalliance.stat:
+	Tooltip:
+		Name: Retrofit
+	Buildable:
+		Description: Certain vehicles receive additional weaponry.\n- The Basilisk is upgraded with AA autocannons (can target aircraft).\n- The Hydra can be used as an artillery (must manually switch modes).\n- The Manticore is upgraded with anti-tank missile launchers (automatically attack nearby enemy vehicles).
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1500
+
+# |------------------------------| - Armor Purge System - |------------------------------|
+#--Stat Research--
+^Upgrade.ArmorPurge.Redalliance.stat:
+	Tooltip:
+		Name: Armor Purge System
+	Buildable:
+		Description: Ground vehicles and structures move faster when they are damaged. The speed acceleration is proportional to the amount of damage sustained.\n- 67% HP or less = +20% speed boost\n- 33% HP or less = +20% additional speed boost.
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 1500
+
+# |------------------------------| - Fusion Engine - |------------------------------|
+#--Stat Research--
+^Upgrade.FusionSpeed.redalliance.stat:
+	Tooltip:
+		Name: Fusion Reactor
+	Buildable:
+		Description: Ground vehicles move 50% faster.
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 2500
+
+#--Upgrade Stat--
+^FusionSpeed.redalliance.apply:
+	SpeedMultiplier@Fusion.Engine:
+		Modifier: 130
+
+# |------------------------------| - Improved Aircraft Engine - |------------------------------|
+#--Stat Research--
+^Upgrade.Supersonic.redalliance.stat:
+	Tooltip:
+		Name: Improved Aircraft Engine
+	Buildable:
+		Description: Aircraft move 30% faster.
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1500
+		
+^AircraftSpeed.redalliance.apply:
+	SpeedMultiplier@SupersonicAircraft:
+		Modifier: 130
+
+# |------------------------------| - Residual Plasma - |------------------------------|
+#--Stat Research--
+^Upgrade.WeaponsFlamer.redalliance.stat:
+	Tooltip:
+		Name: Infernal Compound
+	Buildable:
+		Description: Incendiary weapons deal 50% more damage
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+		
+#--Upgrade Stat--
+^FlamerWeapons.redalliance.apply:
+	FirepowerMultiplier@WeaponsFlamer:
+		Modifier: 140
+
+# |------------------------------| - SuperCharged Railgun - |------------------------------|
+#--Stat Research--
+^Upgrade.SuperchargedRailgun.redalliance.stat:
+	Tooltip:
+		Name: Supercharged Railguns
+	Buildable:
+		Description: Railgun-armed units (artillery units excepted) start overcharging-up their next shot when they are not attacking.\nFully overcharged shots deal massive damage (from +100% to +250% depending on the unit).
+		BuildDurationModifier: 80
+	Valued:
+		Cost: 1000
+
+#--Upgrade Stat--
+^SuperchargedRailgun.redalliance.apply:
+	GrantConditionOnPrerequisite@research.Retrofit.Redalliance:
+		Prerequisites: research.Railgun.Redalliance
+		Condition: Upgrade.Railgun.Redalliance
+
+# ===============================================================================================================================================
+# ====================================================== |     Structure Red Alliance       |  ==================================================
+# ===============================================================================================================================================
+
+# |------------------------------| - Construction Yard - |------------------------------|
+^gigante.mcv.stat.building:
+	Tooltip:
+		Name: Gigantes(MCV)
+	Buildable:
+		Description: Mobile construction vehicle
+		BuildDurationModifier: 55
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 14000
+	RevealsShroud:
+		Range: 9c0
+
+^gigante.mcv.stat.building.fixe:
+	Inherits@Building.Deployed: ^gigante.mcv.stat.building
+
+# |------------------------------| - Reffinery Building - |------------------------------|
+^proc.redalliance.stat.building:
+	Tooltip:
+		Name: Diastim Mobile Refinery
+	Buildable:
+		Description: Refines Diastim into credits
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 9c0
+
+^proc.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^proc.redalliance.stat.building
+
+# |------------------------------| - Barrack Building - |------------------------------|
+^barrack.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile Barracks
+	Buildable:
+		Description: Produces infantry units
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 9c0
+
+^barrack.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^barrack.redalliance.stat.building
+
+# |------------------------------| - Factory Building - |------------------------------|
+^factory.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile War Factory
+	Buildable:
+		Description: Produces vehicles
+		BuildDurationModifier: 35
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 9c0
+
+^factory.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^factory.redalliance.stat.building
+		
+# |------------------------------| - Tech 1 Building - |------------------------------|
+^tech2.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile Orbital Relay (tier 2)
+	Buildable:
+		Description: Unlock tier 2 units/structures and research/upgrades
+		BuildDurationModifier: 35
+	Valued:
+		Cost: 1500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 7000
+	RevealsShroud:
+		Range: 9c0
+
+^tech2.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^tech2.redalliance.stat.building
+
+# |------------------------------| - Radar/Power Building - |------------------------------|
+^spec.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile Defense Outpost
+	Buildable:
+		Description: Unlock radar and the "fusion missile" capacity
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 7000
+	RevealsShroud:
+		Range: 9c0
+
+^spec.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^spec.redalliance.stat.building
+
+# |------------------------------| - Command t3 Building - |------------------------------|
+^tech3.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile Orbital Command Center (Tier 3)
+	Buildable:
+		Description: Unlocks tier 3 units, upgrades, structures and the Astro-Cruiser epic unit
+		BuildDurationModifier: 55
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 9c0
+
+^tech3.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^tech3.redalliance.stat.building
+
+# |------------------------------| - Helipad Building - |------------------------------|
+^heliport.redalliance.stat.building:
+	Tooltip:
+		Name: Mobile Airfield
+	Buildable:
+		Description: Produces and repairs aircraft
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 800
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 9c0
+
+^heliport.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^heliport.redalliance.stat.building

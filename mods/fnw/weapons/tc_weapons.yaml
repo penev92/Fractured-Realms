@@ -1,0 +1,456 @@
+# / Defense Weapons /
+
+Impulsor.LightLaser:
+	Inherits@default.weapons: ^Laser.Impulsor.Weapons.default
+	ReloadDelay: 55
+	Range: 8c0
+	Report: rodeur_gun01.aud, rodeur_gun02.aud, rodeur_gun03.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 250
+		Versus:
+			Infantry: 45
+			LightVehicle: 100
+			ArmorTank: 80
+			Concrete: 50
+	
+# /-------/ Infantry Weapons /-------/   
+
+Gardian.zap.Laser:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^impulsgun.Weapons.Animation
+	Inherits@StatBase.weapons: ^Gardian.Impulsor.stat.weapons
+	Inherits@Range: ^Range.Infantry.Base
+	Report: impuls_conclavefire01.aud, impuls_conclavefire02.aud, impuls_conclavefire03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 525
+		
+Statis.Missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^photon.Missile.Weapons.default
+	Inherits@StatBase.weapons: ^Statis.Missile.stat.weapons
+	Report: pilgrimfire01.aud, pilgrimfire02.aud, pilgrimfire03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 525
+	
+Navigator.GravitonBall:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^graviton.Missile.Conclave.Animation
+	Inherits@StatBase.weapons: ^Graviton.Missile.conclave.stat.weapons
+	Warhead@Effect: GrantExternalCondition
+		Range: 1c0
+		Duration: 100
+		Condition: disturbingspeed
+	Warhead@13Shake: ShakeScreen
+		Duration: 5
+		Intensity: 3
+		Multiplier: 0.5,0.4
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 3c0
+
+# /////////////// Vagabond Weapons Mode ///////////////
+
+vagabond.snipergun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Laser.Target.Animation
+	Inherits@StatBase.weapons: ^Vagabond.snipergun.conclave.stat.weapons
+	Report: snipervagfire01.aud, snipervagfire02.aud, snipervagfire03.aud
+	Projectile: LaserZap
+		Width: 35
+		Color: 773414
+		SecondaryBeamWidth: 25
+		SecondaryBeamColor: ff0000
+		InvalidTargets: Vehicle, Building
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 750
+
+vagabond.sniper.target:
+	Inherits@default.weapons: ^Laser.Target.Animation
+	Inherits@Range: ^Range.InfantrySniper.Base
+	ReloadDelay: 4
+	InvalidTargets: Infantry
+	Projectile: LaserZap
+		Width: 35
+		Color: 773414
+		SecondaryBeamWidth: 25
+		SecondaryBeamColor: ff0000
+	Warhead@target: GrantExternalCondition
+		ValidTargets: Ground, Rough, Tree
+		Range: 25
+		Duration: 5
+		Condition: target.blue.weapon
+		
+vagabond.sniper.fire:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Orbital.Weapons.Animation
+	Inherits@Range: ^Range.InfantrySniper.Base
+	ReloadDelay: 20
+	Report: orbitalrayon.aud
+	InvalidTargets: Infantry
+	Warhead@1Dam: SpreadDamage
+		Delay: 21
+		Damage: 9500
+		Spread: 750
+		ValidTargets: Ground, Water
+	Warhead@3EffGround: CreateEffect
+		Explosions: orbital_strike
+		ExplosionPalette: powereffect
+		ValidTargets: Ground, Water, Air
+	Warhead@4EffGround: CreateEffect
+		Delay: 19
+		Explosions: railbomb_expl02
+		ExplosionPalette: powereffect
+		ImpactSounds: orbitalimpact01.aud, orbitalimpact02.aud, orbitalimpact03.aud
+		ValidTargets: Ground, Water, Air
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Delay: 15
+		Range: 750
+		
+pop_mirror:
+	Inherits: ^NullDamage
+	ReloadDelay: 300
+	Range: 2c0
+	Warhead@5Actor: SpawnActor
+		FallRate: 5000
+		Range: 5
+		Delay: 10
+		ValidTargets: Ground, Water, Infantry, Air, Vehicle, Building, Wall
+		Actors: t4_consniper.Mirror
+
+# /-------/ Vehicle Weapons /-------/   
+
+# /////////////// surveyor Weapons Mode /////////////// 
+
+ExconvectorGun.lateral:
+	Inherits@default.weapons: ^Laser.Surveyor.Conclave.Animation
+	Inherits@Range: ^Range.Vehicle.Base
+	ReloadDelay: 90
+	Report: pilgrimlasergun.aud
+
+ExconvectorGun.primaris:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Laser.Surveyor.Conclave.Animation
+	Inherits@StatBase.weapons: ^Surveyor.BeamSpect.stat.weapons
+	Report: surveyor_fireprimaris.aud
+	Projectile: LaserZap
+		Width: 45
+		Inaccuracy: 1000
+		Color: ffffff
+		Duration: 30
+		SecondaryBeam: true
+		SecondaryBeamWidth: 120
+		SecondaryBeamColor: 171bbc
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 525
+	
+# /////////////// Pilgrim Weapons Mode /////////////// 
+Photo_MissileArty:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^photon.Missile.Weapons.default
+	Inherits@StatBase.weapons: ^Photon.MissileArty.conclave.stat.weapons
+	Report: pilgrim_fire01.aud, pilgrim_fire02.aud, pilgrim_fire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 3
+		Intensity: 2
+		Multiplier: 0.4,0.3
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c3
+		
+Photo_MissileMinArty:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^photon.Missile.Weapons.default
+	Inherits@StatBase.weapons: ^Photon.Missile.conclave.stat.weapons
+	Report: pilgrim_fire01.aud, pilgrim_fire02.aud, pilgrim_fire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 3
+		Intensity: 2
+		Multiplier: 0.4,0.3
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c3
+
+Photo_MissileAA:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^photon.Missile.Weapons.default
+	Inherits@StatBase.weapons: ^Photon.MissileAA.conclave.stat.weapons
+	Report: pilgrim_fire01.aud, pilgrim_fire02.aud, pilgrim_fire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 3
+		Intensity: 2
+		Multiplier: 0.4,0.3
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 300
+
+Photo_MissileAAArty:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^photon.Missile.Weapons.default
+	Inherits@StatBase.weapons: ^Photon.MissileArtyAA.conclave.stat.weapons
+	Report: pilgrimaafire01.aud, pilgrimaafire02.aud, pilgrimaafire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 3
+		Intensity: 2
+		Multiplier: 0.4,0.3
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 300
+
+# /////////////// Rodeur Weapons Mode ///////////////
+Rodeur.Dual.LightLaser:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Laser.Impulsor.Weapons.default
+	Inherits@StatBase.weapons: ^impuls.laser.conclave.stat.weapons
+	Report: rodeur_gun01.aud, rodeur_gun02.aud, rodeur_gun03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 256
+
+Rodeur.Dual.LightLaser.Alpha01:
+	Inherits@default.weapons: Rodeur.Dual.LightLaser
+	Inherits@StatBase.weapons: ^impuls.laserPhie.conclave.stat.weapons
+	FirstBurstTargetOffset: 0,-950,0
+	FollowingBurstTargetOffset: 0,95,0
+	StartBurstReport: rodeur_phie_fire01.aud, rodeur_phie_fire02.aud, rodeur_phie_fire03.aud, rodeur_phie_fire04.aud
+	Projectile: LaserZap
+		Color: ffc000
+		SecondaryBeamColor: f08800
+		Duration: 2
+	Warhead@8Light: CreateEffect
+		Explosions: phierodeurimpact01, phierodeurimpact02, phierodeurimpact03
+		ExplosionPalette: flameeffect
+		ValidTargets: Ground, Water, Air
+		
+Rodeur.Dual.LightLaser.Alpha02:
+	Inherits@default.weapons: Rodeur.Dual.LightLaser.Alpha01
+	FirstBurstTargetOffset: 0,950,0
+	FollowingBurstTargetOffset: 0,-95,0
+
+Rodeur.Dual.LightLaser.Omega:
+	Inherits@default.weapons: Rodeur.Dual.LightLaser
+	Inherits@StatBase.weapons: ^impuls.laserOmega.conclave.stat.weapons
+	Report: rodeuromegafire01.aud, rodeuromegafire02.aud, rodeuromegafire03.aud
+	Projectile: LaserZap
+		Color: ea37ff
+		Width: 40
+		SecondaryBeamWidth: 28
+
+# /////////////// Comete Weapons Mode ///////////////
+Dual.Impuls.Catapult:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^impulsgatling.Weapons.Animation
+	Inherits@StatBase.weapons: ^Comete.standardGun.conclave.stat.weapons
+	Report: cometefire01.aud, cometefire02.aud; cometefire03.aud
+	Projectile: Bullet
+		ContrailStartColor: a049e3
+
+Dual.Impuls.Catapult.Alpha:
+	Inherits@weapons: Dual.Impuls.Catapult
+	Inherits@StatBase.weapons: ^Comete.standardGun.conclave.stat.weapons
+	Projectile: Bullet
+		ContrailStartColor: f08800
+
+Dual.Impuls.Catapult.Omega:
+	Inherits@weapons: Dual.Impuls.Catapult
+	Inherits@StatBase.weapons: ^Comete.standardGun.conclave.stat.weapons
+	Projectile: Bullet
+		ContrailStartColor: ea37ff
+
+# /////////////// Quasar Weapons Mode ///////////////
+ExconvectorCanonAA.TargetBeam:
+	Inherits@weapons: ^Laser.Target.Animation
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	Report: quasar_target_aafirelock01.aud, quasar_target_aafirelock02.aud
+	ReloadDelay: 4
+	MinRange: 2c0
+	ValidTargets: Air
+	Projectile: LaserZap
+		Width: 18
+		TrackTarget: true
+		Color: ff7200
+		SecondaryBeam: true
+		SecondaryBeamWidth: 45
+		SecondaryBeamColor: ff0000
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+
+Quasar.Canon:
+	Inherits@weapons: ^Quasar.Railgun.Conclave.Animation
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	ValidTargets: Air
+	ReloadDelay: 20
+	Report: cometegun.aud
+	ValidTargets: Air
+	Projectile: Railgun
+		HelixRadius: 32
+		HelixThickness: 24
+		BeamWidth: 50
+		BeamPlayerColor: true
+		BeamRenderableShape: Flat
+		HitAnim: quasarshotmax
+		HitAnimPalette: powereffect60
+		HelixPlayerColor: true
+		HelixRadiusDeltaPerTick: 6
+		HelixAngleDeltaPerTick: 16
+		Speed: 20c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+		ValidTargets: Air
+		Versus:
+			Infantry: 50
+			LightVehicle: 100
+			ArmorTank: 100
+			Concrete: 70
+
+Quasar.Canon.Alpha:
+	Inherits@weapons: Quasar.Canon
+	Projectile: Railgun
+		DamageActorsInLine: true
+		HelixRadius: 32
+		HelixThickness: 24
+		BeamWidth: 50
+		BeamPlayerColor: true
+		BeamRenderableShape: Flat
+		HitAnim: quasarshotmax
+		HitAnimPalette: powereffect60
+		HelixPlayerColor: true
+		HelixRadiusDeltaPerTick: 6
+		HelixAngleDeltaPerTick: 16
+		Speed: 20c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+
+Quasar.lasdemolition:
+	Inherits@weapons: ^Laserdemolition.conclave.Animation
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	FirstBurstTargetOffset: -1900,0,0
+	FollowingBurstTargetOffset: 300,0,0
+	Burst: 30
+	BurstDelays: 0
+	ReloadDelay: 120
+	Report: cometegun.aud
+	Warhead@1Dam: SpreadDamage
+		Delay: 25
+		Damage: 500
+		Versus:
+			Infantry: 50
+			LightVehicle: 100
+			ArmorTank: 100
+			Concrete: 70
+
+# /////// Quasar Arty //////
+Quasar.TargetArtyCharge:
+	Inherits@default.weapons: ^null.Comon.Animation
+	Inherits@Range: ^Quasar.ChargeArty.Stat.weapons
+	ReloadDelay: 4
+	MinRange: 4c0
+
+Quasar.FireArtyCharge:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Quasar.Arty.Destroyer.default
+	Inherits@StatBase.weapons: ^Quasar.FireArty.Stat.weapons
+	Report: quasar_artyfire01.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 7
+		Intensity: 3
+		Multiplier: 0.7,0.6
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 4c256
+
+avatar.charging:
+	Inherits@default.weapons: ^null.Comon.Animation
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	ReloadDelay: 125
+
+avatar.deluge:
+	Inherits@weapons: ^TeslaGun.RedAlliance.Animation
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	ReloadDelay: 80
+	Report: cometegun.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 500
+		Versus:
+			Infantry: 50
+			LightVehicle: 100
+			ArmorTank: 100
+			Concrete: 70
+		
+avatar.null:
+	Inherits@Range: ^Range.ArtyVeryHighAircraft.Base
+	ReloadDelay: 125
+	Projectile: InstantHit
+		Inaccuracy: 0
+		
+Avatar_effet:
+	Inherits@weapons: ^Avatar.effet.Conclave.Animation
+	Inherits@StatBase.weapons: ^Avatar.TelsaGun.conclave.stat.weapons
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+		
+Avatar_effet_lightning:
+	Inherits@weapons: ^Tesla.Conclave.Animation
+	Inherits@StatBase.weapons: ^Avatar.TelsaGun.conclave.stat.weapons
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+
+electro_defence:
+	Inherits@weapons: ^Tesla.Conclave.Animation
+	Inherits@StatBase.weapons: ^IonTrap.TelsaGun.conclave.stat.weapons
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+		
+electro_clust:
+	Inherits@weapons: ^Tesla.Conclave.Animation
+	Inherits@StatBase.weapons: ^IonTrap.TelsaGun.conclave.stat.weapons
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Range: 8c0
+	ValidTargets: Ground, Air, Water
+	Warhead@1Dam: SpreadDamage
+		Spread: 16
+		Damage: 350
+		DeathType: 5
+		RangeLimit: 7c256
+		ValidTargets: Ground, Air, Water
+		Versus:
+			Infantry: 180
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 150
+		DamageTypes: Burned, TriggerProne
+
+electro_defenceAA:
+	Inherits@weapons: ^Autocanon.Comon.Animation
+	ReloadDelay: 8
+	Range: 7c512
+	ValidTargets: Air
+	InvalidTargets: Ground, Water
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+		InvalidTargets: Ground, Water
+		Spread: 40
+		Damage: 80
+		Versus:
+			Infantry: 80
+			LightVehicle: 120
+			ArmorTank: 90
+			Concrete: 80
+		DamageTypes: Gibs, TriggerProne
+	Warhead@3EffGround: CreateEffect
+		ExplosionPalette: effectalpha75
+		Explosions: small_sismic_impact
+		ValidTargets: Ground, Water, Air
+		
+orbital_stair:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Orbital.Weapons.Animation
+	ReloadDelay: 60
+	Report: orbitalrayon.aud
+	Warhead@1Dam: SpreadDamage
+		Delay: 19
+		Damage: 1800
+		Spread: 750
+		ValidTargets: Ground, Water
+	Warhead@3EffGround: CreateEffect
+		Explosions: orbital_strikemin
+		ExplosionPalette: powereffect
+		ValidTargets: Ground, Water, Air
+	Warhead@4EffGround: CreateEffect
+		Delay: 19
+		Explosions: railbomb_expl02
+		ExplosionPalette: powereffect
+		ImpactSounds: orbitalimpact01.aud, orbitalimpact02.aud, orbitalimpact03.aud
+		ValidTargets: Ground, Water, Air
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Delay: 15
+		Range: 750

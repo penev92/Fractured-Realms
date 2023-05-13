@@ -1,0 +1,58 @@
+Speech:
+	Prefixes:
+		redalliance: s_ar_
+		conclave: s_tc_
+		baneslayer: s_op_
+		federation: s_ft_
+	Notifications:
+		Repairing: repair
+		BuildingCannotPlaceAudio: cannotplace
+		LowPower: lowpower
+        InsufficientFunds: infunds
+		PrimaryBuildingSelected:
+		NewOptions: newoptioncon
+		Win: win
+		Lose: lose
+		BaseAttack: baseundattack
+		HarvesterAttack: haverstattak
+		Leave:
+		StartGame: startbattle
+		UnitReady: uniteready
+		NoBuild: cannotoptionbuilding
+		NoRoom: 
+		Training: training
+		OnHold: onhold
+		Cancelled: cancel
+		Building: construction
+		BuildingReady: constructioncomplete
+        BuildingInProgress: 
+        GameLoaded:
+		GameSaved:
+		OrderPlaced: 
+		Reinforce: 
+		UnitLost: unitelost
+		BuildingLost: 
+		BuildingCaptured:
+		EnemyUnitsApproaching: 
+		EnemyUnitsDetected: 
+		UnitRepaired: 
+		CannotDeploy: canotdeployere
+		Research: research
+        ResearchReady: researchcomplete
+		DisablePower: DisablePower
+		EnablePower: EnablePower
+
+Sounds:
+	Notifications:
+		RadarUp:
+		RadarDown:
+		CashTickUp: credup1
+		CashTickDown: creddwn1
+		LevelUp:
+		ChatLine: hover_btn
+		BuildPaletteOpen: 
+		BuildPaletteClose: 
+		TabClick: 
+		ClickSound: click_btn
+		ClickDisabledSound: unclick_btn
+		Beacon: 

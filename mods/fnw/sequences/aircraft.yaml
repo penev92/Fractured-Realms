@@ -1,0 +1,370 @@
+t2_chimera:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_chimera.shp
+		Facings: 64
+	icon:
+		Filename: chimeraicon.shp
+	muzzle:
+		Filename: muzzle_railgunbase01.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 15
+
+baneslayerattackaircraft:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: baneslayerattackaircraft.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+		
+eclipse:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: eclipse.shp
+		BlendMode: Subtractive
+	icon:
+		Filename: Commandt3icon.shp
+	
+t3_inferno:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_inferno.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	icon:
+		Filename: cruiserdoicon.shp
+
+t4_cruiser:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t4_cruiser.shp
+		Facings: 64
+	icon:
+		Filename: cruisericon.shp
+	engine:
+		Filename: baselightcub.shp
+		Length: 4
+		BlendMode: Additive
+		ZOffset: -100
+	spot:
+		Filename: light_projup.shp
+		Length: *
+		Tick: 100
+		BlendMode: Additive
+		ZOffset: -300
+
+t2_command_relais:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_command_relais.shp
+		Length: *
+		Tick: 70
+	engine:
+		Filename: baselightcub.shp
+		Length: 4
+		BlendMode: Additive
+		ZOffset: -100
+	spot:
+		Filename: light_projup.shp
+		Length: *
+		Tick: 100
+		BlendMode: Additive
+		ZOffset: -300
+	icon:
+		Filename: commandt3icon.shp
+
+t2_wyvern:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_wyvern.shp
+		Facings: 64
+	icon:
+		Filename: wyvernicon.shp
+
+t3_archdemon:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_archdemon.shp
+		Facings: 64
+	icon:
+		Filename: archdemonicon.shp
+
+t0_transportship:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t0_transportship.shp
+	engine:
+		Filename: baselightcub.shp
+		Length: 4
+		BlendMode: Additive
+		ZOffset: -100
+	icon:
+		Filename: cruisericon.shp
+
+t2_nidhogg:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_nidhogg.shp
+		Facings: 64
+	icon:
+		Filename: nidhoggicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+
+t3_thor:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_thor.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_thor.shp
+		Length: *
+		BlendMode: Additive
+	icon:
+		Filename: thoricon.shp
+
+t3_valkyrie:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_valkyrie.shp
+		ZOffset: -10
+		Facings: 64
+	idle.station:
+		Filename: t3_valkyriestationary.shp
+		Length: *
+	pulse_repair:
+		Filename: circle_pulse_green.shp
+		Length: *
+		BlendMode: Additive
+	Gun.Turret01:
+		Filename: t3_valkyrietur.shp
+		ZOffset: 5
+		Facings: 64
+	Gun.Turret02:
+		Filename: t3_valkyrietur.shp
+		ZOffset: 5
+		Facings: 64
+	make:
+		Filename: t3_valkyriemk.shp
+		ZOffset: 5
+		Length: *
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+	icon:
+		Filename: valkyrieicon.shp
+
+t2_comete:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_comete.shp
+		Facings: 64
+		Length: 5
+	icon:
+		Filename: cometeicon.shp
+	muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		Tick: 16
+		BlendMode: Additive
+
+t2_zenith:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t2_zenith.shp
+		Facings: 64
+	deployed:
+		Filename: t2_zenithdeployed.shp
+		Facings: 64
+	aura_phie:
+		Filename: aura_circle_phie.shp
+		Length: *
+		BlendMode: Additive
+	aura_omega:
+		Filename: aura_circle_omega.shp
+		Length: *
+		BlendMode: Additive
+	muzzle:
+		Filename: zenithball.shp
+		Length: *
+		Tick: 15
+		BlendMode: Additive
+	icon:
+		Filename: zenithicon.shp
+
+t3_quasar:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_quasar.shp
+		Facings: 128
+	idle_warp:
+		Filename: t3_quasar.shp
+		Facings: 128
+		BlendMode: Additive
+	icon:
+		Filename: quasaricon.shp
+	make:
+		Filename: t3_quasarmk.shp
+		Length: *
+	make2:
+		Filename: t3_quasarmk2.shp
+		Length: *
+	deployed:
+		Filename: t3_quasardeploy.shp
+		Facings: 64
+	t3_quasarfirstmake:
+		Filename: t3_quasarfirstmake.shp
+		Length: *
+		Tick: 15
+	warp:
+		Filename: warpeffect.shp
+		Length: *
+		BlendMode: Additive
+		Offset: -20, -15
+	muzzledeploy:
+		Filename: charge_ballquasargun.shp
+		Length: *
+		BlendMode: Additive
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+
+t4_conclavemothership:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t4_conclavemothership.shp
+		Length: *
+		Tick: 70
+	spot:
+		Filename: t4_conclavemothershipeffect.shp
+		Length: *
+		Tick: 100
+		BlendMode: Additive
+	icon:
+		Filename: commandt3icon.shp
+
+# Aircraft Federation sequences:
+
+t1_hummingbird:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t1_hummingbird.shp
+		Facings: 64
+	icon:
+		Filename: chimeraicon.shp
+	harvest:
+		Filename: harvest_anim.shp
+		Length: *
+		BlendMode: Additive
+	dock:
+		Filename: null.shp
+	dock-loop:
+		Filename: null.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+		
+t1_vulture:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t1_vulture.shp
+		Facings: 64
+		Length: 2
+	icon:
+		Filename: t1_vultureicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+		
+t1_mosquito:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t1_mosquito.shp
+		Facings: 64
+	icon:
+		Filename: t2_mosquitoicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive  
+
+t3_trasportfed:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_trasportfed.shp
+		Facings: 128
+	icon:
+		Filename: t3_armadilloicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+        
+t3_trasportfedpowr:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_trasportfedpowr.shp
+		Facings: 128
+	icon:
+		Filename: t3_armadilloicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+
+t3_silverfish:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_silverfish.shp
+		Facings: 64
+	icon:
+		Filename: t2_silverfishicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+
+t3_bombardfed:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: t3_bombardfed.shp
+		Facings: 128
+	icon:
+		Filename: borderdfedicon.shp
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
+		BlendMode: Additive
+
+mastodonde:
+	Inherits@Stat: ^StatAircraftEffect
+	idle:
+		Filename: mastodonde.shp
+		Facings: 128
+	icon:
+		Filename: cruisericon.shp
+	engine:
+		Filename: baselightcub.shp
+		Length: 4
+		BlendMode: Additive
+		ZOffset: -100
+	spot:
+		Filename: light_projup.shp
+		Length: *
+		Tick: 100
+		BlendMode: Additive
+		ZOffset: -300

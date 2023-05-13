@@ -1,0 +1,269 @@
+^upgrade.survivalkit.baneslayer:
+	Inherits@Upgrade.Stat: ^Upgrade.survivalkit.baneslayer.modifier
+	GrantConditionOnPrerequisite@Upgrade.urvivalkit.infantry.baneslayer:
+		Prerequisites: research.survivalkit.infantry.baneslayer
+		Condition: upgrade.survivalkit.infantry.baneslayer
+	ChangesHealth@Upgrade.survivalkit.infantry.baneslayer:
+		RequiresCondition: upgrade.survivalkit.infantry.baneslayer
+		
+^Upgrade.Repair.Training.Baneslayer:
+	Inherits@Upgrade.Stat: ^Upgrade.Repair.Training.baneslayer.modifier
+	GrantConditionOnPrerequisite@Upgrade.Repair.Training.Baneslayer:
+		Prerequisites: research.Repair.Training.Baneslayer
+		Condition: upgrade.Repair.Training.Baneslayer
+	ChangesHealth@Upgrade.Repair.Training.Baneslayer:
+		RequiresCondition: upgrade.Repair.Training.Baneslayer
+	WithIdleOverlay@Upgrade.Repair.Training.Baneslayer:
+		Offset: 0,0,0
+		Sequence: VehicleRepair
+		Palette: effectalpha55
+		RequiresCondition: upgrade.Repair.Training.Baneslayer
+		
+^Upgrade.armorpack.Baneslayer:
+	Inherits@Upgrade.Stat: ^Upgrade.armorpack.baneslayer.modifier
+	GrantConditionOnPrerequisite@upgrade.armorpack.Baneslayer:
+		Prerequisites: research.armorpack.baneslayer
+		Condition: upgrade.armorpack.baneslayer
+	DamageMultiplier@Upgrade.armorpack.Baneslayer:
+		RequiresCondition: upgrade.armorpack.baneslayer
+		
+^Upgrade.Speed.Plasma.Engine.Baneslayer:
+	Inherits@Upgrade.Stat: ^Upgrade.Plasma.Engine.baneslayer.modifier
+	GrantConditionOnPrerequisite@Upgrade.Speed.Plasma.Engine.Baneslayer:
+		Prerequisites: research.speed.plasma.engine.baneslayer
+		Condition: upgrade.speed.plasma.engine.baneslayer
+	SpeedMultiplier@Upgrade.Speed.Plasma.Engine.Baneslayer:
+		RequiresCondition: upgrade.speed.plasma.engine.baneslayer
+
+^Upgrade.plasma.Ammo.Baneslayer:
+	Inherits@Upgrade.Stat: ^Upgrade.ammo.plasma.baneslayer.modifier
+	GrantConditionOnPrerequisite@Upgrade.Plasma.Ammo.Baneslayer:
+		Prerequisites: research.plasma.Ammo.Baneslayer
+		Condition: upgrade.speed.plasma.engine.baneslayer
+	FirepowerMultiplier@Upgrade.ammo.plasma.Baneslayer:
+		RequiresCondition: upgrade.plasma.Ammo.Baneslayer
+
+^Aircraft.Upgrade.baneslayer:
+	GrantConditionOnPrerequisite@Doctrine.aircraft:
+		Condition: doctrine.actived
+		Prerequisites: Doctrine.Aircraft.Baneslayer
+	FirepowerMultiplier@BonusDoctrine:
+		Modifier: 120
+		RequiresCondition: doctrine.actived
+		
+
+# Tier 2 Research
+
+upgrade.survivalkit.infantry.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.survivalkit.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 70
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.survivalkit.infantry.baneslayer
+		IconPalette: Baneslayer.Icon
+	RenderSprites:
+		Image: kevlarbaneslayericon
+	ProvidesPrerequisite:
+		Prerequisite: research.survivalkit.infantry.baneslayer
+
+upgrade.repair.training.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.RepairTraining.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 80
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.Repair.Training.Baneslayer
+		IconPalette: Baneslayer.Icon
+	RenderSprites:
+		Image: repairtrainingicon
+	ProvidesPrerequisite:
+		Prerequisite: research.Repair.Training.Baneslayer
+
+upgrade.plasma.ammunition.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.ammo.plasma.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.plasma.ammo.baneslayer
+		IconPalette: Baneslayer.Icon
+	RenderSprites:
+		Image: roquettebaneupgradeicon
+	ProvidesPrerequisite:
+		Prerequisite: research.plasma.ammo.baneslayer
+		
+# Tier 3 Research
+
+upgrade.plasma.engine.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.plasmaEngine.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.speed.plasma.engine.baneslayer
+		IconPalette: Baneslayer.Icon
+	RenderSprites:
+		Image: plasmaengineicon
+	ProvidesPrerequisite:
+		Prerequisite: research.speed.plasma.engine.baneslayer
+
+upgrade.prism.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.Prism.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.Prism.baneslayer
+	RenderSprites:
+		Image: thorupgradeicon
+	ProvidesPrerequisite:
+		Prerequisite: research.Prism.baneslayer
+		
+upgrade.armorpack.baneslayer:
+	Inherits@Research: ^ResearchActor
+	Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.baneslayer
+		Prerequisites: ~!research.armorpack.baneslayer
+		IconPalette: Baneslayer.Icon
+	RenderSprites:
+		Image: armorpackicon
+	ProvidesPrerequisite:
+		Prerequisite: research.armorpack.baneslayer
+
+#////// Protocole Systemes //////
+
+^Protocole.Base.Baneslayer:
+	Inherits@Research: ^ResearchActor
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.baneslayer
+		BuildDurationModifier: 15
+		BuildLimit: 1
+	ProvidesPrerequisite:
+	Valued:
+		Cost: 0
+	#Condition Recovery
+	ExternalCondition@RemoveBase:
+		Condition: RemoveProtocol
+	KillsSelf:
+		RemoveInstead: true
+		
+^Shield.Trait.Protocol:
+	GrantConditionOnPrerequisite@Alpha:
+		Prerequisites: protocole.Shield.Baneslayer
+		Condition: PShield.Activated
+		
+Protocole.Shield.Baneslayer:
+	Inherits@Research: ^Protocole.Base.Baneslayer
+	Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alrodeur
+	ProvidesPrerequisite:
+		Prerequisite: protocole.Shield.Baneslayer
+	KillsSelf:
+		RequiresCondition: !RemoveProtocole
+		
+		
+#Power capacity
+
+^BuildingGivePower.Baneslayer:
+	DetonateWeaponPower@IemStrike:
+		OrderName: IemCanon
+		Cursor: ability
+		Prerequisites:
+			1: optech
+		Icons:
+			1: empstrike_icon
+		IconPalette: powereffect
+		ChargeInterval: 3750
+		Names:
+			1: EMP Strike
+		Descriptions:
+			1: alls an EMP strike at the selected location disabling all ground vehicles
+		Weapons:
+			1: EMPLaserCannon.Active
+		DisplayRadarPing: False
+		ActivationSequence:
+	DetonateWeaponPower@OrbitalStrike:
+		OrderName: OrbitalCanon
+		Cursor: ability
+		Prerequisites:
+			1: Command center
+		Icons:
+			1: ionstrike_icon
+		IconPalette: powereffect
+		ChargeInterval: 5750
+		Names:
+			1: Ion Strike
+		Descriptions:
+			1: Calls an accurate ion beam strike on the targeted spot.\nDeals a tremendous amount of damage.
+		Weapons:
+			1: orbital_power
+		DisplayRadarPing: False
+		ActivationSequence:
+	AirstrikePower@Baneslayer.Attack.bomber:
+		OrderName: attack.baneslayer.module
+		Cursor: ability
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: Command center
+		Icons:
+			1: aircraftbaneslayerpowericon
+		ChargeInterval: 6000
+		Names:
+			1: Airstrike
+		Descriptions:
+			1: Calls 3 close-support aircraft that unload all their ordnance on the designated area
+		SelectTargetSpeechNotification:
+		IncomingSpeechNotification:
+		UnitTypes:
+			1: baneslayerattackaircraft
+		SquadSizes:
+			1: 3
+		QuantizedFacings: 64
+		CameraActor: camera
+		CameraRemoveDelay: 25
+		DisplayBeacon: False
+		BeaconPosters:
+			1: null
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
+		DeploySound: aircraft_attack.aud
+	SpawnActorPower@RadarPower.Baneslayer:
+		OrderName: reveal.baneslayer.module
+		Cursor: ability
+		Actors:
+			1: camera.spy
+		Prerequisites:
+			1: optech
+		LifeTime: 350
+		ChargeInterval: 2250
+		Icons:
+			1: detecticon
+		IconPalette: powereffect
+		StartFullyCharged: false
+		Names:
+			1: Radar scan
+		Descriptions:
+			1: Scans and reveals the selected area
+		EffectImage: revealradr
+		EffectSequence: idle
+		DeploySound: spyreveal.aud
+		SelectTargetSpeechNotification:

@@ -1,0 +1,822 @@
+tccacnst:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^conclave.mcv.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@AiBot.cheat: ^aibotcheat.module
+	Selectable:
+		Bounds: 7168, 4096, 0, 0
+	Building:
+		Footprint: xxxxxxx xxxxxxx xxxxxxx xxxxxxx
+		Dimensions: 7,4
+		BuildSounds: make_conclave_building.aud
+	Production:
+		Produces: Building.conclave, Defence.conclave, Research.conclave
+		PauseOnCondition: empdisable || disabled || build-incomplete
+		MoveIntoWorld: false
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
+	Transforms:
+		IntoActor: tcmcv
+		Offset: 4,2
+		Facing: 96
+	ProductionQueue@Building:
+		Type: Building.conclave
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		ReadyAudio: BuildingReady
+		CancelledAudio: Cancelled
+	ProductionQueue@DEFENCE:
+		Type: Defence.conclave
+		Group: defence
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		ReadyAudio: BuildingReady
+		CancelledAudio: Cancelled
+	BaseBuilding:
+	ProductionBar@Building.Conclave:
+		ProductionType: Building.conclave
+	ProductionBar@Defence.Conclave:
+		ProductionType: Defence.conclave
+	ProductionBar@Research.Conclave:
+		ProductionType: Research.conclave
+	ProvidesPrerequisite@buildingname:
+	Exit:
+	ProductionQueue@Research:
+		Type: Research.conclave
+		Factions: conclave
+		Group: Research
+		BuildDurationModifier: 80
+		LowPowerModifier: 200
+		QueuedAudio: Research
+		ReadyAudio: ResearchReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	BaseProvider:
+		Cooldown: 75
+		Range: 8c0
+	WithBuildingPlacedAnimation:
+	Power:
+		Amount: 20
+	HitShape:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effectalpha75
+		RequiresCondition: !build-incomplete
+	RenderSprites:
+		Scale: 1
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tccacnst.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealtccacnst
+		Condition: tccacnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealtccacnst
+	GrantConditionOnBotOwner:
+		Condition: BotOwner
+		Bots: rush, normal, turtle
+	ProvidesPrerequisite@Bot:
+		Prerequisite: BotOwnerBuild
+		RequiresCondition: BotOwner
+	GrantExternalConditionToProduced:
+		Condition: RemoveAspect
+		Duration: 20
+		
+
+tcpodrelais:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^1x1Shape
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Relais
+		Description: Provides power for other structures
+	Selectable:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		Adjacent: 5
+		BuildSounds: make_conclave_building.aud
+		BuildDurationModifier: 5
+	GivesBuildableArea:
+		AreaTypes: building
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
+	BaseProvider:
+		Cooldown: 200
+		Range: 4c0
+	Health:
+		HP: 1000
+	Armor:
+		Type: Concrete
+	HitShape:
+
+tciontrap:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^iontrap.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 3048, 3048, 0, 0
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 10
+		Prerequisites: ~BotOwnerBuild
+		IconPalette: Conclave.Icon
+	Voiced:
+		VoiceSet: tcpowr_voice
+	ProvidesPrerequisite@TCtech.LVL1:
+		Prerequisite: Ion Trap X1
+	ProvidesPrerequisite@TCtech.LVL2:
+		Prerequisite: Ion Trap X2
+		RequiresPrerequisites: Ion Trap X1, Ion Trap X1
+	ProvidesPrerequisite@TCtech.LVL3:
+		Prerequisite: Ion Trap X3
+		RequiresPrerequisites: Ion Trap X2, Ion Trap X2, Ion Trap X2
+	ProvidesPrerequisite@TCtech.LVL4:
+		Prerequisite: Ion Trap X4
+		RequiresPrerequisites: Ion Trap X3, Ion Trap X3, Ion Trap X3, Ion Trap X3
+	ProvidesPrerequisite@TCtech.LVL5:
+		Prerequisite: Ion Trap X5
+		RequiresPrerequisites: Ion Trap X4, Ion Trap X4, Ion Trap X4, Ion Trap X4
+	ProvidesPrerequisite@TCtech.LVL6:
+		Prerequisite: Ion Trap X6
+		RequiresPrerequisites: Ion Trap X5, Ion Trap X5, Ion Trap X5, Ion Trap X5, Ion Trap X5
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		Adjacent: 10
+		BuildSounds: make_conclave_building.aud
+	RevealsShroud:
+		Range: 8c0
+		RequiresCondition: !plug.eyeplug
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	WithIdleOverlay@Lightningmaking:
+		Offset: 0,0,0
+		Sequence: makeeffect
+		Palette: flammeeffectblue
+		RequiresCondition: build-incomplete
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	BaseProvider:
+		Cooldown: 75
+		Range: 10c0
+	HitShape:
+	WithIdleOverlay@Lightning:
+		Offset: 0,0,0
+		Sequence: lightingrelais
+		Palette: powereffect
+		RequiresCondition: !(build-incomplete || buildOverlay-active)
+	Pluggable:
+		Conditions:
+			plug.eyeplug: plug.eyeplug
+			plug.repairmodule: plug.repairmodule
+	#Eye Plugable Module
+	WithIdleOverlay@EyeI:
+		Offset: 0,0,0
+		Sequence: plug.eyeplug
+		RequiresCondition: plug.eyeplug
+	ProvidesRadar:
+		RequiresCondition: plug.eyeplug
+	DetectCloaked:
+		Range: 10c0
+		CloakTypes: Cloak, Mine
+		RequiresCondition: plug.eyeplug
+	RevealsShroud@PlugEye:
+		Range: 15c0
+		RequiresCondition: plug.eyeplug
+	#Repair Plugable Module
+	WithIdleOverlay@RelaisModuleRepairVehicle:
+		Offset: 0,0,0
+		Sequence: plug.tcrepairplug
+		RequiresCondition: plug.repairmodule
+	WithRangeCircle@BuildingRepair:
+		Type: FactoryRepairVehicle
+		RequiresCondition: plug.repairmodule
+		Color: fcb415
+		Range: 7c0
+	ProximityExternalCondition@REPAIRMODULE:
+		Condition: FactoryRepairVehicle
+		Range: 7c0
+		AffectsParent: true
+		RequiresCondition: plug.repairmodule
+	ProximityExternalCondition@REPAIRMODULE2:
+		Condition: FactoryRepairAircraft
+		Range: 7c0
+		AffectsParent: true
+		RequiresCondition: plug.repairmodule
+	ProximityExternalCondition@HEALMODULE:
+		Condition: ModuleHealInfantry
+		Range: 7c0
+		AffectsParent: true
+		RequiresCondition: plug.repairmodule
+	ProximityExternalCondition@ModuleAircraftRepair:
+		Condition: ModuleRepairAircraft
+		Range: 7c0
+		AffectsParent: true
+		RequiresCondition: plug.repairmodule
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tciontrap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealtciontrap
+		Condition: tciontrap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealtciontrap
+	WithIdleOverlay@Pavement:
+		Offset: 0,0,0
+		Sequence: pavement
+		RequiresCondition: !build-incomplete
+	RenderSprites:
+		Image: tcpowr
+		
+tciontrap_player:
+	Inherits: tciontrap
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 10
+		Prerequisites: ~tccacnst
+		IconPalette: Conclave.Icon
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Pluggable:
+		Conditions:
+			plug.eyeplug: plug.eyeplug
+			plug.repairmodule: plug.repairmodule
+			plug.relaisdef: plug.relaisdef
+	#Needle Plugable Module
+	WithIdleOverlay@Needle:
+		Offset: 0,0,0
+		Sequence: plug.relaisdef
+		RequiresCondition: plug.relaisdef
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || disabled
+		RequiresCondition: plug.relaisdef
+	Turreted:
+		TurnSpeed: 255
+		Offset: 128,128,384
+	Armament@gun:
+		Weapon: electro_defence
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 0,0,1250
+	Power:
+		RequiresCondition: !(plug.relaisdef || plug.eyeplug || plug.repairmodule)
+
+relaisaiguille:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^needle.module.stat.building
+	Buildable:
+		Queue: Defence.conclave
+		BuildPaletteOrder: 10
+		Prerequisites: Ion Trap X1
+		IconPalette: Conclave.Icon
+	Plug:
+		Type: plug.relaisdef
+	Power:
+		Amount: -35
+
+tceyeplug:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^vision.module.stat.building
+	Buildable:
+		Queue: Defence.conclave
+		BuildPaletteOrder: 10
+		Prerequisites: Ion Trap X3
+		IconPalette: Conclave.Icon
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Mine
+	Plug:
+		Type: plug.eyeplug
+	Power:
+		Amount: -60
+
+repairplug:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^repair.module.stat.building
+	Buildable:
+		Queue: Defence.conclave
+		BuildPaletteOrder: 10
+		Prerequisites: Ion Trap X6
+		IconPalette: Conclave.Icon
+	Plug:
+		Type: plug.repairmodule
+	Power:
+		Amount: -50
+
+tcproc:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 3072, 3072, 0, 0
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Building.conclave
+		Prerequisites: Ion Trap X1
+		IconPalette: Conclave.Icon
+	Building:
+		Footprint: xxxx xxxx ====
+		Dimensions: 4,3
+		Adjacent: 7
+		BuildSounds: make_conclave_building.aud
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	SelectionDecorations:
+	Sellable:
+		RefundPercent: 90
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	RevealsShroud:
+		Range: 6c0
+	Refinery:
+		DockAngle: 640
+		DockOffset: 2,2
+		UseStorage: false
+	FreeActor:
+		Actor: prospecteur
+		SpawnOffset: 2,2
+		Facing: 64
+		RequiresCondition: !build-incomplete
+	CustomSellValue:
+		Value: 600
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+		Notification: credit1.aud
+	Power:
+		Amount: -40
+	WithDeathAnimation:
+	RenderSprites:
+		Scale: 1.0
+	Explodes:
+		Delay: 1
+	WithIdleOverlay@Lightningmaking:
+		Offset: 0,0,0
+		Sequence: makeeffect
+		Palette: flammeeffectblue50
+		RequiresCondition: build-incomplete
+	ProvidesPrerequisite@buildingname:
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcproc
+		Condition: tcproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcproc
+	HitShape:
+
+^tcholotech:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^5x3Shape
+	Selectable:
+		Bounds: 5090, 3072, 0, 0
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Holo Tech
+		Description: ...
+	Building:
+		Footprint: xxxxx xxxxx xxxxx
+		Dimensions: 5,3
+		Adjacent: 7
+		BuildSounds: make_conclave_building.aud
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Voiced:
+		VoiceSet: tcholotech_voice
+	Power:
+		Amount: -50
+	WithIdleOverlay@Lightningmaking:
+		Offset: 0,0,0
+		Sequence: makeeffect
+		Palette: flammeeffectblue50
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Holo_animation:
+		Offset: 0,0,0
+		Sequence: holotech_anim
+		Palette: flammeeffectblue
+		RequiresCondition: !build-incomplete
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	WithIdleOverlay@Pavement:
+		Offset: 0,0,0
+		Sequence: pavement
+		RequiresCondition: !build-incomplete
+
+tcholotech.rodeur:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.rodeur.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Tooltip:
+		Name: Holo-Tech: Prowler
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 50
+		Prerequisites: Ion Trap X3, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.rodeur.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.rodeur
+		Condition: tcholotech.rodeur.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.rodeur
+	WithIdleOverlay@Unite:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+	WithIdleOverlay@Unite.tur:
+		Offset: 0,0,0
+		Sequence: Holo.Anim.tur
+
+tcholotech.pelerin:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.pilgrim.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 60
+		Prerequisites: Ion Trap X3, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.pelerin.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.pelerin
+		Condition: tcholotech.pelerin.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.pelerin
+	WithIdleOverlay@Unite:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+	WithIdleOverlay@Unite.tur:
+		Offset: 0,0,0
+		Sequence: Holo.Anim.tur
+
+tcholotech.arpenteur:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.surveyor.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Tooltip:
+		Name: Holo-Tech: Surveyor
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 110
+		Prerequisites: Ion Trap X6, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.arpenteur.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.arpenteur
+		Condition: tcholotech.arpenteur.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.arpenteur
+	WithIdleOverlay@Unite:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+	WithIdleOverlay@Unite.tur:
+		Offset: 0,0,0
+		Sequence: Holo.Anim.tur
+
+tcholotech.comete:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.comet.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 70
+		Prerequisites: Ion Trap X3, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.comete.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.comete
+		Condition: tcholotech.comete.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.comete
+	WithIdleOverlay@Unite:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+
+tcholotech.zenith:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.zenith.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 80
+		Prerequisites: Ion Trap X3, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.zenith.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.zenith
+		Condition: tcholotech.zenith.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.zenith
+	WithIdleOverlay@Unite:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+
+tcholotech.quasar:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.quasar.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 110
+		Prerequisites: Ion Trap X6, tcweap.first
+		BuildDurationModifier: 20
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.quasar.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.quasar
+		Condition: tcholotech.quasar.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.quasar
+	WithIdleOverlay:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+		
+tcholotech.navigator:
+	Inherits: ^tcholotech
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^holo.navigator.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		BuildPaletteOrder: 90
+		Prerequisites: Ion Trap X6, tcweap.first
+		IconPalette: Conclave.Icon
+	ProvidesPrerequisite:
+		RequiresCondition: !disabled
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcholotech.navigator.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.navigator
+		Condition: tcholotech.navigator.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.navigator
+	WithIdleOverlay:
+		Offset: 0,0,0
+		Sequence: Holo.Anim
+
+tcweap.first:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^gate.conclave.stat.building
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Buildable:
+		Queue: Building.conclave
+		Prerequisites: Ion Trap X1
+		BuildPaletteOrder: 20
+		BuildDurationModifier: 14
+		IconPalette: Conclave.Icon
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Valued:
+		Cost: 800
+	Selectable:
+		Bounds: 4096, 2048, 0, -1024
+		Class: Gate.Selection
+	ProductionCostMultiplier@SecondGate:
+		Multiplier: 250
+		Prerequisites: tcweap.first
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@FirstGateWarp:
+		Prerequisite: GateWarp.first
+	Building:
+		Footprint: xxxx x==x ====
+		Dimensions: 4,3
+		BuildSounds: make_conclave_building.aud
+		Adjacent: 8
+	Exit:
+		SpawnOffset: -20,-20,0
+		ExitCell: 0,3
+	ProximityExternalCondition@BuildingRepair:
+		Condition: RepairVehicle
+		Range: 5c0
+		AffectsParent: true
+	ProximityExternalCondition@AircraftRepair:
+		Condition: RepairAircraft
+		Range: 6c0
+		AffectsParent: true
+	ProximityExternalCondition@HealInfantry:
+		Condition: HealInfantry
+		Range: 5c0
+		AffectsParent: true
+	Production@Vehicle:
+		Produces: Vehicle.conclave
+		PauseOnCondition: empdisable || disabled || build-incomplete
+	ProductionQueue@Vehicle:
+		Type: Vehicle.conclave
+		Group: Vehicle
+		LowPowerModifier: 200
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionBar@vehicle:
+		ProductionType: Vehicle.conclave
+	WithProductionOverlay:
+		Sequence: build-top
+		Palette: powereffect
+	Voiced:
+		VoiceSet: tcgate_voice
+	Power:
+		Amount: -30
+	ProximityExternalCondition:
+		Range: 5
+		Condition: RepairVehicle
+	WithIdleOverlay@Lightningmaking:
+		Offset: 0,0,0
+		Sequence: makeeffect
+		Palette: flammeeffectblue50
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.tcweap
+		Condition: tcweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.tcweap
+	RenderSprites:
+		Image: tcweap
+	HitShape:
+
+tctech:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^2x2Shape
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: forge
+		Description: ..
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: Ion Trap X6
+		BuildDurationModifier: 45
+		Queue: nope.conclave
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		BuildSounds: make_conclave_building.aud
+		Adjacent: 8
+	Health:
+		HP: 9000
+	Armor:
+		Type: Concrete
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,2
+	WithBuildingPlacedAnimation:
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
+tcsuperweap:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^spec.conclave.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 3072, 2048, 0, 0
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: Ion Trap X6
+		Queue: Building.conclave
+		IconPalette: Conclave.Icon
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+		BuildSounds: make_conclave_building.aud
+		Adjacent: 8
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,2
+	WithBuildingPlacedAnimation:
+	WithIdleOverlay@tcsuperweapplug:
+		Offset: 0, 0, 0
+		Sequence: tcsuperweapplug
+		Palette: powereffect
+		RequiresCondition: !build-incomplete && buildOverlay-active
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@SuperWeapons:
+	ProvidesPrerequisite@SuperWeapons:
+		Prerequisite: Avatar.Module
+		RequiresCondition: SuperWeap.Plug
+	ProvidesPrerequisite@buildingname:
+	SpawnActorPower@SpawnAvatar:
+		OrderName: SpawnAvatar
+		Cursor: ability
+		Actors:
+			1: avatar
+		Prerequisites:
+			1: tcsuperweap
+		LifeTime: 500
+		ChargeInterval: 7500
+		Icons:
+			1: avataricon
+		IconPalette: Conclave.Icon
+		DeploySound: warp_supweapon.aud
+		Names:
+			1: Avatar
+		Descriptions:
+			1: Spawn Avatar
+		SelectTargetSpeechNotification:
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		EffectImage: warp_portail
+		EffectSequence: idle
+		EffectPalette: effectpurple80
+	WithIdleOverlay@Lightningmaking:
+		Offset: 0,0,0
+		Sequence: makeeffect
+		Palette: flammeeffectblue50
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: tcsuperweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealttcholotech.tcsuperweap
+		Condition: tcsuperweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealttcholotech.tcsuperweap
+	HitShape:

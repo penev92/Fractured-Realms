@@ -1,0 +1,2658 @@
+diastextractor:
+	Inherits: ^TechBuilding
+	Inherits@Option.derrick: ^DerrickBuilding.Option
+	Inherits@Capturable.Building: ^TechBuildingCapturable
+	Inherits@2: ^4x3Shape
+	Selectable:
+		Bounds: 4048, 4049, 0, 0
+	Valued:
+		Cost: 1200
+	Capturable:
+		Types: TechBuilding
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	InstantlyRepairable:
+	Tooltip:
+		Name: Derrick
+	Health:
+		HP: 5000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	Power:
+		Amount: 0
+	HitShape:
+	
+factoryoil:
+	Inherits: ^TechBuilding
+	Inherits@2: ^3x3Shape
+	Inherits@Capturable.Building: ^TechBuildingCapturable
+	Selectable:
+		Bounds: 3048, 2509, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Valued:
+		Cost: 1200
+	InstantlyRepairable:
+	Tooltip:
+		Name: Factory
+	Health:
+		HP: 5000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect
+	ProvidesPrerequisite@Factory.Active:
+		Prerequisite: Factory.Oil.Active
+	Power:
+		Amount: 0
+	HitShape:
+
+Parcelle_Bridge01:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 953
+		DamagedTemplate: 965
+		DestroyedTemplate: 977
+	Building:
+		Footprint: ______
+		Dimensions: 6,1
+	Interactable:
+		Bounds: 3072, 2048
+		
+Parcelle_Bridge02:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 954
+		DamagedTemplate: 966
+		DestroyedTemplate: 978
+	Building:
+		Footprint: ______
+		Dimensions: 6,1
+	Interactable:
+		Bounds: 3072, 2048
+		
+Parcelle_Bridge03:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 955
+		DamagedTemplate: 967
+		DestroyedTemplate: 979
+	Building:
+		Footprint: ______
+		Dimensions: 6,1
+	Interactable:
+		Bounds: 3072, 2048
+		
+Parcelle_Bridge04:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 956
+		DamagedTemplate: 968
+		DestroyedTemplate: 980
+	Building:
+		Footprint: ______
+		Dimensions: 6,1
+	Interactable:
+		Bounds: 3072, 2048
+
+derrick:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: generator
+	HitShape:
+
+generatciv_01:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Generator
+	HitShape:
+	
+# ////// Building type grung
+buildingdepot:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Dépot
+	HitShape:
+	
+
+taudi_01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Makeshift building
+	HitShape:
+
+taudi_02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Makeshift building
+	HitShape:
+
+taudi_03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Makeshift building
+	HitShape:
+
+taudi_04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Makeshift building
+	HitShape:
+
+taudi_05:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Makeshift building
+	HitShape:
+
+taudi_06:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Drop Pod makeshift
+	HitShape:
+
+taudi_07:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Darnell Garage
+	HitShape:
+	
+# ///// Building Type Residence
+resbuilding01:
+	Inherits: ^CivBuilding
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building1
+	HitShape:
+
+resbuilding02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building2
+	HitShape:
+
+resbuilding03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building3
+	HitShape:
+
+resbuilding04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3248, 7549, 0, -2500
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building4
+	HitShape:
+
+resbuilding05:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building5
+	HitShape:
+
+resbuilding06:
+	Inherits: ^CivBuilding
+	Inherits@2: ^5x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 5048, 3249, 0, -400
+	Building:
+		Footprint: xxxxx xxxxx xxxxx
+		Dimensions: 5,3
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Residence building6
+	HitShape:
+	
+# ///// Animated Building Type Neo-City
+civpunkbuilding01:
+	Inherits: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building1
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding01.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+
+civpunkbuilding01.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding01
+		Palette: civilianpal
+
+civpunkbuilding02:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 3049, 0, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building2
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding02.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+	
+civpunkbuilding02.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding02
+		Palette: civilianpal
+
+civpunkbuilding03:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 3049, 0, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building3
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding03.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+
+civpunkbuilding03.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding03
+		Palette: civilianpal
+
+civpunkbuilding04:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 4549, 0, -1080
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Garrisonable:
+		MaxWeight: 8
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding04.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	Tooltip:
+		Name: Makeshift building4
+	HitShape:
+	
+civpunkbuilding04.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding04
+		Palette: civilianpal
+	
+civpunkbuilding05:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 6048, 5049, 0, 0
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,4
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building5
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding05.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+	
+civpunkbuilding05.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding05
+		Palette: civilianpal
+	
+civpunkbuilding06:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4248, 3549, 0, -200
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building6
+	RenderSprites:
+		Palette: civilianpal
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding06.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: powereffect
+	HitShape:
+	
+civpunkbuilding06.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding06
+		Palette: civilianpal
+	
+civpunkbuilding07:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building7
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: powereffect
+	HitShape:
+	
+civpunkbuilding08:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building8
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: powereffect
+	HitShape:
+
+civpunkbuilding09:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 2949, 0, 0
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building9
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: powereffect
+	HitShape:
+	
+civpunkbuilding10:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 6049, 0, -950
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building10
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	HitShape:
+	
+civpunkbuilding11:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^4x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 2249, 0, 0
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building11
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+
+civpunkbuilding12:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building12
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: effect
+	HitShape:
+	
+civpunkbuilding13:
+	Inherits: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building1
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding13.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+
+civpunkbuilding013.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding013
+		Palette: player
+
+civpunkbuilding14:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 3049, 0, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building2
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding14.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+	
+civpunkbuilding14.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding14
+		Palette: player
+
+civpunkbuilding15:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 3049, 0, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building3
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding15.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+
+civpunkbuilding15.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding15
+		Palette: player
+
+civpunkbuilding16:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 4549, 0, -1080
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Garrisonable:
+		MaxWeight: 8
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding16.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+	
+civpunkbuilding16.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding16
+		Palette: player
+	
+civpunkbuilding17:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 6048, 5049, 0, 0
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,4
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building5
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding17.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+	
+civpunkbuilding17.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding17
+		Palette: player
+	
+civpunkbuilding18:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4248, 3549, 0, -200
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building6
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: civpunkbuilding18.rubble
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+	
+civpunkbuilding18.rubble:
+	Inherits: ^Rubble
+	Inherits@shape: ^3x3Shape
+	Building:
+		Dimensions: 3,3
+		Footprint: ___ ___ ___
+	RenderSprites:
+		Image: civpunkbuilding18
+		Palette: player
+	
+civpunkbuilding19:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building7
+	RenderSprites:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+	
+civpunkbuilding20:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4848, 3749, 240, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Makeshift building8
+	RenderSprites:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect50
+	WithIdleOverlay@Neonlight:
+		Offset: 0, 0, 0
+		Sequence: neonlight
+		Palette: unitalpha60
+	WithIdleOverlay@shadow:
+		Offset: 0, 0, 0
+		Sequence: shadow
+		Palette: player
+	HitShape:
+
+avpost:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 12c0
+	Tooltip:
+		Name: Building
+	Capturable:
+		Types: TechBuilding
+	ProximityExternalCondition@AVPOSTRANGE:
+		Condition: Avpost.Range
+		Range: 3c0
+	WithIdleOverlay@Effect:
+		Offset: 0, 0, 0
+		Sequence: effect
+		Palette: powereffect
+	HitShape:
+
+# ///// Building Type Administrative
+commbuilding01:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 7649, 0, -2000
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building1
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding02:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^4x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 6849, 0, -1600
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building2
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding03:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3648, 4049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building3
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding04:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^4x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 2048, 0, 0
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building4
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding05:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding05:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^6x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 6148, 3049, 0, -200
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,3
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding06:
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits: ^CivBuilding
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding07:
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits: ^CivBuilding
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding08:
+	Inherits@2: ^3x3Shape
+	# / Inherit Stat Unite /
+	Inherits: ^CivBuilding
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding09:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits: ^CivBuilding
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding10:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding11:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding12:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+commbuilding14:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Garrisonable:
+		MaxWeight: 8
+	Tooltip:
+		Name: Administrative building5
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+trapvent:
+	Inherits@buildingType: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Vent Trap
+	WithIdleOverlay@amins:
+		Offset: 0,0,0
+		Sequence: amins
+		Palette: powereffect60
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+purifierstation:
+	Inherits@buildingType: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilMediumBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Tooltip:
+		Name: Vent Trap
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+# ///// Nuclear Reactor
+
+nuclear_fireplace:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilHeavyBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Fireplace
+	RenderSprites:
+		Palette: civilianpal
+	SmokeParticleEmitter@01:
+		Image: buildingcivil_smokeparticle
+		Sequences: idle01, idle02
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 5, 6
+		Speed: 4
+		Gravity: 65
+		Offset: 100, -1850, 2150
+		Palette: flameeffect50
+		Duration: 70
+		RandomFacing: True
+	HitShape:
+	
+nuclear_reactor01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilHeavyBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Nuclear Reactor
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	HitShape:
+	
+nuclear_reactor02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilHeavyBuilding.stat.Building
+	Selectable:
+		Bounds: 3048, 2049, 0, 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Nuclear Reactor
+	RenderSprites:
+		Palette: civilianpal
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: effect
+	HitShape:
+	
+turbineheat:
+	Inherits: ^CivBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilHeavyBuilding.stat.Building
+	Selectable:
+		Bounds: 4048, 3049, 0, 0
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Turbine
+	Explodes:
+		Weapon: nuke.alliance.missile
+		EmptyWeapon: nuke.alliance.missile
+		Type: CenterPosition
+	HitShape:
+
+# ///// Building Type Container / Crane / citern
+cont01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Container
+	HitShape:
+	
+cont02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Container
+	HitShape:
+	
+cont03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Container
+	HitShape:
+	
+cont04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Container
+	HitShape:
+	
+^crane_base:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Crane
+	HitShape:
+	
+crane:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane
+
+crane2:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane2
+
+crane3:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane3
+crane4:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane4
+crane5:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane5
+crane6:
+	Inherits: ^crane_base
+	RenderSprites:
+		Image: crane6
+		
+^tuba_base:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Tube
+	HitShape:
+	
+tuba:
+	Inherits: ^tuba_base
+	RenderSprites:
+		Image: tuba
+
+tuba2:
+	Inherits: ^tuba_base
+	RenderSprites:
+		Image: tuba2
+
+tuba4:
+	Inherits: ^tuba_base
+	RenderSprites:
+		Image: tuba4
+
+proj01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Priority: 0
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RevealsShroud:
+		Range: 3c0
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: light
+		Palette: light
+	Tooltip:
+		Name: Projector
+	HitShape:
+
+proj02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RevealsShroud:
+		Range: 3c0
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: light
+		Palette: light
+	Tooltip:
+		Name: Projector
+	HitShape:
+
+proj03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x2Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RevealsShroud:
+		Range: 3c0
+	WithIdleOverlay@Light:
+		Offset: 0, 0, 0
+		Sequence: light
+		Palette: light
+	Tooltip:
+		Name: Projector
+	HitShape:
+
+citern1:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: water tank
+	HitShape:
+	
+citern2:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: water tank
+	HitShape:
+	
+citern3:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: water tank
+	HitShape:
+	
+citern4:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^CivilLightMaterial.stat.Building
+	Selectable:
+		Bounds: 640, 640, 0, 0
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: water tank
+	HitShape:
+	
+derrick3:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Oil pump
+	WithIdleOverlay@Effect:
+		Offset: 0, 0, 0
+		Sequence: effect
+		Palette: powereffect
+	HitShape:
+
+reactor:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 25000
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		Name: Reactor
+	ProvidesPrerequisite@ShieldActivate:
+		Prerequisite: ShieldFortress
+	HitShape:
+
+fortress:
+	Inherits: ^TechBuilding
+	Inherits@2: ^3x3Shape
+	Selectable:
+		Bounds: 3048, 3049, 0, 0
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 65000
+	RevealsShroud:
+		Range: 3c0
+	GrantConditionOnPrerequisite@ShieldActivate:
+		Prerequisites: ShieldFortress
+		Condition: ShieldActivated
+	GrantConditionOnPrerequisite@BossActivate:
+		Prerequisites: !ShieldFortress
+		Condition: ActivateUnite
+	DamageMultiplier@ShieldActivate:
+		RequiresCondition: ShieldActivated
+		Modifier: 0
+	WithIdleOverlay@ShieldActivate:
+		Offset: 0, 0, 0
+		Sequence: shield
+		Palette: powereffect
+		RequiresCondition: ShieldActivated
+	FreeActor:
+		Actor: mastodonde
+		RequiresCondition: ActivateUnite
+	Tooltip:
+		Name: HQ
+	HitShape:
+
+postpoint:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Inherits@Capturable.Building: ^TechBuildingCapturable
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 5c0
+	Tooltip:
+		Name: Observation tower
+	Capturable:
+		Types: TechBuilding
+	HitShape:
+	RevealsShroud:
+		Range: 18c0
+	WithRangeCircle@DetectCloack:
+		Range: 8c0
+	DetectCloaked:
+		Range: 8c0
+		CloakTypes: Cloak, Mine
+
+opwall:
+	Inherits: ^Wall
+	Buildable:
+		Queue: null.baneslayer
+		Prerequisites: Research Module
+		BuildPaletteOrder: 100
+		Description: ...
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Wall
+	Health:
+		HP: 3500
+	Armor:
+		Type: Concrete
+	LineBuild:
+		Range: 10
+		NodeTypes: wall
+	LineBuildNode:
+		Types: wall
+	WithWallSpriteBody:
+		Type: wall
+		
+wallbrik:
+	Inherits: ^Wall
+	RequiresBuildableArea:
+		AreaTypes: defense
+		Adjacent: 16
+	Valued:
+		Cost: 200
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Health:
+		HP: 4000
+	Armor:
+		Type: Concrete
+	Crushable:
+		CrushClasses: wall
+	BlocksProjectiles:
+	LineBuild:
+		NodeTypes: concrete
+	Replaceable:
+		Types: Brikgate
+	LineBuild:
+		NodeTypes: wall, turret
+	WithWallSpriteBody:
+		Type: concrete
+
+gate_h:
+	Inherits: ^Gate_A
+	Tooltip:
+		Name: Gate H
+	Replacement:
+		ReplaceableTypes: Brikgate
+		
+gate_v:
+	Inherits: ^Gate_B
+	Tooltip:
+		Name: Gate V
+	Replacement:
+		ReplaceableTypes: Brikgate
+		
+biggate_h:
+	Inherits: ^Gate_A
+	Building:
+		Dimensions: 5,1
+		Footprint: xxxxx
+	Tooltip:
+		Name: Big Gate H
+	Replacement:
+		ReplaceableTypes: Brikgate
+		
+fortwall:
+	Inherits: ^Gate_A
+	Tooltip:
+		Name: Gate
+	Building:
+		Dimensions: 7,1
+		Footprint: xxxxxxx
+	Replacement:
+		ReplaceableTypes: Brikgate
+
+plandefense:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 7c0
+	InstantlyRepairable:
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 3
+		RealignDelay: 0
+		Offset: 0,0,1000
+	WithMuzzleOverlay:
+	GrantConditionOnAttack@TargetDefense:
+		ArmamentNames: primary
+		RevokeOnNewTarget: false
+		IsCyclic: true
+		RequiredShotsPerInstance: 30
+		Condition: Target
+	Armament@target00:
+		Weapon: fortress.targetpri
+		LocalOffset: 0,0,0
+		RequiresCondition: !Target
+	Armament@target001:
+		Weapon: fortress.targetpri
+		LocalOffset: 0,0,0
+		RequiresCondition: !Target
+	Armament@target002:
+		Weapon: fortress.targetpri
+		LocalOffset: 0,0,0
+		RequiresCondition: !Target
+	Armament@target01:
+		Weapon: fortress.target
+		LocalOffset: 1950,850,50
+		RequiresCondition: !Target
+		MuzzleSequence: muzzle
+	Armament@target02:
+		Weapon: fortress.target
+		LocalOffset: 1950,350,50
+		RequiresCondition: !Target
+		MuzzleSequence: muzzle
+	Armament@target02:
+		Weapon: fortress.target
+		LocalOffset: 1950,150,50
+		RequiresCondition: !Target
+		MuzzleSequence: muzzle
+	Armament@Fire01:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,800,50
+		RequiresCondition: Target
+	Armament@Fire02:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,500,50
+		RequiresCondition: Target
+	Armament@Fire03:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,200,50
+		RequiresCondition: Target
+	Armament@Fire04:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,-800,50
+		RequiresCondition: Target
+	Armament@Fire05:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,-500,50
+		RequiresCondition: Target
+	Armament@Fire06:
+		Name: secondary
+		Weapon: fortress.laser
+		LocalOffset: 1950,-200,50
+		RequiresCondition: Target
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: trollgun.aud
+	WithMuzzleOverlay:
+	Tooltip:
+		Name: Fortress Defense
+	BodyOrientation:
+		QuantizedFacings: 0
+	HitShape:
+
+
+towerdefenceap:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 6000
+	RevealsShroud:
+		Range: 7c0
+	InstantlyRepairable:
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 8
+		RealignDelay: 20
+		Offset: 0,0,1900
+	Armament@primary01:
+		Weapon: Gatling.tower
+		LocalOffset: 1050,100,50
+		MuzzleSequence: muzzle
+		Recoil: 85
+		RecoilRecovery: 25
+	Armament@primary02:
+		Weapon: Gatling.tower
+		FireDelay: 4
+		LocalOffset: 1050,-100,50
+		MuzzleSequence: muzzle
+		Recoil: 85
+		RecoilRecovery: 25
+	WithMuzzleOverlay:
+	Tooltip:
+		Name: Gatling Tower
+	BodyOrientation:
+		QuantizedFacings: 0
+	HitShape:
+
+towerdefenceac:
+	Inherits: ^TechBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 5c0
+	InstantlyRepairable:
+	Tooltip:
+		Name: Guard Tower
+	BodyOrientation:
+		QuantizedFacings: 0
+	HitShape:
+
+bunker:
+	Inherits@buildingType: ^GarrisonableBuilding
+	Inherits@target: ^AutoTargetAll
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 7000
+	Garrisonable:
+		MaxWeight: 8
+	InstantlyRepairable:
+	Tooltip:
+		Name: bunker
+	HitShape:
+
+bunker.husk:
+	Inherits: ^TechBuilding
+	Selectable:
+		Bounds: 2048, 2049, 0, 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 5c0
+	InstantlyRepairable:
+	Capturable:
+		Type: huskBuilding
+		AllowAllies: true
+		Types: building
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+	Tooltip:
+		Name: bunker epave
+	TransformOnCapture:
+		IntoActor: bunker
+	HitShape:
+	CaptureManager:
+
+urbanlamp_01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 512, 2150, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: lamp
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: light
+	HitShape:
+	
+megaspot01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: triple spot
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: light
+	HitShape:
+	
+megaspot02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: triple spot
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: light
+	HitShape:
+	
+megaspot03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: triple spot
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: light
+	HitShape:
+	
+megaspot04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: triple spot
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: light
+	HitShape:
+	
+urbandecoy_01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Holographique-Signaletic !
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: unitalpha60
+	HitShape:
+
+urbandecoy_01.variant01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	RenderSprites:
+		Image: urbandecoy_01
+	Tooltip:
+		Name: Holographique-Signaletic !
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon2
+		Palette: unitalpha60
+	HitShape:
+
+urbandecoy_02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Holographique-Signaletic !
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon1
+		Palette: unitalpha60
+	HitShape:
+
+urbandecoy_02.variant01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	RenderSprites:
+		Image: urbandecoy_02
+	Tooltip:
+		Name: Holographique-Signaletic !
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: Neon2
+		Palette: unitalpha60
+	HitShape:
+
+urbandecoy_03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The federation does not forget you!
+	HitShape:
+
+urbandecoy_03.decoy:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+		Sequence: idle2
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The federation does not forget you!
+	HitShape:
+
+panel_road01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Tech Civilian Building
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Image: panel_road01
+		Palette: civilianpal
+	HitShape:
+
+panel_road02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The federation does not forget you!
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+	
+panel_road03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The federation does not forget you!
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+	
+panel_road04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 480, 480, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The federation does not forget you!
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+	
+panel_popup01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x1Shape
+	Selectable:
+		Bounds: 3580, 480, 0, 0
+	Building:
+		Footprint: xxx
+		Dimensions: 3,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Red Alliance
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+	
+panel_popup02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x1Shape
+	Selectable:
+		Bounds: 3580, 480, 0, 0
+	Building:
+		Footprint: xxx
+		Dimensions: 3,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The Story next generation!
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+panel_popup03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x1Shape
+	Selectable:
+		Bounds: 3580, 480, 0, 0
+	Building:
+		Footprint: xxx
+		Dimensions: 3,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: AAAAH Alert !
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+panel_popup04:
+	Inherits: ^CivBuilding
+	Inherits@2: ^3x1Shape
+	Selectable:
+		Bounds: 3080, 480, 0, 0
+	Building:
+		Footprint: xxx
+		Dimensions: 3,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Game Remastered !
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+panel_popupiso01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^4x2Shape
+	Selectable:
+		Bounds: 4080, 480, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx__ __xx
+		Dimensions: 2,4
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Red Alliance
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+panel_popupiso02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^4x2Shape
+	Selectable:
+		Bounds: 4080, 480, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx__ __xx
+		Dimensions: 4,2
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: The Story
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+panel_popupiso03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^4x2Shape
+	Selectable:
+		Bounds: 3080, 1280, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xx__ __xx
+		Dimensions: 4,2
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: AAAh Alert !
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+relais01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 512, 1150, 0, 0
+		Priority: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Power Lines
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+relais02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Selectable:
+		Bounds: 512, 1150, 0, 0
+		Priority: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Power Lines
+	WithIdleOverlay@SPOT:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: civilianpal
+	RenderSprites:
+		Palette: civilianpal
+	HitShape:
+
+techcivbuild_01:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2588, 3848, 0, -50
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Tech Civilian Building
+	HitShape:
+
+techcivbuild_02:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 2588, 3048, 0, -50
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Tech Civilian Building
+	HitShape:
+
+techcivbuild_03:
+	Inherits: ^CivBuilding
+	Inherits@2: ^2x2Shape
+	Selectable:
+		Bounds: 3048, 2048, 0, 0
+		Priority: 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Tech Civilian Building test
+	HitShape:

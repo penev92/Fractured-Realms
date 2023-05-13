@@ -1,0 +1,53 @@
+#Pour simplifier la tache le champ Order prend une dizaine entre chaque faction comme ça toutes les entrées du codex relatif à la faction seront ensembles
+#Order du Pourfendeur
+encyclopedia.order.faction:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Baneslayer Order
+	Encyclopedia:
+		Description: The Baneslayer Order\n\nOriginally founded as the Xeno Containment Task Force under the old regime, the Order broke the chains that kept it bound to the Great Federation during the dark age and reforged itself into a powerful military order,\nFirm in it's dedication to protect Earth's old colonies from threats both Alien and Human.
+		Order: 0
+		Category: Baneslayer Order
+encyclopedia.garm.unite:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Garm Battle Tank
+	Encyclopedia:
+		Description: Garm Battle Tank\n\nMain Battle Tank of the Order.\nFloating on Hover Tracks and armed with a portable ion cannon the Garm is a versatile weapon capable of handling most threats by itself.\nIt is the result of years of struggle against a higly adaptable foe.
+		Order: 1
+		Category: Baneslayer Order
+encyclopedia.lyndwurm.unite:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Lyndwurm Artilery
+	Encyclopedia:
+		Description: Lyndwurm Artilery\n\nHypermobile Anti-vehicle artilery.\nWith its highly precise canon and fast all-terrain speed, the Lindwyrm is a counter-artilery.\nThanks to it's ability to acuratly fire while on the move it excels at picking up valuable targets.
+		Order: 2
+		Category: Baneslayer Order
+#Alliance Rouge
+encyclopedia.alliance.faction:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Red Alliance
+	Encyclopedia:
+		Description: The Red Alliance\n\nBorn in the fire of the Kerberos siege, the Red Alliance is the result of the alliance between the forces of the ex-mining colony Kerberos, turned industrial powerhouse but sutck to it's system due to a lack of subspace technology and the Lost Fleet, a vagrant military operation adrift since the begening of the dark age and deprived of supply due to the abscance of a safe harbor.\nDespite the distrust of the respetive leaders, each found in the other exactly what it required to thrive anew.
+		Order: 10
+		Category: Red Alliance
+#Federation Terrienne
+encyclopedia.federation.faction:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Earth Federation
+	Encyclopedia:
+		Description: The Earth Federation\n\n
+		Order: 20
+		Category: Earth Federation
+# Conclave de l'Horizon   
+encyclopedia.conclave.faction:
+	Inherits: ^encyclopedia.info
+	Tooltip:
+		Name: Conclave of the Horizon
+	Encyclopedia:
+		Description: The Conclave of the Horizon\n\nThe
+		Order: 30
+		Category: Conclave of the Horizon

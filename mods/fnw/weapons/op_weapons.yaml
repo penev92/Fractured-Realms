@@ -1,0 +1,545 @@
+Midgard.gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Autogun.Comon.Animation
+	Inherits@StatBase.weapons: ^Midgard.defense.baneslayer.stat.weapons
+	Report: flak_canonfire01.aud, flak_canonfire02.aud, flak_canonfire03.aud
+	
+Midgard.gunAP:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Autogun.Comon.Animation
+	Inherits@StatBase.weapons: ^Midgard.defenseAP.baneslayer.stat.weapons
+	Report: flak_canonfire01.aud, flak_canonfire02.aud, flak_canonfire03.aud
+
+Niflheim.gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^PlamsaBlast.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Niflheim.defense.baneslayer.stat.weapons
+	Report: trollgun01.aud, trollgun02.aud, trollgun03.aud
+	Report: niflheilgunfire01.aud, niflheilgunfire02.aud, niflheilgunfire03.aud
+
+Helgun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@weapons: ^SonicGun.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Helgun.defense.baneslayer.stat.weapons
+	Report: helgun.aud
+
+residual_plasma:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^PlasmaFlame.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Jotun.residual_plasma.stat.weapons
+	MinRange: 1c0
+	Report: jotuungun.aud
+	
+residual_plasma.large:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^PlasmaFlame.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Jotun.residual_plasma.stat.weapons
+	Range: 7c0
+	
+carpet.blast.Aircraft:
+	ReloadDelay: 15
+	Range: 5c0
+	Report: airstrike_passage.aud
+	Projectile: InstantHit
+	Warhead@blast01: FireShrapnel
+		Delay: 25
+		Weapon: Blast.Aircraft
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+		ImpactActors: false
+	Warhead@blast02: FireShrapnel
+		Delay: 30
+		Weapon: Blast.Aircraft
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+		ImpactActors: false
+	Warhead@blast03: FireShrapnel
+		Delay: 40
+		Weapon: Blast.Aircraft
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+		ImpactActors: false
+	Warhead@blast04: FireShrapnel
+		Delay: 48
+		Weapon: Blast.Aircraft
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+		ImpactActors: false
+	Warhead@blast03: FireShrapnel
+		Delay: 55
+		Weapon: Blast.Aircraft
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+		ImpactActors: false
+
+Blast.Aircraft:
+	Range: 5c0
+	Projectile: InstantHit
+	Warhead@3EffGround: CreateEffect
+		Explosions: aircraft_blastexpl01, aircraft_blastexpl02
+		ExplosionPalette: flameeffect50
+		ImpactSounds: impact_explh01.aud, impact_explh02.aud, impact_explh03.aud
+		ValidTargets: Ground, Water, Air
+	Warhead@2bisEffGround: CreateEffect
+		Explosions: ring_pulse
+		ExplosionPalette: effectalpha30
+		ValidTargets: Ground, Water
+	Warhead@1Dam: SpreadDamage
+		Spread: 848
+		Damage: 500
+		Versus:
+			Infantry: 60
+			LightVehicle: 100
+			ArmorTank: 90
+			Concrete: 95
+		DamageTypes: Burned, TriggerProne, Crater
+			
+RagnarokCanonPlasma.target:
+	Inherits@default.weapons: ^null.Comon.Animation
+	Inherits@Range: ^Range.Vehicle.Base
+	Report: bigplasmaguncharge.aud
+	ReloadDelay: 200
+	Range: 900c0
+	MinRange: 2c0
+	
+residual_plasma.Ragnarok01:
+	Inherits@conditionweapons: residual_plasma.large
+	MinRange: 2c0
+	Range: 7c0
+	
+residual_plasma.Ragnarok02:
+	Inherits@conditionweapons: residual_plasma.large
+	MinRange: 6c0
+	Range: 10c0
+	
+residual_plasma.Ragnarok03:
+	Inherits@conditionweapons: residual_plasma.large
+	MinRange: 9c0
+	Range: 14c0
+
+RagnarokCanonPlasma:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Ragnarok.Weapons.default
+	ReloadDelay: 200
+	Range: 900c0
+	MinRange: 2c0
+	Report: bigplasmagunfire.aud
+	Warhead@1Dam: SpreadDamage
+		Delay: 73
+		Spread: 7c256
+		Damage: 12000
+		DeathType: 4
+		Versus:
+			Infantry: 100
+			LightVehicle: 100
+			ArmorTank: 65
+			Concrete: 80
+	Warhead@Residual_plasma01: FireShrapnel
+		Delay: 70
+		Weapon: residual_plasma.Ragnarok01
+		Amount: 14
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@Residual_plasma02: FireShrapnel
+		Delay: 85
+		Weapon: residual_plasma.Ragnarok02
+		Amount: 16
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@Residual_plasma03: FireShrapnel
+		Delay: 100
+		Weapon: residual_plasma.Ragnarok03
+		Amount: 14
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@13Shake: ShakeScreen
+		Duration: 45
+		Intensity: 6
+		Multiplier: 1.2,1.4
+		
+		
+# ///////////////////// Infantry Weapons /////////////////////
+
+M1Carbine:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.Comon.Animation
+	Inherits@StatBase.weapons: ^Minigun.infantry.Baneslayer.Stat.weapons
+	Report: draugr_riflegun_01.aud, draugr_riflegun_02.aud, draugr_riflegun_03.aud, draugr_riflegun_04.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 256
+
+M1Carbine.fafnir:
+	Inherits@default.weapons: M1Carbine
+	Inherits@Range: ^Range.Garrisoned.Base
+	ReloadDelay: 25
+	Warhead@1Dam: SpreadDamage
+		Damage: 70
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 256
+
+Einherjar.missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^Einherjar.missile.stat.weapons
+	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 256
+
+Einherjar.missile.upgrade:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^Einherjar.missileupgrade.stat.weapons
+	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
+	ValidTargets: Ground, Air, Water
+	ReloadDelay: 70
+	Projectile: Missile
+		Speed: 380
+		Image: 120mmplasma
+		ContrailStartColor: 54ff00
+	Warhead@3Eff: CreateEffect
+		Explosions: exlp_plasmarocket01, exlp_plasmarocket02, exlp_plasmarocket03
+		ExplosionPalette: powereffect
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
+		
+plasma.jotuun.mode2:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^Plasma_jotun_canon
+	Inherits@StatBase.weapons: ^Jotun.plasma.stat.weapons
+	Warhead@Residual_plasma: FireShrapnel
+		Delay: 5
+		Weapon: residual_plasma
+		Amount: 4
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+
+grenade.vanir:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^SonicGrenade.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^vanir.grenade.stat.weapons
+	Report: vanir_mortar.aud
+
+Aesir.Mattergun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^MatterMin.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Aesir.Mattergun.stat.weapons
+	Report: aesirfire.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
+
+Minigun.matrice:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.Comon.Animation
+	Inherits@StatBase.weapons: ^Minigun.heidrun.stat.weapons
+	Report: rigleheavygun_01.aud, rigleheavygun_02.aud, rigleheavygun_03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
+
+Supergun.matrice:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.Comon.Animation
+	Inherits@StatBase.weapons: ^supergun.Heidrun.Baneslayer.Stat
+	Report: heindrun_supergun01.aud, heindrun_supergun02.aud, heindrun_supergun03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
+
+Missile.matrice:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^MissileAA.heidrun.stat.weapons
+	Report: misl1.aud
+	Projectile: Missile
+		Speed: 380
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c0
+
+Repair.laser:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Laser.Repair.Animation
+	Inherits@StatBase.weapons: ^Laser.Repair.Stat
+
+Garm.Railgun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^ionCanon.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Garm.ioncanon.stat.weapons
+	Inherits@Range: ^Range.Vehicle.Base
+	Report: iongun_fire01.aud, iongun_fire02.aud, iongun_fire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 2
+		Intensity: 2
+		Multiplier: 0.2,0.2
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c0
+
+doom.deploy.gun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^PlamsaBlast.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Troll.PlasmaCanon.stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
+	Report: trollgun01.aud, trollgun02.aud, trollgun03.aud
+	Warhead@Residual_plasma: FireShrapnel
+		Delay: 5
+		Weapon: residual_plasma
+		Amount: 8
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@13Shake: ShakeScreen
+		Duration: 4
+		Intensity: 3
+		Multiplier: 0.4,0.5
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c0
+		
+dwarf.gun.mode1:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Plasma.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Troll.PlasmaCanon.stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
+	Report: trollgun01.aud, trollgun02.aud, trollgun03.aud
+	Warhead@Residual_plasma: FireShrapnel
+		Delay: 5
+		Weapon: residual_plasma
+		Amount: 8
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@13Shake: ShakeScreen
+		Duration: 4
+		Intensity: 3
+		Multiplier: 0.4,0.5
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c0
+
+Warg_AA:
+	Inherits@default.weapons: ^InstantHit.Comon.Animation
+	Inherits@StatBase.weapons: ^Warg.AutogunAA.stat.weapons
+	Report: flak_canonfire01.aud, flak_canonfire02.aud, flak_canonfire03.aud
+	
+	
+Loki.target01:
+	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
+	FirstBurstTargetOffset: 0,-910,0
+	FollowingBurstTargetOffset: 0,40,0
+	ReloadDelay: 4
+	MinRange: 4c0
+	Range: 18c0
+	Burst: 23
+	BurstDelays: 1
+	
+	
+Loki.target02:
+	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
+	FirstBurstTargetOffset: 0,910,0
+	FollowingBurstTargetOffset: 0,-40,0
+	ReloadDelay: 4
+	MinRange: 4c0
+	Range: 18c0
+	Burst: 23
+	BurstDelays: 1
+	
+Loki.Iem:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
+	Range: 18c0
+	MinRange: 4c0
+	ReloadDelay: 1
+	Warhead@emp: GrantExternalCondition
+		Range: 2c256
+		Duration: 2
+		Condition: empdisable
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 0c256
+
+Sharest.Railgun:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^SonicGun.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Loki.SonicGun.stat.weapons
+	Report: lokifire01.aud, lokifire02.aud, lokifire03.aud
+	Warhead@Cluster01: FireCluster
+		Delay: 8
+		Weapon: Sharest.Railgun.Cluster
+		RandomClusterCount: 14
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+	Warhead@Cluster02: FireCluster
+		Delay: 14
+		Weapon: Sharest.Railgun.Cluster
+		RandomClusterCount: 14
+		Dimensions: 5,5
+		Footprint: =xxx= x===x x===x x===x =xxx=
+	Warhead@Cluster03: FireCluster
+		Delay: 22
+		Weapon: Sharest.Railgun.Cluster
+		RandomClusterCount: 14
+		Dimensions: 7,7
+		Footprint: ==xxx== =x===x= x=====x x=====x x=====x =x===x= ==xxx==
+	Warhead@13Shake: ShakeScreen
+		Duration: 6
+		Intensity: 4
+		Multiplier: 0.8,0.6
+			
+Sharest.Railgun.Cluster:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Cluster.Loki.animation
+	Inherits@StatBase.weapons: ^Loki.SonicCluster.stat.weapons
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 128
+
+Sharest.Railgun.AA:
+	Inherits@default.weapons: ^SonicGun.Baneslayer.Animation
+	Inherits@Range: ^Range.VehicleAA.Base
+	ValidTargets: Air
+	ReloadDelay: 75
+	Range: 8c512
+	Report: lokifire01.aud, lokifire02.aud, lokifire03.aud
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+		Damage: 750
+		Versus:
+			Infantry: 10
+			LightVehicle: 110
+			ArmorTank: 100
+			Concrete: 150
+
+120mm.lindwyrm:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^PlasmaArty.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Lindwyrm.plasmaArty.stat.weapons
+	Report: lindwyrmfire01.aud, lindwyrmfire02.aud, lindwyrmfire03.aud
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Warhead@13Shake: ShakeScreen
+		Duration: 5
+		Intensity: 3
+		Multiplier: 0.8,0.6
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c857
+		
+120mm_lindwyrmShock:
+	Inherits@StatBase.weapons: ^Lindwyrm.Shock.weapons
+	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
+	Projectile: InstantExplode
+	Warhead@13ShakeFire: ShakeScreen
+		Duration: 4
+		Intensity: 2
+		Multiplier: 0.2,0.3
+	Warhead@3EffWater: CreateEffect
+		Explosions: shock_smokelarge01, shock_smokelarge02, shock_smokelarge03
+		ExplosionPalette: flameeffect50
+		ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
+
+120mm.lindwyrm.secondfire:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^PlasmaArty.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Lindwyrm.plasmaArty.mode2.stat.weapons
+	Report: lindwyrmfire01.aud, lindwyrmfire02.aud, lindwyrmfire03.aud
+	Projectile: Bullet
+		Image: 120mmplasma
+		Inaccuracy: 125
+	Warhead@3EffGround: CreateEffect
+		Explosions: plasma_pulseminex2
+		ExplosionPalette: powereffect
+	Warhead@spec: SpawnActor
+		Actors: roquetteorderinf
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 857
+
+Heimdall.Missile:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^BallistiqueMissile.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Heimdall.Rocket.stat.weapons
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Report: hemdail_rocket.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 8
+		Intensity: 4
+		Multiplier: 0.9,0.8
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c256
+		
+OdinWeapon.muzzle:
+	Inherits@default.weapons: ^null.Comon.Animation
+	Inherits@Range: ^Odin.ChargingVortex.baneslayer.stat.weapons
+	Burst: 2
+	BurstDelay: 25
+	ReloadDelay: 48
+	Report: charginmatter01.aud, charginmatter02.aud
+
+OdinWeapon.target:
+	Inherits@default.weapons: ^null.Comon.Animation
+	Inherits@Range: ^Odin.ChargingVortex.baneslayer.stat.weapons
+	ReloadDelay: 6
+
+Dark.Matter:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Mattermax.Weapons.Animation
+	Inherits@StatBase.weapons: ^Odin.VortexCanon.baneslayer.stat.weapons
+	Report: odin_fire01.aud, odin_fire02.aud, odin_fire03.aud
+	Warhead@13Shake: ShakeScreen
+		Duration: 6
+		Intensity: 4
+		Multiplier: 0.8,0.7
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c256
+
+Dark.Matter02:
+	Inherits@conditionweapons: Dark.Matter
+	Projectile: Bullet
+		Image: matter_bullet02
+		Palette: powereffect
+
+Ion.Matter:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^ionCanon.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Odin.IonCanon.Baneslayer.stat.weapons
+
+Nidhogg.StunCannon:
+	Inherits@default.weapons: ^Laser.Target.Animation
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@StatBase.weapons: ^Nidhogg.StunCannon.stat.weapons
+
+minigun.Nidhogg:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^Minigun.Comon.Animation
+	Inherits@StatBase.weapons: ^Nidhogg.minigun.stat.weapons
+	FirstBurstTargetOffset: -550,0,0
+	FollowingBurstTargetOffset: 250,0,0
+	StartBurstReport: nidhogg_fire01.aud, nidhogg_fire02.aud, nidhogg_fire03.aud
+	Warhead@3EffGround: CreateEffect
+		Explosions: autogun_expl
+		ExplosionPalette: effectalpha75
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 128
+
+Valkyrie.StunCannon:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^EMCanonAircraft.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^t3_valkyrie.Ionturret.stat.weapons
+	Report: garmgunmode2fire.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c256
+
+Thor.TwinRailgun01:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^ionCanonAircraft.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Thor.IonTracer.stat.weapons
+	FirstBurstTargetOffset: 0,350,0
+	FollowingBurstTargetOffset: 210,0,0
+	Report: thor_twinlas01.aud, thor_twinlas02.aud, thor_twinlas03.aud
+	
+Thor.TwinRailgun02:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@default.weapons: ^ionCanonAircraft.Baneslayer.Animation
+	Inherits@StatBase.weapons: ^Thor.IonTracer.stat.weapons
+	FirstBurstTargetOffset: 0,-350,0
+	FollowingBurstTargetOffset: 210,0,0
+	Report: thor_twinlas01.aud, thor_twinlas02.aud, thor_twinlas03.aud

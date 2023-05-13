@@ -1,0 +1,134 @@
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////// Gibs Sequences //////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Visual Effect Animation ////////////////////////////////// 
+
+gibs_splash:
+	Defaults:
+		Length: *
+	expl_gibs01:
+		Filename: expl_gibs01.shp
+		BlendMode: Additive
+	# impact weapons blood infantry
+	impactblood01:
+		Filename: impactblood01.shp
+		BlendMode: Additive
+	impactblood02:
+		Filename: impactblood02.shp
+		BlendMode: Additive
+	impactblood03:
+		Filename: impactblood03.shp
+		BlendMode: Additive
+	impactbloodmin01:
+		Filename: impactbloodmin01.shp
+		scale: 0.65
+	impactbloodmin02:
+		Filename: impactbloodmin02.shp
+		scale: 0.65
+	impactbloodmin03:
+		Filename: impactbloodmin03.shp
+		scale: 0.65
+	impactmaxblood01:
+		Filename: impactmaxblood01.shp
+		BlendMode: Additive
+	bloodspawn01:
+		Filename: bloodspawn01.shp
+		Tick: 1300
+	bloodspawn02:
+		Filename: bloodspawn02.shp
+		Tick: 1250
+	bloodspawn03:
+		Filename: bloodspawn03.shp
+		Tick: 1190
+	bloodspawn04:
+		Filename: bloodspawn04.shp
+		Tick: 1290
+
+# ////////////////////////////////////// Gibs base organs / Projectiles //////////////////////////////////
+
+gibsproj01:
+	Defaults:
+		Length: *
+
+gibs01:
+	Defaults:
+		Filename: gibs01.shp
+		Length: *
+	idle:
+
+gibs02:
+	Defaults:
+		Filename: gibs02.shp
+		Length: *
+	idle:
+	
+gibs03:
+	Defaults:
+		Filename: gibs03.shp
+		Length: *
+	idle:
+	
+gibs04:
+	Defaults:
+		Filename: gibs04.shp
+		Length: *
+	idle:
+	
+gibs05:
+	Defaults:
+		Filename: gibs05.shp
+		Length: *
+	idle:
+	
+gibs06:
+	Defaults:
+		Filename: gibs06.shp
+		Length: *
+	idle:
+
+# ////////////////////////////////////// Gibs corps full //////////////////////////////////
+
+corps01:
+	Defaults:
+		Length: *
+
+corps02:
+	Defaults:
+		Length: *
+
+corps03:
+	Defaults:
+		Length: *
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////// Débris Sequences ////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Debris base / Projectiles //////////////////////////////////
+
+medium_debris:
+	Defaults:
+		Filename: medium_debris.shp
+		Length: *
+	idle:
+
+medium_debris2:
+	Defaults:
+		Length: *
+	idle:
+		Filename: medium_debris2.shp
+
+small_debris2:
+	Defaults:
+		Length: *
+	idle:
+		Filename: small_debris2.shp
+
+# ////////////////////////////////////// Light vehicles husk / Projectiles //////////////////////////////////
+
+bike_debris:
+	Defaults:
+		Length: *
+	idle:
+		Filename: t1_bike.shp

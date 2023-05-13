@@ -1,0 +1,124 @@
+mastodonde:
+	Inherits: ^Helicoptershape
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^mastodonde.stat.unite
+	# / Inherit option Unite /
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
+	Armament@primary:
+		Turret: borde01
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,900,200, 490,900,200, 140,900,200, -210,900,200, -560,900,200
+	Armament@secondary:
+		Turret: borde02
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,-900,200, 490,-900,200, 140,-900,200, -210,-900,200, -560,-900,200
+	Armament@primarylas:
+		Turret: laser_des
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,900,200, 490,900,200, 140,900,200, -210,900,200, -560,900,200
+	Armament@secondarylas:
+		Turret: laser_des2
+		Weapon: cannon_cruiser
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		LocalOffset: 840,-900,200, 490,-900,200, 140,-900,200, -210,-900,200, -560,-900,200
+	AttackTurreted:
+		Turrets: borde01, borde02, laser_des, laser_des2
+	Turreted:
+		Turret: borde01
+		Offset: 750,1800,-50
+	Turreted@borde02:
+		Turret: borde02
+		Offset: 750,1500,-50
+	Turreted@borde02:
+		Turret: laser_des
+		Offset: 950,0,0
+	Turreted@borde03:
+		Turret: laser_des2
+		Offset: 950,0,0
+	RenderSprites:
+		Scale: 1.0
+	Aircraft:
+		CruiseAltitude: 7500
+		InitialFacing: 192
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	ProximityExternalCondition@FlakBATTERY:
+		Condition: FlakCruiser
+		ValidStances: Enemy
+		Range: 9c0
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	ProvidesPrerequisite:
+		Prerequisite: Orbital.Command.Relay
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	GrantConditionOnMovement@EngineMove:
+		Condition: EngineMove
+	WithIdleOverlay@EngineSTAND:
+		Offset: 0,0,0
+		Sequence: engine
+		Palette: light
+		RequiresCondition: EngineMove || !SmokeCamoActivate
+	WithIdleOverlay@EngineSPOT:
+		Offset: 0,0,0
+		Sequence: spot
+		Palette: light
+		RequiresCondition: !SmokeCamoActivate
+	HitShape:
+	GrantConditionOnDamageState@Damage01:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
+	GrantConditionOnDamageState@Damage02:
+		Condition: Critical.damage
+		ValidDamageStates: Critical
+	LeavesTrails@01:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 650,445,580
+		RequiresCondition: heavy.damage || Critical.damage
+	LeavesTrails@02:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -380,-405,670
+		RequiresCondition: Critical.damage
+	LeavesTrails@03:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -80,505,670
+		RequiresCondition: Critical.damage
+	SpawnActorOnDeath:
+		Actor: mastodonde.Husk
+
+mastodonde.husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: cruiser
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 46
+	RenderSprites:
+		Image: mastodonde
+		Scale: 0.95

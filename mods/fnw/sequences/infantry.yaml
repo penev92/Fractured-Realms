@@ -1,0 +1,933 @@
+^BasicInfantry:
+	Defaults:
+		Tick: 80
+		Offset: 0, 0, 16
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+
+^DeadInfantryGlobal:
+	die2:
+		Filename: explgore.shp
+		Start: 0
+		Length: 20
+		Tick: 50
+		ZOffset: -10
+	die3:
+		Filename: burninf.shp
+		Start: 0
+		Length: 20
+		Tick: 50
+		ZOffset: -10
+	die4:
+		Filename: deathnuke.shp
+		Length: 15
+		Tick: 35
+		ZOffset: -10
+	die5:
+		Filename: deathionique.shp
+		Length: 10
+		Tick: 35
+		ZOffset: -10
+	die6:
+		Filename: deathplasma.shp
+		Length: 10
+		Tick: 35
+		ZOffset: -10
+	die-crushed:
+		Filename: explgore.shp
+		Start: 15
+		Length: 1
+		Tick: 1800
+		ZOffset: -511
+		
+civ4:
+	Defaults:
+		Filename: civ4.shp
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	attack:
+		Start: 164
+		Length: 6
+		Facings: 8
+	idle1:
+		Start: 56
+		Length: 15
+	idle2:
+		Start: 71
+		Length: 15
+	die1:
+		Start: 134
+		Length: 15
+	panic-attack:
+		Start: 164
+		Length: 6
+		Facings: 8
+	panic-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+	panic-stand:
+		Facings: 8
+
+civ5:
+	Defaults:
+		Filename: civ5.shp
+	Inherits@Stat: civ4
+	
+civ6:
+	Defaults:
+		Filename: civ6.shp
+	Inherits@Stat: civ4
+
+civ7:
+	Defaults:
+		Filename: civ7.shp
+	Inherits@Stat: civ4
+
+t1_comrade:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_comrade.shp
+		Scale: 1.0
+	idle1:
+		Start: 56
+		Length: 15
+	die1:
+		Start: 135
+		Length: 18
+		Tick: 80
+	shoot:
+		Start: 170
+		Length: 9
+		Facings: 8
+	muzzle:
+		Filename: lasermuzzlemin.shp
+		Facings: 16
+		Length: 16
+		Tick: 18
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_comradeicon.shp
+		Start: 0
+		
+t1_stealhar:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_stealhar.shp
+		Scale: 1.0
+	idle1:
+		Start: 5
+		Length: 1
+	die1:
+		Start: 103
+		Length: 8
+		Tick: 80
+	shoot:
+		Start: 55
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_stealharicon.shp
+		Start: 0
+
+droneconclave:
+	Defaults:
+		Filename: droneconclave.shp
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	shoot:
+		Start: 56
+		Length: 1
+		Facings: 8
+	icon:
+		Filename: droneconclaveicon.shp
+
+avatar:
+	Defaults:
+		Filename: avatar.shp
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	AuraAvatar:
+		Filename: auraavatar.shp
+		Start: 0
+		Length: 49
+		Tick: 25
+		ZOffset: -45
+		BlendMode: Additive
+	light:
+		Filename: auraavatar.shp
+		Start: 50
+		Length: 5
+		Tick: 25
+		ZOffset: -45
+		BlendMode: Additive
+	idle1:
+		Start: 0
+		Facings: 8
+	muzzle:
+		Filename: cloudlitghning.shp
+		Start: 0
+		Length: *
+		Tick: 15
+		BlendMode: Additive
+	run:
+		Start: 8
+		Facings: 8
+		Length: 31
+	shoot:
+		Start: 255
+		Length: 31
+		Facings: 8
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: droneconclaveicon.shp
+
+t3_navigator:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t3_navigator.shp
+		Scale: 0.92
+	Defaults:
+		Filename: t3_navigator.shp
+		Tick: 80
+		Offset: 0, 0, 16
+	stand:
+		Facings: 8
+	run:
+		Start: 0
+		Facings: 8
+	idle1:
+		Start: 0
+		Facings: 8
+	die1:
+		Start: 0
+	shoot:
+		Start: 0
+		Facings: 8
+	robe_navigator:
+		Filename: robe_navigator.shp
+		Length: *
+		ZOffset: -5
+	muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t3_navigatoricon.shp
+		Start: 0
+
+t1_disciple:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_disciple.shp
+		Scale: 1.0
+	idle1:
+		Start: 104
+		Length: 15
+	idle2:
+		Start: 119
+		Length: 15
+	die1:
+		Start: 134
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzle_railgun.shp
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: muzzle_autogun_small.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_discipleicon.shp
+		Start: 0
+
+t1_aesir:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_aesir.shp
+		Scale: 1.0
+	idle1:
+		Start: 0
+		Length: 8
+	die1:
+		Start: 105
+		Length: 6
+		Tick: 80
+	shoot:
+		Start: 57
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_aesiricon.shp
+		Start: 0
+
+t2_tesla:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t2_tesla.shp
+		Scale: 1.0
+	idle1:
+		Start: 103
+		Length: 6
+		Tick: 90
+	die1:
+		Start: 109
+		Length: 6
+		Tick: 90
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 90
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: teslaicon.shp
+		Start: 0
+
+t3_eradicator:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t3_eradicator.shp
+		Scale: 0.87
+	idle1:
+		Start: 104
+		Length: 15
+		Tick: 90
+	die1:
+		Start: 120
+		Length: 7
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 120
+	muzzle:
+		Filename: autogun_expl.shp
+		Start: 0
+		Length: *
+	garrison-muzzle:
+		Filename: autogun_expl.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/redall_eradicatorart.png
+	icon:
+		Filename: t3_eradicatoricon.shp
+		Start: 0
+
+t2_devastator:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t2_devastator.shp
+		Scale: 1.0
+	idle1:
+		Start: 104
+		Length: 6
+	die1:
+		Start: 116
+		Length: 6
+		Tick: 90
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 90
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: devastatoricon.shp
+		Start: 0
+
+saboteur:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: saboteur.shp
+		Scale: 1.0
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 80
+	die1:
+		Start: 134
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 80
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		Tick: 80
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: cfinficon.shp
+		Start: 0
+
+e1:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: e1.shp
+		Scale: 1.0
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 80
+	die1:
+		Start: 86
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 116
+		Length: 6
+		Facings: 8
+		Tick: 80
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: champicon.shp
+		Start: 0
+
+ardisciple:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: ardisciple.shp
+		Scale: 1.0
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 80
+	die1:
+		Start: 134
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		Tick: 80
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: cfinficon.shp
+		Start: 0
+
+soldierop:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: soldierop.shp
+		Scale: 0.94
+	idle1:
+		Start: 104
+		Length: 12
+	die1:
+		Start: 116
+		Length: 11
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 60
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		Tick: 40
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: champicon.shp
+		Start: 0
+
+roquetteorderinf:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: roquetteorderinf.shp
+		Scale: 0.94
+	idle1:
+		Start: 0
+		Length: 8
+	die1:
+		Start: 104
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	garrison-muzzle:
+		Filename: minigun_impact.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: roquetteorderinficon.shp
+		Start: 0
+		
+t1_opengineer:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_opengineer.shp
+		Scale: 0.94
+	idle1:
+		Start: 56
+		Length: 12
+	die1:
+		Start: 67
+		Length: 12
+		Tick: 80
+	muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: redbeam_small_muzzle.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: engineer_opicon.shp
+		Start: 0
+
+jotun:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: jotun.shp
+		Scale: 0.94
+	idle1:
+		Start: 56
+		Length: 5
+	die1:
+		Start: 70
+		Length: 5
+		Tick: 80
+	shoot:
+		Start: 62
+		Length: 1
+		Facings: 8
+	muzzle:
+		Filename: pulse_lightmin.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: pulse_lightmin.shp
+		Start: 0
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: jotunicon.shp
+		Start: 0
+
+vanir:
+	Inherits@Stat: ^StatAircraftEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: vanir.shp
+		Scale: 0.94
+	idle:
+		Facings: 8
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: vaniricon.shp
+
+gardian:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: gardian.shp
+		Scale: 0.94
+	idle1:
+		Start: 104
+		Length: 12
+	die1:
+		Start: 116
+		Length: 11
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 60
+	muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		BlendMode: Additive
+		Tick: 60
+	garrison-muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: gardianicon.shp
+		Start: 0
+
+statis:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: statis.shp
+		Scale: 0.94
+	idle1:
+		Start: 4
+		Length: 0
+	die1:
+		Start: 104
+		Length: 6
+		Tick: 60
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 50
+	muzzle:
+		Filename: muzzle_bluegun.shp
+		Length: *
+		BlendMode: Additive
+	garrison-muzzle:
+		Filename: firegunmuzzlemin.shp
+		Facings: -16
+		Length: 14
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: statisicon.shp
+		Start: 0
+		
+t4_consniper:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t4_consniper.shp
+		Scale: 0.94
+	idle1:
+		Start: 104
+		Length: 15
+	die1:
+		Start: 119
+		Length: 15
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Start: 0
+		Length: *
+	garrison-muzzle:
+		Filename: muzzle_autogun_small.shp
+		Start: 0
+		Length: *
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: consnipericon.shp
+		Start: 0
+		
+t1_guardmen:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_guardmen.shp
+		Scale: 0.94
+	idle1:
+		Start: 56
+		Length: 6
+	die1:
+		Start: 105
+		Length: 6
+		Tick: 80
+	shoot:
+		Start: 68
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_regulartroopericon.shp
+		Start: 0
+		
+t1_guardmenat:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t1_guardmenat.shp
+		Scale: 0.94
+	idle1:
+		Start: 56
+		Length: 6
+	die1:
+		Start: 105
+		Length: 6
+		Tick: 80
+	shoot:
+		Start: 68
+		Length: 5
+		Facings: 8
+	muzzle:
+		Filename: muzzlerifle.shp
+		Facings: 16
+		Length: 10
+		Tick: 20
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t1_roquettetroopericon.shp
+		Start: 0
+
+t2_officer:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t2_officer.shp
+		Scale: 0.94
+	idle1:
+		Start: 0
+		Facings: 8
+		Length: 6
+	die1:
+		Start: 105
+		Length: 6
+		Tick: 80
+	shoot:
+		Start: 68
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzlerifle.shp
+		Facings: 16
+		Length: 10
+		Tick: 20
+		BlendMode: Additive
+	circle_effet:
+		Filename: circle_effet_federation_charge.shp
+		Length: *
+		Tick: 24
+		BlendMode: additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t2_officier.shp
+		Start: 0
+		
+t3_silverwolf:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t3_silverwolf.shp
+		Scale: 0.94
+	idle1:
+		Start: 5
+	die1:
+		Start: 144
+		Length: 6
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 5
+		Facings: 8
+	shoot2:
+		Start: 96
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t3_sniperfedicon.shp
+		Start: 0
+		
+t2_locust:
+	Inherits@Stat: ^StatInfantryEffect
+	Inherits@DefaultInfantry: ^BasicInfantry
+	Inherits@Dead: ^DeadInfantryGlobal
+	Defaults:
+		Filename: t2_locust.shp
+		Scale: 0.94
+	idle1:
+		Start: 56
+		Length: 15
+	die1:
+		Start: 1
+		Length: 1
+		Tick: 80
+	shoot:
+		Start: 56
+		Length: 6
+		Facings: 8
+	shoot_aa:
+		Start: 104
+		Length: 6
+		Facings: 8
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: t2_exoicon.shp
+		Start: 0

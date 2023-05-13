@@ -1,0 +1,35 @@
+CycleProductionBuildings: TAB
+	Description: Next facility
+	Types: Production
+
+ProductionTypeBuilding: E
+	Description: Building Tab
+	Types: Production
+
+ProductionTypeDefense: R
+	Description: Defense Tab
+	Types: Production
+
+ProductionTypeInfantry: T
+	Description: Infantry Tab
+	Types: Production
+
+ProductionTypeVehicle: Y
+	Description: Vehicle Tab
+	Types: Production
+
+ProductionTypeAircraft: U
+	Description: Aircraft Tab
+	Types: Production
+    
+ProductionTypeResearch: I
+	Description: Research Tab
+	Types: Production
+    
+ProductionTypeDoctrine: O
+	Description: Doctrine Power Tab
+	Types: Production
+    
+ProductionTypeAbillity: P 
+	Description: Abillity Tab
+	Types: Abillity

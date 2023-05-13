@@ -1,0 +1,503 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Abilitie & Power Sequences //////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Abilitie Effect Animation ////////////////////////////////// 
+
+allyrepair:
+	repair:
+		Filename: repairing_building.shp
+		Length: *
+		Tick: 160
+		ZOffset: 2047
+
+spyreveal:
+	idle:
+		Filename: spyreveal.shp
+		Start: 0
+		Length: 7
+		
+revealradr:
+	idle:
+		Filename: powerradar.shp
+		Start: 0
+		Length: *
+		Offset: -150, 80
+		BlendMode: Additive
+		
+power_repair:
+	idle:
+		Filename: power_repair.shp
+		Length: *
+
+disorientrayon:
+	idle:
+		Filename: disorientrayon.shp
+		Length: *
+		BlendMode: Additive
+		Palette: powereffect
+		Tick: 20
+		Offset: 0, -230
+		
+fusion.missile:
+	up:
+		Filename: fusionmissiledown.shp
+		Length: *
+		ZOffset: 1023
+	down:
+		Filename: fusionmissiledown.shp
+		Length: *
+		ZOffset: 1023
+
+nuke.alliance.missile:
+	up:
+		Filename: nukeallianceup.shp
+		Length: *
+		ZOffset: 1023
+	down:
+		Filename: nukealliancedown.shp
+		Length: *
+		ZOffset: 1023
+
+alliance.droppod:
+	up:
+		Filename: null.shp
+		Length: *
+		ZOffset: 1023
+	down:
+		Filename: null.shp
+		Length: *
+		ZOffset: 1023
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Researh & Icon Sequences ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+testicons:
+	icon:
+		Filename: testicons.shp
+		Offset: 32, 32
+
+# ///////////// Icone Vide (pour generez des espace) /////////////
+blankicon:
+	icon:
+		Filename: blankicon.shp
+
+# ///////////// Icone Locked (Icone de verroux) /////////////
+lockicon:
+	icon:
+		Filename: lockicon.shp
+		Start: 0
+
+# ////////////////////////////////////// RED ALLIANCES ////////////////////////////////////
+
+# ///////////// Weapons Aspect /////////////
+upgrade_ar_railgunicons:
+	icon:
+		Filename: upgrade_railgunicon.shp
+aspect_ar_lasericons:
+	icon:
+		Filename: aspect_ar_lasericons.shp
+aspect_ar_balisticons:
+	icon:
+		Filename: aspect_ar_balisticons.shp
+aspect_ar_flammeicons:
+	icon:
+		Filename: aspect_ar_flammeicons.shp
+aspect_ar_railgunicons:
+	icon:
+		Filename: aspect_ar_railgunicons.shp
+	
+# ///////////// Stat Aspect /////////////
+aspect_ar_armorinficons:
+	icon:
+		Filename: aspect_ar_armorinficons.shp
+aspect_ar_rangeicons:
+	icon:
+		Filename: aspect_ar_rangeicons.shp
+aspect_ar_walkericons:
+	Defaults:
+		Filename: aspect_ar_walkericons.shp
+	idle:
+	make:
+	icon:
+		Filename: aspect_ar_walkericons.shp
+aspect_ar_airicons:
+	icon:
+		Filename: aspect_ar_airicons.shp
+	
+# ////////////////////////////////////// BANESLAYER ORDER ////////////////////////////////////
+
+# ///////////// Icone doctrrine/research old /////////////
+aspect_op_infantryicons:
+	icon:
+		Filename: doctrinesinficon.shp
+aspect_op_vehicleicons:
+	icon:
+		Filename: doctrinesvehicon.shp
+aspect_op_aircrafticons:
+	icon:
+		Filename: doctrinesairicon.shp
+aspect_op_defenseicons:
+	icon:
+		Filename: doctrinesdeficon.shp
+	
+# ///////////// Icone doctrrine/protocole old /////////////
+aspect_op_locklidnicons:
+	icon:
+		Filename: doctrineslocklidnicon.shp
+aspect_op_lockdwarficons:
+	icon:
+		Filename: doctrineslockdwarficon.shp
+		Offset: 0, -34
+aspect_op_locklokiicons:
+	icon:
+		Filename: doctrineslocklokiicon.shp
+		Offset: 0, -34
+aspect_op_lockaheimdalicon:
+	icon:
+		Filename: doctrineslockheimdalicon.shp
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Researh/Abilitie & Icon Sequences /////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# //////////////////////////////////////// Abilitie Icone  /////////////////////////////////////
+icon:
+	salveicon:
+		Filename: salveicon.shp
+	detecticon:
+		Filename: detecticon.shp
+	empstrike_icon:
+		Filename: empstrike_icon.shp
+	powergravitconclaveicon:
+		Filename: powergravitconclaveicon.shp
+	bubblestaseicon:
+		Filename: bubblestaseicon.shp
+	avataricon:
+		Filename: avataricon.shp
+	powerrelaisicon:
+		Filename: powerrelaisicon.shp
+	aircraftbaneslayerpowericon:
+		Filename: aircraftbaneslayerpowericon.shp
+	ionstrike_icon:
+		Filename: ionstrike_icon.shp
+	ardroppowericon:
+		Filename: ardroppowericon.shp
+	nukeallianceicons:
+		Filename: nukeallianceicons.shp
+	arminstrikepowericon:
+		Filename: arminstrikepowericon.shp
+	ragnarok_plasmaicon:
+		Filename: ragnarok_plasmaicon.shp
+	orbitalstairstrikepowericon:
+		Filename: orbitalstairstrikepowericon.shp
+	powereclipseconclaveicon:
+		Filename: powereclipseconclaveicon.shp
+	fusionmissileicon:
+		Filename: fusion_missile_redallianceicon.shp
+	ragnarokcanonicon:
+		Filename: ragnarokcanonicon.shp
+	purification_ray_redallianceicon:
+		Filename: purification_ray_redallianceicon.shp
+	nukestrikeaaicon:
+		Filename: nukestrikeaaicon.shp
+	shakenukeicon:
+		Filename: shakenukeicon.shp
+	fedthunderstrikeicon:
+		Filename: fedthunderstrikeicon.shp
+	paradropfedicon:
+		Filename: paradropfedicon.shp
+	bomberfedicon:
+		Filename: bomberfedicon.shp
+	chargedfedicon:
+		Filename: chargedfedicon.shp
+	xxicon:
+		Filename: artwork|comon_generiqueart.png
+	massdropfedicon:
+		Filename: massdropfedicon.shp
+	emptyicon:
+		Filename: default.shp
+	
+# //////////////////////////////////////// Benslayer Researh /////////////////////////////////////
+# //////___________________________________________________________________________________///////
+
+lockedicon:
+	icon:
+		Filename: lockedicon.shp
+		Start: 0
+
+empstrike_unlockicon:
+	icon:
+		Filename: empstrike_unlockicon.shp
+		Start: 0
+
+fusionmissileicon:
+	icon:
+		Filename: fusion_missile_redallianceicon.shp
+		Start: 0
+		
+empstrike_icon:
+	icon:
+		Filename: empstrike_icon.shp
+		Start: 0
+
+detectrange_icons:
+	icon:
+		Filename: detectrange_icons.shp
+		Start: 0
+
+speedboosticon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: speedboosticon.shp
+		Start: 0
+
+rangeboosticon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: targetupgrade.shp
+		Start: 0
+
+upgrade_doctrine_artemienicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_doctrine_artemienicon.shp
+		Start: 0
+
+upgrade_doctrine_valkyricon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_doctrine_valkyricon.shp
+		Start: 0
+
+heidruncasematicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: heidruncasematicon.shp
+		Start: 0
+
+plasmaengineicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: plasmaengineicon.shp
+		Start: 0
+
+kevlarbaneslayericon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: kevlarbaneslayericon.shp
+		Start: 0
+
+thorupgradeicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: thorupgradeicon.shp
+		Start: 0
+
+roquettebaneupgradeicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: roquettebaneupgradeicon.shp
+		Start: 0
+		
+armorpackicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: armorpackicon.shp
+		Start: 0
+	
+
+# ////////////////////////////////////// Red Alliance Researh ////////////////////////////////////
+# //////___________________________________________________________________________________///////
+
+upgrade_armor_redalliance_icon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_armor_redalliance_icon.shp
+		Start: 0
+
+upgrade_supersonic_redalliance_icon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_supersonic_redalliance_icon.shp
+		Start: 0
+
+blueflameicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: blueflameicon.shp
+
+fusion_engineicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: fusion_engineicon.shp
+
+nukeammo_icon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: nukeammoicon.shp
+	
+repairtrainingicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: repairtrainingicon.shp
+
+serumicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: serumicon.shp
+
+arflakicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: arflakicon.shp
+	
+# /////////////////////////////////////// Conclave Researh /////////////////////////////////////
+# //////_________________________________________________________________________________///////
+
+holoup_alpelerin:
+	icon:
+		Filename: holoup_alpelerin.shp
+
+holoup_ompelerin:
+	icon:
+		Filename: holoup_ompelerin.shp
+
+holoup_alcomete:
+	icon:
+		Filename: holoup_alcomete.shp
+
+holoup_omcomete:
+	icon:
+		Filename: holoup_omcomete.shp
+
+holoup_alrodeur:
+	icon:
+		Filename: holoup_alrodeur.shp
+
+holoup_omrodeur:
+	icon:
+		Filename: holoup_omrodeur.shp
+
+holoup_alarpenteur:
+	icon:
+		Filename: holoup_alarpenteur.shp
+
+holoup_omarpenteur:
+	icon:
+		Filename: holoup_omarpenteur.shp
+
+holoup_alzenith:
+	icon:
+		Filename: holoup_alzenith.shp
+
+holoup_omzenith:
+	icon:
+		Filename: holoup_omzenith.shp
+
+holoup_alquasar:
+	icon:
+		Filename: holoup_alquasar.shp
+
+holoup_omquasar:
+	icon:
+		Filename: holoup_omquasar.shp
+
+holoup_alnavigator:
+	icon:
+		Filename: holoup_alnavigator.shp
+
+holoup_omnavigator:
+	icon:
+		Filename: holoup_omnavigator.shp
+
+# ////////////////////////////////////// Federation Researh Icon ////////////////////////////////////
+# //////______________________________________________________________________________________///////
+
+upgrade_fed_electroshieldicon:
+	icon:
+		Filename: upgrade_fed_electroshieldicon.shp
+
+upgrade_fedtogether_icon:
+	icon:
+		Filename: upgrade_fedtogether_icon.shp
+
+upgrade_fedautoloader_icon:
+	icon:
+		Filename: upgrade_fedautoloader_icon.shp
+	
+upgrade_fedrangearty_icon:
+	icon:
+		Filename: upgrade_fedrangearty_icon.shp
+	
+upgrade_fedpowr_icon:
+	icon:
+		Filename: upgrade_fedpowr_icon.shp
+
+tech2icon:
+	icon:
+		Filename: tech2icon.shp
+	
+fedfortressicon:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: fedfortressicon.shp
+
+# ////////////////////////////////////// Icon Doctrines Sequences ////////////////////////////////////
+
+doctrines_com_rangeicon:
+	icon:
+		Filename: doctrines_com_rangeicon.shp
+doctrines_com_terroricon:
+	icon:
+		Filename: doctrines_com_terroricon.shp
+doctrines_inf_armoricon:
+	icon:
+		Filename: doctrines_inf_armoricon.shp
+doctrines_inf_rangeicon:
+	icon:
+		Filename: doctrines_inf_rangeicon.shp
+doctrines_inf_regenicon:
+	icon:
+		Filename: doctrines_inf_regenicon.shp
+doctrines_inf_stealhicon:
+	icon:
+		Filename: doctrines_inf_stealhicon.shp
+doctrines_veh_armoricon:
+	icon:
+		Filename: doctrines_veh_armoricon.shp
+doctrines_veh_rangeicon:
+	icon:
+		Filename: doctrines_veh_rangeicon.shp
+doctrines_veh_speedicon:
+	icon:
+		Filename: doctrines_veh_speedicon.shp
+doctrines_veh_speedicon:
+	icon:
+		Filename: doctrines_veh_speedicon.shp
+doctrines_build_bonusicon:
+	icon:
+		Filename: doctrines_build_bonusicon.shp
+doctrines_air_bonusicon:
+	icon:
+		Filename: doctrines_air_bonusicon.shp

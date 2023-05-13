@@ -1,0 +1,787 @@
+t1_harvester:
+	Inherits@1: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^lamia.harv.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@harvester: ^Harvester.rules
+	# / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	ProximityExternalCondition@FirtDeploy:
+		Condition: Reffinery.FirstDeploy
+		Range: 2
+		AffectsParent: true
+	Armament@gun:
+		Weapon: AP_Harvesterturret
+		Recoil: 100
+		RecoilRecovery: 15
+		LocalOffset: 500,200,340
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: 30,0,650
+		PauseOnCondition: stunweapons
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,645,-10
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,-645,-10
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: arproc
+
+t1_bike:
+	Inherits@1: ^ShapeVehicleLight
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_bike.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	AttackFrontal:
+		FacingTolerance: 4
+		PauseOnCondition: empdisable || stunweapons
+	Armament@gun:
+		Weapon: BikeMissile
+		Modifier: 0
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: -400,105,180, -400,-105,180
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+
+t1_scarab:
+	Inherits@1: ^ShapeWalkerLight
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_scarab.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^FlamerWeapons.UpgradeStat.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	Mobile:
+		RequiresCondition: !deployed
+	Cloak:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock
+		CloakDelay: 5
+		IsPlayerPalette: true
+		CloakedCondition: cloaked
+		RequiresCondition: deployed
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable || stunweapons
+	GrantConditionOnDeploy:
+		PauseOnCondition: empdisable || being-captured
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 96
+		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Diast, Beach, Concrete, Tree
+		Voice: Move
+	WithMoveAnimation:
+		MoveSequence: walk
+		RequiresCondition: !deployed
+	WithFacingSpriteBody:
+		Sequence: idle
+		StartSequence: make
+		RequiresCondition: !deployed
+	WithIdleOverlay@Shadow:
+		RequiresCondition: !deployed
+	WithSpriteBody@deployed:
+		Name: Deploy
+		StartSequence: make
+		Sequence: idle-deployed
+		RequiresCondition: deployed
+	Armament@Default:
+		Weapon: FlamerDrone
+		LocalOffset: 1200,0,380
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+		RequiresCondition: !upgrade.WeaponsFlamer.Redalliance && !deployed
+	Armament@Upgraded:
+		Weapon: FlamerDroneUP
+		LocalOffset: 1200,0,380
+		MuzzleSequence: muzzle
+		MuzzlePalette: flammeeffectblue
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance && !deployed
+	Armament@Deployed:
+		Weapon: FlamerDrone.deploy
+		LocalOffset: 0,0,0
+		RequiresCondition: !upgrade.WeaponsFlamer.Redalliance && deployed
+	Armament@DeployedUP:
+		Weapon: FlamerDrone.deployUP
+		LocalOffset: 0,0,0
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance && deployed
+	WithMuzzleOverlay:
+
+t2_basilisk:
+	Inherits@1: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_basilisk.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	# / affect & upgrade /
+	Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^Affect.Upgrade.ChargedRailgun.Redalliance
+	Inherits@Upgrade.redalliance03: ^Affect.Upgrade.Retrofit.Redalliance
+	Inherits@Upgrade.redalliance04: ^Affect.Upgrade.ArmorPurge.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	Armament@primary:
+		Name: primary
+		Weapon: AP_basilic
+		LocalOffset: 2450,0,220
+		MuzzleSequence: muzzlebase
+		MuzzlePalette: flameeffect
+		PauseOnCondition: ammo
+		Recoil: 85
+		RecoilRecovery: 15
+	# / Shock Heavy Weapons Fire /
+	GrantConditionOnAttack@ShockFirePrimary:
+		ArmamentNames: primary, charged
+		Condition: PrimaryFire
+		RequiredShotsPerInstance: 0
+		RevokeDelay: 1
+		RevokeAll: true
+	Armament@PRIMARYSHOCK:
+		Name: primary
+		Turret: primary
+		Weapon: AP_basilicShock
+		LocalOffset: 0,0,0
+		RequiresCondition: PrimaryFire
+	AmmoPool:
+		Name: charged
+		Armaments: charged
+		InitialAmmo: 0
+		AmmoCondition: ammo
+		SelfReloads: true
+		RearmSound: railguncharge01
+	ReloadAmmoPool:
+		AmmoPool: charged
+		Delay: 120
+		Count: 1
+		ResetOnFire: true
+		Sound: railguncharge01.aud
+		RequiresCondition: Upgrade.Railgun.Redalliance
+	Armament@primardy:
+		Name: charged
+		Weapon: AP_basilic.supercharged
+		LocalOffset: 2450,0,220
+		PauseOnCondition: !ammo
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+		Recoil: 5
+		RecoilRecovery: 1
+		RequiresCondition: Upgrade.Railgun.Redalliance
+	Armament@AA.Canon:
+		Name: aagun
+		Weapon: basilic_AACanon
+		LocalOffset: -150,290,658, -150,-290,658
+		Recoil: 85
+		RecoilRecovery: 15
+		RequiresCondition: Upgrade.Retrofit.Redalliance
+	WithMuzzleOverlay:
+	AttackTurreted:
+		Armaments: primary, aagun, charged
+		RequiresCondition: !(empdisable || stunweapons)
+		TargetFrozenActors: true
+	Turreted:
+		Offset: -30,0,80
+		PauseOnCondition: stunweapons
+	WithFacingSpriteBody:
+		RequiresCondition: !Upgrade.FusionSpeed.Vehicle
+	WithFacingSpriteBody@FE:
+		RequiresCondition: Upgrade.FusionSpeed.Vehicle
+		Sequence: idle.fe
+	WithSpriteTurret:
+		RequiresCondition: !Upgrade.Retrofit.Redalliance && !Upgrade.Railgun.Redalliance
+	WithSpriteTurret@UpgradeAA:
+		RequiresCondition: Upgrade.Retrofit.Redalliance && !Upgrade.Railgun.Redalliance
+		Sequence: turret.upaa
+	WithSpriteTurret@UpgradeIF:
+		RequiresCondition: Upgrade.Railgun.Redalliance && !Upgrade.Retrofit.Redalliance
+		Sequence: turret.upif
+	WithSpriteTurret@UpgradeAAIF:
+		RequiresCondition: Upgrade.Retrofit.Redalliance && Upgrade.Railgun.Redalliance
+		Sequence: turret.full
+	AutoTargetPriority@AIR:
+		RequiresCondition: !stance-attackanything && Upgrade.Retrofit.Redalliance
+		PauseOnCondition: BaitTargetApply
+		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Defense, Structure
+		InvalidTargets: NoAutoTarget, WaterStructure
+	AutoTargetPriority@AIR:
+		RequiresCondition: stance-attackanything && Upgrade.Retrofit.Redalliance
+		PauseOnCondition: BaitTargetApply
+		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+t2_hydra:
+	Inherits@1: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_hydra.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	# / affect & upgrade /
+	Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance04: ^Affect.Upgrade.Retrofit.Redalliance
+	Inherits@Upgrade.redalliance05: ^Affect.Upgrade.ArmorPurge.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	AmmoPool@initial:
+		Name: secondary
+		Armaments: secondary
+		Ammo: 8
+		PipCount: 8
+		SelfReloads: true
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: secondary
+		Delay: 50
+		Count: 1
+		ResetOnFire: true
+	GrantConditionOnDeploy:
+		DeployedCondition: SwitchFireMode
+		RequiresCondition: Upgrade.Retrofit.Redalliance
+	WithMuzzleOverlay:
+	RevealsShroud:
+		Range: 8c0
+	#condition type
+	GrantConditionOnAttack:
+		Condition: AP_fire
+		ArmamentNames: primary
+		RevokeDelay: 12
+	#Armament type
+	Armament@PRIMARY:
+		Weapon: AP_hydra
+		Recoil: 15
+		RecoilRecovery: 5
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+		LocalOffset: 1650,240,520, 1650,-240,520
+		RequiresCondition: !SwitchFireMode
+	Armament@PRIMARYAA:
+		Name: AA_hydraweapon
+		Weapon: AA_hydra
+		Recoil: 15
+		RecoilRecovery: 5
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+		LocalOffset: 1800,240,1360, 1800,-240,1360
+		RequiresCondition: !SwitchFireMode
+	Armament@rocket:
+		Name: secondary
+		Weapon: hydra.Inferno.rocket
+		AmmoPoolName: secondary
+		LocalOffset: 20,80,160, 20,-80,160
+		RequiresCondition: SwitchFireMode
+		PauseOnCondition: !ammo
+		MuzzleSequence: muzzle
+		MuzzlePalette: powereffect
+	# Sprite type & condition
+	WithFacingSpriteBody:
+		RequiresCondition: !Upgrade.FusionSpeed.Vehicle
+	WithFacingSpriteBody@FE:
+		RequiresCondition: Upgrade.FusionSpeed.Vehicle
+		Sequence: idle.fe
+	AttackTurreted:
+		Armaments: primary, secondary, AA_hydraweapon
+		Turrets: primary, AA_turret, Upgrade_turret, UpgradeAA_turret, Deploy_turret
+		RequiresCondition: !(empdisable || stunweapons)
+	WithSpriteTurret:
+		RequiresCondition: !Upgrade.Retrofit.Redalliance && !AP_fire
+		Turret: AA_turret
+	WithSpriteTurret@AA:
+		RequiresCondition: !Upgrade.Retrofit.Redalliance && !SwitchFireMode && AP_fire
+		Sequence: turreth
+	WithSpriteTurret@Upgrade:
+		RequiresCondition: Upgrade.Retrofit.Redalliance && !SwitchFireMode && !AP_fire
+		Sequence: turretup
+		Turret: Upgrade_turret
+	WithSpriteTurret@UpgradeAA:
+		RequiresCondition: Upgrade.Retrofit.Redalliance && !SwitchFireMode && AP_fire
+		Sequence: turretuph
+		Turret: UpgradeAA_turret
+	WithSpriteTurret@Deploy:
+		RequiresCondition: Upgrade.Retrofit.Redalliance && SwitchFireMode
+		Sequence: turretdeploy
+		Turret: Deploy_turret
+	# turreted type
+	Turreted:
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+	Turreted@AA:
+		Turret: AA_turret
+		TurnSpeed: 8
+		RealignDelay: 5
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+	Turreted@Upgrade:
+		Turret: Upgrade_turret
+		TurnSpeed: 8
+		RealignDelay: 5
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+	Turreted@UpgradeAA:
+		Turret: UpgradeAA_turret
+		TurnSpeed: 8
+		RealignDelay: 5
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+	Turreted@Deploy:
+		Turret: Deploy_turret
+		TurnSpeed: 8
+		RealignDelay: 5
+		Offset: 0,0,0
+		PauseOnCondition: stunweapons
+
+t2_manticore:
+	Inherits@1: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_manticore.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance04: ^Affect.Upgrade.Retrofit.Redalliance
+	Inherits@Upgrade.redalliance05: ^Affect.Upgrade.ArmorPurge.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	Mobile:
+		Crushes: gibs, infantry, husk
+	Armament@PRIMARY:
+		Name: primary
+		Weapon: 120mm_mantis
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2400,0,1280
+		MuzzleSequence: muzzle
+		MuzzlePalette: railgunpal
+		ReloadingCondition: reloading
+	Armament@rocket:
+		Name: secondary
+		Weapon: rocket.mantis
+		LocalOffset: 200,75,350
+		RequiresCondition: Upgrade.Retrofit.Redalliance
+	ReloadArmamentsBar:
+	# / Shock Heavy Weapons Fire /
+	GrantConditionOnAttack@ShockFirePrimary:
+		ArmamentNames: primary
+		Condition: PrimaryFire
+		RequiredShotsPerInstance: 0
+		RevokeDelay: 1
+		RevokeAll: true
+	Armament@PRIMARYSHOCK:
+		Name: primary
+		Turret: primary
+		Weapon: 120mm_mantisShock
+		LocalOffset: 0,0,0
+		RequiresCondition: PrimaryFire
+	WithMuzzleOverlay:
+	WithRangeCircle@MinAreaFire:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFire:
+		Color: FF990065
+	WithFacingSpriteBody:
+		RequiresCondition: !Upgrade.FusionSpeed.Vehicle
+	WithFacingSpriteBody@FE:
+		RequiresCondition: Upgrade.FusionSpeed.Vehicle
+		Sequence: idle.fe
+	WithSpriteTurret:
+		RequiresCondition: !Upgrade.Retrofit.Redalliance
+	WithSpriteTurret@Upgrade:
+		RequiresCondition: Upgrade.Retrofit.Redalliance
+		Sequence: turret.up
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -10,0,150
+		PauseOnCondition: stunweapons
+
+t2_salamander:
+	Inherits@1: ^ShapeVehicleMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_salamander.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@CargoPipsVisual: ^CargoPips
+	# / affect & upgrade /
+	Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^Affect.Upgrade.Retrofit.Redalliance
+	Inherits@Upgrade.redalliance03: ^Affect.Upgrade.ArmorPurge.Redalliance
+	Inherits@Upgrade.redalliance04: ^FlamerWeapons.UpgradeStat.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	Mobile:
+		Crushes: gibs, infantry, husk
+		Locomotor: amphibious
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: 30,0,410
+		PauseOnCondition: stunweapons
+	Armament@Flame:
+		Weapon: minotaur_flamer
+		Recoil: 15
+		RecoilRecovery: 15
+		LocalOffset: 1100,0,250
+		RequiresCondition: !upgrade.WeaponsFlamer.Redalliance && !Flammer.Doctrines.Redalliance
+	Armament@FlameUP:
+		Weapon: minotaur_flamer
+		Recoil: 15
+		RecoilRecovery: 15
+		LocalOffset: 1100,0,250
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance && !Flammer.Doctrines.Redalliance
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+		LoadingCondition: loading
+	RevealsShroud:
+	GrantConditionOnTerrain@Water:
+		Condition: amphibie
+		TerrainTypes: Water
+	WithFacingSpriteBody:
+		RequiresCondition: !amphibie
+	WithFacingSpriteBody@AmphMode:
+		Sequence: idle.amp
+		RequiresCondition: amphibie
+	GrantConditionOnMovement@MOUVSOUND:
+		Condition: mouvsnd
+	WithSpriteTurret:
+
+t3_apocalypse:
+	Inherits: ^ShapeVehicleHeavy
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_apocalypse.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HeavyTracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^Affect.Upgrade.ArmorPurge.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetAll
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	ChangesHealth@Base:
+		Step: 25
+		Delay: 8
+		StartIfBelow: 50
+		DamageCooldown: 150
+	# //////// Turret Trait System //////////
+	AttackTurreted:
+		Armaments: primary, secondary, charged, CounterMeasure
+		Turrets: primary, CounterMeasureTurret
+		RequiresCondition: !(empdisable || stunweapons)
+		TargetFrozenActors: true
+	Turreted:
+		Offset: -140,0,260
+		PauseOnCondition: stunweapons
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	# //////// Armement base //////////
+	Armament@gun:
+		Name: primary
+		Turret: primary
+		Weapon: AP_Apocalypse
+		Recoil: 10
+		RecoilRecovery: 15
+		PauseOnCondition: ammo
+		MuzzleSequence: muzzlebase
+		MuzzlePalette: flameeffect
+		LocalOffset: 2200,180,550, 2200,-180,550
+	Armament@FragMissilex1:
+		Name: secondary
+		Turret: primary
+		Weapon: fragMissile
+		Recoil: 10
+		RecoilRecovery: 15
+		MuzzleSequence: frag-muzzle
+		MuzzlePalette: flameeffect
+		LocalOffset: 15,-300,260, 15,300,260
+	# //////// Armement Upgrade Supercharged Railgun //////////
+	Armament@charged:
+		Name: charged
+		Turret: primary
+		Weapon: AP_Apocalypse_supercharged
+		Recoil: 10
+		RecoilRecovery: 15
+		PauseOnCondition: !ammo
+		MuzzleSequence: muzzlebase
+		MuzzlePalette: railgunpal
+		LocalOffset: 2200,180,550, 2200,-180,550
+		RequiresCondition: Upgrade.Railgun.Redalliance
+	AmmoPool:
+		Name: charged
+		Armaments: charged
+		InitialAmmo: 0
+		Ammo: 2
+		AmmoCondition: ammo
+		SelfReloads: true
+		RearmSound: railguncharge01
+	ReloadAmmoPool:
+		AmmoPool: charged
+		Delay: 120
+		Count: 1
+		ResetOnFire: true
+		Sound: railguncharge01.aud
+		RequiresCondition: Upgrade.Railgun.Redalliance
+	# //////// Shock Heavy Weapons Fire Effect //////////
+	GrantConditionOnAttack@ShockFirePrimary:
+		ArmamentNames: primary
+		Condition: PrimaryFire
+		RequiredShotsPerInstance: 0
+		RevokeDelay: 1
+		RevokeAll: true
+	Armament@PRIMARYSHOCK:
+		Name: primary
+		Turret: primary
+		Weapon: AP_ApocalypseShock
+		LocalOffset: 15,-300,260, 15,300,260
+		RequiresCondition: PrimaryFire
+	# //////// Armement CounterMeasure //////////
+	Turreted@countermeasure:
+		Turret: CounterMeasureTurret
+		FireDelay: 5
+		TurnSpeed: 1024
+		Offset: 551,0,158
+	WithSpriteTurret@CounterMeasure:
+		Turret: CounterMeasureTurret
+		Sequence: turret.null
+	Armament@CounterMeasure:
+		Name: CounterMeasure
+		Turret: CounterMeasureTurret
+		Weapon: AP_ApocalypseCounterMeasure
+		ForceTargetRelationships: Enemy
+		LocalOffset: 15,-30,260, 15,30,260
+		RequiresCondition: Titan.Activate.CounterMeasure
+	PointDefense:
+		Armament: CounterMeasure
+		PointDefenseTypes: Missile
+		ValidRelationships: Enemy
+		RequiresCondition: Titan.Activate.CounterMeasure
+	# //////// Fumigene Armament System //////////
+	GrantTimedConditionOnDeploy@FumigeneSystem:
+		DeployedCondition: Fumigene.deployed
+		CooldownTicks: 2000
+		DeployedTicks: 150
+		StartsFullyCharged: true
+		PauseOnCondition: Disable
+		RequiresCondition: Titan.Activate.Fumigene
+	ExplodeWeapon@FumigeneSystem:
+		Weapon: Cluster.Fumigene
+		RequiresCondition: Fumigene.deployed
+
+t3_purifier:
+	Inherits@1: ^ShapeVehicleHeavy
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_purifier.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@SoundMove: ^HeavyTracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^Affect.Upgrade.Retrofit.Redalliance
+	Inherits@Upgrade.redalliance03: ^Affect.Upgrade.ArmorPurge.Redalliance
+	Inherits@Upgrade.redalliance04: ^FlamerWeapons.UpgradeStat.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		Offset: -10,0,20
+		PauseOnCondition: stunweapons
+	Armament@gun:
+		Weapon: FlamerPurifier_01
+		Recoil: 100
+		RecoilRecovery: 15
+		LocalOffset: 800,-250,340
+		RequiresCondition: !upgrade.WeaponsFlamer.Redalliance
+	Armament@gun2:
+		Weapon: FlamerPurifier_02
+		Recoil: 100
+		RecoilRecovery: 15
+		LocalOffset: 800,250,340
+		RequiresCondition: !upgrade.WeaponsFlamer.Redalliance
+	Armament@gunUpgrade:
+		Weapon: FlamerPurifierUP_01
+		Recoil: 100
+		RecoilRecovery: 15
+		LocalOffset: 800,-250,340
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance
+	Armament@gunUpgrade2:
+		Weapon: FlamerPurifierUP_02
+		Recoil: 100
+		RecoilRecovery: 15
+		LocalOffset: 800,250,340
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance
+	WithSpriteTurret:
+
+t3_annihilator:
+	Inherits@1: ^ShapeWalkerHeavy
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_annihilator.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / Option - Effect /
+	Inherits@TrailEffect: ^Trails.Walker.effect.smoke
+	# / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Affect.Upgrade.FusionSpeed.Redalliance
+	Inherits@Upgrade.redalliance02: ^Affect.Upgrade.ArmorPurge.Redalliance
+	# / Select / Target type /
+	Inherits@Select: ^SelectableHeightCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.redalliance
+		IconPalette: RedAlliance.Icon
+	Armament@gun:
+		Weapon: AP_Gatling_ann
+		Recoil: 150
+		RecoilRecovery: 23
+		LocalOffset: 800,-480,200
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
+	Transforms:
+		IntoActor: t3_annihilator_deployed
+		Offset: 0,0
+		Facing: 370
+		TransformSounds: deploy_vehicle_mode.aud
+		NoTransformSounds:
+	Turreted:
+		Offset: 0,0,1150
+		PauseOnCondition: stunweapons
+
+t3_harbinger_mobile:
+	Inherits@1: ^VoxelVehicleHeavy
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_harbinger_mobile.stat.unite
+	# / Inherit Option Unite /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@SoundMove: ^HeavyTracked.vehicle.move
+	# / Upgrade Faction /
+	Buildable:
+		Queue: null.redalliance
+		IconPalette: RedAlliance.Icon
+	Mobile:
+		PauseOnCondition: !(!deployed)
+	-AutoTarget:
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	WithVoxelBody@Normal:
+		Sequence: idle
+		RequiresCondition: !deployed
+	WithVoxelBody@Deployed:
+		Sequence: deployed
+		RequiresCondition: deployed
+	ProximityExternalCondition@HarbingerRepair:
+		Condition: FactoryRepairVehicle
+		Range: 5c0
+		AffectsParent: true
+		RequiresCondition: deployed
+	ProximityExternalCondition@harbingerHealthInfantry:
+		Condition: harbingerHealthInfantry
+		Range: 5c0
+		AffectsParent: true
+		RequiresCondition: deployed
+	ProximityExternalCondition@CloakGeneratorIdle:
+		Condition: cloakgenerator
+		Range: 5c0
+		EnableSound:
+		DisableSound:
+		AffectsParent: True
+		RequiresCondition: deployed
+	WithRangeCircle@Cloak:
+		Range: 5c0
+		Type: cloakgenerator
+	RenderVoxels:
+	WithVoxelBody:

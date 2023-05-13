@@ -1,0 +1,90 @@
+^gibs:
+	Range: 1c0
+	Projectile: Bullet
+		Speed: 84, 148
+		LaunchAngle: 45, 112
+		Image: gibs01
+		High: true
+		Inaccuracy: 512
+		TrailImage: gibs_smoke
+		TrailInterval: 2
+		TrailPalette: effectalpha55
+		BounceCount: 2
+		Shadow: true
+		Blockable: true
+	Warhead@2Eff: CreateEffect
+		Image: gibs_splash
+		Explosions: impactbloodmin01, impactbloodmin02, impactbloodmin03
+		ExplosionPalette: powereffect
+		ValidTargets: Ground, Road, Concrete
+	Warhead@2Eff: CreateEffect
+		Image: gibs_splash
+		Explosions: bloodspawn01, bloodspawn02, bloodspawn03, bloodspawn04
+		ExplosionPalette: powereffect
+		ValidTargets: Ground, Road, Concrete
+		
+# ////////////////////////////////////////////////////////////////
+# //////////////////////////  Gibs  base  ////////////////////////
+# ////////////////////////////////////////////////////////////////
+
+gibs_part01:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs01
+		BounceSound: gibs_bounce01.aud
+
+gibs_part02:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs02
+		BounceSound: gibs_bounce02.aud
+
+gibs_part03:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs03
+		BounceSound: gibs_bounce01.aud
+		Palette: powereffect
+
+gibs_part04:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs04
+		BounceSound: gibs_bounce03.aud
+		Palette: powereffect
+
+gibs_part05:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs05
+		BounceSound: gibs_bounce02.aud
+		Palette: powereffect
+
+gibs_part06:
+	Inherits@gibs: ^gibs
+	Projectile: Bullet
+		Image: gibs06
+		BounceSound: gibs_bounce03.aud
+		Palette: powereffect
+
+# ////////////////////////////////////////////////////////////////
+# ////////////////////////// Corps Entier ////////////////////////
+# ////////////////////////////////////////////////////////////////
+
+body1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		TrailImage: corps01
+		Image: medium_debris
+		
+body2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		TrailImage: corps02
+		Image: medium_debris
+		
+body3:
+	Inherits: ^Debris
+	Projectile: Bullet
+		TrailImage: corps03
+		Image: medium_debris

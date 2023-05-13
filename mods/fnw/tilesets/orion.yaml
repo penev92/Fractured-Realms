@@ -1,0 +1,9033 @@
+General:
+	Name: orion
+	Id: ORION
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Forest, Decoy, Beach, Bridge
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		AcceptsSmudgeType: Gibs, Scorch, Crater, Largecrater_clear, Crater_clear
+		Color: 2d4f0d
+		RestrictPlayerColor: true
+	TerrainType@Impassable:
+		Type: Impassable
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Largecrater_clear, Crater_clear
+		Color: 2d4f0d
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		IsWater: True
+		Color: 1a3c89
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_clear, Crater_clear
+		Color: 493612
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 4b4b4b
+	TerrainType@Pilrock:
+		Type: Pilrock
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch
+		Color: 493612
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		IsWater: False
+		Color: 222222
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 2d4a16
+	TerrainType@Beach:
+		Type: Beach
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 314add
+	TerrainType@Bridge:
+		Type: Bridge
+		TargetTypes: Ground
+		AcceptsSmudgeType: Gibs
+		IsWater: False
+		Color: 314add
+	TerrainType@Concrete:
+		Type: Concrete
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 515350
+	TerrainType@Wall:
+		Type: Wall
+		TargetTypes: Ground
+		Color: aeaeae
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 323232
+	TerrainType@Diast:
+		Type: Diast
+		TargetTypes: Ground
+		Color: c55ac4
+	TerrainType@Gems:
+		Type: Diastgems
+		TargetTypes: Ground
+		Color: ffcc00
+	TerrainType@Deposit:
+		Type: Deposit
+		TargetTypes: Ground
+		Color: C7C9FA
+	TerrainType@Subterranean:
+		Type: Subterranean
+		Color: c55ac4
+
+Templates:
+	Template@0:
+		Id: 0
+		Images: t00.ori, t01.ori, t02.ori, t03.ori, t04.ori, t05.ori, t06.ori, t07.ori, t08.ori, t09.ori, t10.ori, t11.ori, t12.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@13:
+		Id: 13
+		Images: t13.ori, t14.ori, t15.ori, t16.ori, t17.ori, t18.ori, t19.ori, t20.ori, t21.ori, t22.ori, t23.ori, t24.ori, t25.ori, t26.ori, t27.ori, t28.ori, t29.ori, t30.ori, t31.ori, t32.ori, t33.ori, t34.ori, t35.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@36:
+		Id: 36
+		Images: t36.ori, t37.ori, t38.ori, t39.ori, t40.ori, t41.ori, t42.ori, t43.ori, t44.ori, t45.ori, t46.ori, t47.ori, t48.ori, t49.ori, t50.ori, t51.ori, t52.ori, t53.ori, t54.ori, t55.ori, t56.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@57:
+		Id: 57
+		Images: t57.ori, t58.ori, t59.ori, t60.ori, t61.ori, t62.ori, t63.ori, t64.ori, t65.ori, t66.ori, t67.ori, t68.ori, t69.ori, t70.ori, t71.ori, t72.ori, t73.ori, t74.ori, t75.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@76:
+		Id: 76
+		Images: t76.ori, t77.ori, t78.ori, t79.ori, t80.ori, t81.ori, t82.ori, t83.ori, t84.ori, t85.ori, t86.ori, t87.ori, t88.ori, t89.ori, t90.ori, t91.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@92:
+		Id: 92
+		Images: t92.ori, t93.ori, t94.ori, t95.ori, t96.ori, t97.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@98:
+		Id: 98
+		Images: t98.ori, t99.ori, t100.ori, t101.ori, t102.ori, t103.ori, t104.ori, t105.ori, t106.ori, t107.ori, t108.ori, t109.ori, t110.ori, t111.ori, t112.ori, t113.ori, t114.ori, t115.ori, t116.ori, t117.ori, t118.ori, t119.ori, t120.ori, t121.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@122:
+		Id: 122
+		Images: t122.ori, t123.ori, t124.ori, t125.ori, t126.ori, t127.ori, t128.ori, t129.ori, t130.ori, t131.ori, t132.ori, t133.ori, t134.ori, t135.ori, t136.ori, t137.ori, t138.ori, t139.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rough
+	Template@140:
+		Id: 140
+		Images: t140.ori, t141.ori, t142.ori, t143.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@144:
+		Id: 144
+		Images: t144.ori, t145.ori, t146.ori, t147.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rough
+	Template@148:
+		Id: 148
+		Images: t148.ori, t149.ori, t150.ori, t151.ori, t152.ori, t153.ori, t154.ori, t155.ori, t156.ori, t157.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Tree
+	Template@158:
+		Id: 158
+		Images: t158.ori, t159.ori, t160.ori, t161.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Pilrock
+	Template@162:
+		Id: 162
+		Images: t162.ori, t163.ori, t164.ori, t165.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Tree
+	Template@166:
+		Id: 166
+		Images: t166.ori, t167.ori, t168.ori, t169.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Tree
+	Template@170:
+		Id: 170
+		Images: t170.ori, t171.ori, t172.ori, t173.ori, t174.ori, t175.ori, t176.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@177:
+		Id: 177
+		Images: t177.ori, t178.ori, t179.ori, t180.ori, t181.ori, t182.ori, t183.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@184:
+		Id: 184
+		Images: t184.ori, t185.ori, t186.ori, t187.ori, t188.ori, t189.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@190:
+		Id: 190
+		Images: t190.ori, t191.ori, t192.ori, t193.ori, t194.ori, t195.ori, t196.ori, t197.ori, t198.ori, t199.ori, t200.ori, t201.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Water
+	Template@202:
+		Id: 202
+		Images: t202.ori, t203.ori, t204.ori, t205.ori, t206.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rock
+	Template@207:
+		Id: 207
+		Images: t207.ori, t208.ori, t209.ori, t210.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rock
+	Template@211:
+		Id: 211
+		Images: t211.ori, t212.ori, t213.ori, t214.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@215:
+		Id: 215
+		Images: t215.ori, t216.ori, t217.ori, t218.ori, t219.ori, t220.ori, t221.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Water
+	Template@222:
+		Id: 222
+		Images: t222.ori, t223.ori, t224.ori, t225.ori, t226.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Water
+			1: Water
+	Template@227:
+		Id: 227
+		Images: t227.ori, t228.ori, t229.ori, t230.ori, t231.ori, t232.ori, t233.ori, t234.ori, t235.ori, t236.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Pilrock
+	Template@237:
+		Id: 237
+		Images: t237.ori, t238.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@239:
+		Id: 239
+		Images: t239.ori, t240.ori, t241.ori, t242.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@243:
+		Id: 243
+		Images: t243.ori, t244.ori, t245.ori, t246.ori, t247.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@248:
+		Id: 248
+		Images: t248.ori, t249.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@250:
+		Id: 250
+		Images: t250.ori, t251.ori, t252.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@253:
+		Id: 253
+		Images: t253.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Road
+	Template@254:
+		Id: 254
+		Images: t254.ori, t255.ori, t256.ori, t257.ori, t258.ori, t259.ori, t260.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@261:
+		Id: 261
+		Images: t261.ori, t262.ori, t263.ori, t264.ori, t265.ori, t266.ori, t267.ori, t268.ori, t269.ori, t270.ori, t271.ori, t272.ori, t273.ori, t274.ori, t275.ori, t276.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@277:
+		Id: 277
+		Images: t277.ori, t278.ori, t279.ori, t280.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+	Template@281:
+		Id: 281
+		Images: t281.ori, t282.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@283:
+		Id: 283
+		Images: t283.ori, t284.ori, t285.ori, t286.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Rock
+	Template@851:
+		Id: 851
+		Images: t851.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@852:
+		Id: 852
+		Images: t852.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@853:
+		Id: 853
+		Images: t853.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@854:
+		Id: 854
+		Images: t854.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@855:
+		Id: 855
+		Images: t855.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			5: Clear
+			8: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			6: Clear
+			3: Clear
+			4: Clear
+			7: Clear
+	Template@856:
+		Id: 856
+		Images: t856.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@857:
+		Id: 857
+		Images: t857.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@858:
+		Id: 858
+		Images: t858.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			11: Clear
+			10: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+	Template@859:
+		Id: 859
+		Images: t859.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			7: Clear
+			6: Clear
+			10: Clear
+			11: Clear
+			9: Clear
+			8: Clear
+			4: Clear
+			5: Clear
+	Template@860:
+		Id: 860
+		Images: t860.ori, t861.ori, t862.ori, t863.ori, t864.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Terrain, Decoy
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+	Template@913:
+		Id: 913
+		Images: t913.ori, t914.ori, t915.ori, t916.ori, t917.ori, t918.ori, t919.ori, t920.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@923:
+		Id: 923
+		Images: t923.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			3: Concrete
+			4: Concrete
+			5: Concrete
+	Template@924:
+		Id: 924
+		Images: t924.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			2: Concrete
+			5: Concrete
+			4: Concrete
+			3: Concrete
+	Template@925:
+		Id: 925
+		Images: t925.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			3: Concrete
+			4: Concrete
+			5: Concrete
+			2: Concrete
+			1: Concrete
+	Template@926:
+		Id: 926
+		Images: t926.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			3: Concrete
+			0: Concrete
+			1: Concrete
+			2: Concrete
+	Template@287:
+		Id: 287
+		Images: t287.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@288:
+		Id: 288
+		Images: t288.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			7: Road
+			6: Road
+			5: Road
+			4: Road
+	Template@289:
+		Id: 289
+		Images: t289.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			7: Road
+			6: Road
+			5: Road
+			4: Road
+	Template@290:
+		Id: 290
+		Images: t290.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@291:
+		Id: 291
+		Images: t291.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			4: Road
+			6: Road
+			7: Road
+			5: Road
+			3: Road
+			1: Road
+	Template@292:
+		Id: 292
+		Images: t292.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			4: Road
+			6: Road
+			7: Road
+			5: Road
+			3: Road
+			1: Road
+	Template@293:
+		Id: 293
+		Images: t293.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			1: Road
+			7: Road
+			10: Road
+			11: Road
+			8: Road
+	Template@294:
+		Id: 294
+		Images: t294.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			5: Road
+			4: Road
+			1: Road
+			7: Road
+			10: Road
+			9: Road
+			6: Road
+	Template@295:
+		Id: 295
+		Images: t295.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			4: Road
+			5: Road
+			1: Road
+			6: Road
+			7: Road
+			11: Road
+			10: Road
+	Template@296:
+		Id: 296
+		Images: t296.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			3: Road
+			2: Road
+			6: Road
+			7: Road
+			5: Road
+			4: Road
+			8: Road
+			9: Road
+	Template@297:
+		Id: 297
+		Images: t297.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			7: Road
+			8: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@298:
+		Id: 298
+		Images: t298.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@299:
+		Id: 299
+		Images: t299.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			4: Road
+			3: Road
+			6: Road
+			7: Road
+			8: Road
+			5: Road
+			2: Road
+	Template@300:
+		Id: 300
+		Images: t300.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@301:
+		Id: 301
+		Images: t301.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			1: Road
+			0: Road
+			3: Road
+			6: Road
+			7: Road
+			8: Road
+	Template@302:
+		Id: 302
+		Images: t302.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+			2: Road
+			3: Road
+	Template@303:
+		Id: 303
+		Images: t303.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			5: Road
+			4: Road
+			7: Road
+			6: Road
+			3: Road
+			0: Road
+			1: Road
+	Template@304:
+		Id: 304
+		Images: t304.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			0: Road
+			1: Road
+			3: Road
+	Template@305:
+		Id: 305
+		Images: t305.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+			3: Road
+			2: Road
+			1: Road
+	Template@306:
+		Id: 306
+		Images: t306.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+			3: Road
+			2: Road
+			1: Road
+	Template@307:
+		Id: 307
+		Images: t307.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			4: Road
+			6: Road
+			7: Road
+			5: Road
+			3: Road
+			1: Road
+	Template@308:
+		Id: 308
+		Images: t308.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			4: Road
+			6: Road
+			7: Road
+			5: Road
+			3: Road
+			1: Road
+	Template@309:
+		Id: 309
+		Images: t309.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			4: Road
+			5: Road
+			1: Road
+			6: Road
+			7: Road
+			11: Road
+			10: Road
+			9: Road
+			13: Road
+			12: Road
+			8: Road
+	Template@310:
+		Id: 310
+		Images: t310.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			3: Road
+			7: Road
+			6: Road
+			2: Road
+			5: Road
+			4: Road
+			8: Road
+			9: Road
+			10: Road
+			14: Road
+			15: Road
+			11: Road
+	Template@311:
+		Id: 311
+		Images: t311.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			5: Road
+			9: Road
+			8: Road
+			12: Road
+			13: Road
+			14: Road
+			15: Road
+			10: Road
+			6: Road
+			2: Road
+	Template@312:
+		Id: 312
+		Images: t312.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			4: Road
+			5: Road
+			9: Road
+			13: Road
+			14: Road
+			10: Road
+			6: Road
+			7: Road
+			3: Road
+			2: Road
+			1: Road
+	Template@313:
+		Id: 313
+		Images: t313.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+			2: Road
+	Template@314:
+		Id: 314
+		Images: t314.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+	Template@315:
+		Id: 315
+		Images: t315.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+			2: Road
+	Template@316:
+		Id: 316
+		Images: t316.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+	Template@317:
+		Id: 317
+		Images: t317.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@318:
+		Id: 318
+		Images: t318.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@319:
+		Id: 319
+		Images: t319.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@320:
+		Id: 320
+		Images: t320.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@321:
+		Id: 321
+		Images: t321.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@322:
+		Id: 322
+		Images: t322.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@323:
+		Id: 323
+		Images: t323.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@324:
+		Id: 324
+		Images: t324.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@325:
+		Id: 325
+		Images: t325.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@326:
+		Id: 326
+		Images: t326.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@327:
+		Id: 327
+		Images: t327.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@328:
+		Id: 328
+		Images: t328.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@329:
+		Id: 329
+		Images: t329.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@330:
+		Id: 330
+		Images: t330.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@331:
+		Id: 331
+		Images: t331.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@332:
+		Id: 332
+		Images: t332.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@333:
+		Id: 333
+		Images: t333.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@334:
+		Id: 334
+		Images: t334.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@335:
+		Id: 335
+		Images: t335.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@336:
+		Id: 336
+		Images: t336.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@337:
+		Id: 337
+		Images: t337.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@338:
+		Id: 338
+		Images: t338.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@339:
+		Id: 339
+		Images: t339.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@340:
+		Id: 340
+		Images: t340.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@341:
+		Id: 341
+		Images: t341.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@342:
+		Id: 342
+		Images: t342.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@343:
+		Id: 343
+		Images: t343.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@344:
+		Id: 344
+		Images: t344.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@345:
+		Id: 345
+		Images: t345.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@346:
+		Id: 346
+		Images: t346.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@347:
+		Id: 347
+		Images: t347.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+	Template@348:
+		Id: 348
+		Images: t348.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@349:
+		Id: 349
+		Images: t349.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+	Template@350:
+		Id: 350
+		Images: t350.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@351:
+		Id: 351
+		Images: t351.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+	Template@352:
+		Id: 352
+		Images: t352.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@353:
+		Id: 353
+		Images: t353.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+	Template@354:
+		Id: 354
+		Images: t354.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			1: Tree
+			0: Tree
+	Template@355:
+		Id: 355
+		Images: t355.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+	Template@356:
+		Id: 356
+		Images: t356.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Forest, Concrete
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@357:
+		Id: 357
+		Images: t357.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@358:
+		Id: 358
+		Images: t358.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@359:
+		Id: 359
+		Images: t359.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@360:
+		Id: 360
+		Images: t360.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@361:
+		Id: 361
+		Images: t361.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@362:
+		Id: 362
+		Images: t362.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@363:
+		Id: 363
+		Images: t363.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@364:
+		Id: 364
+		Images: t364.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@365:
+		Id: 365
+		Images: t365.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+	Template@366:
+		Id: 366
+		Images: t366.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@367:
+		Id: 367
+		Images: t367.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+	Template@368:
+		Id: 368
+		Images: t368.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@369:
+		Id: 369
+		Images: t369.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+	Template@370:
+		Id: 370
+		Images: t370.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@371:
+		Id: 371
+		Images: t371.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+	Template@372:
+		Id: 372
+		Images: t372.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Forest
+		Tiles:
+			0: Tree
+			1: Tree
+	Template@373:
+		Id: 373
+		Images: t373.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+	Template@374:
+		Id: 374
+		Images: t374.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@375:
+		Id: 375
+		Images: t375.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+	Template@376:
+		Id: 376
+		Images: t376.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@377:
+		Id: 377
+		Images: t377.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+	Template@378:
+		Id: 378
+		Images: t378.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@379:
+		Id: 379
+		Images: t379.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch, Concrete
+		Tiles:
+			0: Clear
+	Template@380:
+		Id: 380
+		Images: t380.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@381:
+		Id: 381
+		Images: t381.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@382:
+		Id: 382
+		Images: t382.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@383:
+		Id: 383
+		Images: t383.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@384:
+		Id: 384
+		Images: t384.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@385:
+		Id: 385
+		Images: t385.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@386:
+		Id: 386
+		Images: t386.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@387:
+		Id: 387
+		Images: t387.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@388:
+		Id: 388
+		Images: t388.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@389:
+		Id: 389
+		Images: t389.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@390:
+		Id: 390
+		Images: t390.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@391:
+		Id: 391
+		Images: t391.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@392:
+		Id: 392
+		Images: t392.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@393:
+		Id: 393
+		Images: t393.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@394:
+		Id: 394
+		Images: t394.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@395:
+		Id: 395
+		Images: t395.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@396:
+		Id: 396
+		Images: t396.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@397:
+		Id: 397
+		Images: t397.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@398:
+		Id: 398
+		Images: t398.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Clear
+			0: Clear
+	Template@399:
+		Id: 399
+		Images: t399.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@400:
+		Id: 400
+		Images: t400.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Clear
+			0: Clear
+			
+			
+	Template@401:
+		Id: 401
+		Images: t401.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+	Template@402:
+		Id: 402
+		Images: t402.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@403:
+		Id: 403
+		Images: t403.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+	Template@404:
+		Id: 404
+		Images: t404.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@405:
+		Id: 405
+		Images: t405.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+	Template@406:
+		Id: 406
+		Images: t406.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@407:
+		Id: 407
+		Images: t407.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+	Template@408:
+		Id: 408
+		Images: t408.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@409:
+		Id: 409
+		Images: t409.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@410:
+		Id: 410
+		Images: t410.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@411:
+		Id: 411
+		Images: t411.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@412:
+		Id: 412
+		Images: t412.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@413:
+		Id: 413
+		Images: t413.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@414:
+		Id: 414
+		Images: t414.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@415:
+		Id: 415
+		Images: t415.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@416:
+		Id: 416
+		Images: t416.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@417:
+		Id: 417
+		Images: t417.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@418:
+		Id: 418
+		Images: t418.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@419:
+		Id: 419
+		Images: t419.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			1: Concrete
+			0: Concrete
+	Template@420:
+		Id: 420
+		Images: t420.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@421:
+		Id: 421
+		Images: t421.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@422:
+		Id: 422
+		Images: t422.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@423:
+		Id: 423
+		Images: t423.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@424:
+		Id: 424
+		Images: t424.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@425:
+		Id: 425
+		Images: t425.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@426:
+		Id: 426
+		Images: t426.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@427:
+		Id: 427
+		Images: t427.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@428:
+		Id: 428
+		Images: t428.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@429:
+		Id: 429
+		Images: t429.ori, t430.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@431:
+		Id: 431
+		Images: t431.ori, t432.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@433:
+		Id: 433
+		Images: t433.ori, t434.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@435:
+		Id: 435
+		Images: t435.ori, t436.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@437:
+		Id: 437
+		Images: t437.ori, t438.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@439:
+		Id: 439
+		Images: t439.ori, t440.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@441:
+		Id: 441
+		Images: t441.ori, t442.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+			2: Concrete
+			5: Concrete
+			4: Concrete
+			3: Concrete
+	Template@443:
+		Id: 443
+		Images: t443.ori, t444.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+			2: Concrete
+			5: Concrete
+			4: Concrete
+			3: Concrete
+	Template@445:
+		Id: 445
+		Images: t445.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@446:
+		Id: 446
+		Images: t446.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@447:
+		Id: 447
+		Images: t447.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@448:
+		Id: 448
+		Images: t448.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@449:
+		Id: 449
+		Images: t449.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@450:
+		Id: 450
+		Images: t450.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@451:
+		Id: 451
+		Images: t451.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@452:
+		Id: 452
+		Images: t452.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@453:
+		Id: 453
+		Images: t453.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@927:
+		Id: 927
+		Images: t927.ori
+		Size: 7,4
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			21: Concrete
+			22: Concrete
+			23: Concrete
+			24: Concrete
+			25: Concrete
+			26: Concrete
+			27: Concrete
+			20: Concrete
+			13: Concrete
+			6: Concrete
+			5: Concrete
+			4: Concrete
+			3: Concrete
+			2: Concrete
+			1: Concrete
+			0: Concrete
+			7: Concrete
+			8: Concrete
+			9: Concrete
+			10: Concrete
+			11: Concrete
+			12: Concrete
+			19: Concrete
+			18: Concrete
+			17: Concrete
+			16: Concrete
+			15: Concrete
+			14: Concrete
+	Template@454:
+		Id: 454
+		Images: t454.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@455:
+		Id: 455
+		Images: t455.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@456:
+		Id: 456
+		Images: t456.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@457:
+		Id: 457
+		Images: t457.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@458:
+		Id: 458
+		Images: t458.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@459:
+		Id: 459
+		Images: t459.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@460:
+		Id: 460
+		Images: t460.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			1: Concrete
+	Template@461:
+		Id: 461
+		Images: t461.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@462:
+		Id: 462
+		Images: t462.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			1: Concrete
+			0: Concrete
+	Template@463:
+		Id: 463
+		Images: t463.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@464:
+		Id: 464
+		Images: t464.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			1: Concrete
+			0: Concrete
+	Template@465:
+		Id: 465
+		Images: t465.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@466:
+		Id: 466
+		Images: t466.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			1: Concrete
+			0: Concrete
+	Template@467:
+		Id: 467
+		Images: t467.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@468:
+		Id: 468
+		Images: t468.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@469:
+		Id: 469
+		Images: t469.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@470:
+		Id: 470
+		Images: t470.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@471:
+		Id: 471
+		Images: t471.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@472:
+		Id: 472
+		Images: t472.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			3: Concrete
+			4: Concrete
+			1: Concrete
+			5: Concrete
+			2: Concrete
+	Template@473:
+		Id: 473
+		Images: t473.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+			3: Concrete
+			4: Concrete
+			1: Concrete
+			2: Concrete
+			5: Concrete
+	Template@474:
+		Id: 474
+		Images: t474.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@475:
+		Id: 475
+		Images: t475.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Decoy
+		Tiles:
+			0: Concrete
+	Template@928:
+		Id: 928
+		Images: t928.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@929:
+		Id: 929
+		Images: t929.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@930:
+		Id: 930
+		Images: t930.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@931:
+		Id: 931
+		Images: t931.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+			1: Water
+	Template@932:
+		Id: 932
+		Images: t932.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@933:
+		Id: 933
+		Images: t933.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			1: Water
+			0: Water
+	Template@934:
+		Id: 934
+		Images: t934.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@935:
+		Id: 935
+		Images: t935.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			1: Water
+			0: Water
+	Template@936:
+		Id: 936
+		Images: t936.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+	Template@937:
+		Id: 937
+		Images: t937.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Water
+		Tiles:
+			0: Water
+			1: Water
+	Template@938:
+		Id: 938
+		Images: t938.ori, t939.ori, t940.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+	Template@941:
+		Id: 941
+		Images: t941.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+	Template@942:
+		Id: 942
+		Images: t942.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@943:
+		Id: 943
+		Images: t943.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+	Template@944:
+		Id: 944
+		Images: t944.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@945:
+		Id: 945
+		Images: t945.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+	Template@946:
+		Id: 946
+		Images: t946.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@947:
+		Id: 947
+		Images: t947.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+	Template@948:
+		Id: 948
+		Images: t948.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@949:
+		Id: 949
+		Images: t949.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Rough
+		Tiles:
+			0: Rough
+			1: Clear
+	Template@950:
+		Id: 950
+		Images: t950.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Rough
+		Tiles:
+			0: Rough
+			1: Clear
+	Template@951:
+		Id: 951
+		Images: t951.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Rough
+		Tiles:
+			0: Clear
+			1: Rough
+	Template@952:
+		Id: 952
+		Images: t952.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete, Rough
+		Tiles:
+			0: Clear
+			1: Rough
+	Template@476:
+		Id: 476
+		Images: t476.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@477:
+		Id: 477
+		Images: t477.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@478:
+		Id: 478
+		Images: t478.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@479:
+		Id: 479
+		Images: t479.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@480:
+		Id: 480
+		Images: t480.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@481:
+		Id: 481
+		Images: t481.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@482:
+		Id: 482
+		Images: t482.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@483:
+		Id: 483
+		Images: t483.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@484:
+		Id: 484
+		Images: t484.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@485:
+		Id: 485
+		Images: t485.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@486:
+		Id: 486
+		Images: t486.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@487:
+		Id: 487
+		Images: t487.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@488:
+		Id: 488
+		Images: t488.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@489:
+		Id: 489
+		Images: t489.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@490:
+		Id: 490
+		Images: t490.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@491:
+		Id: 491
+		Images: t491.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@492:
+		Id: 492
+		Images: t492.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@493:
+		Id: 493
+		Images: t493.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@494:
+		Id: 494
+		Images: t494.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@495:
+		Id: 495
+		Images: t495.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@496:
+		Id: 496
+		Images: t496.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@497:
+		Id: 497
+		Images: t497.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@498:
+		Id: 498
+		Images: t498.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@499:
+		Id: 499
+		Images: t499.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			4: Road
+			10: Road
+			9: Road
+			3: Clear
+			15: Road
+			14: Road
+			20: Road
+			19: Road
+			18: Road
+			21: Road
+			22: Road
+			16: Road
+			17: Road
+			23: Clear
+			11: Road
+			5: Road
+	Template@500:
+		Id: 500
+		Images: t500.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			8: Road
+			9: Road
+			15: Road
+			21: Clear
+			22: Road
+			23: Road
+			17: Road
+			16: Road
+			10: Road
+			11: Road
+			5: Clear
+			4: Road
+			3: Road
+	Template@501:
+		Id: 501
+		Images: t501.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			7: Road
+			2: Clear
+			8: Road
+			14: Road
+			15: Road
+			21: Road
+			22: Road
+			23: Road
+			20: Road
+			19: Road
+			13: Road
+			12: Road
+			18: Clear
+			6: Road
+			0: Road
+	Template@502:
+		Id: 502
+		Images: t502.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			7: Road
+			6: Road
+			0: Clear
+			12: Road
+			18: Road
+			19: Road
+			13: Road
+			20: Clear
+			14: Clear
+			8: Road
+			9: Road
+			10: Clear
+	Template@503:
+		Id: 503
+		Images: t503.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@504:
+		Id: 504
+		Images: t504.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@505:
+		Id: 505
+		Images: t505.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@506:
+		Id: 506
+		Images: t506.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@507:
+		Id: 507
+		Images: t507.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@508:
+		Id: 508
+		Images: t508.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@509:
+		Id: 509
+		Images: t509.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@510:
+		Id: 510
+		Images: t510.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@511:
+		Id: 511
+		Images: t511.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@512:
+		Id: 512
+		Images: t512.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@513:
+		Id: 513
+		Images: t513.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@514:
+		Id: 514
+		Images: t514.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@515:
+		Id: 515
+		Images: t515.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@516:
+		Id: 516
+		Images: t516.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@517:
+		Id: 517
+		Images: t517.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@518:
+		Id: 518
+		Images: t518.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@519:
+		Id: 519
+		Images: t519.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@520:
+		Id: 520
+		Images: t520.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@521:
+		Id: 521
+		Images: t521.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@522:
+		Id: 522
+		Images: t522.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@523:
+		Id: 523
+		Images: t523.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@524:
+		Id: 524
+		Images: t524.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@525:
+		Id: 525
+		Images: t525.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			2: Road
+			1: Road
+			3: Road
+	Template@526:
+		Id: 526
+		Images: t526.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@527:
+		Id: 527
+		Images: t527.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@528:
+		Id: 528
+		Images: t528.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@529:
+		Id: 529
+		Images: t529.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@530:
+		Id: 530
+		Images: t530.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@531:
+		Id: 531
+		Images: t531.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@532:
+		Id: 532
+		Images: t532.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@533:
+		Id: 533
+		Images: t533.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@534:
+		Id: 534
+		Images: t534.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@535:
+		Id: 535
+		Images: t535.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			4: Road
+			10: Road
+			9: Road
+			15: Road
+			14: Road
+			20: Road
+			19: Road
+			18: Road
+			21: Road
+			22: Road
+			16: Road
+			17: Road
+			11: Road
+			5: Road
+			23: Clear
+	Template@536:
+		Id: 536
+		Images: t536.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			10: Road
+			11: Road
+			17: Road
+			23: Road
+			22: Road
+			16: Road
+			15: Road
+			21: Clear
+			9: Road
+			8: Road
+			5: Clear
+	Template@537:
+		Id: 537
+		Images: t537.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			1: Road
+			7: Road
+			8: Road
+			14: Road
+			15: Road
+			21: Road
+			22: Road
+			23: Road
+			20: Road
+			19: Road
+			13: Road
+			12: Road
+			18: Clear
+			6: Road
+			0: Road
+	Template@538:
+		Id: 538
+		Images: t538.ori
+		Size: 6,4
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			7: Road
+			6: Road
+			0: Clear
+			12: Road
+			18: Road
+			19: Road
+			13: Road
+			14: Clear
+			20: Clear
+			8: Road
+			9: Road
+	Template@539:
+		Id: 539
+		Images: t539.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@540:
+		Id: 540
+		Images: t540.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@541:
+		Id: 541
+		Images: t541.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@542:
+		Id: 542
+		Images: t542.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@543:
+		Id: 543
+		Images: t543.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@544:
+		Id: 544
+		Images: t544.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@545:
+		Id: 545
+		Images: t545.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@546:
+		Id: 546
+		Images: t546.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@547:
+		Id: 547
+		Images: t547.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@548:
+		Id: 548
+		Images: t548.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@549:
+		Id: 549
+		Images: t549.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@550:
+		Id: 550
+		Images: t550.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Concrete
+		Tiles:
+			0: Road
+	Template@551:
+		Id: 551
+		Images: t551.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@552:
+		Id: 552
+		Images: t552.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@553:
+		Id: 553
+		Images: t553.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@554:
+		Id: 554
+		Images: t554.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@555:
+		Id: 555
+		Images: t555.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@556:
+		Id: 556
+		Images: t556.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@557:
+		Id: 557
+		Images: t557.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@558:
+		Id: 558
+		Images: t558.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@559:
+		Id: 559
+		Images: t559.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@560:
+		Id: 560
+		Images: t560.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@561:
+		Id: 561
+		Images: t561.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@562:
+		Id: 562
+		Images: t562.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@563:
+		Id: 563
+		Images: t563.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@564:
+		Id: 564
+		Images: t564.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@565:
+		Id: 565
+		Images: t565.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Clear
+			1: Road
+	Template@566:
+		Id: 566
+		Images: t566.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@567:
+		Id: 567
+		Images: t567.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Clear
+	Template@568:
+		Id: 568
+		Images: t568.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Clear
+	Template@569:
+		Id: 569
+		Images: t569.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Clear
+	Template@570:
+		Id: 570
+		Images: t570.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Clear
+	Template@571:
+		Id: 571
+		Images: t571.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@572:
+		Id: 572
+		Images: t572.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@573:
+		Id: 573
+		Images: t573.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@574:
+		Id: 574
+		Images: t574.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+	Template@575:
+		Id: 575
+		Images: t575.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@576:
+		Id: 576
+		Images: t576.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@577:
+		Id: 577
+		Images: t577.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@578:
+		Id: 578
+		Images: t578.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Road, Rouch
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@579:
+		Id: 579
+		Images: t579.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@580:
+		Id: 580
+		Images: t580.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@581:
+		Id: 581
+		Images: t581.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+	Template@582:
+		Id: 582
+		Images: t582.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			7: Clear
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+	Template@583:
+		Id: 583
+		Images: t583.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+			6: Cliff
+			4: Cliff
+	Template@584:
+		Id: 584
+		Images: t584.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+	Template@585:
+		Id: 585
+		Images: t585.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			4: Cliff
+			8: Cliff
+			9: Cliff
+			10: Clear
+			6: Clear
+			2: Cliff
+			3: Clear
+			1: Cliff
+			5: Cliff
+	Template@586:
+		Id: 586
+		Images: t586.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Cliff
+			4: Cliff
+			5: Clear
+			2: Clear
+			1: Cliff
+			0: Cliff
+	Template@587:
+		Id: 587
+		Images: t587.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Clear
+	Template@588:
+		Id: 588
+		Images: t588.ori
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			17: Cliff
+			18: Cliff
+			19: Clear
+			15: Clear
+			14: Cliff
+			13: Cliff
+			9: Cliff
+			5: Cliff
+			10: Cliff
+			6: Clear
+			4: Cliff
+			0: Cliff
+	Template@589:
+		Id: 589
+		Images: t589.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Cliff
+			7: Cliff
+			11: Cliff
+			2: Cliff
+			1: Cliff
+			0: Cliff
+	Template@590:
+		Id: 590
+		Images: t590.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+	Template@591:
+		Id: 591
+		Images: t591.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+	Template@592:
+		Id: 592
+		Images: t592.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			8: Cliff
+			5: Cliff
+			1: Cliff
+			0: Cliff
+	Template@593:
+		Id: 593
+		Images: t593.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@594:
+		Id: 594
+		Images: t594.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+	Template@595:
+		Id: 595
+		Images: t595.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@596:
+		Id: 596
+		Images: t596.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			1: Cliff
+			0: Cliff
+			3: Cliff
+			4: Clear
+	Template@597:
+		Id: 597
+		Images: t597.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@598:
+		Id: 598
+		Images: t598.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+			5: Clear
+	Template@599:
+		Id: 599
+		Images: t599.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			5: Cliff
+			4: Cliff
+			1: Clear
+			3: Cliff
+			6: Cliff
+			7: Cliff
+	Template@600:
+		Id: 600
+		Images: t600.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@601:
+		Id: 601
+		Images: t601.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@602:
+		Id: 602
+		Images: t602.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			1: Clear
+			3: Cliff
+			5: Cliff
+			7: Cliff
+			4: Cliff
+			6: Clear
+	Template@603:
+		Id: 603
+		Images: t603.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@604:
+		Id: 604
+		Images: t604.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@605:
+		Id: 605
+		Images: t605.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			3: Cliff
+			1: Clear
+			5: Cliff
+			7: Cliff
+	Template@606:
+		Id: 606
+		Images: t606.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			3: Cliff
+			4: Cliff
+			1: Clear
+			6: Cliff
+			9: Cliff
+			10: Cliff
+			13: Cliff
+			14: Cliff
+			11: Cliff
+			8: Cliff
+			7: Cliff
+	Template@607:
+		Id: 607
+		Images: t607.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@608:
+		Id: 608
+		Images: t608.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@609:
+		Id: 609
+		Images: t609.ori
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Cliff
+			7: Cliff
+			11: Cliff
+			10: Cliff
+			14: Clear
+			13: Cliff
+			17: Cliff
+			18: Clear
+			16: Cliff
+			12: Cliff
+			9: Cliff
+			5: Cliff
+			4: Cliff
+			8: Cliff
+			6: Cliff
+			2: Cliff
+	Template@610:
+		Id: 610
+		Images: t610.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Clear
+			1: Cliff
+			0: Cliff
+			4: Cliff
+			5: Cliff
+			9: Cliff
+			8: Clear
+			10: Cliff
+			14: Cliff
+			13: Cliff
+			15: Cliff
+			6: Clear
+			11: Clear
+	Template@611:
+		Id: 611
+		Images: t611.ori
+		Size: 5,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			15: Cliff
+			16: Cliff
+			11: Cliff
+			12: Cliff
+			17: Clear
+			7: Cliff
+			8: Cliff
+			13: Cliff
+			3: Cliff
+			4: Cliff
+			9: Clear
+			14: Clear
+	Template@612:
+		Id: 612
+		Images: t612.ori
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			19: Cliff
+			18: Cliff
+			14: Cliff
+			13: Cliff
+			9: Cliff
+			8: Cliff
+			4: Cliff
+			0: Cliff
+			1: Cliff
+			5: Cliff
+			6: Clear
+			10: Cliff
+			11: Cliff
+			15: Cliff
+	Template@613:
+		Id: 613
+		Images: t613.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			5: Cliff
+			8: Cliff
+			7: Cliff
+			6: Clear
+			3: Cliff
+			4: Cliff
+			1: Clear
+	Template@614:
+		Id: 614
+		Images: t614.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			8: Cliff
+			5: Clear
+			4: Cliff
+			1: Clear
+			0: Cliff
+			3: Cliff
+			6: Cliff
+			7: Cliff
+	Template@615:
+		Id: 615
+		Images: t615.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			3: Clear
+			5: Clear
+			4: Clear
+			1: Cliff
+	Template@616:
+		Id: 616
+		Images: t616.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Clear
+			2: Cliff
+			4: Cliff
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@617:
+		Id: 617
+		Images: t617.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			3: Cliff
+			1: Clear
+			5: Clear
+			4: Cliff
+			6: Cliff
+	Template@618:
+		Id: 618
+		Images: t618.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			5: Cliff
+			4: Clear
+	Template@619:
+		Id: 619
+		Images: t619.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Clear
+			7: Clear
+			3: Clear
+	Template@620:
+		Id: 620
+		Images: t620.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			4: Clear
+	Template@621:
+		Id: 621
+		Images: t621.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			3: Cliff
+			6: Cliff
+			4: Cliff
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@622:
+		Id: 622
+		Images: t622.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			3: Clear
+			4: Cliff
+			7: Clear
+			8: Cliff
+			5: Cliff
+			2: Cliff
+			1: Cliff
+	Template@623:
+		Id: 623
+		Images: t623.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			2: Cliff
+			0: Clear
+	Template@624:
+		Id: 624
+		Images: t624.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			2: Clear
+			0: Cliff
+	Template@625:
+		Id: 625
+		Images: t625.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			4: Clear
+			2: Cliff
+			0: Cliff
+			1: Cliff
+			3: Clear
+			5: Clear
+	Template@626:
+		Id: 626
+		Images: t626.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Clear
+			2: Cliff
+			4: Cliff
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@627:
+		Id: 627
+		Images: t627.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			4: Clear
+			5: Clear
+			3: Clear
+	Template@628:
+		Id: 628
+		Images: t628.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Clear
+			3: Cliff
+			6: Cliff
+			7: Cliff
+			8: Clear
+			4: Clear
+			1: Clear
+			5: Clear
+	Template@629:
+		Id: 629
+		Images: t629.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Clear
+			3: Clear
+			1: Clear
+			5: Clear
+	Template@630:
+		Id: 630
+		Images: t630.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Clear
+			4: Clear
+			5: Cliff
+			2: Clear
+			3: Cliff
+			1: Clear
+			7: Clear
+	Template@631:
+		Id: 631
+		Images: t631.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Clear
+			3: Cliff
+			6: Cliff
+			7: Cliff
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			4: Cliff
+	Template@632:
+		Id: 632
+		Images: t632.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Cliff
+			3: Clear
+			6: Clear
+			7: Clear
+			4: Clear
+			1: Cliff
+			2: Clear
+			5: Clear
+			8: Clear
+	Template@633:
+		Id: 633
+		Images: t633.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Cliff
+			2: Cliff
+			0: Clear
+	Template@634:
+		Id: 634
+		Images: t634.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Clear
+			1: Cliff
+			0: Cliff
+	Template@635:
+		Id: 635
+		Images: t635.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@636:
+		Id: 636
+		Images: t636.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@637:
+		Id: 637
+		Images: t637.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Rough
+	Template@638:
+		Id: 638
+		Images: t638.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			7: Rough
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+	Template@639:
+		Id: 639
+		Images: t639.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Rough
+	Template@640:
+		Id: 640
+		Images: t640.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Rough
+	Template@641:
+		Id: 641
+		Images: t641.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			8: Cliff
+			4: Cliff
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Rough
+			6: Cliff
+			5: Cliff
+			9: Cliff
+			10: Rough
+	Template@642:
+		Id: 642
+		Images: t642.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			3: Cliff
+			0: Cliff
+			1: Cliff
+			2: Rough
+			5: Rough
+			4: Cliff
+	Template@643:
+		Id: 643
+		Images: t643.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			3: Cliff
+			0: Cliff
+			1: Cliff
+			2: Rough
+			5: Rough
+			4: Cliff
+	Template@644:
+		Id: 644
+		Images: t644.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			6: Cliff
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			8: Rough
+			0: Cliff
+			1: Cliff
+	Template@645:
+		Id: 645
+		Images: t645.ori
+		Size: 6,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			8: Cliff
+			9: Cliff
+			15: Cliff
+			16: Cliff
+			17: Cliff
+	Template@646:
+		Id: 646
+		Images: t646.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			1: Cliff
+			4: Cliff
+			5: Cliff
+			8: Cliff
+			7: Cliff
+	Template@647:
+		Id: 647
+		Images: t647.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			3: Clear
+			0: Cliff
+			1: Cliff
+			4: Cliff
+			5: Cliff
+	Template@648:
+		Id: 648
+		Images: t648.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@649:
+		Id: 649
+		Images: t649.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Clear
+			2: Clear
+			3: Clear
+			5: Clear
+	Template@650:
+		Id: 650
+		Images: t650.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+	Template@651:
+		Id: 651
+		Images: t651.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@652:
+		Id: 652
+		Images: t652.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			2: Cliff
+			1: Cliff
+			0: Cliff
+			3: Cliff
+			4: Clear
+	Template@653:
+		Id: 653
+		Images: t653.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+			5: Clear
+	Template@654:
+		Id: 654
+		Images: t654.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			1: Clear
+			3: Clear
+			2: Clear
+			4: Clear
+	Template@655:
+		Id: 655
+		Images: t655.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			2: Cliff
+			1: Rough
+			4: Cliff
+			3: Cliff
+			6: Cliff
+			7: Cliff
+			5: Cliff
+	Template@656:
+		Id: 656
+		Images: t656.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@657:
+		Id: 657
+		Images: t657.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@658:
+		Id: 658
+		Images: t658.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			1: Clear
+			3: Cliff
+			5: Cliff
+			2: Cliff
+			4: Cliff
+			7: Cliff
+	Template@659:
+		Id: 659
+		Images: t659.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Rough
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@660:
+		Id: 660
+		Images: t660.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Rough
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@661:
+		Id: 661
+		Images: t661.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Rough
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@662:
+		Id: 662
+		Images: t662.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			3: Cliff
+			4: Clear
+			1: Clear
+			7: Cliff
+			8: Cliff
+			11: Cliff
+			14: Cliff
+			13: Rough
+			10: Cliff
+			9: Rough
+			12: Rough
+			6: Cliff
+	Template@663:
+		Id: 663
+		Images: t663.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			3: Cliff
+			7: Cliff
+			11: Cliff
+			10: Cliff
+			14: Cliff
+			13: Cliff
+			12: Cliff
+			8: Cliff
+			9: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			2: Cliff
+	Template@664:
+		Id: 664
+		Images: t664.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Rough
+			5: Cliff
+			4: Cliff
+			9: Cliff
+			8: Clear
+			13: Cliff
+			14: Cliff
+			15: Cliff
+			10: Cliff
+			6: Rough
+	Template@665:
+		Id: 665
+		Images: t665.ori
+		Size: 5,4
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			15: Cliff
+			16: Cliff
+			11: Cliff
+			12: Cliff
+			17: Clear
+			7: Rough
+			8: Cliff
+			13: Cliff
+			9: Cliff
+			3: Cliff
+			4: Cliff
+	Template@666:
+		Id: 666
+		Images: t666.ori
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff, Rouch
+		Tiles:
+			19: Cliff
+			18: Cliff
+			14: Cliff
+			13: Cliff
+			17: Rough
+			12: Rough
+			8: Cliff
+			4: Cliff
+			0: Cliff
+			5: Cliff
+			1: Clear
+			6: Clear
+			10: Cliff
+			11: Clear
+			15: Cliff
+			9: Cliff
+	Template@667:
+		Id: 667
+		Images: t667.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Rough
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@668:
+		Id: 668
+		Images: t668.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Clear
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@669:
+		Id: 669
+		Images: t669.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Water
+	Template@670:
+		Id: 670
+		Images: t670.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			8: Cliff
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			5: Cliff
+			7: Water
+	Template@671:
+		Id: 671
+		Images: t671.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			0: Clear
+			4: Cliff
+			6: Cliff
+			7: Water
+			5: Cliff
+	Template@672:
+		Id: 672
+		Images: t672.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Water
+	Template@673:
+		Id: 673
+		Images: t673.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			12: Water
+			8: Cliff
+			4: Cliff
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Water
+			7: Water
+			6: Cliff
+			10: Water
+			9: Cliff
+			13: Water
+			5: Cliff
+	Template@674:
+		Id: 674
+		Images: t674.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			3: Cliff
+			4: Cliff
+			5: Water
+			2: Water
+			1: Cliff
+			0: Cliff
+	Template@675:
+		Id: 675
+		Images: t675.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			3: Cliff
+			4: Cliff
+			5: Water
+			2: Water
+			1: Cliff
+			0: Cliff
+	Template@676:
+		Id: 676
+		Images: t676.ori
+		Size: 3,1
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			2: Water
+			1: Cliff
+			0: Cliff
+	Template@677:
+		Id: 677
+		Images: t677.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			4: Cliff
+			5: Cliff
+			1: Cliff
+			0: Cliff
+	Template@678:
+		Id: 678
+		Images: t678.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			7: Cliff
+			8: Cliff
+			13: Cliff
+			14: Cliff
+	Template@679:
+		Id: 679
+		Images: t679.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			3: Clear
+			0: Cliff
+			1: Cliff
+			4: Cliff
+			5: Cliff
+	Template@680:
+		Id: 680
+		Images: t680.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			6: Cliff
+			5: Cliff
+			1: Cliff
+			0: Cliff
+			10: Cliff
+			11: Cliff
+			9: Cliff
+	Template@681:
+		Id: 681
+		Images: t681.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			2: Cliff
+			3: Cliff
+			5: Cliff
+	Template@682:
+		Id: 682
+		Images: t682.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@683:
+		Id: 683
+		Images: t683.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@684:
+		Id: 684
+		Images: t684.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@685:
+		Id: 685
+		Images: t685.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			1: Cliff
+			3: Clear
+			2: Cliff
+			0: Cliff
+	Template@686:
+		Id: 686
+		Images: t686.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+			5: Clear
+	Template@687:
+		Id: 687
+		Images: t687.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+	Template@688:
+		Id: 688
+		Images: t688.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			2: Cliff
+			1: Cliff
+			4: Cliff
+			3: Cliff
+			6: Cliff
+			7: Cliff
+			8: Clear
+			5: Cliff
+	Template@689:
+		Id: 689
+		Images: t689.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@690:
+		Id: 690
+		Images: t690.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@691:
+		Id: 691
+		Images: t691.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Clear
+			3: Cliff
+			5: Cliff
+			7: Cliff
+			2: Cliff
+			4: Cliff
+			6: Water
+	Template@692:
+		Id: 692
+		Images: t692.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			2: Cliff
+			1: Clear
+			3: Cliff
+			5: Cliff
+			7: Cliff
+			6: Water
+			4: Cliff
+	Template@693:
+		Id: 693
+		Images: t693.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Water
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@694:
+		Id: 694
+		Images: t694.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Water
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@695:
+		Id: 695
+		Images: t695.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			1: Clear
+			4: Cliff
+			7: Cliff
+			8: Cliff
+			10: Cliff
+			11: Cliff
+			14: Cliff
+			13: Cliff
+			3: Cliff
+			6: Cliff
+			9: Water
+			12: Water
+	Template@847:
+		Id: 847
+		Images: t847.ori
+		Size: 5,5
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			0: Cliff
+			5: Cliff
+			10: Cliff
+			11: Cliff
+			16: Water
+			15: Water
+			17: Cliff
+			22: Water
+			23: Cliff
+			24: Cliff
+			19: Cliff
+			18: Cliff
+			13: Cliff
+			14: Cliff
+			12: Cliff
+			8: Cliff
+			7: Cliff
+			2: Cliff
+			3: Clear
+			1: Cliff
+			6: Cliff
+	Template@848:
+		Id: 848
+		Images: t848.ori
+		Size: 5,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			2: Water
+			7: Cliff
+			12: Cliff
+			11: Cliff
+			10: Cliff
+			15: Cliff
+			16: Cliff
+			17: Cliff
+			13: Cliff
+			8: Cliff
+			9: Cliff
+			4: Cliff
+			3: Cliff
+			14: Clear
+	Template@849:
+		Id: 849
+		Images: t849.ori
+		Size: 5,6
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			24: Water
+			19: Cliff
+			14: Cliff
+			9: Cliff
+			8: Cliff
+			7: Cliff
+			23: Water
+			22: Cliff
+			27: Water
+			26: Cliff
+			25: Cliff
+			20: Cliff
+			21: Cliff
+			16: Cliff
+			15: Cliff
+			11: Cliff
+			10: Cliff
+			12: Cliff
+			13: Cliff
+			18: Cliff
+			17: Cliff
+			2: Clear
+			3: Clear
+	Template@850:
+		Id: 850
+		Images: t850.ori
+		Size: 5,4
+		PickAny: False
+		Categories: Cliff, Water
+		Tiles:
+			19: Cliff
+			18: Cliff
+			14: Cliff
+			13: Cliff
+			17: Cliff
+			12: Cliff
+			11: Cliff
+			6: Cliff
+			7: Cliff
+			2: Water
+			1: Cliff
+			0: Cliff
+			5: Cliff
+			10: Clear
+	Template@696:
+		Id: 696
+		Images: t696.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@697:
+		Id: 697
+		Images: t697.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@698:
+		Id: 698
+		Images: t698.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@699:
+		Id: 699
+		Images: t699.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			12: Clear
+			11: Clear
+			13: Beach
+			14: Beach
+			9: Beach
+			8: Beach
+			2: Beach
+			1: Beach
+	Template@700:
+		Id: 700
+		Images: t700.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Beach
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			6: Beach
+			1: Water
+			7: Water
+			2: Water
+	Template@701:
+		Id: 701
+		Images: t701.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Clear
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			7: Beach
+			6: Beach
+			2: Beach
+			1: Beach
+	Template@702:
+		Id: 702
+		Images: t702.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			3: Beach
+			4: Beach
+			7: Beach
+			8: Beach
+			5: Beach
+			1: Beach
+			2: Water
+	Template@703:
+		Id: 703
+		Images: t703.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			4: Clear
+			5: Beach
+			9: Beach
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Water
+			6: Water
+			1: Beach
+			2: Water
+	Template@704:
+		Id: 704
+		Images: t704.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			4: Clear
+			5: Beach
+			9: Beach
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			6: Beach
+			1: Beach
+			2: Water
+	Template@705:
+		Id: 705
+		Images: t705.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			3: Beach
+			4: Beach
+			1: Beach
+			5: Water
+			8: Beach
+			11: Beach
+			14: Beach
+			13: Beach
+			10: Beach
+			7: Beach
+			6: Clear
+			9: Clear
+	Template@706:
+		Id: 706
+		Images: t706.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			2: Beach
+			4: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+	Template@707:
+		Id: 707
+		Images: t707.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			2: Clear
+			4: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+	Template@708:
+		Id: 708
+		Images: t708.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@709:
+		Id: 709
+		Images: t709.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			2: Beach
+			1: Beach
+			4: Beach
+			7: Beach
+			6: Beach
+			9: Beach
+			12: Beach
+			13: Beach
+			10: Beach
+			5: Beach
+			8: Water
+			11: Water
+			3: Beach
+	Template@710:
+		Id: 710
+		Images: t710.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			2: Beach
+			6: Beach
+			10: Beach
+			9: Beach
+			8: Beach
+			12: Beach
+			13: Beach
+			14: Beach
+			11: Beach
+			15: Water
+			7: Beach
+			3: Beach
+	Template@711:
+		Id: 711
+		Images: t711.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			1: Beach
+			4: Beach
+			3: Beach
+			6: Beach
+			7: Beach
+			8: Water
+			5: Beach
+			2: Beach
+	Template@712:
+		Id: 712
+		Images: t712.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			4: Beach
+			3: Beach
+			2: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			10: Beach
+			11: Beach
+			12: Beach
+			8: Beach
+			9: Beach
+			13: Water
+	Template@713:
+		Id: 713
+		Images: t713.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			3: Beach
+			7: Beach
+			6: Beach
+			2: Clear
+			5: Clear
+			9: Beach
+			8: Beach
+			12: Beach
+			13: Water
+			10: Beach
+			11: Water
+			14: Water
+	Template@714:
+		Id: 714
+		Images: t714.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@715:
+		Id: 715
+		Images: t715.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@716:
+		Id: 716
+		Images: t716.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@717:
+		Id: 717
+		Images: t717.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			14: Beach
+			13: Beach
+			12: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			0: Beach
+			1: Beach
+			2: Beach
+			8: Beach
+			9: Beach
+			11: Water
+	Template@718:
+		Id: 718
+		Images: t718.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			15: Beach
+			14: Water
+			13: Water
+			9: Beach
+			8: Water
+			4: Beach
+			0: Beach
+			1: Clear
+			5: Beach
+			6: Clear
+			10: Beach
+			11: Beach
+	Template@719:
+		Id: 719
+		Images: t719.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			15: Beach
+			11: Beach
+			10: Beach
+			9: Beach
+			5: Beach
+			1: Beach
+			0: Beach
+			4: Beach
+			8: Beach
+			13: Beach
+			14: Beach
+			12: Water
+	Template@720:
+		Id: 720
+		Images: t720.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			5: Beach
+			8: Beach
+			7: Beach
+			4: Beach
+			3: Beach
+			0: Beach
+			1: Beach
+			6: Water
+	Template@721:
+		Id: 721
+		Images: t721.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			14: Beach
+			11: Beach
+			8: Clear
+			5: Clear
+			4: Beach
+			1: Beach
+			0: Beach
+			3: Beach
+			6: Water
+			9: Water
+			10: Beach
+			13: Beach
+			7: Beach
+	Template@722:
+		Id: 722
+		Images: t722.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			3: Beach
+			5: Beach
+			7: Beach
+			6: Beach
+			4: Beach
+			2: Beach
+	Template@723:
+		Id: 723
+		Images: t723.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+			3: Beach
+			5: Beach
+			4: Beach
+			6: Beach
+			7: Beach
+			2: Beach
+	Template@724:
+		Id: 724
+		Images: t724.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@725:
+		Id: 725
+		Images: t725.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			12: Beach
+			9: Beach
+			6: Beach
+			3: Water
+			4: Beach
+			1: Beach
+			2: Beach
+			5: Beach
+			8: Clear
+			7: Beach
+			10: Beach
+			13: Beach
+			11: Clear
+	Template@726:
+		Id: 726
+		Images: t726.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			8: Water
+			5: Beach
+			6: Beach
+			10: Beach
+			2: Beach
+			3: Beach
+			7: Clear
+	Template@727:
+		Id: 727
+		Images: t727.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			12: Beach
+			8: Beach
+			9: Beach
+			5: Beach
+			6: Beach
+			2: Beach
+			3: Beach
+			7: Clear
+			10: Clear
+			13: Beach
+	Template@728:
+		Id: 728
+		Images: t728.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Beach
+			0: Water
+			4: Beach
+			8: Beach
+	Template@729:
+		Id: 729
+		Images: t729.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			6: Beach
+			7: Beach
+			4: Beach
+			5: Beach
+			2: Beach
+			1: Beach
+			0: Water
+			3: Beach
+	Template@730:
+		Id: 730
+		Images: t730.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			4: Beach
+			3: Beach
+			2: Water
+			1: Water
+			6: Beach
+			5: Beach
+			10: Beach
+			11: Beach
+			7: Beach
+			8: Beach
+			9: Beach
+			12: Clear
+	Template@731:
+		Id: 731
+		Images: t731.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			4: Water
+			5: Beach
+			1: Water
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			10: Clear
+			9: Beach
+			13: Clear
+			12: Beach
+			8: Beach
+	Template@732:
+		Id: 732
+		Images: t732.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Water
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			7: Clear
+			6: Beach
+			2: Clear
+			1: Beach
+	Template@733:
+		Id: 733
+		Images: t733.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			0: Beach
+			3: Beach
+			4: Beach
+			7: Beach
+			8: Beach
+			5: Beach
+			1: Beach
+			2: Clear
+	Template@734:
+		Id: 734
+		Images: t734.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			2: Beach
+			6: Beach
+			5: Water
+			9: Beach
+			8: Beach
+			12: Beach
+			13: Beach
+			14: Clear
+			10: Beach
+			11: Beach
+			7: Beach
+			3: Beach
+	Template@735:
+		Id: 735
+		Images: t735.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			1: Beach
+			4: Beach
+			3: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			8: Clear
+			2: Beach
+	Template@736:
+		Id: 736
+		Images: t736.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			11: Beach
+			10: Beach
+			6: Water
+			5: Beach
+			1: Beach
+			0: Beach
+			4: Beach
+			8: Beach
+			9: Beach
+			13: Beach
+			14: Beach
+			15: Beach
+	Template@737:
+		Id: 737
+		Images: t737.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			5: Beach
+			4: Beach
+			1: Beach
+			0: Beach
+			3: Beach
+			6: Clear
+			7: Beach
+			8: Beach
+	Template@738:
+		Id: 738
+		Images: t738.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			10: Water
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Clear
+			5: Beach
+			4: Clear
+			8: Beach
+	Template@739:
+		Id: 739
+		Images: t739.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach
+		Tiles:
+			6: Beach
+			7: Beach
+			4: Beach
+			5: Beach
+			2: Beach
+			1: Beach
+			0: Clear
+			3: Beach
+	Template@740:
+		Id: 740
+		Images: t740.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			7: Beach
+			8: Beach
+			9: Beach
+			14: Beach
+			13: Beach
+			3: Water
+	Template@741:
+		Id: 741
+		Images: t741.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			4: Cliff
+			3: Cliff
+			2: Cliff
+			7: Beach
+			8: Clear
+			6: Beach
+			5: Beach
+			10: Beach
+			11: Beach
+			12: Clear
+	Template@742:
+		Id: 742
+		Images: t742.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			4: Cliff
+			3: Cliff
+			8: Cliff
+			7: Beach
+			2: Beach
+			1: Beach
+			0: Beach
+			5: Beach
+			6: Beach
+			11: Water
+			12: Cliff
+			13: Cliff
+			14: Cliff
+			9: Cliff
+	Template@743:
+		Id: 743
+		Images: t743.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Beach
+			3: Beach
+			4: Beach
+			9: Beach
+			8: Beach
+			7: Cliff
+			6: Cliff
+			5: Cliff
+			10: Cliff
+			11: Cliff
+			12: Water
+			13: Water
+	Template@744:
+		Id: 744
+		Images: t744.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			0: Beach
+			3: Cliff
+			6: Cliff
+			9: Cliff
+			12: Cliff
+			13: Cliff
+			14: Clear
+			10: Cliff
+			11: Clear
+			7: Cliff
+			8: Clear
+			4: Beach
+			5: Clear
+			1: Beach
+	Template@745:
+		Id: 745
+		Images: t745.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			12: Cliff
+			9: Cliff
+			6: Cliff
+			3: Water
+			4: Beach
+			1: Beach
+			2: Beach
+			5: Clear
+			7: Cliff
+			10: Cliff
+			13: Cliff
+	Template@746:
+		Id: 746
+		Images: t746.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			0: Cliff
+			3: Cliff
+			6: Cliff
+			9: Cliff
+			12: Beach
+			13: Beach
+			10: Beach
+			7: Cliff
+			8: Water
+			5: Water
+			2: Water
+			1: Cliff
+			4: Cliff
+	Template@747:
+		Id: 747
+		Images: t747.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Cliff
+		Tiles:
+			14: Beach
+			11: Clear
+			10: Beach
+			13: Beach
+			9: Cliff
+			6: Cliff
+			3: Cliff
+			0: Cliff
+			1: Cliff
+			4: Cliff
+			7: Cliff
+	Template@748:
+		Id: 748
+		Images: t748.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Beach
+	Template@749:
+		Id: 749
+		Images: t749.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Beach
+	Template@750:
+		Id: 750
+		Images: t750.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@751:
+		Id: 751
+		Images: t751.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			12: Tree
+			13: Beach
+			14: Beach
+			9: Beach
+			8: Beach
+			2: Clear
+			1: Beach
+	Template@752:
+		Id: 752
+		Images: t752.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Tree
+			10: Beach
+			14: Tree
+			15: Beach
+			11: Beach
+			6: Beach
+			2: Water
+			1: Beach
+			7: Water
+	Template@753:
+		Id: 753
+		Images: t753.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Tree
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			7: Beach
+			6: Beach
+			2: Beach
+			1: Beach
+			3: Water
+	Template@754:
+		Id: 754
+		Images: t754.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			3: Beach
+			4: Beach
+			7: Beach
+			8: Beach
+			5: Beach
+			2: Water
+			1: Beach
+	Template@755:
+		Id: 755
+		Images: t755.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Clear
+			5: Beach
+			9: Clear
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Water
+			6: Beach
+			1: Beach
+	Template@756:
+		Id: 756
+		Images: t756.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Tree
+			5: Beach
+			9: Tree
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			6: Beach
+			1: Beach
+	Template@757:
+		Id: 757
+		Images: t757.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			3: Beach
+			6: Tree
+			7: Beach
+			10: Beach
+			13: Beach
+			14: Beach
+			11: Beach
+			8: Water
+			4: Beach
+			1: Beach
+			5: Water
+	Template@758:
+		Id: 758
+		Images: t758.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			2: Beach
+			4: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+	Template@759:
+		Id: 759
+		Images: t759.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			2: Beach
+			4: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+	Template@760:
+		Id: 760
+		Images: t760.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@761:
+		Id: 761
+		Images: t761.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			2: Beach
+			5: Beach
+			8: Water
+			7: Beach
+			10: Beach
+			13: Beach
+			12: Beach
+			9: Beach
+			6: Tree
+			4: Beach
+			1: Beach
+	Template@762:
+		Id: 762
+		Images: t762.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			2: Beach
+			6: Beach
+			5: Clear
+			9: Beach
+			8: Beach
+			12: Beach
+			13: Beach
+			14: Beach
+			15: Water
+			11: Beach
+			7: Beach
+			3: Beach
+			10: Beach
+	Template@763:
+		Id: 763
+		Images: t763.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			1: Beach
+			4: Beach
+			3: Beach
+			6: Beach
+			7: Beach
+			8: Water
+			5: Beach
+			2: Beach
+	Template@764:
+		Id: 764
+		Images: t764.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			3: Beach
+			7: Beach
+			6: Beach
+			10: Beach
+			9: Beach
+			13: Water
+			12: Beach
+			8: Beach
+			5: Beach
+			2: Tree
+			14: Water
+			11: Water
+	Template@765:
+		Id: 765
+		Images: t765.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			3: Beach
+			4: Beach
+			9: Beach
+			8: Beach
+			7: Beach
+			12: Water
+			11: Beach
+			10: Beach
+			5: Beach
+			6: Beach
+			2: Tree
+	Template@766:
+		Id: 766
+		Images: t766.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@767:
+		Id: 767
+		Images: t767.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			5: Beach
+			4: Beach
+	Template@768:
+		Id: 768
+		Images: t768.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@769:
+		Id: 769
+		Images: t769.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			14: Beach
+			13: Beach
+			12: Water
+			7: Beach
+			6: Beach
+			5: Beach
+			0: Beach
+			1: Beach
+			2: Tree
+			8: Beach
+			9: Beach
+			11: Water
+	Template@770:
+		Id: 770
+		Images: t770.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			15: Beach
+			14: Water
+			13: Water
+			9: Beach
+			8: Water
+			4: Beach
+			0: Beach
+			5: Beach
+			10: Beach
+			11: Beach
+			6: Beach
+			1: Tree
+	Template@771:
+		Id: 771
+		Images: t771.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			11: Beach
+			15: Beach
+			14: Beach
+			13: Beach
+			12: Clear
+			8: Beach
+			4: Beach
+			0: Beach
+			1: Beach
+			5: Beach
+			9: Beach
+			10: Beach
+	Template@772:
+		Id: 772
+		Images: t772.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			5: Beach
+			4: Beach
+			1: Beach
+			0: Beach
+			3: Beach
+			6: Water
+			7: Beach
+			8: Beach
+	Template@773:
+		Id: 773
+		Images: t773.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			14: Beach
+			11: Beach
+			8: Tree
+			7: Beach
+			4: Beach
+			1: Beach
+			0: Beach
+			3: Beach
+			6: Clear
+			10: Beach
+			13: Beach
+	Template@774:
+		Id: 774
+		Images: t774.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			2: Beach
+			4: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+	Template@775:
+		Id: 775
+		Images: t775.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			6: Beach
+			7: Beach
+			5: Beach
+			3: Beach
+			1: Beach
+			0: Beach
+			2: Beach
+			4: Beach
+	Template@776:
+		Id: 776
+		Images: t776.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@777:
+		Id: 777
+		Images: t777.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			12: Beach
+			13: Beach
+			10: Beach
+			7: Beach
+			4: Beach
+			5: Beach
+			2: Beach
+			1: Beach
+			3: Water
+			6: Water
+			9: Beach
+			8: Tree
+	Template@778:
+		Id: 778
+		Images: t778.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			8: Beach
+			5: Beach
+			6: Beach
+			2: Beach
+			3: Beach
+			7: Tree
+			10: Tree
+	Template@779:
+		Id: 779
+		Images: t779.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			10: Tree
+			6: Beach
+			7: Tree
+			3: Beach
+			2: Beach
+			5: Beach
+			8: Water
+	Template@780:
+		Id: 780
+		Images: t780.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Clear
+			0: Clear
+			4: Beach
+			8: Beach
+	Template@781:
+		Id: 781
+		Images: t781.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			6: Beach
+			7: Beach
+			4: Beach
+			5: Beach
+			2: Beach
+			1: Beach
+			0: Water
+			3: Beach
+	Template@782:
+		Id: 782
+		Images: t782.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			8: Beach
+			4: Water
+			5: Beach
+			1: Water
+			2: Beach
+			3: Beach
+			7: Beach
+			6: Beach
+			10: Tree
+			9: Beach
+			13: Tree
+			12: Beach
+	Template@783:
+		Id: 783
+		Images: t783.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			1: Water
+			6: Beach
+			5: Beach
+			10: Beach
+			11: Beach
+			7: Beach
+			8: Beach
+			9: Beach
+			4: Beach
+			3: Beach
+			2: Water
+			12: Tree
+	Template@784:
+		Id: 784
+		Images: t784.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			3: Beach
+			4: Beach
+			7: Beach
+			8: Beach
+			5: Beach
+			1: Beach
+			2: Tree
+	Template@785:
+		Id: 785
+		Images: t785.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			0: Beach
+			4: Beach
+			5: Beach
+			9: Water
+			10: Beach
+			14: Beach
+			15: Beach
+			11: Beach
+			6: Beach
+			1: Beach
+			2: Tree
+			7: Tree
+	Template@786:
+		Id: 786
+		Images: t786.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			1: Beach
+			4: Beach
+			3: Beach
+			6: Beach
+			7: Beach
+			5: Beach
+			2: Beach
+			8: Tree
+	Template@787:
+		Id: 787
+		Images: t787.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			2: Beach
+			6: Beach
+			5: Water
+			9: Beach
+			8: Beach
+			12: Beach
+			13: Beach
+			14: Tree
+			10: Beach
+			11: Tree
+			7: Beach
+			3: Beach
+	Template@788:
+		Id: 788
+		Images: t788.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			5: Beach
+			8: Beach
+			7: Beach
+			6: Clear
+			3: Beach
+			0: Beach
+			1: Beach
+			4: Beach
+	Template@789:
+		Id: 789
+		Images: t789.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			11: Beach
+			10: Beach
+			6: Water
+			5: Beach
+			4: Beach
+			1: Beach
+			0: Beach
+			8: Tree
+			9: Beach
+			13: Tree
+			14: Beach
+			15: Beach
+	Template@790:
+		Id: 790
+		Images: t790.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			6: Beach
+			7: Beach
+			4: Beach
+			5: Beach
+			2: Beach
+			1: Beach
+			3: Beach
+			0: Clear
+	Template@791:
+		Id: 791
+		Images: t791.ori
+		Size: 4,4
+		PickAny: False
+		Categories: Beach, Forest
+		Tiles:
+			12: Beach
+			13: Beach
+			9: Beach
+			10: Water
+			6: Beach
+			7: Beach
+			3: Beach
+			2: Beach
+			1: Tree
+			5: Beach
+			4: Tree
+			8: Beach
+	Template@792:
+		Id: 792
+		Images: t792.ori, t793.ori, t794.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Clear
+			5: Clear
+			3: Cliff
+			1: Cliff
+	Template@795:
+		Id: 795
+		Images: t795.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			6: Cliff
+			7: Cliff
+			3: Cliff
+			4: Cliff
+			10: Cliff
+			13: Clear
+			12: Clear
+			9: Cliff
+			5: Cliff
+			2: Cliff
+			8: Cliff
+			11: Cliff
+	Template@796:
+		Id: 796
+		Images: t796.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			8: Cliff
+			6: Cliff
+			4: Cliff
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			5: Cliff
+			7: Cliff
+	Template@797:
+		Id: 797
+		Images: t797.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			9: Cliff
+			6: Cliff
+			3: Cliff
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			5: Cliff
+			4: Cliff
+			7: Cliff
+			8: Clear
+	Template@798:
+		Id: 798
+		Images: t798.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@799:
+		Id: 799
+		Images: t799.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			5: Cliff
+			4: Cliff
+			2: Cliff
+			3: Cliff
+			1: Clear
+			0: Cliff
+	Template@800:
+		Id: 800
+		Images: t800.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			2: Cliff
+	Template@801:
+		Id: 801
+		Images: t801.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			3: Cliff
+			2: Cliff
+			0: Cliff
+			1: Cliff
+	Template@802:
+		Id: 802
+		Images: t802.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			3: Cliff
+			2: Cliff
+			0: Cliff
+			1: Cliff
+	Template@803:
+		Id: 803
+		Images: t803.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			3: Clear
+			2: Clear
+			0: Cliff
+			1: Cliff
+	Template@804:
+		Id: 804
+		Images: t804.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			3: Clear
+			2: Clear
+			0: Cliff
+	Template@805:
+		Id: 805
+		Images: t805.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@806:
+		Id: 806
+		Images: t806.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Clear
+	Template@807:
+		Id: 807
+		Images: t807.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			3: Clear
+			1: Cliff
+			0: Cliff
+			2: Cliff
+	Template@808:
+		Id: 808
+		Images: t808.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			3: Clear
+	Template@809:
+		Id: 809
+		Images: t809.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			3: Clear
+			2: Cliff
+			0: Cliff
+	Template@810:
+		Id: 810
+		Images: t810.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			3: Cliff
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+	Template@811:
+		Id: 811
+		Images: t811.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@812:
+		Id: 812
+		Images: t812.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			6: Clear
+			8: Cliff
+			5: Cliff
+			11: Clear
+	Template@813:
+		Id: 813
+		Images: t813.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Cliff
+			7: Cliff
+			9: Clear
+			5: Cliff
+			3: Cliff
+	Template@814:
+		Id: 814
+		Images: t814.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			5: Clear
+			8: Cliff
+			6: Cliff
+			9: Cliff
+			10: Cliff
+			13: Clear
+			14: Clear
+			11: Cliff
+	Template@815:
+		Id: 815
+		Images: t815.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Clear
+	Template@816:
+		Id: 816
+		Images: t816.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+			6: Clear
+			4: Cliff
+			2: Cliff
+	Template@817:
+		Id: 817
+		Images: t817.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			0: Cliff
+	Template@818:
+		Id: 818
+		Images: t818.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			0: Cliff
+	Template@819:
+		Id: 819
+		Images: t819.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			7: Clear
+			5: Cliff
+			3: Cliff
+	Template@820:
+		Id: 820
+		Images: t820.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			2: Cliff
+			0: Cliff
+			1: Cliff
+			3: Cliff
+	Template@821:
+		Id: 821
+		Images: t821.ori
+		Size: 1,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@822:
+		Id: 822
+		Images: t822.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			0: Cliff
+	Template@823:
+		Id: 823
+		Images: t823.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			3: Clear
+			1: Clear
+	Template@824:
+		Id: 824
+		Images: t824.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Clear
+			4: Cliff
+			7: Clear
+			6: Cliff
+			8: Cliff
+			5: Cliff
+			2: Cliff
+	Template@825:
+		Id: 825
+		Images: t825.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			2: Cliff
+			5: Clear
+			4: Cliff
+			7: Clear
+			6: Cliff
+			9: Clear
+			10: Clear
+	Template@826:
+		Id: 826
+		Images: t826.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			10: Cliff
+			6: Cliff
+			5: Cliff
+			9: Cliff
+			8: Cliff
+			2: Clear
+			3: Cliff
+			4: Cliff
+	Template@827:
+		Id: 827
+		Images: t827.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			5: Cliff
+			4: Cliff
+			6: Clear
+			2: Cliff
+			1: Cliff
+			3: Clear
+	Template@828:
+		Id: 828
+		Images: t828.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@829:
+		Id: 829
+		Images: t829.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+	Template@830:
+		Id: 830
+		Images: t830.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			2: Cliff
+			3: Cliff
+	Template@831:
+		Id: 831
+		Images: t831.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@832:
+		Id: 832
+		Images: t832.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			5: Cliff
+			6: Cliff
+			10: Cliff
+			11: Clear
+			9: Clear
+			4: Cliff
+	Template@833:
+		Id: 833
+		Images: t833.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			5: Cliff
+			6: Cliff
+			10: Cliff
+			11: Cliff
+			9: Cliff
+	Template@834:
+		Id: 834
+		Images: t834.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			10: Clear
+			8: Cliff
+			11: Clear
+	Template@835:
+		Id: 835
+		Images: t835.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			3: Cliff
+			4: Cliff
+			7: Cliff
+			8: Cliff
+			11: Clear
+			6: Cliff
+	Template@836:
+		Id: 836
+		Images: t836.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@837:
+		Id: 837
+		Images: t837.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@838:
+		Id: 838
+		Images: t838.ori
+		Size: 1,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Clear
+	Template@839:
+		Id: 839
+		Images: t839.ori
+		Size: 1,4
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Clear
+	Template@840:
+		Id: 840
+		Images: t840.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			2: Cliff
+			0: Cliff
+			1: Cliff
+			3: Clear
+	Template@841:
+		Id: 841
+		Images: t841.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			2: Clear
+			3: Cliff
+			1: Cliff
+	Template@842:
+		Id: 842
+		Images: t842.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			4: Cliff
+			2: Cliff
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+	Template@843:
+		Id: 843
+		Images: t843.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			5: Cliff
+			3: Cliff
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			4: Cliff
+	Template@844:
+		Id: 844
+		Images: t844.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Clear
+			4: Clear
+			2: Cliff
+	Template@845:
+		Id: 845
+		Images: t845.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			2: Cliff
+			3: Cliff
+			1: Clear
+			4: Cliff
+			6: Cliff
+			8: Clear
+			7: Cliff
+			5: Cliff
+	Template@846:
+		Id: 846
+		Images: t846.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Terrain
+		Tiles:
+			9: Clear
+			7: Cliff
+			5: Cliff
+			4: Cliff
+			3: Cliff
+			2: Cliff
+			0: Clear
+			6: Cliff
+	Template@865:
+		Id: 865
+		Images: t865.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Clear
+			5: Clear
+			3: Cliff
+			1: Cliff
+	Template@866:
+		Id: 866
+		Images: t866.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			4: Cliff
+			2: Cliff
+			3: Cliff
+			1: Cliff
+			5: Cliff
+			7: Cliff
+			6: Cliff
+			8: Clear
+	Template@867:
+		Id: 867
+		Images: t867.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			4: Cliff
+			6: Clear
+			5: Clear
+			3: Cliff
+			2: Cliff
+			0: Cliff
+			1: Cliff
+	Template@868:
+		Id: 868
+		Images: t868.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@869:
+		Id: 869
+		Images: t869.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			3: Cliff
+			2: Cliff
+			0: Cliff
+			1: Clear
+	Template@870:
+		Id: 870
+		Images: t870.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			2: Cliff
+			0: Cliff
+			3: Cliff
+			5: Cliff
+	Template@871:
+		Id: 871
+		Images: t871.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Clear
+			3: Cliff
+			1: Cliff
+	Template@872:
+		Id: 872
+		Images: t872.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+	Template@873:
+		Id: 873
+		Images: t873.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			4: Cliff
+	Template@874:
+		Id: 874
+		Images: t874.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			3: Clear
+			2: Cliff
+			0: Cliff
+	Template@875:
+		Id: 875
+		Images: t875.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			0: Cliff
+	Template@876:
+		Id: 876
+		Images: t876.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@877:
+		Id: 877
+		Images: t877.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+			4: Cliff
+			2: Cliff
+	Template@878:
+		Id: 878
+		Images: t878.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			4: Cliff
+			2: Cliff
+	Template@879:
+		Id: 879
+		Images: t879.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Clear
+	Template@880:
+		Id: 880
+		Images: t880.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Cliff
+			3: Cliff
+			1: Clear
+	Template@881:
+		Id: 881
+		Images: t881.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+	Template@882:
+		Id: 882
+		Images: t882.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Cliff
+			3: Cliff
+			1: Cliff
+	Template@883:
+		Id: 883
+		Images: t883.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			3: Cliff
+			2: Cliff
+			0: Clear
+			1: Cliff
+	Template@884:
+		Id: 884
+		Images: t884.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@885:
+		Id: 885
+		Images: t885.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			3: Cliff
+			2: Cliff
+			0: Cliff
+	Template@886:
+		Id: 886
+		Images: t886.ori
+		Size: 1,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Clear
+	Template@887:
+		Id: 887
+		Images: t887.ori
+		Size: 1,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Clear
+	Template@888:
+		Id: 888
+		Images: t888.ori
+		Size: 2,6
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+			9: Cliff
+			11: Cliff
+			10: Clear
+			8: Cliff
+			6: Cliff
+			4: Cliff
+			2: Cliff
+	Template@889:
+		Id: 889
+		Images: t889.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Clear
+			2: Clear
+			3: Clear
+			1: Clear
+			5: Clear
+			4: Clear
+	Template@890:
+		Id: 890
+		Images: t890.ori
+		Size: 2,6
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			8: Cliff
+			10: Cliff
+			11: Clear
+			9: Cliff
+			7: Cliff
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@891:
+		Id: 891
+		Images: t891.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			3: Cliff
+			5: Clear
+			4: Clear
+			2: Cliff
+			0: Cliff
+	Template@892:
+		Id: 892
+		Images: t892.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			2: Cliff
+			5: Cliff
+			4: Cliff
+			7: Cliff
+			6: Cliff
+			9: Clear
+			10: Clear
+	Template@893:
+		Id: 893
+		Images: t893.ori
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			2: Cliff
+			5: Cliff
+			8: Cliff
+			7: Cliff
+			6: Cliff
+			4: Cliff
+	Template@894:
+		Id: 894
+		Images: t894.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@895:
+		Id: 895
+		Images: t895.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			2: Cliff
+			1: Cliff
+			0: Cliff
+	Template@896:
+		Id: 896
+		Images: t896.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			3: Cliff
+			6: Cliff
+			7: Cliff
+			8: Cliff
+			11: Clear
+			10: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			4: Cliff
+	Template@897:
+		Id: 897
+		Images: t897.ori
+		Size: 3,4
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			3: Cliff
+			6: Clear
+			7: Cliff
+			10: Clear
+			11: Clear
+			8: Cliff
+			4: Cliff
+	Template@898:
+		Id: 898
+		Images: t898.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			9: Cliff
+			5: Cliff
+			1: Cliff
+			0: Cliff
+			6: Cliff
+			7: Clear
+			11: Cliff
+			10: Cliff
+	Template@899:
+		Id: 899
+		Images: t899.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			5: Cliff
+			6: Cliff
+			2: Clear
+			7: Clear
+			11: Cliff
+			10: Cliff
+			4: Clear
+			9: Clear
+	Template@900:
+		Id: 900
+		Images: t900.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@901:
+		Id: 901
+		Images: t901.ori
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+			3: Clear
+			2: Clear
+	Template@902:
+		Id: 902
+		Images: t902.ori
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			3: Clear
+			4: Clear
+			1: Cliff
+			2: Cliff
+			5: Clear
+	Template@903:
+		Id: 903
+		Images: t903.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			1: Cliff
+			0: Cliff
+	Template@904:
+		Id: 904
+		Images: t904.ori
+		Size: 4,2
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			2: Cliff
+			3: Clear
+			6: Clear
+			5: Cliff
+			4: Cliff
+			1: Cliff
+	Template@905:
+		Id: 905
+		Images: t905.ori
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			3: Cliff
+			2: Cliff
+			6: Cliff
+			10: Cliff
+			5: Cliff
+			9: Clear
+			4: Cliff
+			8: Clear
+	Template@906:
+		Id: 906
+		Images: t906.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Clear
+			5: Cliff
+			3: Cliff
+			1: Clear
+	Template@907:
+		Id: 907
+		Images: t907.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Clear
+			1: Cliff
+			3: Cliff
+			5: Clear
+			4: Cliff
+			2: Cliff
+	Template@908:
+		Id: 908
+		Images: t908.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			4: Cliff
+			2: Cliff
+	Template@909:
+		Id: 909
+		Images: t909.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff, Concrete
+		Tiles:
+			5: Cliff
+			3: Cliff
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			4: Cliff
+	Template@921:
+		Id: 921
+		Images: t921.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Decoy
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			7: Clear
+			5: Cliff
+			3: Cliff
+			1: Cliff
+	Template@922:
+		Id: 922
+		Images: t922.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff, Decoy
+		Tiles:
+			1: Cliff
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			6: Clear
+			5: Cliff
+			3: Cliff
+	Template@910:
+		Id: 910
+		Images: t910.ori
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Cliff
+			6: Cliff
+			8: Clear
+			4: Cliff
+			2: Cliff
+	Template@911:
+		Id: 911
+		Images: t911.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Cliff
+			2: Cliff
+			4: Cliff
+			5: Cliff
+			7: Clear
+			3: Cliff
+			1: Cliff
+	Template@912:
+		Id: 912
+		Images: t912.ori
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete, Forest
+		Tiles:
+			0: Cliff
+			1: Cliff
+			3: Cliff
+			5: Cliff
+			7: Clear
+			6: Clear
+			4: Cliff
+			2: Cliff
+	Template@953:
+		Id: 953
+		Images: t953.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			1: Bridge
+			2: Bridge
+			3: Bridge
+			4: Bridge
+			5: Water
+	Template@954:
+		Id: 954
+		Images: t954.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			1: Bridge
+			2: Bridge
+			3: Bridge
+			4: Bridge
+			5: Water
+	Template@955:
+		Id: 955
+		Images: t955.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			2: Bridge
+			4: Water
+			5: Water
+			3: Bridge
+			1: Bridge
+	Template@956:
+		Id: 956
+		Images: t956.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			1: Bridge
+			2: Water
+	Template@957:
+		Id: 957
+		Images: t957.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			10: Beach
+			11: Water
+			12: Water
+			13: Bridge
+			14: Bridge
+			9: Bridge
+			4: Beach
+			3: Clear
+			2: Road
+			1: Road
+			0: Clear
+			5: Beach
+			6: Clear
+			7: Road
+			8: Bridge
+	Template@958:
+		Id: 958
+		Images: t958.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			1: Bridge
+			2: Bridge
+			3: Water
+			4: Beach
+			9: Clear
+			14: Clear
+			13: Clear
+			12: Road
+			11: Clear
+			10: Beach
+			5: Beach
+			6: Bridge
+			7: Bridge
+			8: Road
+	Template@959:
+		Id: 959
+		Images: t959.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			1: Road
+			2: Road
+			3: Road
+			4: Clear
+			9: Beach
+			14: Beach
+			13: Beach
+			12: Water
+			11: Bridge
+			10: Bridge
+			5: Bridge
+			6: Bridge
+			7: Road
+			8: Beach
+	Template@960:
+		Id: 960
+		Images: t960.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			14: Beach
+			9: Beach
+			4: Bridge
+			3: Bridge
+			2: Bridge
+			1: Water
+			0: Beach
+			5: Clear
+			10: Clear
+			11: Clear
+			12: Clear
+			13: Beach
+			8: Bridge
+			7: Bridge
+			6: Road
+	Template@961:
+		Id: 961
+		Images: t961.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Beach
+			6: Bridge
+			9: Bridge
+			12: Water
+			13: Beach
+			14: Clear
+			11: Clear
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			4: Beach
+			7: Bridge
+			10: Bridge
+	Template@962:
+		Id: 962
+		Images: t962.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Clear
+			6: Clear
+			9: Clear
+			12: Clear
+			13: Beach
+			10: Beach
+			7: Bridge
+			4: Bridge
+			1: Beach
+			2: Water
+			5: Bridge
+			8: Bridge
+			11: Beach
+			14: Beach
+	Template@963:
+		Id: 963
+		Images: t963.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			12: Beach
+			9: Bridge
+			6: Bridge
+			3: Water
+			0: Water
+			1: Beach
+			4: Beach
+			7: Bridge
+			10: Bridge
+			13: Beach
+			11: Clear
+			8: Clear
+			5: Clear
+			2: Beach
+			14: Clear
+	Template@964:
+		Id: 964
+		Images: t964.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			2: Beach
+			5: Bridge
+			8: Bridge
+			11: Water
+			14: Water
+			13: Beach
+			12: Beach
+			9: Clear
+			6: Bridge
+			3: Clear
+			0: Clear
+			1: Beach
+			4: Bridge
+			7: Bridge
+			10: Beach
+	Template@965:
+		Id: 965
+		Images: t965.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			1: Bridge
+			2: Bridge
+			3: Bridge
+			4: Bridge
+			5: Clear
+	Template@966:
+		Id: 966
+		Images: t966.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			1: Bridge
+			2: Bridge
+			3: Bridge
+			4: Bridge
+			5: Clear
+	Template@967:
+		Id: 967
+		Images: t967.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			2: Bridge
+			4: Water
+			5: Water
+			3: Bridge
+			1: Bridge
+	Template@968:
+		Id: 968
+		Images: t968.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			1: Bridge
+			2: Water
+	Template@969:
+		Id: 969
+		Images: t969.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			5: Beach
+			10: Beach
+			11: Water
+			12: Water
+			13: Bridge
+			14: Bridge
+			9: Bridge
+			4: Beach
+			3: Clear
+			2: Bridge
+			1: Clear
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@970:
+		Id: 970
+		Images: t970.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Bridge
+			5: Beach
+			10: Beach
+			11: Clear
+			12: Bridge
+			13: Clear
+			14: Clear
+			9: Bridge
+			4: Beach
+			3: Beach
+			2: Bridge
+			1: Bridge
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@971:
+		Id: 971
+		Images: t971.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			5: Clear
+			10: Clear
+			11: Clear
+			12: Clear
+			13: Clear
+			14: Beach
+			9: Beach
+			4: Bridge
+			3: Bridge
+			2: Bridge
+			1: Water
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@972:
+		Id: 972
+		Images: t972.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			5: Bridge
+			10: Bridge
+			11: Bridge
+			12: Water
+			13: Water
+			14: Beach
+			9: Beach
+			4: Clear
+			3: Clear
+			2: Bridge
+			1: Clear
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@973:
+		Id: 973
+		Images: t973.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Beach
+			6: Bridge
+			9: Bridge
+			12: Water
+			13: Beach
+			14: Beach
+			11: Clear
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Beach
+			4: Beach
+			7: Bridge
+			10: Bridge
+	Template@974:
+		Id: 974
+		Images: t974.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Clear
+			6: Clear
+			9: Clear
+			12: Clear
+			13: Beach
+			14: Beach
+			11: Beach
+			8: Bridge
+			5: Bridge
+			2: Clear
+			1: Beach
+			4: Bridge
+			7: Bridge
+			10: Beach
+	Template@975:
+		Id: 975
+		Images: t975.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			3: Water
+			6: Bridge
+			9: Bridge
+			12: Beach
+			13: Beach
+			14: Clear
+			11: Clear
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Beach
+			4: Beach
+			7: Bridge
+			10: Bridge
+	Template@976:
+		Id: 976
+		Images: t976.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			3: Clear
+			6: Clear
+			9: Beach
+			12: Beach
+			13: Beach
+			14: Water
+			11: Water
+			8: Bridge
+			5: Bridge
+			2: Beach
+			1: Beach
+			4: Bridge
+			7: Bridge
+			10: Beach
+	Template@977:
+		Id: 977
+		Images: t977.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Water
+	Template@978:
+		Id: 978
+		Images: t978.ori
+		Size: 6,1
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Water
+	Template@979:
+		Id: 979
+		Images: t979.ori
+		Size: 2,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Water
+			5: Water
+			3: Rock
+			1: Rock
+	Template@980:
+		Id: 980
+		Images: t980.ori
+		Size: 1,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+	Template@981:
+		Id: 981
+		Images: t981.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			5: Beach
+			10: Beach
+			11: Clear
+			12: Rock
+			13: Rock
+			14: Rock
+			9: Rock
+			4: Beach
+			3: Clear
+			2: Bridge
+			1: Clear
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@982:
+		Id: 982
+		Images: t982.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Rock
+			5: Beach
+			10: Beach
+			11: Clear
+			12: Bridge
+			13: Clear
+			14: Clear
+			9: Clear
+			4: Beach
+			3: Beach
+			2: Rock
+			1: Rock
+			6: Rock
+			7: Bridge
+			8: Bridge
+	Template@983:
+		Id: 983
+		Images: t983.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			5: Bridge
+			10: Clear
+			11: Clear
+			12: Clear
+			13: Clear
+			14: Beach
+			9: Beach
+			4: Rock
+			3: Rock
+			2: Rock
+			1: Rock
+			6: Bridge
+			7: Bridge
+			8: Bridge
+	Template@984:
+		Id: 984
+		Images: t984.ori
+		Size: 5,3
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			5: Rock
+			10: Rock
+			11: Rock
+			12: Water
+			13: Water
+			14: Beach
+			9: Beach
+			4: Clear
+			3: Bridge
+			2: Bridge
+			1: Clear
+			6: Bridge
+			7: Bridge
+			8: Beach
+	Template@985:
+		Id: 985
+		Images: t985.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Beach
+			6: Bridge
+			9: Bridge
+			12: Water
+			13: Beach
+			14: Beach
+			11: Clear
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Beach
+			4: Beach
+			7: Bridge
+			10: Bridge
+	Template@986:
+		Id: 986
+		Images: t986.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Water
+			3: Water
+			6: Rock
+			9: Rock
+			12: Beach
+			13: Beach
+			14: Clear
+			11: Clear
+			8: Clear
+			5: Beach
+			4: Beach
+			1: Beach
+			7: Bridge
+			2: Beach
+			10: Bridge
+	Template@987:
+		Id: 987
+		Images: t987.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Beach
+			3: Bridge
+			6: Bridge
+			9: Clear
+			12: Clear
+			13: Beach
+			14: Beach
+			11: Beach
+			8: Rock
+			5: Rock
+			2: Water
+			1: Beach
+			4: Bridge
+			7: Bridge
+			10: Beach
+	Template@988:
+		Id: 988
+		Images: t988.ori
+		Size: 3,5
+		PickAny: False
+		Categories: Bridge
+		Tiles:
+			0: Clear
+			3: Clear
+			6: Clear
+			9: Beach
+			12: Beach
+			13: Beach
+			14: Water
+			11: Water
+			8: Rock
+			5: Rock
+			4: Bridge
+			1: Beach
+			7: Bridge
+			2: Beach
+			10: Beach
+	Template@989:
+		Id: 989
+		Images: t989.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@990:
+		Id: 990
+		Images: t990.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@991:
+		Id: 991
+		Images: t991.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+			1: Clear
+	Template@992:
+		Id: 992
+		Images: t992.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@993:
+		Id: 993
+		Images: t993.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@994:
+		Id: 994
+		Images: t994.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@995:
+		Id: 995
+		Images: t995.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@996:
+		Id: 996
+		Images: t996.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@997:
+		Id: 997
+		Images: t997.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@998:
+		Id: 998
+		Images: t998.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@999:
+		Id: 999
+		Images: t999.ori
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+			1: Clear
+	Template@1000:
+		Id: 1000
+		Images: t1000.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@1001:
+		Id: 1001
+		Images: t1001.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@1002:
+		Id: 1002
+		Images: t1002.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@1003:
+		Id: 1003
+		Images: t1003.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock
+	Template@1004:
+		Id: 1004
+		Images: t1004.ori
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rock

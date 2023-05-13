@@ -1,0 +1,825 @@
+Player:
+	#-------------------------------#
+	# Bots Defination
+	#-------------------------------#
+	ModularBot@NormalAI:
+		Name: Normal AI
+		Type: normal
+	ModularBot@TurtleAI:
+		Name: Turtle AI
+		Type: turtle
+	ModularBot@RushAI:
+		Name: Rush AI
+		Type: rush
+	#-------------------------------#
+	# Condition Defination
+	#-------------------------------#
+	AutoDeployManager:
+		RequiresCondition: enable-normal-ai || enable-turtle-ai || enable-rush-ai
+	CaptureManagerBotASModule:
+		RequiresCondition: enable-normal-ai || enable-turtle-ai || enable-rush-ai
+		CapturingActorTypes: t1_opengineer, t1_stealhar, statis, t2_officer
+		PriorityCaptureChance: 100
+		PriorityCapturableActorTypes: factoryoil, postpoint, diastextractor
+		MinimumCaptureDelay: 125
+	McvManagerBotModule:
+		RequiresCondition: enable-normal-ai || enable-turtle-ai || enable-rush-ai
+		McvTypes: t2_yggdrasil, tcmcv, armcv
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		McvFactoryTypes: opweap, arweap, tcweap.first, fedweap
+		MinimumConstructionYardCount: 2
+		MinBaseRadius: 20
+		MaxBaseRadius: 35
+	HarvesterBotModule@generic:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+		HarvesterTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv
+	GrantConditionOnBotOwner@normal:
+		Condition: enable-normal-ai
+		Bots: normal
+	GrantConditionOnBotOwner@turtle:
+		Condition: enable-turtle-ai
+		Bots: turtle
+	GrantConditionOnBotOwner@rush:
+		Condition: enable-rush-ai
+		Bots: rush
+	ProvidesPrerequisite@AISpecialCash:
+		Prerequisite: AICash
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+		
+	#-------------------------------#
+	# Harvester/Deploy AI
+	#-------------------------------#
+	HarvesterBotModule:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+		HarvesterTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv
+		RefineryTypes: refinery, opproc tcproc, fedproc
+	#-------------------------------#
+	# Baneslayer PLug AI
+	#-------------------------------#
+	PlugSpawnerBotModule@AllAI:
+		Plug: oppowr.plugpowr
+		Pluggables: oppowr
+		Interval: 750
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+	PlugSpawnerBotModule@Fed02AI:
+		Plug: federation.pluglevel2
+		Pluggables: fedbarr, fedweap, fedlabtech
+		Interval: 750
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+	PlugSpawnerBotModule@Fed03AI:
+		Plug: federation.pluglevel3
+		Pluggables: fedbarr, fedweap, fedlabtech
+		Interval: 1050
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+	#-------------------------------#
+	# Base Builder Normal AI    
+	#-------------------------------#
+	BaseBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		MinimumExcessPower: 60
+		MaximumExcessPower: 200
+		ExcessPowerIncrement: 40
+		BuildingQueues: Building.redalliance, Building.baneslayer, Building.conclave, Building.federation, Research.conclave
+		DefenseQueues: Defence.baneslayer, Defence.conclave, Defence.federation
+		ExcessPowerIncreaseThreshold: 4
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		RefineryTypes: arproc, tcproc, opproc, fedproc
+		PowerTypes: oppowr, tciontrap, fedpowr
+		BarracksTypes: arbarr, opbarr, tcweap, fedbarr
+		VehiclesFactoryTypes: arweap, opweap, fedweap, tcweap
+		ProductionTypes: arbarr, arweap, arheli, opbarr, opweap, tcweap, fedbarr, fedweap
+		BuildingLimits:
+			# /// Power construct ///
+			oppowr: 5
+			tciontrap: 6
+			fedpowr: 5
+			# /// Ressource construct ///
+			arproc: 3
+			opproc: 3
+			tcproc: 3
+			fedproc: 3
+			# /// Barrack construct ///
+			arbarr: 2
+			opbarr: 1
+			fedbarr: 2
+			# /// Weapon-Factory construct ///
+			arweap: 1
+			opweap: 1
+			fedweap: 2
+			tcweap.first: 3
+			# /// Aircraft construct ///
+			arheli: 1
+			opheli: 1
+			fedheli: 1
+			# /// Tech-Center construct ///
+			artech: 1
+			ardeftech: 1
+			t3_commandbuilding: 1
+			optech: 1
+			optech2: 1
+			opcacnst.plug: 1
+			fedlabtech: 1
+			fedtech: 1
+			federation.pluglevel2: 6
+			federation.pluglevel3: 6
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 1
+			tcholotech.pelerin: 1
+			tcholotech.arpenteur: 1
+			tcholotech.comete: 1
+			tcholotech.zenith: 1
+			tcholotech.quasar: 1
+			Upgrade.Omega.Rodeur.Conclave: 1
+		BuildingFractions:
+			# /// Power construct ///
+			oppowr: 3
+			tciontrap: 6
+			fedpowr: 2
+			# /// Ressource construct ///
+			arproc: 25
+			opproc: 25
+			tcproc: 25
+			fedproc: 25
+			# /// Barrack construct ///
+			arbarr: 25
+			opbarr: 25
+			fedbarr: 25
+			# /// Weapon-Factory construct ///
+			arweap: 80
+			opweap: 80
+			fedweap: 80
+			tcweap.first: 80
+			# /// Aircraft construct ///
+			arheli: 15
+			opheli: 15
+			fedheli: 15
+			# /// Tech-Center construct ///
+			artech: 50
+			ardeftech: 50
+			t3_commandbuilding: 50
+			optech: 50
+			optech2: 50
+			opcacnst.plug: 50
+			fedlabtech: 50
+			fedtech: 50
+			federation.pluglevel2: 50
+			federation.pluglevel3: 50
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 10
+			tcholotech.pelerin: 10
+			tcholotech.arpenteur: 10
+			tcholotech.comete: 10
+			tcholotech.zenith: 10
+			tcholotech.quasar: 10
+			Upgrade.Omega.Rodeur.Conclave: 50
+		BuildingDelays:
+			artech: 3500
+			optech: 3500
+			fedtech: 3500
+	#-------------------------------#
+	# Base Builder Turtle AI    
+	#-------------------------------#
+	BaseBuilderBotModule@turtle:
+		RequiresCondition: enable-turtle-ai || enable-duel-ai
+		MinimumExcessPower: 60
+		MaximumExcessPower: 250
+		ExcessPowerIncrement: 50
+		BuildingQueues: Building.redalliance, Building.baneslayer, Building.conclave, Building.federation, Research.conclave
+		DefenseQueues: Defence.baneslayer, Defence.conclave, Defence.federation
+		ExcessPowerIncreaseThreshold: 4
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		RefineryTypes: arproc, tcproc, opproc, fedproc
+		PowerTypes: oppowr, tciontrap, fedpowr
+		BarracksTypes: arbarr, opbarr, tcweap, fedbarr
+		VehiclesFactoryTypes: arweap, opweap, fedweap, tcweap
+		ProductionTypes: arbarr, arweap, arheli, opbarr, opweap, tcweap, fedbarr, fedweap
+		BuildingLimits:
+			# /// Power construct ///
+			oppowr: 4
+			tciontrap: 6
+			fedpowr: 4
+			# /// Ressource construct ///
+			arproc: 3
+			opproc: 3
+			tcproc: 3
+			fedproc: 3
+			# /// Barrack construct ///
+			arbarr: 2
+			opbarr: 2
+			fedbarr: 2
+			# /// Weapon-Factory construct ///
+			arweap: 2
+			opweap: 2
+			fedweap: 2
+			tcweap.first: 3
+			# /// Aircraft construct ///
+			arheli: 2
+			opheli: 2
+			fedheli: 2
+			# /// Tech-Center construct ///
+			artech: 1
+			ardeftech: 1
+			t3_commandbuilding: 1
+			optech: 1
+			optech2: 1
+			opcacnst.plug: 1
+			fedlabtech: 1
+			fedtech: 1
+			federation.pluglevel2: 6
+			federation.pluglevel3: 6
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 1
+			tcholotech.pelerin: 1
+			tcholotech.arpenteur: 1
+			tcholotech.comete: 1
+			tcholotech.zenith: 1
+			tcholotech.quasar: 1
+			Upgrade.Omega.Rodeur.Conclave: 1
+		BuildingFractions:
+			# /// Power construct ///
+			oppowr: 3
+			tciontrap: 6
+			fedpowr: 2
+			# /// Ressource construct ///
+			arproc: 25
+			opproc: 25
+			tcproc: 25
+			fedproc: 25
+			# /// Barrack construct ///
+			arbarr: 25
+			opbarr: 25
+			fedbarr: 25
+			# /// Weapon-Factory construct ///
+			arweap: 80
+			opweap: 80
+			fedweap: 80
+			tcweap.first: 80
+			# /// Aircraft construct ///
+			arheli: 15
+			opheli: 15
+			fedheli: 15
+			# /// Tech-Center construct ///
+			artech: 50
+			ardeftech: 50
+			t3_commandbuilding: 50
+			optech: 50
+			optech2: 50
+			opcacnst.plug: 50
+			fedlabtech: 50
+			fedtech: 50
+			federation.pluglevel2: 50
+			federation.pluglevel3: 50
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 10
+			tcholotech.pelerin: 10
+			tcholotech.arpenteur: 10
+			tcholotech.comete: 10
+			tcholotech.zenith: 10
+			tcholotech.quasar: 10
+			Upgrade.Omega.Rodeur.Conclave: 50
+		BuildingDelays:
+			artech: 3500
+			optech: 3500
+			fedtech: 3500
+	#-------------------------------#
+	# Base Builder Rush AI    
+	#-------------------------------#
+	BaseBuilderBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		MinimumExcessPower: 40
+		MaximumExcessPower: 60
+		ExcessPowerIncrement: 20
+		ExcessPowerIncreaseThreshold: 1
+		BuildingQueues: Building.redalliance, Building.baneslayer, Building.conclave, Building.federation, Research.conclave
+		DefenseQueues: Defence.baneslayer, Defence.conclave, Defence.federation
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		RefineryTypes: arproc, tcproc, opproc, fedproc
+		PowerTypes: oppowr, tciontrap, fedpowr
+		BarracksTypes: arbarr, opbarr, tcweap, fedbarr
+		VehiclesFactoryTypes: arweap, opweap, fedweap, tcweap
+		ProductionTypes: arbarr, arweap, arheli, opbarr, opweap, tcweap, fedbarr, fedweap
+		BuildingLimits:
+			# /// Power construct ///
+			oppowr: 3
+			tciontrap: 6
+			fedpowr: 2
+			# /// Ressource construct ///
+			arproc: 2
+			opproc: 2
+			tcproc: 2
+			fedproc: 2
+			# /// Barrack construct ///
+			arbarr: 2
+			opbarr: 2
+			fedbarr: 2
+			# /// Weapon-Factory construct ///
+			arweap: 2
+			opweap: 2
+			fedweap: 2
+			tcweap.first: 3
+			# /// Aircraft construct ///
+			arheli: 1
+			opheli: 1
+			fedheli: 1
+			# /// Tech-Center construct ///
+			artech: 1
+			ardeftech: 1
+			t3_commandbuilding: 1
+			optech: 1
+			optech2: 1
+			opcacnst.plug: 1
+			fedlabtech: 1
+			fedtech: 1
+			federation.pluglevel2: 6
+			federation.pluglevel3: 6
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 1
+			tcholotech.pelerin: 1
+			tcholotech.arpenteur: 1
+			tcholotech.comete: 1
+			tcholotech.zenith: 1
+			tcholotech.quasar: 1
+			Upgrade.Omega.Rodeur.Conclave: 1
+		BuildingFractions:
+			# /// Power construct ///
+			oppowr: 10
+			tciontrap: 10
+			fedpowr: 10
+			# /// Ressource construct ///
+			arproc: 25
+			opproc: 25
+			tcproc: 25
+			fedproc: 25
+			# /// Barrack construct ///
+			arbarr: 50
+			opbarr: 50
+			fedbarr: 50
+			# /// Weapon-Factory construct ///
+			arweap: 30
+			opweap: 30
+			fedweap: 30
+			tcweap.first: 30
+			# /// Aircraft construct ///
+			arheli: 15
+			opheli: 15
+			fedheli: 15
+			# /// Tech-Center construct ///
+			artech: 20
+			ardeftech: 20
+			t3_commandbuilding: 20
+			optech: 20
+			optech2: 20
+			opcacnst.plug: 20
+			fedlabtech: 50
+			fedtech: 50
+			federation.pluglevel2: 50
+			federation.pluglevel3: 50
+			# /// Conclave Tech ///
+			tcholotech.rodeur: 10
+			tcholotech.pelerin: 10
+			tcholotech.arpenteur: 10
+			tcholotech.comete: 10
+			tcholotech.zenith: 10
+			tcholotech.quasar: 10
+			Upgrade.Omega.Rodeur.Conclave: 20
+		BuildingDelays:
+			artech: 3500
+			optech: 3500
+			fedtech: 3500
+	BuildingRepairBotModule:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-duel-ai
+	#-------------------------------#
+	# Base Squad AI
+	#-------------------------------#
+	SquadManagerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		SquadSize: 10
+		SquadSizeRandomBonus: 25
+		AssignRolesInterval: 15
+		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+		MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
+		ProtectionScanRadius: 10
+		ProtectUnitScanRadius: 20
+		DangerScanRadius: 15
+		AirUnitsTypes: t2_nidhogg, t3_thor, t3_valkyrie, t2_comete, t2_zenith, t3_quasar, t2_wyvern, t2_chimera, t3_archdemon, t4_cruiser
+		GuerrillaTypes: t1_bike, t1_scarab, t2_rodeur, t2_comete, t1_heidrun
+		ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst
+	SquadManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		SquadSize: 8
+		SquadSizeRandomBonus: 30
+		AssignRolesInterval: 20
+		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+		MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
+		ProtectionScanRadius: 10
+		ProtectUnitScanRadius: 20
+		DangerScanRadius: 18
+		AirUnitsTypes: t2_nidhogg, t3_thor, t3_valkyrie, t2_comete, t2_zenith, t3_quasar, t2_wyvern, t2_chimera, t3_archdemon, t4_cruiser
+		GuerrillaTypes: t1_bike, t1_scarab, t2_rodeur, t2_comete, t1_heidrun
+		ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst
+	SquadManagerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		SquadSize: 10
+		SquadSizeRandomBonus: 40
+		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
+		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+		MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
+		DangerScanRadius: 18
+		ProtectionScanRadius: 12
+		ProtectUnitScanRadius: 25
+		AirUnitsTypes: t2_nidhogg, t3_thor, t3_valkyrie, t2_comete, t2_zenith, t3_quasar, t2_wyvern, t2_chimera, t3_archdemon, t4_cruiser, t1_mosquito, t1_vulture
+		GuerrillaTypes: t1_bike, t1_scarab, t2_rodeur, t2_comete, t1_heidrun
+		ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst
+	#-------------------------------#
+	# Base Build Une Normal AI
+	#-------------------------------#
+	UnitBuilderBotModule@BaseNormalAI:
+		RequiresCondition: enable-normal-ai
+		UnitQueues: Infantry.redalliance, Vehicle.redalliance, Aircraft.redalliance, Infantry.baneslayer, Vehicle.baneslayer, Aircraft.baneslayer, Infantry.conclave, Vehicle.conclave, Aircraft.conclave, Infantry.federation, Infantry.federation.T2, Infantry.federation.T3, Vehicle.federation, Vehicle.federation.T2, Vehicle.federation.T3, Aircraft.federation
+		UnitsToBuild:
+			# /// Red Alliance
+			t1_comrade: 35
+			t1_disciple: 25
+			t1_stealhar: 15
+			t3_eradicator: 20
+			bike: 25
+			t2_basilisk: 35
+			t2_manticore: 15
+			t3_apocalypse: 35
+			t3_purifier: 10
+			t3_annihilator: 12
+			t2_hydra: 25
+			t1_harvester: 15
+			t2_chimera: 5
+			t3_archdemon: 25
+			t2_command_relais: 10
+			t4_cruiser: 20
+			# /// Baneslayer
+			soldierop: 15
+			roquetteorderinf: 15
+			t1_opengineer: 15
+			jotun: 15
+			t1_aesir: 10
+			vanir: 15
+			t1_dainn: 12
+			t1_heidrun: 15
+			t2_dwarf: 18
+			t1_ratatoskr: 2
+			t2_garm: 60
+			t2_warg: 25
+			t2_nidhogg: 3
+			t3_thor: 2
+			t3_valkyrie: 1
+			t3_heimdall: 20
+			t3_loki: 25
+			t4_odin: 15
+			# /// Conclave
+			prospecteur: 15
+			t2_rodeur: 35
+			t3_surveyor: 20
+			t2_pilgrim: 25
+			t2_comete: 50
+			zenith: 30
+			t3_quasar: 12
+			gardian: 15
+			statis: 15
+			# /// Federation
+			t1_guardmen: 15
+			t1_guardmenat: 15
+			t2_officer: 10
+			t2_locust: 10
+			t3_silverwolf: 5
+			t1_fedharv: 15
+			t1_suricate: 10
+			t1_tick: 25
+			t2_cobra: 18
+			t2_lynx: 5
+			t2_mongoose: 10
+			t3_rhino: 20
+			t3_porcupine: 15
+			t3_mantis: 20
+			t4_colossus: 40
+			t1_mosquito: 15
+			t1_vulture: 25
+		UnitLimits:
+			# /// Red Alliance
+			t1_comrade: 12
+			t1_disciple: 10
+			t1_stealhar: 2
+			t3_eradicator: 8
+			bike: 6
+			t2_basilisk: 18
+			t1_harvester: 3
+			armcv: 1
+			t2_command_relais: 1
+			# /// Baneslayer
+			t1_opengineer: 2
+			jotun: 8
+			t1_aesir: 3
+			t3_thor: 3
+			t3_valkyrie: 2
+			t2_nidhogg: 3
+			t1_dainn: 3
+			# /// Conclave
+			prospecteur: 3
+			# /// Federation
+			t1_fedharv: 3
+		UnitDelays:
+			# /// Red Alliance
+			t1_stealhar: 1500
+			# /// Baneslayer
+			t1_opengineer: 1500
+	#-------------------------------#
+	# Base Build Une Rush AI
+	#-------------------------------#
+	UnitBuilderBotModule@BaseRushAI:
+		RequiresCondition: enable-rush-ai
+		UnitQueues: Infantry.redalliance, Vehicle.redalliance, Aircraft.redalliance, Infantry.baneslayer, Vehicle.baneslayer, Aircraft.baneslayer, Infantry.conclave, Vehicle.conclave, Aircraft.conclave, Infantry.federation, Infantry.federation.T2, Infantry.federation.T3, Vehicle.federation, Vehicle.federation.T2, Vehicle.federation.T3, Aircraft.federation
+		UnitsToBuild:
+			# /// Red Alliance
+			t1_comrade: 35
+			t1_disciple: 25
+			t1_stealhar: 15
+			t3_eradicator: 20
+			bike: 35
+			t2_basilisk: 35
+			t2_manticore: 15
+			t3_apocalypse: 35
+			t3_purifier: 10
+			t3_annihilator: 12
+			t2_hydra: 25
+			t1_harvester: 12
+			t2_chimera: 5
+			t3_archdemon: 25
+			t2_command_relais: 10
+			t4_cruiser: 20
+			# /// Baneslayer
+			soldierop: 35
+			roquetteorderinf: 25
+			t1_opengineer: 15
+			jotun: 15
+			t1_aesir: 10
+			vanir: 15
+			t1_dainn: 25
+			t1_heidrun: 15
+			t2_dwarf: 12
+			t1_ratatoskr: 2
+			t2_garm: 60
+			t2_warg: 25
+			t2_nidhogg: 35
+			t3_thor: 25
+			t3_valkyrie: 15
+			t3_heimdall: 20
+			t3_loki: 25
+			t4_odin: 15
+			# /// Conclave
+			prospecteur: 25
+			t2_rodeur: 35
+			t3_surveyor: 20
+			t2_pilgrim: 25
+			t2_comete: 50
+			zenith: 30
+			t3_quasar: 12
+			gardian: 15
+			statis: 15
+			# /// Federation
+			t1_guardmen: 15
+			t1_guardmenat: 15
+			t2_officer: 10
+			t2_locust: 10
+			t3_silverwolf: 5
+			t1_fedharv: 15
+			t1_suricate: 10
+			t1_tick: 25
+			t2_cobra: 18
+			t2_lynx: 5
+			t2_mongoose: 10
+			t3_rhino: 20
+			t3_porcupine: 15
+			t3_mantis: 20
+			t4_colossus: 40
+			t1_mosquito: 15
+			t1_vulture: 25
+		UnitLimits:
+			# /// Red Alliance
+			t1_stealhar: 2
+			t3_eradicator: 8
+			t1_harvester: 3
+			armcv: 1
+			t2_command_relais: 1
+			# /// Baneslayer
+			t1_opengineer: 2
+			t1_dainn: 3
+			# /// Conclave
+			prospecteur: 3
+			# /// Federation
+			t1_fedharv: 3
+		UnitDelays:
+			# /// Red Alliance
+			t1_stealhar: 1500
+			# /// Baneslayer
+			t1_opengineer: 1500
+	#-------------------------------#
+	# Base Build Une Turtle AI
+	#-------------------------------#
+	UnitBuilderBotModule@BaseTurtleAI:
+		RequiresCondition: enable-turtle-ai
+		UnitQueues: Infantry.redalliance, Vehicle.redalliance, Aircraft.redalliance, Infantry.baneslayer, Vehicle.baneslayer, Aircraft.baneslayer, Infantry.conclave, Vehicle.conclave, Aircraft.conclave, Infantry.federation, Infantry.federation.T2, Infantry.federation.T3, Vehicle.federation, Vehicle.federation.T2, Vehicle.federation.T3, Aircraft.federation
+		UnitsToBuild:
+			# /// Red Alliance
+			t1_comrade: 35
+			t1_disciple: 25
+			t1_stealhar: 15
+			t3_eradicator: 20
+			bike: 35
+			t2_basilisk: 35
+			t2_manticore: 15
+			t3_apocalypse: 35
+			t3_purifier: 10
+			t3_annihilator: 12
+			t2_hydra: 25
+			t1_harvester: 12
+			t2_chimera: 5
+			t3_archdemon: 25
+			t2_command_relais: 10
+			t4_cruiser: 20
+			# /// Baneslayer
+			soldierop: 35
+			roquetteorderinf: 25
+			t1_opengineer: 15
+			jotun: 15
+			t1_aesir: 10
+			vanir: 15
+			t1_dainn: 25
+			t1_heidrun: 15
+			t2_dwarf: 12
+			t1_ratatoskr: 2
+			t2_garm: 60
+			t2_warg: 25
+			t2_nidhogg: 35
+			t3_thor: 25
+			t3_valkyrie: 15
+			t3_heimdall: 20
+			t3_loki: 25
+			t4_odin: 15
+			# /// Conclave
+			prospecteur: 25
+			t2_rodeur: 35
+			t3_surveyor: 20
+			t2_pilgrim: 25
+			t2_comete: 50
+			zenith: 30
+			t3_quasar: 12
+			gardian: 15
+			statis: 15
+			# /// Federation
+			t1_guardmen: 15
+			t1_guardmenat: 15
+			t2_officer: 10
+			t2_locust: 10
+			t3_silverwolf: 5
+			t1_fedharv: 15
+			t1_suricate: 10
+			t1_tick: 25
+			t2_cobra: 18
+			t2_lynx: 5
+			t2_mongoose: 10
+			t3_rhino: 20
+			t3_porcupine: 15
+			t3_mantis: 20
+			t4_colossus: 40
+			t1_mosquito: 15
+			t1_vulture: 25
+		UnitLimits:
+			# /// Red Alliance
+			t1_comrade: 25
+			t1_disciple: 10
+			t1_stealhar: 2
+			t3_eradicator: 8
+			bike: 6
+			t2_basilisk: 18
+			t1_harvester: 3
+			armcv: 1
+			t2_command_relais: 1
+			# /// Baneslayer
+			soldierop: 35
+			t1_opengineer: 2
+			jotun: 8
+			t1_aesir: 3
+			t3_thor: 3
+			t3_valkyrie: 2
+			t2_nidhogg: 3
+			t1_dainn: 3
+			# /// Conclave
+			prospecteur: 3
+			# /// Federation
+			t1_fedharv: 3
+		UnitDelays:
+			# /// Red Alliance
+			t1_stealhar: 1500
+			# /// Baneslayer
+			t1_opengineer: 1500
+	#-------------------------------#
+	# Suport Power AI
+	#-------------------------------#
+	SupportPowerBotModule:
+		RequiresCondition: enable-normal-ai || enable-turtle-ai || enable-rush-ai || enable-duel-ai
+		Decisions:
+			SubtereanNuke:
+				OrderName: ShakeSubtereanNuke
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			Droptroop:
+				OrderName: Droppod
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			OrbitalCanon:
+				OrderName: OrbitalCanon
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			OrbitalIEM:
+				OrderName: IemCanon
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			attack.baneslayer.aricraftstrike:
+				OrderName: attack.baneslayer.module
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			Stase.Conclave:
+				OrderName: Stase.Conclave
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			Eclipse.Conclave:
+				OrderName: Eclipse.Conclave
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			nukepower:
+				OrderName: Nuke.Redalliance
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0

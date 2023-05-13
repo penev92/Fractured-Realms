@@ -1,0 +1,219 @@
+soldierop:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^soldierop.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~opbarr, ~techlevel.infonly
+		IconPalette: Baneslayer.Icon
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	# //// Garrisoner Condition Infantry ////
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: M1Carbine
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	# RevealsShroudToIntelligenceOwner:
+	#	Range: 6c0
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	WithMuzzleOverlay:
+
+roquetteorderinf:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^roquetteorderinf.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / Target type /
+	Inherits@Target: ^AutoTargetAll
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 20
+		Prerequisites: ~opbarr, ~techlevel.infonly
+		IconPalette: Baneslayer.Icon
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	Armament@PRIMARY:
+		Weapon: Einherjar.missile
+		LocalOffset: 0,0,220
+		RequiresCondition: !upgrade.plasma.ammo.baneslayer
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Einherjar.missile
+		RequiresCondition: !upgrade.plasma.ammo.baneslayer
+
+t1_opengineer:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_opengineer.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		IconPalette: Baneslayer.Icon
+		BuildPaletteOrder: 30
+	-AttackMove:
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+
+vanir:
+	Inherits@1: ^Helicoptershape
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^vanir.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: optech
+	AttackAircraft:
+		FacingTolerance: 20
+		PauseOnCondition: stunweapons
+	Aircraft:
+		CruiseAltitude: 2200
+		InitialFacing: 192
+		TurnSpeed: 4
+		RepulsionSpeed: 20
+		MaximumPitch: 45
+	Armament@PRIMARY:
+		Weapon: grenade.vanir
+		LocalOffset: 0,-70,280
+	WithFacingSpriteBody:
+		RequiresCondition: !Tshoot
+		Sequence: run
+	WithFacingSpriteBody@shoot:
+		Sequence: shoot
+		RequiresCondition: Tshoot
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	RenderSprites:
+		Scale: 0.75
+	HitShape:
+
+jotun:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^jotun.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: oplabtech
+		IconPalette: Baneslayer.Icon
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	Armament@PRIMARY:
+		Weapon: plasma.jotuun.mode2
+		LocalOffset: 50,0,500
+		MuzzleSequence: muzzle
+		MuzzlePalette: greenlight
+		RequiresCondition: !SwitchFireMode
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: plasma.jotuun.mode2
+		MuzzleSequence: muzzle
+		MuzzlePalette: greenlight
+	HitShape:
+
+t1_aesir:
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_aesir.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+	# / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+	# / Target type /
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	# / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.baneslayer
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 50
+		Prerequisites: optechtempt3
+	Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+		GarrisonCondition: GarrisonWeaponRange
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: stunweapons
+	Armament@PRIMARY:
+		Weapon: Aesir.Mattergun
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Aesir.Mattergun
+	HitShape:

@@ -1,0 +1,40 @@
+Fractured Realms is a 3rd-party OpenRA Mod
+full custom.
+
+This mod uses Superior Attack modifications
+engine by Gyula Zimmermann (Graion Dilach) and modifications
+ of "Romanov's Vengeance" mod by Mustafa Alperen Seki (MustaphaTR).
+
+Credits for the maps can be seen in the map
+selection menu.
+
+Fractured Realms is developed by:
+ * Logue
+ * Antoku
+ * MartinMB
+ * Divadawm
+
+Other contributors:
+ * Mustafa Alperen Seki (MustaphaTR)
+   > Coding
+   > Misc artwork
+
+ * darkademic / Inq8
+   > Coding Loading Screen logic
+
+ * Gyula Zimmermann (Graion Dilach)
+   > Attacque Supérior engine coding and maintenance
+   > Lightning Storm logic
+   > Psychic Sensor logic
+
+ * darkscrypt
+   > Garrison logic
+   > Smart Deploy logic
+
+ * Matthias Mailänder (Mailaender)
+   > Improvements to Mirage Tank disguise logic
+
+The mod owes a big thank you to OpenRA for its modularity
+which allows this mod to exist in the first place.
+
+Thank you also for you, the user for playing our mod.

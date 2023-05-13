@@ -1,0 +1,429 @@
+armcv:
+	Defaults:
+		Filename: armcv.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 120
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: armcvicon.shp
+	
+t1_scarab:
+	Defaults:
+		Filename: t1_scarab.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 8
+		Tick: 50
+	make:
+		Filename: t1_scarabmk.shp
+		Length: *
+		Offset: 0,-10
+	idle-deployed:
+		Filename: t1_scarabmk.shp
+		Start: 7
+		Offset: 0,-10
+	muzzle:
+		Filename: flamer_directional.shp
+		Facings: 8
+		Length: 38
+		Tick: 50
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: droneicon.shp
+
+arnahand:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: arnahand.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arbarricon.shp
+
+t1_defence_hq:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_defence_hq.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arlabicon.shp
+
+arnaweap:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: arnaweap.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arweapicon.shp
+
+mobilerelay:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: mobilerelay.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: artechicon.shp
+
+refinery:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: refinery.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arprocicon.shp
+
+t2_airfield:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t2_airfield.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arheliicon.shp
+
+t1_harvester:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t1_harvester.shp
+		Scale: 0.65
+	idle:
+		Filename: t1_arharv.shp
+		Facings: 64
+	turret:
+		Filename: t2_salamandertur.shp
+		Facings: 64
+	harvest:
+		Filename: harvest_anim.shp
+		Length: *
+		BlendMode: Additive
+	dock:
+		Filename: t1_arharv.shp
+	dock-loop:
+		Filename: t1_arharv.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arharvicon.shp
+
+t1_bike:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_balist_small.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: t1_bike.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: bikeicon.shp
+
+t1_raider:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: t1_raider.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: raidericon.shp
+
+t2_basilisk:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	Defaults:
+		Filename: t2_basilisk.shp
+		Scale: 0.82
+	muzzle_charge:
+		Filename: railguncharge.shp
+		Length: *
+		BlendMode: Additive
+	muzzlebase:
+		Filename: muzzle_railguncanon.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 12
+	muzzle:
+		Filename: muzzle_railgun.shp
+		Facings: 16
+		Length: 25
+		Tick: 25
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle.fe:
+		Filename: t2_basilisk_fe.shp
+		Facings: 64
+	turret:
+		Filename: t2_basilisktur.shp
+		Facings: 64
+		Offset: 0,10
+	turret.upaa:
+		Filename: t2_basilisktur_upaa.shp
+		Facings: 64
+		Offset: 0,10
+	turret.upif:
+		Filename: t2_basilisktur_upif.shp
+		Facings: 64
+		Offset: 0,10
+	turret.full:
+		Filename: t2_basilisktur_upaaif.shp
+		Facings: 64
+		Offset: 0,10
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: artnkicon.shp
+
+t2_basilisk.husk:
+	Defaults:
+		Scale: 0.82
+	idle:
+		Filename: null.shp
+
+t2_manticore:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	Defaults:
+		Filename: t2_manticore.shp
+		Scale: 0.82
+	muzzle:
+		Filename: muzzle_fireann.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle.fe:
+		Filename: t2_manticore_fe.shp
+		Facings: 64
+	turret:
+		Filename: t2_manticoretur.shp
+		Facings: 64
+	turret.up:
+		Filename: t2_manticoreturup.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: manticoreicon.shp
+
+t2_salamander:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	Defaults:
+		Filename: t2_salamander.shp
+		Scale: 0.92
+	idle:
+		Facings: 64
+	idle.amp:
+		Filename: t2_salamanderamp.shp
+		Facings: 64
+	turret:
+		Filename: t2_salamandertur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: salamandericon.shp
+
+t2_hydra:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	Defaults:
+		Filename: t2_hydra.shp
+		Scale: 0.82
+	muzzle:
+		Filename: lasermuzzlemin.shp
+		Facings: 16
+		Length: 16
+		Tick: 18
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle.fe:
+		Facings: 64
+	turret:
+		Filename: t2_hydraturh.shp
+		Facings: 64
+	turretup:
+		Filename: t2_hydraturuph.shp
+		Facings: 64
+	turreth:
+		Filename: t2_hydratur.shp
+		Facings: 64
+	turretuph:
+		Filename: t2_hydraturup.shp
+		Facings: 64
+	turretdeploy:
+		Filename: t2_hydraturupdeploy.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: hydraicon.shp
+
+t3_apocalypse:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	muzzlebase:
+		Filename: muzzle_railgun.shp
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+	muzzle:
+		Filename: muzzle_railgun.shp
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+	frag-muzzle:
+		Filename: muzzlesabbot.shp
+		Facings: 16
+		Length: 10
+		Tick: 20
+		BlendMode: Additive
+	idle:
+		Filename: t3_apocalypse.shp
+		Facings: 64
+	aura:
+		Filename: aura_apoc.shp
+		Length: *
+	turret:
+		Filename: t3_apocalypsetur.shp
+		Facings: 64
+	turret.null:
+		Filename: null.shp
+		Facings: 32
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: apocicon.shp
+
+t3_annihilator:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t3_annihilator.shp
+		Scale: 0.90
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 21
+		Tick: 80
+	turret:
+		Filename: t3_annihilatortur.shp
+		Facings: 64
+	muzzle:
+		Filename: firegunmuzzle.shp
+		Facings: -16
+		Length: 14
+		Tick: 16
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: annicon.shp
+
+t3_purifier:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	Defaults:
+		Filename: t3_purifier.shp
+		Scale: 0.92
+	idle:
+		Facings: 64
+	turret:
+		Filename: t3_purifiertur.shp
+		Facings: 64
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: purifiericon.shp
+
+t3_harbinger_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	idle:
+		Filename: t3_harbinger_mobile.shp
+	deployed:
+		Filename: t3_harbinger_deployed.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: harbingicon.shp
+
+t2_basiliskhusk:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_basiliskhusk.shp
+		Scale: 0.85
+	idle:
+
+t2_manticorehusk:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t2_manticorehusk.shp
+		Scale: 0.85
+	idle:
+
+t3_apocalypsehusk:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: t3_apocalypsehusk.shp
+		Scale: 0.85
+	idle:
+
+t2_predator_mobile:
+	Defaults:
+		Filename: t2_predator_mobile.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 25
+		Tick: 30
+	dead:
+	make:
+		Filename: t2_predator_deployedmk.shp
+		Length: *
+	icon:
+		Filename: defpredatoricon.shp
+
+t2_tarantula_mobile:
+	Defaults:
+		Filename: t2_tarantula_mobile.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 25
+		Tick: 30
+	dead:
+	make:
+		Filename: t2_tarantula_deployedmk.shp
+		Length: *
+	icon:
+		Filename: tarantulaicon.shp

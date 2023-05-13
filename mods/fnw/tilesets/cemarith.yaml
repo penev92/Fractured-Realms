@@ -1,0 +1,7505 @@
+General:
+	Name: cemarith
+	Id: CEMARITH
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		AcceptsSmudgeType: Gibs, Scorch, Crater, Largecrater_clear, Crater_clear
+		Color: 2d4f0d
+		RestrictPlayerColor: true
+	TerrainType@Impassable:
+		Type: Impassable
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Largecrater_clear, Crater_clear
+		Color: 2d4f0d
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		IsWater: True
+		Color: 1a3c89
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_clear, Crater_clear
+		Color: 493612
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 4b4b4b
+	TerrainType@Pilrock:
+		Type: Pilrock
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch
+		Color: 493612
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		IsWater: False
+		Color: 222222
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 2d4a16
+	TerrainType@Beach:
+		Type: Beach
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Gibs, Crater
+		IsWater: False
+		Color: 314add
+	TerrainType@Concrete:
+		Type: Concrete
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch, Crater, Gibs, Crater, Largecrater_concrete, Crater_concrete
+		Color: 515350
+	TerrainType@Wall:
+		Type: Wall
+		TargetTypes: Ground
+		Color: aeaeae
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 323232
+	TerrainType@Diast:
+		Type: Diast
+		TargetTypes: Ground
+		Color: c55ac4
+	TerrainType@Gems:
+		Type: Diastgems
+		TargetTypes: Ground
+		Color: ffcc00
+	TerrainType@Deposit:
+		Type: Deposit
+		TargetTypes: Ground
+		Color: C7C9FA
+	TerrainType@Subterranean:
+		Type: Subterranean
+		Color: c55ac4
+
+Templates:
+	Template@0:
+		Id: 0
+		Images: t00.cem, t01.cem, t02.cem, t03.cem, t04.cem, t05.cem, t06.cem, t07.cem, t08.cem, t09.cem, t10.cem, t11.cem, t12.cem, t13.cem, t14.cem, t15.cem, t16.cem, t17.cem, t18.cem, t19.cem, t20.cem, t21.cem, t22.cem, t23.cem, t24.cem, t25.cem, t26.cem, t27.cem, t28.cem, t29.cem, t30.cem, t31.cem, t32.cem, t33.cem, t34.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@35:
+		Id: 35
+		Images: t35.cem, t36.cem, t37.cem, t38.cem, t39.cem, t40.cem, t41.cem, t42.cem, t43.cem, t44.cem, t45.cem, t46.cem, t47.cem, t48.cem, t49.cem, t50.cem, t51.cem, t52.cem, t53.cem, t54.cem, t55.cem, t56.cem, t57.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@58:
+		Id: 58
+		Images: t58.cem, t59.cem, t60.cem, t61.cem, t62.cem, t63.cem, t64.cem, t65.cem, t66.cem, t67.cem, t68.cem, t69.cem, t70.cem, t71.cem, t72.cem, t73.cem, t74.cem, t75.cem, t76.cem, t77.cem, t78.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@79:
+		Id: 79
+		Images: t79.cem, t80.cem, t81.cem, t82.cem, t83.cem, t84.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@713:
+		Id: 713
+		Images: t713.cem, t714.cem, t715.cem, t716.cem, t717.cem, t718.cem, t719.cem, t720.cem, t721.cem, t722.cem, t723.cem, t724.cem, t725.cem, t726.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+	Template@85:
+		Id: 85
+		Images: t85.cem, t86.cem, t87.cem, t88.cem, t89.cem, t90.cem, t91.cem, t92.cem, t93.cem, t94.cem, t95.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@806:
+		Id: 806
+		Images: t806.cem, t807.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+				Height: 1
+				ZOffset: -12
+				ZRamp: 1
+	Template@808:
+		Id: 808
+		Images: t808.cem, t809.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@810:
+		Id: 810
+		Images: t810.cem, t811.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@812:
+		Id: 812
+		Images: t812.cem, t813.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@814:
+		Id: 814
+		Images: t814.cem, t815.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@816:
+		Id: 816
+		Images: t816.cem, t817.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@818:
+		Id: 818
+		Images: t818.cem, t819.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@820:
+		Id: 820
+		Images: t820.cem, t821.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@96:
+		Id: 96
+		Images: t96.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			2: Road
+			1: Road
+	Template@97:
+		Id: 97
+		Images: t97.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@98:
+		Id: 98
+		Images: t98.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@99:
+		Id: 99
+		Images: t99.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Clear
+			3: Road
+	Template@100:
+		Id: 100
+		Images: t100.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@101:
+		Id: 101
+		Images: t101.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@102:
+		Id: 102
+		Images: t102.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			3: Clear
+			2: Road
+	Template@103:
+		Id: 103
+		Images: t103.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@104:
+		Id: 104
+		Images: t104.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@105:
+		Id: 105
+		Images: t105.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Road
+			2: Clear
+			0: Road
+	Template@106:
+		Id: 106
+		Images: t106.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@107:
+		Id: 107
+		Images: t107.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Clear
+			0: Road
+	Template@108:
+		Id: 108
+		Images: t108.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Road
+			1: Road
+			0: Road
+	Template@109:
+		Id: 109
+		Images: t109.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+			2: Road
+	Template@110:
+		Id: 110
+		Images: t110.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@111:
+		Id: 111
+		Images: t111.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@112:
+		Id: 112
+		Images: t112.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@113:
+		Id: 113
+		Images: t113.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+	Template@114:
+		Id: 114
+		Images: t114.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+	Template@115:
+		Id: 115
+		Images: t115.cem, t116.cem, t117.cem, t118.cem, t119.cem, t120.cem, t121.cem, t122.cem, t123.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@846:
+		Id: 846
+		Images: t846.cem, t847.cem, t848.cem, t849.cem, t850.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@758:
+		Id: 758
+		Images: t758.cem, t759.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@760:
+		Id: 760
+		Images: t760.cem, t761.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@762:
+		Id: 762
+		Images: t762.cem, t763.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@764:
+		Id: 764
+		Images: t764.cem, t765.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@766:
+		Id: 766
+		Images: t766.cem, t767.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@768:
+		Id: 768
+		Images: t768.cem, t769.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@770:
+		Id: 770
+		Images: t770.cem, t771.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@772:
+		Id: 772
+		Images: t772.cem, t773.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@822:
+		Id: 822
+		Images: t822.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@823:
+		Id: 823
+		Images: t823.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@824:
+		Id: 824
+		Images: t824.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@825:
+		Id: 825
+		Images: t825.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@826:
+		Id: 826
+		Images: t826.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@827:
+		Id: 827
+		Images: t827.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@828:
+		Id: 828
+		Images: t828.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@829:
+		Id: 829
+		Images: t829.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@851:
+		Id: 851
+		Images: t851.cem, t852.cem, t853.cem, t854.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@855:
+		Id: 855
+		Images: t855.cem, t856.cem, t857.cem, t858.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@859:
+		Id: 859
+		Images: t859.cem, t860.cem, t861.cem, t862.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@863:
+		Id: 860
+		Images: t863.cem, t864.cem, t865.cem, t866.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@141:
+		Id: 141
+		Images: t141.cem, t142.cem, t143.cem, t144.cem, t145.cem, t146.cem, t147.cem, t148.cem, t149.cem, t150.cem, t151.cem, t152.cem, t153.cem, t154.cem, t155.cem, t156.cem, t157.cem, t158.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@913:
+		Id: 913
+		Images: t913.cem, t914.cem, t915.cem, t916.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@917:
+		Id: 917
+		Images: t917.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@918:
+		Id: 918
+		Images: t918.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@919:
+		Id: 919
+		Images: t919.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@920:
+		Id: 920
+		Images: t920.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+	Template@921:
+		Id: 921
+		Images: t921.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@922:
+		Id: 922
+		Images: t922.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@923:
+		Id: 923
+		Images: t923.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@924:
+		Id: 924
+		Images: t924.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@159:
+		Id: 159
+		Images: t159.cem, t160.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@161:
+		Id: 161
+		Images: t161.cem,  t162.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@163:
+		Id: 163
+		Images: t163.cem, t164.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@165:
+		Id: 165
+		Images: t165.cem, t166.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@167:
+		Id: 167
+		Images: t167.cem, t168.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@169:
+		Id: 169
+		Images: t169.cem, t170.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@171:
+		Id: 171
+		Images: t171.cem, t172.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@173:
+		Id: 173
+		Images: t173.cem, t174.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@790:
+		Id: 790
+		Images: t790.cem, t791.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@792:
+		Id: 792
+		Images: t792.cem, t793.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+	Template@794:
+		Id: 794
+		Images: t794.cem, t795.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+	Template@796:
+		Id: 796
+		Images: t796.cem, t797.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+	Template@798:
+		Id: 798
+		Images: t798.cem, t799.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@800:
+		Id: 800
+		Images: t800.cem, t801.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@802:
+		Id: 802
+		Images: t802.cem, t803.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@804:
+		Id: 804
+		Images: t804.cem, t805.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water, Rouch
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@830:
+		Id: 830
+		Images: t830.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@831:
+		Id: 831
+		Images: t831.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@832:
+		Id: 832
+		Images: t832.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@833:
+		Id: 833
+		Images: t833.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@834:
+		Id: 834
+		Images: t834.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@835:
+		Id: 835
+		Images: t835.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@836:
+		Id: 836
+		Images: t836.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@837:
+		Id: 837
+		Images: t837.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@867:
+		Id: 867
+		Images: t867.cem, t868.cem, t869.cem, t870.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@871:
+		Id: 871
+		Images: t871.cem, t872.cem, t873.cem, t874.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@872:
+		Id: 872
+		Images: t875.cem, t876.cem, t877.cem, t878.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@879:
+		Id: 876
+		Images: t879.cem, t880.cem, t881.cem, t882.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@386:
+		Id: 386
+		Images: t386.cem, t387.cem, t388.cem, t389.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@899:
+		Id: 899
+		Images: t899.cem, t900.cem, t901.cem, t902.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@653:
+		Id: 653
+		Images: t653.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@654:
+		Id: 654
+		Images: t654.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@655:
+		Id: 655
+		Images: t655.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@656:
+		Id: 656
+		Images: t656.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@903:
+		Id: 903
+		Images: t903.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@904:
+		Id: 904
+		Images: t904.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@905:
+		Id: 905
+		Images: t905.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@906:
+		Id: 906
+		Images: t906.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@907:
+		Id: 907
+		Images: t907.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@908:
+		Id: 908
+		Images: t908.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@909:
+		Id: 909
+		Images: t909.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@910:
+		Id: 910
+		Images: t910.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@911:
+		Id: 911
+		Images: t911.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@912:
+		Id: 912
+		Images: t912.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+	Template@390:
+		Id: 390
+		Images: t390.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@391:
+		Id: 391
+		Images: t391.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@392:
+		Id: 392
+		Images: t392.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@393:
+		Id: 393
+		Images: t393.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@394:
+		Id: 394
+		Images: t394.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@395:
+		Id: 395
+		Images: t395.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@396:
+		Id: 396
+		Images: t396.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@397:
+		Id: 397
+		Images: t397.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@774:
+		Id: 774
+		Images: t774.cem, t775.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@776:
+		Id: 776
+		Images: t776.cem, t777.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@778:
+		Id: 778
+		Images: t778.cem, t779.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@780:
+		Id: 780
+		Images: t780.cem, t781.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+	Template@782:
+		Id: 782
+		Images: t782.cem, t783.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@784:
+		Id: 784
+		Images: t784.cem, t785.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@786:
+		Id: 786
+		Images: t786.cem, t787.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@788:
+		Id: 788
+		Images: t788.cem, t789.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@838:
+		Id: 838
+		Images: t838.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@839:
+		Id: 839
+		Images: t839.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@840:
+		Id: 840
+		Images: t840.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@841:
+		Id: 841
+		Images: t841.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@842:
+		Id: 842
+		Images: t842.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@843:
+		Id: 843
+		Images: t843.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@844:
+		Id: 844
+		Images: t844.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@845:
+		Id: 845
+		Images: t845.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@883:
+		Id: 883
+		Images: t883.cem, t884.cem, t885.cem, t886.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@887:
+		Id: 887
+		Images: t887.cem, t888.cem, t889.cem, t890.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@891:
+		Id: 891
+		Images: t891.cem, t892.cem, t893.cem, t894.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@895:
+		Id: 895
+		Images: t895.cem, t896.cem, t897.cem, t898.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@124:
+		Id: 124
+		Images: t124.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@125:
+		Id: 125
+		Images: t125.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@126:
+		Id: 126
+		Images: t126.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			2: Water
+			0: Beach
+			3: Beach
+			1: Beach
+	Template@127:
+		Id: 127
+		Images: t127.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			0: Water
+			1: Beach
+			3: Beach
+			2: Water
+	Template@128:
+		Id: 128
+		Images: t128.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@129:
+		Id: 129
+		Images: t129.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			3: Beach
+			2: Beach
+			0: Water
+	Template@130:
+		Id: 130
+		Images: t130.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@131:
+		Id: 131
+		Images: t131.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@132:
+		Id: 132
+		Images: t132.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+			2: Beach
+	Template@133:
+		Id: 133
+		Images: t133.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@134:
+		Id: 134
+		Images: t134.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@135:
+		Id: 135
+		Images: t135.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+	Template@136:
+		Id: 136
+		Images: t136.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			0: Beach
+			2: Beach
+	Template@137:
+		Id: 137
+		Images: t137.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			3: Beach
+			2: Beach
+			0: Beach
+			1: Water
+	Template@138:
+		Id: 138
+		Images: t138.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			2: Beach
+			3: Beach
+			1: Beach
+			0: Clear
+	Template@139:
+		Id: 139
+		Images: t139.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			1: Beach
+			3: Beach
+			2: Beach
+	Template@140:
+		Id: 140
+		Images: t140.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water
+		Tiles:
+			3: Beach
+			2: Beach
+			0: Beach
+	Template@191:
+		Id: 191
+		Images: t191.cem, t192.cem, t193.cem, t194.cem, t195.cem, t196.cem, t197.cem, t198.cem, t199.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@200:
+		Id: 200
+		Images: t200.cem, t201.cem, t202.cem, t203.cem, t204.cem, t205.cem, t206.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@933:
+		Id: 933
+		Images: t933.cem, t934.cem, t935.cem, t936.cem, t937.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@938:
+		Id: 938
+		Images: t938.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@939:
+		Id: 939
+		Images: t939.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+	Template@940:
+		Id: 940
+		Images: t940.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+	Template@941:
+		Id: 941
+		Images: t941.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@942:
+		Id: 942
+		Images: t942.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@207:
+		Id: 207
+		Images: t207.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@208:
+		Id: 208
+		Images: t208.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@209:
+		Id: 209
+		Images: t209.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@210:
+		Id: 210
+		Images: t210.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@211:
+		Id: 211
+		Images: t211.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@212:
+		Id: 212
+		Images: t212.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@213:
+		Id: 213
+		Images: t213.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@214:
+		Id: 214
+		Images: t214.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			1: Road
+			0: Road
+	Template@215:
+		Id: 215
+		Images: t215.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@216:
+		Id: 216
+		Images: t216.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@217:
+		Id: 217
+		Images: t217.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@218:
+		Id: 218
+		Images: t218.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@219:
+		Id: 219
+		Images: t219.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@220:
+		Id: 220
+		Images: t220.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@221:
+		Id: 221
+		Images: t221.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@222:
+		Id: 222
+		Images: t222.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@175:
+		Id: 175
+		Images: t175.cem, t176.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@177:
+		Id: 177
+		Images: t177.cem, t178.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@179:
+		Id: 179
+		Images: t179.cem, t180.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@181:
+		Id: 181
+		Images: t181.cem, t182.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+	Template@183:
+		Id: 183
+		Images: t183.cem, t184.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@185:
+		Id: 185
+		Images: t185.cem,t186.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@187:
+		Id: 187
+		Images: t187.cem, t188.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@189:
+		Id: 189
+		Images: t189.cem, t190.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Rough
+			1: Rough
+			1: Rough
+	Template@223:
+		Id: 223
+		Images: t223.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@224:
+		Id: 224
+		Images: t224.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@225:
+		Id: 225
+		Images: t225.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@226:
+		Id: 226
+		Images: t226.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@227:
+		Id: 227
+		Images: t227.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@228:
+		Id: 228
+		Images: t228.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@229:
+		Id: 229
+		Images: t229.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@230:
+		Id: 230
+		Images: t230.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@231:
+		Id: 231
+		Images: t231.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@232:
+		Id: 232
+		Images: t232.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@233:
+		Id: 233
+		Images: t233.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@234:
+		Id: 234
+		Images: t234.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@235:
+		Id: 235
+		Images: t235.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@236:
+		Id: 236
+		Images: t236.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@237:
+		Id: 237
+		Images: t237.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@238:
+		Id: 238
+		Images: t238.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@239:
+		Id: 239
+		Images: t239.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@240:
+		Id: 240
+		Images: t240.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@241:
+		Id: 241
+		Images: t241.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@242:
+		Id: 242
+		Images: t242.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@243:
+		Id: 243
+		Images: t243.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@244:
+		Id: 244
+		Images: t244.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@245:
+		Id: 245
+		Images: t245.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@246:
+		Id: 246
+		Images: t246.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@247:
+		Id: 247
+		Images: t247.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@248:
+		Id: 248
+		Images: t248.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@249:
+		Id: 249
+		Images: t249.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@250:
+		Id: 250
+		Images: t250.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@251:
+		Id: 251
+		Images: t251.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@252:
+		Id: 252
+		Images: t252.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@253:
+		Id: 253
+		Images: t253.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@254:
+		Id: 254
+		Images: t254.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@255:
+		Id: 255
+		Images: t255.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@256:
+		Id: 256
+		Images: t256.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@257:
+		Id: 257
+		Images: t257.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@258:
+		Id: 258
+		Images: t258.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@259:
+		Id: 259
+		Images: t259.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@260:
+		Id: 260
+		Images: t260.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@261:
+		Id: 261
+		Images: t261.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@262:
+		Id: 262
+		Images: t262.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@263:
+		Id: 263
+		Images: t263.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@264:
+		Id: 264
+		Images: t264.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@265:
+		Id: 265
+		Images: t265.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@266:
+		Id: 266
+		Images: t266.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@267:
+		Id: 267
+		Images: t267.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@268:
+		Id: 268
+		Images: t268.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@269:
+		Id: 269
+		Images: t269.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@270:
+		Id: 270
+		Images: t270.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@271:
+		Id: 271
+		Images: t271.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@272:
+		Id: 272
+		Images: t272.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@273:
+		Id: 273
+		Images: t273.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@274:
+		Id: 274
+		Images: t274.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@275:
+		Id: 275
+		Images: t275.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Clear
+	Template@276:
+		Id: 276
+		Images: t276.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@277:
+		Id: 277
+		Images: t277.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@278:
+		Id: 278
+		Images: t278.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@279:
+		Id: 279
+		Images: t279.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@280:
+		Id: 280
+		Images: t280.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@281:
+		Id: 281
+		Images: t281.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@282:
+		Id: 282
+		Images: t282.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@283:
+		Id: 283
+		Images: t283.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@757:
+		Id: 757
+		Images: t757.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@728:
+		Id: 728
+		Images: t728.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@729:
+		Id: 729
+		Images: t729.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@730:
+		Id: 730
+		Images: t730.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@731:
+		Id: 731
+		Images: t731.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@732:
+		Id: 732
+		Images: t732.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@733:
+		Id: 733
+		Images: t733.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@734:
+		Id: 734
+		Images: t734.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@943:
+		Id: 943
+		Images: t943.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@944:
+		Id: 944
+		Images: t944.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@945:
+		Id: 945
+		Images: t945.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@946:
+		Id: 946
+		Images: t946.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@947:
+		Id: 947
+		Images: t947.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@948:
+		Id: 948
+		Images: t948.cem
+		Size: 1,1
+		PickAnys: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@949:
+		Id: 949
+		Images: t949.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@950:
+		Id: 950
+		Images: t950.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Clear
+	Template@735:
+		Id: 735
+		Images: t735.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@736:
+		Id: 736
+		Images: t736.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@737:
+		Id: 737
+		Images: t737.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@738:
+		Id: 738
+		Images: t738.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@739:
+		Id: 739
+		Images: t739.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@740:
+		Id: 740
+		Images: t740.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@741:
+		Id: 741
+		Images: t741.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@742:
+		Id: 742
+		Images: t742.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@743:
+		Id: 743
+		Images: t743.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@744:
+		Id: 744
+		Images: t744.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@745:
+		Id: 745
+		Images: t745.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@746:
+		Id: 746
+		Images: t746.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@747:
+		Id: 747
+		Images: t747.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@748:
+		Id: 748
+		Images: t748.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@749:
+		Id: 749
+		Images: t749.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@750:
+		Id: 750
+		Images: t750.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@751:
+		Id: 751
+		Images: t751.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			1: Road
+	Template@752:
+		Id: 752
+		Images: t752.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@753:
+		Id: 753
+		Images: t753.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@754:
+		Id: 754
+		Images: t754.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+	Template@361:
+		Id: 361
+		Images: t361.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			5: Road
+			4: Road
+			3: Road
+	Template@362:
+		Id: 362
+		Images: t362.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@363:
+		Id: 363
+		Images: t363.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@364:
+		Id: 364
+		Images: t364.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			5: Road
+			2: Road
+			1: Road
+	Template@365:
+		Id: 365
+		Images: t365.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@366:
+		Id: 366
+		Images: t366.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@367:
+		Id: 367
+		Images: t367.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@368:
+		Id: 368
+		Images: t368.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@369:
+		Id: 369
+		Images: t369.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@370:
+		Id: 370
+		Images: t370.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@371:
+		Id: 371
+		Images: t371.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@372:
+		Id: 372
+		Images: t372.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@373:
+		Id: 373
+		Images: t373.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@374:
+		Id: 374
+		Images: t374.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@375:
+		Id: 375
+		Images: t375.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@376:
+		Id: 376
+		Images: t376.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@377:
+		Id: 377
+		Images: t377.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@378:
+		Id: 378
+		Images: t378.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@379:
+		Id: 379
+		Images: t379.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@380:
+		Id: 380
+		Images: t380.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@381:
+		Id: 381
+		Images: t381.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@382:
+		Id: 382
+		Images: t382.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@383:
+		Id: 383
+		Images: t383.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+			1: Road
+	Template@384:
+		Id: 384
+		Images: t384.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@385:
+		Id: 385
+		Images: t385.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Road
+	Template@398:
+		Id: 398
+		Images: t398.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@399:
+		Id: 399
+		Images: t399.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@400:
+		Id: 400
+		Images: t400.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@401:
+		Id: 401
+		Images: t401.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+	Template@402:
+		Id: 402
+		Images: t402.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@403:
+		Id: 403
+		Images: t403.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@404:
+		Id: 404
+		Images: t404.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@405:
+		Id: 405
+		Images: t405.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			1: Rough
+	Template@755:
+		Id: 755
+		Images: t755.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			1: Road
+			2: Road
+			5: Road
+	Template@756:
+		Id: 756
+		Images: t756.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Road
+			3: Road
+			4: Road
+			1: Road
+			2: Road
+			5: Road
+	Template@284:
+		Id: 284
+		Images: t284.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@285:
+		Id: 285
+		Images: t285.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@286:
+		Id: 286
+		Images: t286.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@287:
+		Id: 287
+		Images: t287.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			2: Road
+			3: Road
+			1: Road
+	Template@288:
+		Id: 288
+		Images: t288.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@289:
+		Id: 289
+		Images: t289.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@290:
+		Id: 290
+		Images: t290.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Clear
+	Template@291:
+		Id: 291
+		Images: t291.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@292:
+		Id: 292
+		Images: t292.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Road
+		Tiles:
+			2: Road
+			3: Road
+			1: Road
+			0: Road
+	Template@293:
+		Id: 293
+		Images: t293.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@294:
+		Id: 294
+		Images: t294.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@295:
+		Id: 295
+		Images: t295.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@296:
+		Id: 296
+		Images: t296.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@297:
+		Id: 297
+		Images: t297.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@298:
+		Id: 298
+		Images: t298.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@299:
+		Id: 299
+		Images: t299.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@300:
+		Id: 300
+		Images: t300.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@301:
+		Id: 301
+		Images: t301.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@302:
+		Id: 302
+		Images: t302.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@303:
+		Id: 303
+		Images: t303.cem
+		Categories: Road
+		Size: 2,1
+		PickAny: False
+		Tiles:
+			0: Road
+			1: Road
+	Template@304:
+		Id: 304
+		Images: t304.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@305:
+		Id: 305
+		Images: t305.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@306:
+		Id: 306
+		Images: t306.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@307:
+		Id: 307
+		Images: t307.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			5: Road
+			4: Road
+			3: Road
+			2: Road
+			1: Road
+			0: Road
+	Template@308:
+		Id: 308
+		Images: t308.cem
+		Size: 6,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+	Template@309:
+		Id: 309
+		Images: t309.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@310:
+		Id: 310
+		Images: t310.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@311:
+		Id: 311
+		Images: t311.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			1: Road
+			0: Road
+	Template@312:
+		Id: 312
+		Images: t312.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+			1: Road
+	Template@313:
+		Id: 313
+		Images: t313.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@314:
+		Id: 314
+		Images: t314.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@315:
+		Id: 315
+		Images: t315.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@316:
+		Id: 316
+		Images: t316.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@317:
+		Id: 317
+		Images: t317.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@318:
+		Id: 318
+		Images: t318.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@319:
+		Id: 319
+		Images: t319.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@320:
+		Id: 320
+		Images: t320.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@321:
+		Id: 321
+		Images: t321.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@322:
+		Id: 322
+		Images: t322.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@323:
+		Id: 323
+		Images: t323.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@324:
+		Id: 324
+		Images: t324.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@325:
+		Id: 325
+		Images: t325.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			6: Rough
+			7: Rough
+			8: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+			4: Rough
+	Template@326:
+		Id: 326
+		Images: t326.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Clear
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@327:
+		Id: 327
+		Images: t327.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@328:
+		Id: 328
+		Images: t328.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@329:
+		Id: 329
+		Images: t329.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			6: Rough
+			7: Rough
+			8: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+			4: Rough
+	Template@330:
+		Id: 330
+		Images: t330.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@331:
+		Id: 331
+		Images: t331.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@332:
+		Id: 332
+		Images: t332.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			1: Rough
+			2: Rough
+			5: Rough
+	Template@333:
+		Id: 333
+		Images: t333.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@334:
+		Id: 334
+		Images: t334.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@335:
+		Id: 335
+		Images: t335.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			2: Rough
+			3: Rough
+			1: Rough
+	Template@336:
+		Id: 336
+		Images: t336.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@337:
+		Id: 337
+		Images: t337.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			2: Rough
+			3: Rough
+			1: Rough
+	Template@338:
+		Id: 338
+		Images: t338.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			1: Rough
+			2: Rough
+			5: Rough
+	Template@339:
+		Id: 339
+		Images: t339.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			2: Rough
+			1: Rough
+	Template@340:
+		Id: 340
+		Images: t340.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+			0: Clear
+			2: Clear
+	Template@341:
+		Id: 341
+		Images: t341.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@342:
+		Id: 342
+		Images: t342.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@343:
+		Id: 343
+		Images: t343.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			1: Clear
+			3: Clear
+			5: Clear
+			2: Clear
+	Template@344:
+		Id: 344
+		Images: t344.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@345:
+		Id: 345
+		Images: t345.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			1: Clear
+			3: Clear
+			2: Clear
+			0: Clear
+			4: Clear
+			5: Clear
+	Template@346:
+		Id: 346
+		Images: t346.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			3: Clear
+			1: Clear
+	Template@347:
+		Id: 347
+		Images: t347.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@348:
+		Id: 348
+		Images: t348.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			3: Clear
+			1: Clear
+			5: Clear
+	Template@349:
+		Id: 349
+		Images: t349.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@350:
+		Id: 350
+		Images: t350.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			8: Clear
+			7: Clear
+			4: Clear
+			1: Clear
+			0: Clear
+			3: Clear
+			6: Clear
+	Template@351:
+		Id: 351
+		Images: t351.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			5: Clear
+			3: Clear
+			1: Clear
+			0: Clear
+			2: Clear
+			4: Clear
+	Template@352:
+		Id: 352
+		Images: t352.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+			2: Clear
+	Template@353:
+		Id: 353
+		Images: t353.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			0: Clear
+			3: Clear
+			6: Clear
+			7: Clear
+			4: Clear
+	Template@354:
+		Id: 354
+		Images: t354.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+	Template@355:
+		Id: 355
+		Images: t355.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@356:
+		Id: 356
+		Images: t356.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@357:
+		Id: 357
+		Images: t357.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			1: Clear
+			3: Clear
+			5: Clear
+			4: Clear
+			2: Clear
+			0: Clear
+	Template@358:
+		Id: 358
+		Images: t358.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			4: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+	Template@359:
+		Id: 359
+		Images: t359.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			2: Clear
+			5: Clear
+			8: Clear
+			7: Clear
+			6: Clear
+			3: Clear
+			0: Clear
+			1: Clear
+			4: Clear
+	Template@360:
+		Id: 360
+		Images: t360.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Divers
+		Tiles:
+			0: Clear
+			3: Clear
+			6: Clear
+			7: Clear
+			4: Clear
+			5: Clear
+			2: Clear
+			1: Clear
+			8: Clear
+	Template@406:
+		Id: 406
+		Images: t406.cem, t407.cem, t408.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@409:
+		Id: 409
+		Images: t409.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+	Template@410:
+		Id: 410
+		Images: t410.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+	Template@411:
+		Id: 411
+		Images: t411.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			4: Rock
+			8: Rock
+			9: Rock
+			10: Clear
+			6: Rock
+			5: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@412:
+		Id: 412
+		Images: t412.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Clear
+			2: Clear
+			1: Rock
+			0: Rock
+	Template@413:
+		Id: 413
+		Images: t413.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Clear
+			2: Clear
+			1: Rock
+			0: Rock
+	Template@414:
+		Id: 414
+		Images: t414.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Clear
+			3: Rock
+			0: Rock
+			4: Rock
+			1: Rock
+	Template@415:
+		Id: 415
+		Images: t415.cem
+		Size: 6,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			2: Rock
+			0: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Rock
+	Template@416:
+		Id: 416
+		Images: t416.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			5: Rock
+			4: Rock
+			1: Rock
+			0: Rock
+			3: Rock
+	Template@417:
+		Id: 417
+		Images: t417.cem, t418.cem, t419.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@420:
+		Id: 420
+		Images: t420.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@421:
+		Id: 421
+		Images: t421.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			5: Clear
+			4: Rock
+			2: Rock
+	Template@422:
+		Id: 422
+		Images: t422.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			2: Rock
+			5: Rock
+			8: Clear
+			7: Rock
+			6: Rock
+			3: Rock
+			4: Rock
+			1: Rock
+	Template@423:
+		Id: 423
+		Images: t423.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@424:
+		Id: 424
+		Images: t424.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@425:
+		Id: 425
+		Images: t425.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			3: Rock
+			1: Rock
+	Template@426:
+		Id: 426
+		Images: t426.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@427:
+		Id: 427
+		Images: t427.cem
+		Size: 3,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			9: Rock
+			12: Clear
+			13: Rock
+			14: Rock
+			11: Rock
+			8: Rock
+			7: Rock
+			10: Rock
+			4: Rock
+			1: Clear
+	Template@428:
+		Id: 428
+		Images: t428.cem, t429.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Clear
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+	Template@430:
+		Id: 430
+		Images: t430.cem, t431.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@432:
+		Id: 432
+		Images: t432.cem
+		Size: 5,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			10: Rock
+			11: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			8: Rock
+			3: Rock
+			4: Rock
+	Template@433:
+		Id: 433
+		Images: t433.cem
+		Size: 4,5
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			14: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Clear
+			5: Rock
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+	Template@434:
+		Id: 434
+		Images: t434.cem
+		Size: 4,4
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			11: Rock
+			7: Rock
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			9: Rock
+			14: Clear
+			13: Rock
+			12: Rock
+			8: Rock
+			4: Rock
+			5: Rock
+	Template@435:
+		Id: 435
+		Images: t435.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Clear
+			6: Rock
+			10: Rock
+			11: Rock
+			9: Rock
+			5: Rock
+			4: Clear
+	Template@436:
+		Id: 436
+		Images: t436.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Clear
+			1: Rock
+	Template@437:
+		Id: 437
+		Images: t437.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Clear
+			1: Rock
+	Template@438:
+		Id: 438
+		Images: t438.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@439:
+		Id: 439
+		Images: t439.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Clear
+			1: Clear
+	Template@440:
+		Id: 440
+		Images: t440.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			0: Rock
+			3: Clear
+			5: Rock
+			4: Rock
+			7: Rock
+	Template@441:
+		Id: 441
+		Images: t441.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			2: Clear
+			4: Clear
+			3: Clear
+			5: Clear
+	Template@442:
+		Id: 442
+		Images: t442.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			0: Clear
+	Template@443:
+		Id: 443
+		Images: t443.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Clear
+			3: Clear
+			0: Clear
+			5: Clear
+			4: Clear
+			7: Clear
+	Template@444:
+		Id: 444
+		Images: t444.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			4: Rock
+			1: Rock
+			2: Rock
+			5: Clear
+	Template@445:
+		Id: 445
+		Images: t445.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			4: Rock
+			5: Clear
+			1: Clear
+	Template@446:
+		Id: 446
+		Images: t446.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			8: Rock
+			4: Rock
+			3: Clear
+	Template@447:
+		Id: 447
+		Images: t447.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Rock
+			5: Rock
+			2: Rock
+			4: Rock
+			3: Clear
+	Template@448:
+		Id: 448
+		Images: t448.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			4: Rock
+			6: Rock
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@449:
+		Id: 449
+		Images: t449.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			3: Rock
+			1: Clear
+	Template@450:
+		Id: 450
+		Images: t450.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			4: Clear
+	Template@451:
+		Id: 451
+		Images: t451.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@452:
+		Id: 452
+		Images: t452.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Rock
+			4: Rock
+	Template@453:
+		Id: 453
+		Images: t453.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Clear
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			2: Clear
+			1: Rock
+			4: Rock
+	Template@454:
+		Id: 454
+		Images: t454.cem
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@455:
+		Id: 455
+		Images: t455.cem
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@456:
+		Id: 456
+		Images: t456.cem
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@457:
+		Id: 457
+		Images: t457.cem
+		Size: 3,1
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@458:
+		Id: 458
+		Images: t458.cem, t459.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@460:
+		Id: 460
+		Images: t460.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Water
+	Template@461:
+		Id: 461
+		Images: t461.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			8: Water
+			6: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			7: Water
+	Template@462:
+		Id: 462
+		Images: t462.cem
+		Size: 4,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			12: Water
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Water
+			7: Water
+			6: Rock
+			10: Water
+			9: Rock
+			13: Water
+			5: Rock
+	Template@463:
+		Id: 463
+		Images: t463.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Water
+			2: Water
+			1: Rock
+			0: Rock
+	Template@464:
+		Id: 464
+		Images: t464.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Water
+			2: Water
+			1: Rock
+			0: Rock
+	Template@465:
+		Id: 465
+		Images: t465.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			8: Water
+			7: Rock
+			6: Rock
+			3: Rock
+			0: Rock
+			4: Rock
+			1: Water
+	Template@466:
+		Id: 466
+		Images: t466.cem
+		Size: 6,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Water
+	Template@467:
+		Id: 467
+		Images: t467.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			5: Rock
+			4: Rock
+			1: Rock
+			0: Rock
+			2: Water
+	Template@468:
+		Id: 468
+		Images: t468.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@469:
+		Id: 469
+		Images: t469.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@470:
+		Id: 470
+		Images: t470.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@471:
+		Id: 471
+		Images: t471.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+			0: Water
+	Template@472:
+		Id: 472
+		Images: t472.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Water
+			5: Rock
+			4: Water
+			3: Water
+			6: Rock
+			9: Rock
+			10: Rock
+			7: Rock
+			8: Rock
+	Template@473:
+		Id: 473
+		Images: t473.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@474:
+		Id: 474
+		Images: t474.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@475:
+		Id: 475
+		Images: t475.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Rock
+			7: Rock
+			6: Water
+			4: Rock
+	Template@476:
+		Id: 476
+		Images: t476.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+	Template@477:
+		Id: 477
+		Images: t477.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			0: Rock
+			4: Rock
+			6: Rock
+			8: Water
+			9: Rock
+			7: Rock
+			5: Rock
+			3: Clear
+	Template@478:
+		Id: 478
+		Images: t478.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Water
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@479:
+		Id: 479
+		Images: t479.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Water
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@480:
+		Id: 480
+		Images: t480.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@481:
+		Id: 481
+		Images: t481.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Water
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@482:
+		Id: 482
+		Images: t482.cem
+		Size: 4,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			17: Water
+			13: Rock
+			12: Water
+			8: Rock
+			4: Rock
+			0: Rock
+			5: Rock
+			1: Clear
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+			14: Rock
+			9: Rock
+	Template@483:
+		Id: 483
+		Images: t483.cem
+		Size: 4,5
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			7: Rock
+			11: Rock
+			15: Water
+			14: Rock
+			18: Water
+			17: Rock
+			16: Rock
+			12: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			2: Rock
+			10: Rock
+	Template@484:
+		Id: 484
+		Images: t484.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+			6: Rock
+			7: Water
+			11: Rock
+			10: Rock
+			5: Rock
+			4: Rock
+	Template@485:
+		Id: 485
+		Images: t485.cem
+		Size: 5,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			5: Water
+			10: Rock
+			11: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			2: Water
+			3: Rock
+			8: Rock
+			4: Rock
+	Template@486:
+		Id: 486
+		Images: t486.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+	Template@487:
+		Id: 487
+		Images: t487.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+	Template@488:
+		Id: 488
+		Images: t488.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@489:
+		Id: 489
+		Images: t489.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@490:
+		Id: 490
+		Images: t490.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@491:
+		Id: 491
+		Images: t491.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@492:
+		Id: 492
+		Images: t492.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rough
+	Template@493:
+		Id: 493
+		Images: t493.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rough
+	Template@494:
+		Id: 494
+		Images: t494.cem
+		Size: 4,4
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			4: Rock
+			8: Rock
+			9: Rock
+			1: Rock
+			2: Rock
+			3: Rough
+			6: Rock
+			5: Rock
+			10: Rough
+			12: Rough
+	Template@495:
+		Id: 495
+		Images: t495.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Rough
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@496:
+		Id: 496
+		Images: t496.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			3: Rock
+			4: Rock
+			5: Rough
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@497:
+		Id: 497
+		Images: t497.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			6: Rock
+			7: Rock
+			8: Rough
+			5: Rough
+			4: Rock
+			3: Rock
+			0: Rock
+			1: Rock
+	Template@498:
+		Id: 498
+		Images: t498.cem
+		Size: 6,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			8: Rock
+			9: Rock
+			15: Rock
+			16: Rock
+			17: Rock
+	Template@499:
+		Id: 499
+		Images: t499.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			4: Rock
+			5: Rock
+			2: Rough
+			1: Rock
+			0: Rock
+			3: Rock
+	Template@500:
+		Id: 500
+		Images: t500.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@501:
+		Id: 501
+		Images: t501.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@502:
+		Id: 502
+		Images: t502.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Clear
+			2: Rock
+			0: Rock
+	Template@503:
+		Id: 503
+		Images: t503.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+	Template@504:
+		Id: 504
+		Images: t504.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			2: Rock
+			5: Rock
+			4: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			1: Rock
+	Template@505:
+		Id: 505
+		Images: t505.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@506:
+		Id: 506
+		Images: t506.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Water Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			2: Rock
+	Template@507:
+		Id: 507
+		Images: t507.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+			4: Rock
+			2: Rock
+	Template@508:
+		Id: 508
+		Images: t508.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+			6: Rough
+	Template@509:
+		Id: 509
+		Images: t509.cem
+		Size: 3,5
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Clear
+			1: Clear
+			6: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			14: Rock
+			13: Rock
+			10: Rock
+			9: Rough
+	Template@510:
+		Id: 510
+		Images: t510.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@511:
+		Id: 511
+		Images: t511.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Rock
+			6: Rock
+			7: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@512:
+		Id: 512
+		Images: t512.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@513:
+		Id: 513
+		Images: t513.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			6: Clear
+			7: Rock
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@514:
+		Id: 514
+		Images: t514.cem
+		Size: 5,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			11: Rock
+			10: Rock
+			6: Rock
+			7: Rock
+			12: Rock
+			8: Rock
+			3: Rock
+			4: Rock
+	Template@515:
+		Id: 515
+		Images: t515.cem
+		Size: 4,5
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			19: Rock
+			18: Rock
+			14: Rock
+			13: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+			0: Rock
+			1: Rock
+			5: Rock
+			6: Clear
+			10: Rock
+			11: Clear
+			15: Rock
+	Template@516:
+		Id: 516
+		Images: t516.cem
+		Size: 4,4
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			11: Rock
+			7: Rock
+			3: Rock
+			2: Rock
+			6: Rock
+			5: Rock
+			4: Rock
+			8: Rock
+			12: Rock
+			13: Rock
+			14: Rock
+			10: Rock
+			9: Rock
+	Template@517:
+		Id: 517
+		Images: t517.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rough
+			6: Rock
+			5: Rock
+			4: Clear
+			9: Clear
+			10: Rock
+			11: Rock
+	Template@518:
+		Id: 518
+		Images: t518.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+	Template@519:
+		Id: 519
+		Images: t519.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+	Template@520:
+		Id: 520
+		Images: t520.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@521:
+		Id: 521
+		Images: t521.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Rouch Cliff
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@522:
+		Id: 522
+		Images: t522.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@523:
+		Id: 523
+		Images: t523.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@524:
+		Id: 524
+		Images: t524.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@525:
+		Id: 525
+		Images: t525.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Clear
+			2: Rock
+			1: Rock
+			0: Road
+	Template@526:
+		Id: 526
+		Images: t526.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			8: Clear
+			6: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Road
+			5: Rock
+			7: Clear
+	Template@527:
+		Id: 527
+		Images: t527.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			8: Clear
+			6: Rock
+			7: Clear
+			5: Rock
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@528:
+		Id: 528
+		Images: t528.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			9: Clear
+			6: Rock
+			7: Clear
+			4: Rock
+			3: Rock
+			0: Rock
+			1: Rock
+			5: Rock
+			8: Clear
+			2: Rock
+	Template@529:
+		Id: 529
+		Images: t529.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@530:
+		Id: 530
+		Images: t530.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Clear
+			3: Rock
+	Template@531:
+		Id: 531
+		Images: t531.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@532:
+		Id: 532
+		Images: t532.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@533:
+		Id: 533
+		Images: t533.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@534:
+		Id: 534
+		Images: t534.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			2: Rock
+			0: Rock
+	Template@535:
+		Id: 535
+		Images: t535.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@536:
+		Id: 536
+		Images: t536.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@537:
+		Id: 537
+		Images: t537.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@538:
+		Id: 538
+		Images: t538.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@539:
+		Id: 539
+		Images: t539.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			4: Rock
+			5: Rock
+	Template@540:
+		Id: 540
+		Images: t540.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@541:
+		Id: 541
+		Images: t541.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			4: Rock
+			3: Rock
+			7: Rock
+			8: Rock
+			6: Clear
+			11: Clear
+	Template@542:
+		Id: 542
+		Images: t542.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Clear
+	Template@543:
+		Id: 543
+		Images: t543.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Clear
+	Template@544:
+		Id: 544
+		Images: t544.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@545:
+		Id: 545
+		Images: t545.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+	Template@546:
+		Id: 546
+		Images: t546.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Road
+			3: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rough
+			4: Rock
+			2: Rock
+	Template@547:
+		Id: 547
+		Images: t547.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@548:
+		Id: 548
+		Images: t548.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@549:
+		Id: 549
+		Images: t549.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			0: Rock
+			1: Clear
+	Template@550:
+		Id: 550
+		Images: t550.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@551:
+		Id: 551
+		Images: t551.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@552:
+		Id: 552
+		Images: t552.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@553:
+		Id: 553
+		Images: t553.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@554:
+		Id: 554
+		Images: t554.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Clear
+			1: Rock
+	Template@555:
+		Id: 555
+		Images: t555.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			1: Rock
+			0: Rock
+	Template@556:
+		Id: 556
+		Images: t556.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			7: Rock
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			4: Rock
+			6: Road
+			9: Clear
+	Template@557:
+		Id: 557
+		Images: t557.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+	Template@558:
+		Id: 558
+		Images: t558.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+	Template@559:
+		Id: 559
+		Images: t559.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			10: Road
+			6: Rock
+			9: Road
+	Template@560:
+		Id: 560
+		Images: t560.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			3: Rock
+			4: Rock
+			7: Rock
+			8: Rock
+			11: Rock
+			10: Rock
+	Template@561:
+		Id: 561
+		Images: t561.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			5: Rock
+			6: Rock
+			10: Rock
+			11: Road
+			7: Road
+			9: Rock
+	Template@562:
+		Id: 562
+		Images: t562.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			2: Clear
+			7: Clear
+			11: Rock
+			10: Rock
+			9: Road
+	Template@563:
+		Id: 563
+		Images: t563.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@564:
+		Id: 564
+		Images: t564.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@565:
+		Id: 565
+		Images: t565.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			1: Rock
+			4: Rock
+			3: Rock
+			5: Clear
+	Template@566:
+		Id: 566
+		Images: t566.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@567:
+		Id: 567
+		Images: t567.cem
+		Size: 4,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Road
+			7: Clear
+			6: Road
+			5: Rock
+			4: Rock
+			0: Clear
+			1: Rock
+			2: Rock
+	Template@568:
+		Id: 568
+		Images: t568.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			5: Rock
+			9: Rock
+			8: Rock
+			4: Rock
+	Template@569:
+		Id: 569
+		Images: t569.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			5: Rock
+			2: Rock
+			7: Rock
+			6: Rock
+			10: Road
+			9: Rock
+	Template@570:
+		Id: 570
+		Images: t570.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Rock
+			8: Rock
+			11: Road
+			10: Road
+			9: Rock
+			6: Rock
+			7: Rock
+			4: Rock
+			1: Road
+	Template@571:
+		Id: 571
+		Images: t571.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			5: Clear
+			4: Clear
+	Template@572:
+		Id: 572
+		Images: t572.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Clear
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+			4: Clear
+	Template@573:
+		Id: 573
+		Images: t573.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Clear
+	Template@574:
+		Id: 574
+		Images: t574.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Clear
+	Template@575:
+		Id: 575
+		Images: t575.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Road
+			3: Rock
+			1: Road
+	Template@576:
+		Id: 576
+		Images: t576.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			4: Road
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@577:
+		Id: 577
+		Images: t577.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@578:
+		Id: 578
+		Images: t578.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@579:
+		Id: 579
+		Images: t579.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			0: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			10: Clear
+			11: Rock
+			9: Clear
+	Template@580:
+		Id: 580
+		Images: t580.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			10: Rock
+			11: Rock
+			8: Rock
+			7: Rock
+			4: Rock
+			3: Rock
+			0: Rock
+	Template@581:
+		Id: 581
+		Images: t581.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			9: Rock
+			10: Rock
+			11: Rock
+			7: Clear
+			6: Rock
+			5: Rock
+			1: Rock
+			0: Rock
+	Template@582:
+		Id: 582
+		Images: t582.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			11: Rock
+			10: Rock
+			6: Rock
+			5: Rock
+			1: Rock
+			2: Clear
+			0: Rock
+			4: Rock
+			9: Road
+	Template@583:
+		Id: 583
+		Images: t583.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@584:
+		Id: 584
+		Images: t584.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			4: Road
+			5: Road
+			3: Road
+	Template@585:
+		Id: 585
+		Images: t585.cem
+		Size: 3,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Road
+			4: Rock
+			3: Rock
+			1: Rock
+	Template@586:
+		Id: 586
+		Images: t586.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@587:
+		Id: 587
+		Images: t587.cem
+		Size: 4,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			4: Rock
+			0: Clear
+			1: Rock
+			2: Rock
+			3: Rock
+			7: Road
+			6: Road
+	Template@588:
+		Id: 588
+		Images: t588.cem
+		Size: 4,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			6: Rock
+			10: Rock
+			5: Rock
+			9: Rock
+			4: Rock
+			8: Clear
+	Template@589:
+		Id: 589
+		Images: t589.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rock
+			10: Clear
+			9: Rock
+	Template@590:
+		Id: 590
+		Images: t590.cem
+		Size: 3,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			9: Rock
+			10: Clear
+			7: Rock
+			4: Rock
+			1: Rock
+			2: Rock
+			5: Rock
+			8: Rock
+			11: Clear
+	Template@591:
+		Id: 591
+		Images: t591.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+			1: Rock
+	Template@592:
+		Id: 592
+		Images: t592.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@593:
+		Id: 593
+		Images: t593.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			3: Rock
+			1: Clear
+			0: Rock
+	Template@594:
+		Id: 594
+		Images: t594.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Clear
+	Template@595:
+		Id: 595
+		Images: t595.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@596:
+		Id: 596
+		Images: t596.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			4: Clear
+			5: Clear
+			3: Rock
+	Template@597:
+		Id: 597
+		Images: t597.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+			3: Rock
+			1: Clear
+	Template@598:
+		Id: 598
+		Images: t598.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Clear
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@599:
+		Id: 599
+		Images: t599.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rough
+			1: Rock
+			0: Rock
+	Template@600:
+		Id: 600
+		Images: t600.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Road
+			3: Rock
+			2: Rock
+			4: Clear
+			6: Clear
+			8: Clear
+			7: Rock
+			5: Rock
+	Template@601:
+		Id: 601
+		Images: t601.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@602:
+		Id: 602
+		Images: t602.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			1: Rock
+			0: Rock
+			2: Rock
+	Template@603:
+		Id: 603
+		Images: t603.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			3: Rock
+	Template@604:
+		Id: 604
+		Images: t604.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@605:
+		Id: 605
+		Images: t605.cem
+		Size: 2,5
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rough
+			9: Clear
+	Template@606:
+		Id: 606
+		Images: t606.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rough
+			4: Rough
+			2: Rock
+	Template@607:
+		Id: 607
+		Images: t607.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@608:
+		Id: 608
+		Images: t608.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rough
+			4: Rough
+	Template@609:
+		Id: 609
+		Images: t609.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rough
+			3: Rock
+			1: Rough
+	Template@610:
+		Id: 610
+		Images: t610.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rough
+			2: Rock
+			4: Rough
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@611:
+		Id: 611
+		Images: t611.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			6: Rock
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@612:
+		Id: 612
+		Images: t612.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Water
+	Template@613:
+		Id: 613
+		Images: t613.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@614:
+		Id: 614
+		Images: t614.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Water
+	Template@615:
+		Id: 615
+		Images: t615.cem
+		Size: 2,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			7: Rock
+	Template@616:
+		Id: 616
+		Images: t616.cem
+		Size: 1,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+	Template@617:
+		Id: 617
+		Images: t617.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			0: Rock
+			5: Rock
+	Template@618:
+		Id: 618
+		Images: t618.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+	Template@619:
+		Id: 619
+		Images: t619.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Water
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+	Template@620:
+		Id: 620
+		Images: t620.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@621:
+		Id: 621
+		Images: t621.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@622:
+		Id: 622
+		Images: t622.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+			4: Water
+			2: Rock
+	Template@623:
+		Id: 623
+		Images: t623.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Water
+	Template@624:
+		Id: 624
+		Images: t624.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Water
+			5: Water
+			3: Rock
+			1: Rock
+	Template@625:
+		Id: 625
+		Images: t625.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@626:
+		Id: 626
+		Images: t626.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Water
+			4: Water
+			2: Rock
+	Template@627:
+		Id: 627
+		Images: t627.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Clear
+			4: Rock
+			1: Rock
+			2: Clear
+			5: Clear
+	Template@628:
+		Id: 628
+		Images: t628.cem
+		Size: 3,3
+		PickAny: False
+		Categories: Jonction Cliff
+		Tiles:
+			0: Rock
+			3: Rock
+			6: Rock
+			7: Rock
+			8: Clear
+			5: Clear
+			4: Rock
+			1: Clear
+	Template@629:
+		Id: 629
+		Images: t629.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@630:
+		Id: 630
+		Images: t630.cem
+		Size: 1,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@631:
+		Id: 631
+		Images: t631.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@632:
+		Id: 632
+		Images: t632.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@633:
+		Id: 633
+		Images: t633.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@634:
+		Id: 634
+		Images: t634.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@635:
+		Id: 635
+		Images: t635.cem, t636.cem, t637.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@638:
+		Id: 638
+		Images: t638.cem, t639.cem, t640.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@641:
+		Id: 641
+		Images: t641.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@642:
+		Id: 642
+		Images: t642.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@643:
+		Id: 643
+		Images: t643.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@644:
+		Id: 644
+		Images: t644.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			1: Road
+			3: Road
+			2: Road
+			0: Road
+	Template@645:
+		Id: 645
+		Images: t645.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@646:
+		Id: 646
+		Images: t646.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@647:
+		Id: 647
+		Images: t647.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@648:
+		Id: 648
+		Images: t648.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@649:
+		Id: 649
+		Images: t649.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@650:
+		Id: 650
+		Images: t650.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@651:
+		Id: 651
+		Images: t651.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@652:
+		Id: 652
+		Images: t652.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Rouch
+		Tiles:
+			0: Road
+	Template@657:
+		Id: 657
+		Images: t657.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Clear
+			4: Rock
+			2: Rock
+	Template@658:
+		Id: 658
+		Images: t658.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+			4: Rough
+			2: Rock
+	Template@659:
+		Id: 659
+		Images: t659.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@660:
+		Id: 660
+		Images: t660.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@661:
+		Id: 661
+		Images: t661.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@662:
+		Id: 662
+		Images: t662.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@663:
+		Id: 663
+		Images: t663.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@664:
+		Id: 664
+		Images: t664.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@665:
+		Id: 665
+		Images: t665.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			10: Rock
+	Template@666:
+		Id: 666
+		Images: t666.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			6: Rock
+			7: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@667:
+		Id: 667
+		Images: t667.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			7: Rock
+			6: Rock
+			8: Rock
+			9: Rock
+			11: Rock
+	Template@668:
+		Id: 668
+		Images: t668.cem
+		Size: 2,6
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			2: Rock
+			0: Rock
+			3: Rock
+			5: Rock
+			4: Rock
+			6: Rock
+			7: Rock
+			9: Rock
+			8: Rock
+			10: Rock
+	Template@669:
+		Id: 669
+		Images: t669.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Clear
+	Template@670:
+		Id: 670
+		Images: t670.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			1: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+	Template@671:
+		Id: 671
+		Images: t671.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@672:
+		Id: 672
+		Images: t672.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@673:
+		Id: 673
+		Images: t673.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@674:
+		Id: 674
+		Images: t674.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@675:
+		Id: 675
+		Images: t675.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@676:
+		Id: 676
+		Images: t676.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@677:
+		Id: 677
+		Images: t677.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@678:
+		Id: 678
+		Images: t678.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+			1: Beach
+	Template@679:
+		Id: 679
+		Images: t679.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@680:
+		Id: 680
+		Images: t680.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@681:
+		Id: 681
+		Images: t681.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@682:
+		Id: 682
+		Images: t682.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@683:
+		Id: 683
+		Images: t683.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@684:
+		Id: 684
+		Images: t684.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@685:
+		Id: 685
+		Images: t685.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@686:
+		Id: 686
+		Images: t686.cem
+		Size: 1,1
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Beach
+	Template@687:
+		Id: 687
+		Images: t687.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			2: Rock
+			4: Rock
+			3: Rock
+			1: Rock
+	Template@688:
+		Id: 688
+		Images: t688.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			5: Rock
+	Template@689:
+		Id: 689
+		Images: t689.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@690:
+		Id: 690
+		Images: t690.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete
+		Tiles:
+			3: Rock
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@691:
+		Id: 691
+		Images: t691.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@692:
+		Id: 692
+		Images: t692.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			3: Rock
+			2: Rock
+			1: Rock
+			0: Rock
+	Template@693:
+		Id: 693
+		Images: t693.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@694:
+		Id: 694
+		Images: t694.cem
+		Size: 1,4
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Clear
+	Template@695:
+		Id: 695
+		Images: t695.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@696:
+		Id: 696
+		Images: t696.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@697:
+		Id: 697
+		Images: t697.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Water
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@698:
+		Id: 698
+		Images: t698.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Water
+	Template@699:
+		Id: 699
+		Images: t699.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Road
+			2: Rock
+			3: Rock
+			1: Rock
+	Template@700:
+		Id: 700
+		Images: t700.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+			1: Road
+	Template@701:
+		Id: 701
+		Images: t701.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@702:
+		Id: 702
+		Images: t702.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Rock
+			3: Rock
+			1: Rock
+	Template@703:
+		Id: 703
+		Images: t703.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Rock
+	Template@704:
+		Id: 704
+		Images: t704.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@705:
+		Id: 705
+		Images: t705.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			3: Rock
+			1: Rock
+			0: Rock
+	Template@706:
+		Id: 706
+		Images: t706.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			5: Rock
+			3: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+	Template@707:
+		Id: 707
+		Images: t707.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@708:
+		Id: 708
+		Images: t708.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@709:
+		Id: 709
+		Images: t709.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@710:
+		Id: 710
+		Images: t710.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@711:
+		Id: 711
+		Images: t711.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@712:
+		Id: 712
+		Images: t712.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Concrete Wall
+		Tiles:
+			4: Rock
+			2: Rock
+			0: Rock
+			1: Rock
+			3: Rock
+			5: Rock
+	Template@925:
+		Id: 925
+		Images: t925.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			4: Rock
+			5: Clear
+			3: Clear
+			1: Clear
+	Template@926:
+		Id: 926
+		Images: t926.cem
+		Size: 2,3
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Clear
+			2: Rock
+			4: Clear
+			5: Rock
+			3: Rock
+			1: Clear
+	Template@927:
+		Id: 927
+		Images: t927.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Clear
+			1: Clear
+	Template@928:
+		Id: 928
+		Images: t928.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Clear
+			1: Clear
+	Template@929:
+		Id: 929
+		Images: t929.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Clear
+			1: Clear
+	Template@930:
+		Id: 930
+		Images: t930.cem
+		Size: 2,2
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Clear
+			1: Clear
+	Template@931:
+		Id: 931
+		Images: t931.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			1: Rock
+			0: Rock
+	Template@932:
+		Id: 932
+		Images: t932.cem
+		Size: 2,1
+		PickAny: False
+		Categories: Cliff
+		Tiles:
+			0: Rock
+			1: Rock

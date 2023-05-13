@@ -1,0 +1,498 @@
+t1_fedharv:
+	Inherits: ^ShapeVehicleMedium
+	Inherits@harvester: ^Harvester.rules
+	Buildable:
+		Queue: Vehicle.Federation, Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 10
+		InitialActivity: FindResources
+		Description: Harvester with average protection\n> Strong vs None\n Weak vs Everything
+	Tooltip:
+		Name: Harvester
+		GenericName: Harvester
+	Selectable:
+		Priority: 7
+		DecorationBounds: 1544, 2509, 0, -289
+	AutoCarryable:
+		CarriedCondition: notmobile
+		ReservedCondition: carryall-reserved
+		LockedCondition: notmobile
+	CarryableHarvester:
+	WithHarvestOverlay:
+	Health:
+		HP: 4000
+	RenderSprites:
+		Scale: 1.0
+	-AutoTarget:
+	WithDockingAnimation:
+	
+t1_stalker:
+	Inherits: ^ShapeVehicleLight
+	Buildable:
+		Queue: Vehicle.Federation, Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 20
+		Description: Harvester with average protection\n> Strong vs None\n Weak vs Everything
+		BuildDurationModifier: 15
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stalker
+	Selectable:
+		Priority: 7
+		DecorationBounds: 1544, 2509, 0, -289
+	Health:
+		HP: 1000
+    GivesBuildableArea:
+		AreaTypes: building, defense
+	BaseProvider:
+		Cooldown: 120
+		Range: 5c0
+	RenderSprites:
+		Scale: 1.0
+	-AutoTarget:
+
+t1_suricate:
+	Inherits: ^ShapeVehicleLight
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t1_suricate.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.electroShield.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation, Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 30
+		IconPalette: Federation.Icon
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	DetectCloaked:
+		Range: 5c0
+		CloakTypes: Cloak
+	Cargo:
+		Types: Infantry
+		MaxWeight: 2
+		PipCount: 2
+	Armament@Gun:
+		Name: primary
+		Weapon: Surricate.M60
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 150,0,450
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 1.0
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable
+
+t1_tick:
+	Inherits@1: ^ShapeVehicleMedium
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t1_tick.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
+    Inherits@Upgrade02: ^affect.electroShield.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 40
+		Prerequisites: fedweap
+		IconPalette: Federation.Icon
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 12
+		RealignDelay: 20
+		Offset: -10,0,50
+	Armament@primary:
+		Weapon: Tick.gun
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+		LocalOffset: 1850,0,250
+		Recoil: 85
+		RecoilRecovery: 25
+	WithMuzzleOverlay:
+    LeavesTrails@01:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,525,-10
+    LeavesTrails@02:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,-525,-10
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret:
+
+t2_cobra:
+	Inherits: ^ShapeVehicleMedium
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_cobra.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
+    Inherits@Upgrade02: ^affect.electroShield.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 70
+		IconPalette: Federation.Icon
+    #condition type
+    GrantConditionOnAttack:
+        Condition: AP_fire
+        ArmamentNames: primary
+        RevokeDelay: 12
+	Armament@PRIMARY:
+		Weapon: Cobra_Dca
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 880,0,600
+		MuzzleSequence: muzzle
+	Armament@PRIMARYAA:
+        Name: AA_cobraweapon
+		Weapon: Cobra_DcaAA
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 880,0,1600
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+        RequiresCondition: !AP_fire
+        Sequence: turretair
+    WithSpriteTurret@AA:
+        RequiresCondition: AP_fire
+        Sequence: turretground
+	AttackTurreted:
+		Turrets: primary
+		Armaments: primary, AA_cobraweapon
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 25
+		RealignDelay: 5
+		Offset: 0,0,0
+    LeavesTrails@01:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,525,-10
+    LeavesTrails@02:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,-525,-10
+	
+t2_lynx:
+	Inherits: ^ShapeVehicleMedium
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_lynx.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.electroShield.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 50
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Weapon: Lynx.M60
+		Recoil: 400
+		RecoilRecovery: 400
+		LocalOffset: 100,0,100
+		MuzzleSequence: muzzle
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret:
+	AttackTurreted:
+		Turrets: primary
+		Armaments: primary
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 25
+		RealignDelay: 20
+		Offset: 20,0,420
+    LeavesTrails@01:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,525,-10
+    LeavesTrails@02:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,-525,-10
+
+t2_mongoose:
+	Inherits: ^ShapeVehicleLight
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_lynx.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
+    Inherits@Upgrade02: ^affect.Ramjet.Federation
+    Inherits@Upgrade03: ^affect.electroShield.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T2, Vehicle.Federation.T3
+		BuildPaletteOrder: 60
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Weapon: 120mm.mongoose
+		Recoil: 20
+		RecoilRecovery: 10
+		LocalOffset: 100,0,380
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	WithSpriteTurret:
+    Turreted:
+		TurnSpeed: 25
+		RealignDelay: 1
+		Offset: 0,0,10
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 1.0
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable
+    LeavesTrails@01:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,525,-10
+    LeavesTrails@02:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,-525,-10
+
+t3_rhino:
+	Inherits: ^ShapeVehicleMedium
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_rhino.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T3
+		BuildPaletteOrder: 90
+		IconPalette: Federation.Icon
+	GrantConditionOnAttack@speed:
+		ArmamentNames: primary, secondary
+		RequiredShotsPerInstance: 6
+        RevokeDelay: 30
+		Condition: Target
+	Armament@PRIMARY:
+        Name: primary
+		Weapon: Rhino_gun
+		Recoil: 100
+		RecoilRecovery: 100
+		LocalOffset: 1980,0,20
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+		RequiresCondition: !Target
+	Armament@PRIMARYSPEED:
+        Name: secondary
+		Weapon: Rhino_gunspeed
+		Recoil: 100
+		RecoilRecovery: 100
+		LocalOffset: 1980,0,20
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+		RequiresCondition: Target
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: -40,0,110
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 1.0
+    LeavesTrails@01:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,525,-10
+    LeavesTrails@02:
+        Image: smoke_movemin
+        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+        Palette: flameeffect30
+        Type: CenterPosition
+        MovingInterval: 4
+        Offsets: 540,-525,-10
+	Cloak:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Move
+		IsPlayerPalette: true
+
+t3_porcupine:
+	Inherits: ^ShapeVehicleMedium
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_porcupine.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T3
+		BuildPaletteOrder: 100
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Weapon: Anaconda_gatling
+		Recoil: 400
+		RecoilRecovery: 400
+		LocalOffset: 400,0,360
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@Secondary:
+		Weapon: Anaconda.Target
+		Recoil: 400
+		RecoilRecovery: 400
+		LocalOffset: 400,0,360
+	WithMuzzleOverlay:
+	DetectCloaked:
+		CloakTypes: Cloak
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret:
+	AttackTurreted:
+		Turrets: primary
+		Armaments: primary
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 12
+		RealignDelay: 20
+		Offset: -80,0,230
+
+t3_mantis:
+	Inherits: ^ShapeVehicleLight
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_mantis.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Upgrade Faction /
+    Inherits@Upgrade01: ^affect.Ramjet.Federation
+    # / < Stat Unite Base > /
+	Valued:
+		Cost: 700
+	Buildable:
+		Queue: Vehicle.Federation.T3
+		BuildPaletteOrder: 110
+		IconPalette: Federation.Icon
+	Armament@PRIMARY:
+		Weapon: Mantis.missile
+		Recoil: 200
+		RecoilRecovery: 100
+		LocalOffset: 1840,0,2650
+		MuzzleSequence: muzzle
+        MuzzlePalette: flameeffect
+		ReloadingCondition: reloading
+	WithFacingSpriteBody:
+		RequiresCondition: !reloading
+		Name: loaded
+	WithFacingSpriteBody@EMPTY:
+		RequiresCondition: reloading
+		Sequence: empty-idle
+		Name: reloading
+     # / Shock Heavy Weapons Fire /
+    Armament@PRIMARYSHOCK:
+		Name: primary
+		Turret: primary
+		Weapon: Mantis.missileShock
+		LocalOffset: 0,0,0
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 0.95
+	AttackFrontal:
+		FacingTolerance: 2
+		PauseOnCondition: empdisable
+
+t4_colossus:
+	Inherits: ^ShapeVehicleHeavy
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_colossus.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Vehicle.Federation.T3
+		BuildPaletteOrder: 120
+		Prerequisites: Research Module
+		BuildLimit: 1
+		IconPalette: Federation.Icon
+	Armament@MATTER:
+		Weapon: Dark.Matter
+		Recoil: 400
+		RecoilRecovery: 400
+		LocalOffset: 1250,250,720, 1250,-250,720
+		MuzzleSequence: muzzle
+		RequiresCondition: !mode2
+	RenderSprites:
+		Scale: 1.0
+	WithSpriteTurret:
+	AttackTurreted:
+		RequiresCondition: !empdisable
+	Turreted:
+		TurnSpeed: 3
+		RealignDelay: 20
+		Offset: 0,0,250

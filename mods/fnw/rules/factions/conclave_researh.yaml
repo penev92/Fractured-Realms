@@ -1,0 +1,478 @@
+^Vehicle.Upgrade.Conclave:
+
+^Aircraft.Upgrade.Conclave:
+
+^Upgrade.Conclave.RenArmor:
+	GrantConditionOnPrerequisite@research.RegArmorPalI.conclave:
+		Prerequisites: research.RegArmorPalI.conclave, !research.RegArmorPalII.conclave
+		Condition: Upgrade.RegArmorPalI.conclave
+	DamageMultiplier@ArmorPalI:
+		Modifier: 90
+		RequiresCondition: Critical && Upgrade.RegArmorPalI.conclave
+	GrantConditionOnPrerequisite@research.RegArmorPalII.conclave:
+		Prerequisites: research.RegArmorPalII.conclave, research.RegArmorPalIII.conclave
+		Condition: Upgrade.RegArmorPalII.conclave
+	DamageMultiplier@ArmorPalII:
+		Modifier: 80
+		RequiresCondition: damheavyspeed || Critical && Upgrade.RegArmorPalII.conclave
+	GrantConditionOnPrerequisite@research.RegArmorPalIII.conclave:
+		Prerequisites: research.RegArmorPalIII.conclave
+		Condition: Upgrade.RegArmorPalIII.conclave
+	DamageMultiplier@ArmorPalIII:
+		Modifier: 70
+		RequiresCondition: damheavyspeed || Critical && Upgrade.RegArmorPalIII.conclave
+		
+# Aspect Upgrade base
+^Aspect.Base.Conclave:
+	Inherits@Research: ^ResearchActor
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.conclave
+		BuildDurationModifier: 30
+		IconPalette: Conclave.Upgrade.Icon
+		BuildLimit: 1
+	ProvidesPrerequisite:
+	Valued:
+		Cost: 0
+	#Condition Recovery
+	ExternalCondition@RemoveBase:
+		Condition: RemoveAspect
+	KillsSelf:
+		RemoveInstead: true
+		
+^Rodeur.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Rodeur
+		RequiresCondition: RemoveAspect
+
+^Pelerin.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Pelerin
+		RequiresCondition: RemoveAspect
+		
+^Comete.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Comete
+		RequiresCondition: RemoveAspect
+		
+^Arpenteur.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Arpenteur
+		RequiresCondition: RemoveAspect
+
+^Zenith.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Zenith
+		RequiresCondition: RemoveAspect
+		
+^Quasar.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Quasar
+		RequiresCondition: RemoveAspect
+		
+^Navigator.Aspect:
+	#receipt condition
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Weapons.Navigator
+		RequiresCondition: RemoveAspect
+
+upgrade.alpha.rodeur.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Rodeur.Aspect
+	Inherits@Research.stat: ^Upgrade.PhieProwler.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: tcholotech.rodeur
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alrodeur
+	ProvidesPrerequisite@comonRodeur:
+		Prerequisite: research.Base.Rodeur.Conclave
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Rodeur.Conclave
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Rodeur, research.Omega.Rodeur.Conclave
+		Condition: RevokedRodeur
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedRodeur
+
+upgrade.omega.rodeur.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Rodeur.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaProwler.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: tcholotech.rodeur
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_omrodeur
+	ProvidesPrerequisite@comonRodeur:
+		Prerequisite: research.Base.Rodeur.Conclave
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Rodeur.Conclave
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Rodeur, research.Alpha.Rodeur.Conclave
+		Condition: RevokedRodeur
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedRodeur
+
+upgrade.alpha.pelerin.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Pelerin.Aspect
+	Inherits@Research.stat: ^Upgrade.PhiePelerin.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: tcholotech.pelerin
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alpelerin
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Pelerin.Conclave
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Pelerin, research.Omega.Pelerin.Conclave
+		Condition: RevokedPelerin
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedPelerin
+
+upgrade.omega.pelerin.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Pelerin.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaPelerin.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: tcholotech.pelerin
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_ompelerin
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Pelerin.Conclave
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Pelerin, research.Alpha.Pelerin.Conclave
+		Condition: RevokedPelerin
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedPelerin
+
+upgrade.alpha.comete.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Comete.Aspect
+	Inherits@Research.stat: ^Upgrade.PhieComete.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: tcholotech.comete
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alcomete
+	ProvidesPrerequisite@comonComete:
+		Prerequisite: research.Base.Comete.Conclave
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Comete.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Comete, research.Omega.Comete.Conclave
+		Condition: RevokedComete
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedComete
+
+upgrade.omega.comete.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Comete.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaComete.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: tcholotech.comete
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_omcomete
+	ProvidesPrerequisite@comonComete:
+		Prerequisite: research.Base.Comete.Conclave
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Comete.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Comete, research.Alpha.Comete.Conclave
+		Condition: RevokedComete
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedComete
+
+upgrade.alpha.arpenteur.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Arpenteur.Aspect
+	Inherits@Research.stat: ^Upgrade.PhieArpenteur.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: tcholotech.arpenteur
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alarpenteur
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Arpenteur.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Arpenteur, research.Omega.Arpenteur.Conclave
+		Condition: RevokedArpenteur
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedArpenteur
+
+upgrade.omega.arpenteur.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Arpenteur.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaArpenteur.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: tcholotech.arpenteur
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_omarpenteur
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Arpenteur.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Arpenteur, research.Alpha.Arpenteur.Conclave
+		Condition: RevokedArpenteur
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedArpenteur
+
+upgrade.alpha.zenith.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Zenith.Aspect
+	Inherits@Research.stat: ^Upgrade.PhieZenith.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: tcholotech.zenith
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alzenith
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Zenith.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Zenith, research.Omega.Zenith.Conclave
+		Condition: RevokedZenith
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedZenith
+
+upgrade.omega.zenith.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Zenith.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaZenith.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: tcholotech.zenith
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_omzenith
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Zenith.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Zenith, research.Alpha.Zenith.Conclave
+		Condition: RevokedZenith
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedZenith
+
+upgrade.alpha.quasar.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Quasar.Aspect
+	Inherits@Research.stat: ^Upgrade.PhieQuasar.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: tcholotech.quasar
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_alquasar
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Quasar.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Quasar, research.Omega.Quasar.Conclave
+		Condition: RevokedQuasar
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedQuasar
+
+upgrade.omega.quasar.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Quasar.Aspect
+	Inherits@Research.stat: ^Upgrade.OmegaQuasar.conclave.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: tcholotech.quasar
+		BuildLimit: 1
+	RenderSprites:
+		Image: holoup_omquasar
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Quasar.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Quasar, research.Alpha.Quasar.Conclave
+		Condition: RevokedQuasar
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedQuasar
+
+upgrade.alpha.navigator.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Navigator.Aspect
+	AlwaysVisible:
+	Tooltip:
+		Name: ...
+	Buildable:
+		BuildPaletteOrder: 40
+		Queue: Stace.conclave
+		Prerequisites: !research.Omega.Navigator.Conclave, !research.Alpha.Navigator.Conclave, tcholotech.navigator
+		Description: ...
+	Valued:
+		Cost: 100
+	RenderSprites:
+		Image: holoup_alnavigator
+	ProvidesPrerequisite:
+		Prerequisite: research.Alpha.Navigator.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Navigator, research.Omega.Navigator.Conclave
+		Condition: RevokedNavigator
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedNavigator
+
+upgrade.omega.navigator.conclave:
+	Inherits@Research: ^Aspect.Base.Conclave
+	Inherits@Research1: ^Navigator.Aspect
+	AlwaysVisible:
+	Tooltip:
+		Name: ...
+	Buildable:
+		BuildPaletteOrder: 100
+		Queue: Stace.conclave
+		Prerequisites: !research.Omega.Navigator.Conclave, !research.Navigator.Conclave, tcholotech.navigator
+		Description: ...
+	Valued:
+		Cost: 100
+	RenderSprites:
+		Image: holoup_omnavigator
+	ProvidesPrerequisite:
+		Prerequisite: research.Omega.Navigator.Conclave
+	#Condition generate to parallel aspect
+	GrantConditionOnPrerequisite@Revoked:
+		Prerequisites: Remove.Weapons.Navigator, research.Alpha.Navigator.Conclave
+		Condition: RevokedNavigator
+	KillsSelf:
+		RequiresCondition: !RemoveAspect && RevokedNavigator
+
+^BuildingGivePower.Conclave:
+	SpawnActorPower@Orbital_Stair:
+		OrderName: OrbitalStair
+		Cursor: ability
+		Actors:
+			1: star_beam
+		LifeTime: -1
+		ChargeInterval: 6000
+		Icons:
+			1: orbitalstairstrikepowericon
+		IconPalette: Conclave.Icon
+		Prerequisites:
+			1: Ion Trap X6
+		Names:
+			1: stair power
+		Descriptions:
+			1: Calls an orbital particle beam strike at the selected location.\nThe beam’s trajectory can be manually adjusted (must select the point of impact first).
+		SelectTargetSpeechNotification:
+	AirstrikePower@Conclave.eclipse.Power:
+		OrderName: Eclipse.Conclave
+		Cursor: ability
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: Ion Trap X6
+		Icons:
+			1: powereclipseconclaveicon
+		IconPalette: Conclave.Icon
+		ChargeInterval: 3750
+		Names:
+			1: Gravity Eclipse
+		Descriptions:
+			1: Calls a slow moving “shadow”.\nAny enemy units under this “shadow” have drastically reduced movement speed and view range.\nIts approach angle can be manually adjusted.
+		SelectTargetSpeechNotification:
+		IncomingSpeechNotification:
+		UnitTypes:
+			1: eclipse
+		SquadSizes:
+			1: 1
+		QuantizedFacings: 64
+		CameraActor: CAMERA
+		CameraRemoveDelay: 25
+		DisplayBeacon: False
+		BeaconPosters:
+			1: null
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
+	GrantExternalConditionPower@Pattern:
+		Icons:
+			1: powergravitconclaveicon
+		Cursor: ability
+		IconPalette: Conclave.Icon
+		Prerequisites:
+			1: Ion Trap X3
+		ChargeInterval: 2250
+		Names:
+			1: Pattern Analysis
+		Descriptions:
+			1: Select an enemy building to reveal the position of all buildings of the same type that player owns.
+		AllowMultiple: true
+		Durations:
+			1: 500
+		Conditions:
+			1: Conclave.PowerReveal
+		Dimensions:
+			1: 1,1
+		Footprints:
+			1: x
+		ValidRelationships: Enemy
+		SelectTargetSpeechNotification:
+		EndChargeSpeechNotification:
+		LaunchSpeechNotification:
+		IncomingSpeechNotification:
+		EndChargeSound:
+		OnFireSound:
+		DisplayTimerStances: Ally
+		DisplayRadarPing: True
+		PauseOnCondition: disabled
+	SpawnActorPower@Stase.Conclave:
+		OrderName: Stase.Conclave
+		Cursor: ability
+		Actors:
+			1: stase.actor
+		Prerequisites:
+			1: Ion Trap X3
+		LifeTime: 650
+		ChargeInterval: 3250
+		Icons:
+			1: bubblestaseicon
+		IconPalette: Conclave.Icon
+		StartFullyCharged: false
+		Names:
+			1: Field Stase
+		Descriptions:
+			1: Creates a stasis field that makes units inside it completely invulnerable and untargetable but also renders them unable to move or attack for a short period of time.
+		EffectImage: stase_effect
+		EffectSequence: idle
+		DeploySound: spyreveal.aud
+		SelectTargetSpeechNotification:

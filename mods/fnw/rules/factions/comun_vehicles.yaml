@@ -1,0 +1,14 @@
+bull:
+	Inherits: ^ShapeVehicleLight
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Dozer
+	Selectable:
+		Priority: 7
+		DecorationBounds: 1544, 2509, 0, -289
+	Health:
+		HP: 1000
+	RenderSprites:
+		Scale: 1.4
+	-AutoTarget:

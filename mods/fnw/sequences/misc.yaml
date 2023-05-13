@@ -1,0 +1,2905 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////// Animate Stat Unite Sequences /////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ency.tick.unite:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.order.faction:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.garm.unite:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.lyndwurm.unite:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.alliance.faction:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.federation.faction:
+	idle:
+		Filename: bits/ency_art.png
+
+encyclopedia.conclave.faction:
+	idle:
+		Filename: bits/ency_art.png
+
+
+^HeavySmokeEffect:
+	SmokeMove:
+		Filename: smoke_vehiclemove.shp
+		Length: *
+		ZOffset: -100
+		BlendMode: Additive
+
+^StatInfantryEffect:
+	AuraHeal:
+		Filename: heal_aurared.shp
+		Length: *
+		Tick: 18
+		ZOffset: -10
+		BlendMode: Additive
+	heal_effect:
+		Filename: heal_effect.shp
+		Length: *
+		Tick: 20
+		ZOffset: 1
+	heat_flame:
+		Filename: flameinf.shp
+		Length: *
+		Tick: 20
+		ZOffset: 1
+	aura_inffluence:
+		Filename: aura_inffluence.shp
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	shadow.infantry:
+		Filename: shadow_infantry.shp
+		Offset: 0, 0
+		ZOffset: -70
+		BlendMode: Subtractive
+	auracover:
+		Filename: auracover.shp
+		Length: *
+		Tick: 28
+		ZOffset: -50
+		BlendMode: Additive
+	affect.aura.federation:
+		Filename: affect_aura.shp
+		Length: *
+		Tick: 55
+		ZOffset: -40
+		BlendMode: Additive
+	aura.avatar.conclave:
+		Filename: minlight_avatar.shp
+		Length: *
+		Tick: 28
+		ZOffset: -40
+		BlendMode: Additive
+
+^StatVehicleEffect:
+	VehicleRepair:
+		Filename: repair_effet.shp
+		Length: *
+		Tick: 24
+		ZOffset: -100
+		BlendMode: Additive
+	VehicleStun:
+		Filename: stun_elect_stat_effet.shp
+		ZOffset: -100
+		BlendMode: Additive
+	shadow.small:
+		Filename: shadow_vehiclemedium.shp
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	heat_flame:
+		Filename: flame_husk.shp
+		Length: *
+		Tick: 30
+		Offset: 0, -20
+	shadow.medium:
+		Filename: shadow_vehiclelarge.shp
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	shadow.large:
+		Filename: shadow_vehiclelarge.shp
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	aura_inffluence:
+		Filename: aura_inffluence.shp
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	affect.aura.federation:
+		Filename: affect_aura.shp
+		Length: *
+		Tick: 55
+		ZOffset: -40
+		BlendMode: Additive
+	VehicleElectro:
+		Filename: small_sismic_impact.shp
+		Length: *
+		Tick: 15
+		ZOffset: -50
+		BlendMode: Additive
+	disableiem:
+		Filename: iem_stat_veh.shp
+		Length: *
+		Tick: 15
+		ZOffset: 20
+		BlendMode: Additive
+	target.blue:
+		Filename: blue_target.shp
+		Length: *
+		Tick: 45
+		ZOffset: 5
+	hover_move:
+		Filename: hovermove.shp
+		Length: *
+		ZOffset: -10
+		BlendMode: Additive
+	hover_moveLarge:
+		Filename: hovermovelarge.shp
+		Length: *
+		ZOffset: -10
+	smoke_move:
+		Filename: smoke_vehiclemove.shp
+		Length: *
+		ZOffset: -20
+	aura.avatar.conclave:
+		Filename: minlight_avatar.shp
+		Length: *
+		Tick: 28
+		ZOffset: -40
+		BlendMode: Additive
+
+^StatAircraftEffect:
+	Flak.Area:
+		Filename: flakarea.shp
+		Length: *
+		BlendMode: Additive
+	AircraftRepair:
+		Filename: repair_effet.shp
+		Length: *
+		Tick: 24
+		ZOffset: -100
+		BlendMode: Additive
+	shadow.medium:
+		Filename: shadow_vehiclemedium.shp
+		Offset: 0, 0
+		ZOffset: -50
+		BlendMode: Subtractive
+	aura_inffluence:
+		Filename: aura_inffluence.shp
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	shadow.large:
+		Filename: shadow_vehiclelarge.shp
+		Offset: 0, 0
+		ZOffset: -50
+		BlendMode: Subtractive
+
+^StatBuildingEffect:
+	disableiem:
+		Filename: iem_stat_veh.shp
+		Length: *
+		Tick: 15
+		ZOffset: 20
+		BlendMode: Additive
+	
+# /////////////////////////////////// Mine Sequences ///////////////////////////////   
+
+plasmine:
+	idle:
+		Filename: plasmine.shp
+	icon:
+		Filename: blueflameicon.shp
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# /////////////////////////////////// Explosion & Projectile Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 511
+		scale: 0.98
+	water_piffs:
+		Filename: impact_water_small.shp
+	#Building Explosion
+	builddestruc01:
+		Filename: builddestruc01.shp
+		Offset: 0, -50
+		Tick: 45
+	builddestruc02:
+		Filename: builddestruc02.shp
+		Offset: 0, -50
+		Tick: 45
+	builddestruc03:
+		Filename: builddestruc03.shp
+		Offset: 0, -50
+		Tick: 45
+	explbuilding01:
+		Filename: buildexpl01.shp
+		Tick: 65
+		Offset: 0, -20
+	explbuilding02:
+		Filename: buildexpl02.shp
+		Tick: 65
+		Offset: 0, -20
+	explbuilding03:
+		Filename: buildexpl03.shp
+		Tick: 65
+		Offset: 0, -20
+	explbuilding04:
+		Filename: buildexpl04.shp
+		Tick: 40
+		Offset: 0, -20
+	explbuilding05:
+		Filename: buildexpl05.shp
+		Tick: 45
+		Offset: 0, -20
+	smoke_gaz:
+		Filename: smoke_gaz.shp
+		Offset: 0, -20
+	bomb_expl01:
+		Filename: bomb_expl01.shp
+		Offset: 0, -20
+	bomb_expl02:
+		Filename: bomb_expl02.shp
+		Offset: 0, -20
+	bomb_expl03:
+		Filename: bomb_expl03.shp
+		Offset: 0, -20
+	balisimpact01:
+		Filename: balisimpact01.shp
+		Offset: 0, -24
+	balisimpact02:
+		Filename: balisimpact02.shp
+		Offset: 0, -24
+	balisimpact03:
+		Filename: balisimpact03.shp
+		Offset: 0, -24
+	balisimpact04:
+		Filename: balisimpact04.shp
+		Offset: 0, -24
+	balisimpact05:
+		Filename: balisimpact05.shp
+		Offset: 0, -24
+	balisimpact06:
+		Filename: balisimpact06.shp
+		Offset: 0, -24
+	balisimpact07:
+		Filename: balisimpact07.shp
+		Offset: 0, -24
+	#Unite "Small" Impact
+	piff:
+		Filename: piff.shp
+		BlendMode: Additive
+	piffs:
+		Filename: impact_balist_small.shp
+	shockwave_min:
+		Filename: shockwave_min.shp
+		BlendMode: Additive
+		Offset: 0, -24
+		Tick: 15
+	shockwave_medium:
+		Filename: shockwave_medium.shp
+		BlendMode: Additive
+		Offset: 0, -24
+		Tick: 15
+	shockwave_large:
+		Filename: shockwave_large.shp
+		BlendMode: Additive
+		Offset: 0, -24
+		Tick: 15
+	shockwave_large_temp:
+		Filename: shockwave_large_temp.shp
+		BlendMode: Additive
+		Offset: 0, -24
+		Tick: 15
+	#Unite "Medium" Impact
+	autogun_expl:
+		Filename: autogun_expl.shp
+		BlendMode: Additive
+	minigun_impact:
+		Filename: minigun_impact.shp
+		BlendMode: Additive
+	impact_flashspeedmin01:
+		Filename: impact_flashmin01.shp
+		BlendMode: Additive
+		Tick: 4
+	impact_flashspeedmin02:
+		Filename: impact_flashmin02.shp
+		BlendMode: Additive
+		Tick: 4
+	impact_flashspeedmin03:
+		Filename: impact_flashmin03.shp
+		BlendMode: Additive
+		Tick: 4
+	impact_flashmin01:
+		Filename: impact_flashmin01.shp
+		BlendMode: Additive
+		Tick: 8
+	impact_flashmin02:
+		Filename: impact_flashmin02.shp
+		BlendMode: Additive
+		Tick: 8
+	impact_flashmin03:
+		Filename: impact_flashmin03.shp
+		BlendMode: Additive
+		Tick: 8
+	impact_flashlarge01:
+		Filename: impact_flashlarge01.shp
+		BlendMode: Additive
+		Tick: 10
+	impact_flashlarge02:
+		Filename: impact_flashlarge02.shp
+		BlendMode: Additive
+		Tick: 10
+	impact_flashlarge03:
+		Filename: impact_flashlarge03.shp
+		BlendMode: Additive
+		Tick: 10
+	#Unite "Sabot" Impact
+	apo_expl:
+		Filename: apo_expl.shp
+		Offset: 0, -20
+		BlendMode: Additive
+	arty_massexpl01:
+		Filename: arty_massexpl01.shp
+		Offset: 0, 0
+	arty_massexpl02:
+		Filename: arty_massexpl02.shp
+		Offset: 0, 0
+	arty_massexpl03:
+		Filename: arty_massexpl03.shp
+		Offset: 0, 0
+	apo_expl01:
+		Filename: apo_expl01.shp
+		Offset: 0, -50
+		BlendMode: Additive
+	apo_expl02:
+		Filename: apo_expl02.shp
+		Offset: 0, -50
+		BlendMode: Additive
+	apo_expl03:
+		Filename: apo_expl03.shp
+		Offset: 0, -50
+		BlendMode: Additive
+	flak_expl01:
+		Filename: flak_expl01.shp
+		BlendMode: Additive
+	flak_expl02:
+		Filename: flak_expl02.shp
+		BlendMode: Additive
+	flak_expl03:
+		Filename: flak_expl03.shp
+		BlendMode: Additive
+	flak_expl04:
+		Filename: flak_expl04.shp
+		BlendMode: Additive
+	obus_ballexpl:
+		Filename: obus_ballexpl.shp
+		BlendMode: Additive
+	obus_expl01:
+		Filename: obus_expl01.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	obus_expl02:
+		Filename: obus_expl02.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	obus_expl03:
+		Filename: obus_expl03.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	obus_smoke01:
+		Filename: obus_smoke01.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	obus_smoke02:
+		Filename: obus_smoke02.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	obus_smoke03:
+		Filename: obus_smoke03.shp
+		BlendMode: Additive
+		Offset: 0, -35
+	heavysmoke_damage01:
+		Filename: damage_smokelarge01.shp
+		Offset: 0, -40
+		BlendMode: Subtractive
+	heavysmoke_damage02:
+		Filename: damage_smokelarge02.shp
+		Offset: 0, -40
+		BlendMode: Subtractive
+	heavysmoke_damage03:
+		Filename: damage_smokelarge03.shp
+		Offset: 0, -40
+		BlendMode: Subtractive
+	clusterimpact01:
+		Filename: clusterimpact01.shp
+		BlendMode: Additive
+		Tick: 15
+		Offset: 0, -10
+	clusterimpact02:
+		Filename: clusterimpact02.shp
+		BlendMode: Additive
+		Tick: 15
+		Offset: 0, -10
+	clusterimpact03:
+		Filename: clusterimpact03.shp
+		BlendMode: Additive
+		Tick: 15
+		Offset: 0, -10
+	clusterimpact04:
+		Filename: clusterimpact04.shp
+		BlendMode: Additive
+		Tick: 15
+		Offset: 0, -10
+	trail_smoke01:
+		Filename: trail_smoke01.shp
+		BlendMode: Additive
+	trail_smoke02:
+		Filename: trail_smoke02.shp
+	trail_smoke03:
+		Filename: trail_smoke03.shp
+		BlendMode: Additive
+	trail_smokemin01:
+		Filename: trail_smokemin01.shp
+		BlendMode: Additive
+	trail_smokemin02:
+		Filename: trail_smokemin02.shp
+		BlendMode: Additive
+	trail_smokemin03:
+		Filename: trail_smokemin03.shp
+		BlendMode: Additive
+	#Smoke damage effet:
+	artyshocksmoke_large:
+		Filename: artyshocksmoke_large.shp
+		BlendMode: Additive
+	artyshocksmoke_min:
+		Filename: artyshocksmoke_min.shp
+		BlendMode: Additive
+	shock_smokelarge01:
+		Filename: shock_smokelarge01.shp
+	shock_smokelarge02:
+		Filename: shock_smokelarge02.shp
+	shock_smokelarge03:
+		Filename: shock_smokelarge03.shp
+	shock_smokemin01:
+		Filename: shock_smokemin01.shp
+		Tick: 10
+	shock_smokemin02:
+		Filename: shock_smokemin02.shp
+		Tick: 10
+	shock_smokemin03:
+		Filename: shock_smokemin03.shp
+		Tick: 10
+	smoke_damage01:
+		Filename: damage_smokelarge01.shp
+		Offset: 0, -40
+	smoke_damage02:
+		Filename: damage_smokelarge02.shp
+		Offset: 0, -40
+	smoke_damage03:
+		Filename: damage_smokelarge03.shp
+		Offset: 0, -40
+	smoke_damage04:
+		Filename: damage_smokelarge04.shp
+		Offset: 0, -40
+	large_bomb_expl01:
+		Filename: large_bomb_expl01.shp
+		Offset: 0, -40
+	large_bomb_expl02:
+		Filename: large_bomb_expl02.shp
+		Offset: 0, -40
+	large_bomb_expl03:
+		Filename: large_bomb_expl03.shp
+		Offset: 0, -40
+	bomb_pulse01:
+		Filename: bomb_pulse01.shp
+		BlendMode: Additive
+	mediumexplimpact01:
+		Filename: mediumexplimpact01.shp
+		BlendMode: Additive
+		Tick: 21
+	mediumexplimpact02:
+		Filename: mediumexplimpact02.shp
+		BlendMode: Additive
+		Tick: 28
+	mediumexplimpact03:
+		Filename: mediumexplimpact03.shp
+		BlendMode: Additive
+	flakimpact01:
+		Filename: flakimpact01.shp
+		BlendMode: Additive
+		Tick: 21
+	flakimpact02:
+		Filename: flakimpact02.shp
+		BlendMode: Additive
+		Tick: 28
+	flakimpact03:
+		Filename: flakimpact03.shp
+		BlendMode: Additive
+	flakimpactmin01:
+		Filename: flakimpactmin01.shp
+		BlendMode: Additive
+		Tick: 21
+	flakimpactmin02:
+		Filename: flakimpactmin02.shp
+		BlendMode: Additive
+		Tick: 28
+	flakimpactmin03:
+		Filename: flakimpactmin03.shp
+		BlendMode: Additive
+	flame_impact01:
+		Filename: flame_impact01.shp
+		BlendMode: Additive
+	flame_impact02:
+		Filename: flame_impact02.shp
+		BlendMode: Additive
+	flame_impact03:
+		Filename: flame_impact03.shp
+		BlendMode: Additive
+	expl_tank01:
+		Filename: expl_tank01.shp
+		Offset: 0, -20
+	expl_tank02:
+		Filename: expl_tank02.shp
+		Offset: 0, -20
+	expl_tank03:
+		Filename: expl_tank03.shp
+		Offset: 0, -20
+	# Rocket Explosion
+	exlp_rocket01:
+		Filename: exlp_rocket01.shp
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket02:
+		Filename: exlp_rocket02.shp
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket03:
+		Filename: exlp_rocket03.shp
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket01_shad:
+		Filename: exlp_rocket01.shp
+		BlendMode: Subtractive
+		ZOffset: -50
+		Tick: 24
+	exlp_rocket02_shad:
+		Filename: exlp_rocket02.shp
+		BlendMode: Subtractive
+		ZOffset: -50
+		Tick: 24
+	exlp_rocket03_shad:
+		Filename: exlp_rocket03.shp
+		BlendMode: Subtractive
+		ZOffset: -50
+		Tick: 24
+	# Shade Smoke Weapon Animation
+	shad_smoke01:
+		Filename: shad_smoke01.shp
+		BlendMode: Subtractive
+		Tick: 14
+		ZOffset: -50
+	shad_arty_largesmoke01:
+		Filename: shad_arty_largesmoke01.shp
+		BlendMode: Subtractive
+		Tick: 32
+		ZOffset: -50
+	shad_arty_largesmoke02:
+		Filename: shad_arty_largesmoke02.shp
+		BlendMode: Subtractive
+		Tick: 32
+		ZOffset: -50
+	shad_medium_smoke01:
+		Filename: shad_arty_largesmoke01.shp
+		Scale: 0.50
+		BlendMode: Subtractive
+		Tick: 12
+		ZOffset: -50
+	shad_medium_smoke02:
+		Filename: shad_arty_largesmoke02.shp
+		Scale: 0.50
+		BlendMode: Subtractive
+		Tick: 12
+		ZOffset: -50
+	# Rocket Plasma upgrade Explosion
+	exlp_plasmarocket01:
+		Filename: exlp_plasmarocket01.shp
+		BlendMode: Additive
+		Tick: 12
+	exlp_plasmarocket02:
+		Filename: exlp_plasmarocket02.shp
+		BlendMode: Additive
+		Tick: 12
+	exlp_plasmarocket03:
+		Filename: exlp_plasmarocket03.shp
+		BlendMode: Additive
+		Tick: 12
+	#Unite "ballistique" Explosion
+	blast_expl:
+		Filename: blast_expl.shp
+	frag_expl:
+		Filename: frag_expl.shp
+		BlendMode: Additive
+	thermoexpl:
+		Filename: thermoexpl.shp
+		Offset: 0, -30
+		BlendMode: Additive
+	doomexpl75:
+		Filename: doomexpl75.shp
+		BlendMode: Additive
+	grenade_expl:
+		Filename: grenade_expl.shp
+		BlendMode: Additive
+	impact_balist_medium:
+		Filename: impact_balist_medium.shp
+		BlendMode: Additive
+	smoke_bigexpl:
+		Filename: smoke_bigexpl.shp
+	souffle:
+		Filename: souffle.shp
+	target.impact:
+		Filename: blue_target.shp
+		BlendMode: Additive
+		Length: *
+		Tick: 25
+		ZOffset: 5
+	# Note: ratatosk seulement
+	impact_balist_large:
+		Filename: impact_balist_large.shp
+		BlendMode: Additive
+	#Unite Flamme Impact
+	burnimpact:
+		Filename: burnimpact.shp
+	burning:
+		Filename: flame_husk.shp
+		Length: *
+		Tick: 30
+		Offset: 0, -20
+	burn_flam:
+		Filename: burn_flam.shp
+		BlendMode: Additive
+	fire_incinerator:
+		Filename: fire_incinerator.shp
+	napalmhydraexpl:
+		Filename: napalmhydraexpl.shp
+		BlendMode: Additive
+	flamezoneres01:
+		Filename: flamezoneres01.shp
+		BlendMode: Additive
+	flamezoneres02:
+		Filename: flamezoneres02.shp
+		BlendMode: Additive
+	flamezoneres03:
+		Filename: flamezoneres03.shp
+		BlendMode: Additive
+	expl_balistzone01:
+		Filename: expl_balistzone01.shp
+		BlendMode: Additive
+	expl_balistzone02:
+		Filename: expl_balistzone02.shp
+		BlendMode: Additive
+	expl_balistzone03:
+		Filename: expl_balistzone03.shp
+		BlendMode: Additive
+	#Unite Electric Impact
+	small_sismic_impact:
+		Filename: small_sismic_impact.shp
+	normal_sismic_impact:
+		Filename: normal_sismic_impact.shp
+	electric_residual01:
+		Filename: electric_residual01.shp
+		Tick: 34
+		Offset: 0, -20
+		BlendMode: Additive
+	electric_residual02:
+		Filename: electric_residual02.shp
+		Tick: 36
+		Offset: 0, -20
+		BlendMode: Additive
+	electric_residual03:
+		Filename: electric_residual03.shp
+		Tick: 30
+		Offset: 0, -20
+		BlendMode: Additive
+	electric_residual04:
+		Filename: electric_residual01.shp
+		Tick: 35
+		Offset: 0, -20
+		BlendMode: Additive
+	electric_residual05:
+		Filename: electric_residual02.shp
+		Tick: 40
+		Offset: 0, -20
+		BlendMode: Additive
+	electric_residual06:
+		Filename: electric_residual03.shp
+		Tick: 45
+		Offset: 0, -20
+		BlendMode: Additive
+	absorbimpact01:
+		Filename: absorbimpact01.shp
+		Tick: 22
+		BlendMode: Additive
+	absorbimpact02:
+		Filename: absorbimpact02.shp
+		BlendMode: Additive
+	absorbimpact03:
+		Filename: absorbimpact03.shp
+		Tick: 29
+		BlendMode: Additive
+	zapimpactmin:
+		Filename: zapimpactmin.shp
+		BlendMode: Additive
+	railcharge01:
+		Filename: railcharge01.shp
+		BlendMode: Additive
+	railbomb_expl01:
+		Filename: railbomb_expl01.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	railbomb_expl02:
+		Filename: railbomb_expl02.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	railbomb_expl03:
+		Filename: railbomb_expl03.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	railbomb_explmin01:
+		Filename: railbomb_explmin01.shp
+		BlendMode: Additive
+		Offset: 0, -20
+	railbomb_explmin02:
+		Filename: railbomb_explmin02.shp
+		BlendMode: Additive
+		Offset: 0, -20
+	railbomb_explmin03:
+		Filename: railbomb_explmin03.shp
+		BlendMode: Additive
+		Offset: 0, -20
+	railgun_trailshot01:
+		Filename: railgun_trailshot01.shp
+		BlendMode: Additive
+		Offset: 0, -5
+	railgun_trailshot02:
+		Filename: railgun_trailshot02.shp
+		BlendMode: Additive
+		Offset: 0, -5
+	railgun_trailshot03:
+		Filename: railgun_trailshot03.shp
+		BlendMode: Additive
+		Offset: 0, -5
+	zapimpact:
+		Filename: zapimpact.shp
+		BlendMode: Additive
+	laser_spark01:
+		Filename: laser_spark01.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	laser_spark02:
+		Filename: laser_spark02.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	laser_spark03:
+		Filename: laser_spark03.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	expl_railgun01:
+		Filename: expl_railgun01.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	expl_railgun02:
+		Filename: expl_railgun02.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	expl_railgun03:
+		Filename: expl_railgun03.shp
+		BlendMode: Additive
+		Offset: 0, -25
+	aircraft_blastexpl01:
+		Filename: aircraft_blastexpl01.shp
+		BlendMode: Additive
+	aircraft_blastexpl02:
+		Filename: aircraft_blastexpl02.shp
+		BlendMode: Additive
+	#Unite Ion Impact
+	orbital_strike:
+		Filename: orbital_strike.shp
+		BlendMode: Additive
+		Tick: 25
+		Offset: 0, -250
+	orbital_strikemin:
+		Filename: orbital_strikemin.shp
+		BlendMode: Additive
+		Tick: 25
+		Offset: 0, -250
+	ion_expl:
+		Filename: ion_expl.shp
+	ionlaser_impact01:
+		Filename: ionlaser_impact01.shp
+		BlendMode: Additive
+	ionlaser_impact02:
+		Filename: ionlaser_impact02.shp
+		BlendMode: Additive
+	ionlaser_impact03:
+		Filename: ionlaser_impact03.shp
+		BlendMode: Additive
+	impact_particle01:
+		Filename: impact_particle01.shp
+		BlendMode: Additive
+	impact_particle02:
+		Filename: impact_particle02.shp
+		BlendMode: Additive
+	impact_particle03:
+		Filename: impact_particle03.shp
+		BlendMode: Additive
+	ion_impact01:
+		Filename: ion_impact01.shp
+		BlendMode: Additive
+	ion_impact02:
+		Filename: ion_impact02.shp
+		Tick: 30
+		BlendMode: Additive
+	ion_impact03:
+		Filename: ion_impact03.shp
+		Tick: 28
+		BlendMode: Additive
+	#Unite Plasma Impact
+	unit_expl01:
+		Filename: unit_expl01.shp
+		BlendMode: Additive
+	unit_expl02:
+		Filename: unit_expl02.shp
+		BlendMode: Additive
+	navig_expl01:
+		Filename: navig_expl01.shp
+		BlendMode: Additive
+	navig_expl02:
+		Filename: navig_expl02.shp
+		BlendMode: Additive
+	navig_expl03:
+		Filename: navig_expl03.shp
+		BlendMode: Additive
+	plasma_expl01min:
+		Filename: plasma_expl01min.shp
+		BlendMode: Additive
+		Offset: 0, -15
+	plasma_expl02min:
+		Filename: plasma_expl02min.shp
+		BlendMode: Additive
+		Offset: 0, -15
+	plasma_expl03min:
+		Filename: plasma_expl03min.shp
+		BlendMode: Additive
+		Offset: 0, -15
+	plasma_expl01:
+		Filename: plasma_expl01.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	plasma_expl02:
+		Filename: plasma_expl02.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	plasma_expl03:
+		Filename: plasma_expl03.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	plasma_explmin01:
+		Filename: plasma_expl01.shp
+		BlendMode: Additive
+		Offset: 0, -45
+		Scale: 0.55
+	plasma_explmin02:
+		Filename: plasma_expl02.shp
+		BlendMode: Additive
+		Offset: 0, -45
+		Scale: 0.55
+	plasma_explmin03:
+		Filename: plasma_expl03.shp
+		BlendMode: Additive
+		Offset: 0, -45
+		Scale: 0.55
+	nimnukeimpact01:
+		Filename: nimnukeimpact01.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	nimnukeimpact02:
+		Filename: nimnukeimpact02.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	nimnukeimpact03:
+		Filename: nimnukeimpact03.shp
+		BlendMode: Additive
+		Offset: 0, -45
+	plasma_pulseminex2:
+		Filename: plasma_pulseminex2.shp
+		BlendMode: Additive
+	plasma_pulseminx2:
+		Filename: plasma_pulseminx2.shp
+		BlendMode: Additive
+	plasma_impact:
+		Filename: plasma_impact.shp
+		BlendMode: Additive
+	bigplasma_impact:
+		Filename: bigplasma_impact.shp
+		BlendMode: Screen
+		Tick: 65
+	bigplasma_expl:
+		Filename: bigplasma_expl.shp
+		BlendMode: Screen
+	sonic_impact:
+		Filename: sonic_impact.shp
+		BlendMode: Additive
+		Tick: 20
+	#Unite Conclave blue Effect Weapons
+	photo_expl:
+		Filename: photo_expl.shp
+		BlendMode: Additive
+	quasarshotmin:
+		Filename: quasarshotmin.shp
+		BlendMode: Additive
+	quasarshotmax:
+		Filename: quasarshotmax.shp
+		BlendMode: Additive
+	phierodeurimpact01:
+		Filename: phierodeurimpact01.shp
+		BlendMode: Additive
+	phierodeurimpact02:
+		Filename: phierodeurimpact02.shp
+		BlendMode: Additive
+	phierodeurimpact03:
+		Filename: phierodeurimpact03.shp
+		BlendMode: Additive
+	phase_expl01:
+		Filename: phase_expl01.shp
+		BlendMode: Additive
+	phase_expl02:
+		Filename: phase_expl02.shp
+		BlendMode: Additive
+	phase_expl03:
+		Filename: phase_expl03.shp
+		BlendMode: Additive
+	#Impact Air Weapons Balistic
+	air_expl01:
+		Filename: air_expl01.shp
+	air_expl02:
+		Filename: air_expl02.shp
+	air_expl03:
+		Filename: air_expl03.shp
+	air_impact:
+		Filename: air_impact.shp
+		Offset: 0, -30
+		BlendMode: Additive
+	#Light Effect Weapons
+	baselight:
+		Filename: baselight.shp
+		BlendMode: Additive
+	baselightcub:
+		Filename: baselightcub.shp
+		BlendMode: Additive
+	minbaselightcub:
+		Filename: minbaselightcub.shp
+		BlendMode: Additive
+	mediumlight:
+		Filename: mediumlight.shp
+		BlendMode: Additive
+	light_bot:
+		Filename: light_bot.shp
+		BlendMode: Additive
+	light_projup:
+		Filename: light_projup.shp
+		BlendMode: Additive
+	lens_flare_light01:
+		Filename: lens_flare_light01.shp
+		BlendMode: Additive
+	#Smoke Effect Weapons
+	smokehusk:
+		Filename: smokehusk.shp
+	obus_smokeexpl:
+		Filename: obus_smokeexpl.shp
+		BlendMode: Additive
+		Tick: 85
+	ring_pulse:
+		Filename: ring_pulse.shp
+		BlendMode: Additive
+	ring_pulsemin:
+		Filename: ring_pulsemin.shp
+		BlendMode: Additive
+	ring_pulsemedium:
+		Filename: ring_pulsemedium.shp
+		BlendMode: Additive
+	grav_impact:
+		Filename: grav_impact.shp
+		BlendMode: Additive
+	punch_massive:
+		Filename: punch_massive.shp
+		BlendMode: Additive
+		Offset: 0, -10
+		Tick: 85
+	#Superweapons Impact
+	emporbital:
+		Filename: emporbital.shp
+		Tick: 32
+		Offset: 0, -230
+		BlendMode: Additive
+	orbital_strikeexpl:
+		Filename: orbital_strikeexpl.shp
+		Tick: 32
+		Offset: 0, -100
+		BlendMode: Additive
+	ragnarok_plasmaimpact:
+		Filename: ragnarok_plasmaimpact.shp
+		BlendMode: Additive
+	ragnarok_plasmaaura:
+		Filename: ragnarok_plasmaaura.shp
+		BlendMode: Additive
+	nuke_impact:
+		Filename: nuke_impact.shp
+		Offset: 0, -160
+		Tick: 25
+		BlendMode: Additive
+	nuke_impactmin:
+		Filename: nuke_impactmin.shp
+		Offset: 0, -60
+		Tick: 40
+		BlendMode: Additive
+	shake_effectbase:
+		Filename: shake_effectbase.shp
+		Tick: 85
+		BlendMode: Additive
+	shake_effectshade:
+		Filename: shake_effectbase.shp
+		Tick: 125
+		BlendMode: Subtractive
+	nuke_lens:
+		Filename: nuke_lens.shp
+		Tick: 65
+		BlendMode: Additive
+	nuke_lensmin:
+		Filename: nuke_lensmin.shp
+		Tick: 35
+		BlendMode: Additive
+	blast_nuke:
+		Filename: blast_nuke.shp
+		Tick: 55
+		BlendMode: Additive
+	nuke_strikeaa_base:
+		Filename: nuke_strikeaa.shp
+		BlendMode: Additive
+		Tick: 20
+		Offset: 0, -180
+	nuke_strikeaa_shade:
+		Filename: nuke_strikeaa.shp
+		BlendMode: Subtractive
+		Tick: 20
+		Offset: 0, 0
+	nuke_shake_power_base:
+		Filename: nuke_shake_power.shp
+		Tick: 70
+		BlendMode: Additive
+	nuke_shake_power_shade:
+		Filename: nuke_shake_power.shp
+		Tick: 70
+		Offset: 0, 10
+		BlendMode: Subtractive
+	#Water Impact Weapons
+	impact_water_small:
+		Filename: impact_water_small.shp
+		BlendMode: Additive
+	impact_water_medium:
+		Filename: impact_water_medium.shp
+		BlendMode: Additive
+	impact_water_large:
+		Filename: impact_water_large.shp
+		BlendMode: Additive
+	#Other Weapons Impact
+	matter_expl:
+		Filename: matter_expl.shp
+		BlendMode: Additive
+		Tick: 50
+	matter_explmin:
+		Filename: matter_explmin.shp
+		BlendMode: Additive
+	emp_impact:
+		Filename: emp_impact.shp
+		BlendMode: Additive
+	mininuke_impact:
+		Filename: mininuke_impact.shp
+		BlendMode: Additive
+		Offset: 0, -40
+		Tick: 50
+	doomtowershield:
+		Filename: doomtowershield.shp
+		BlendMode: Additive
+	doomtowerelectro:
+		Filename: doomtowerelectro.shp
+		BlendMode: Additive
+	#No classed
+	debrisexplode:
+		Filename: debrisexplode.shp
+		BlendMode: Additive
+	laserimpact:
+		Filename: laserimpact.shp
+		BlendMode: Additive
+	mantis_explo:
+		Filename: mantis_explo.shp
+		BlendMode: Additive
+	eplosionfire01:
+		Filename: eplosionfire01.shp
+	fusionimpactfire:
+		Filename: fusionimpactfire.shp
+		BlendMode: Additive
+	zenithimpact:
+		Filename: zenithimpact.shp
+		BlendMode: Additive
+		
+smoke:
+	single_smoke_medium01:
+		Filename: single_smoke_medium01.shp
+		BlendMode: Translucent
+		ZOffset: 25
+	single_smoke_medium02:
+		Filename: single_smoke_medium02.shp
+		BlendMode: Translucent
+		ZOffset: 25
+	single_smoke_medium03:
+		Filename: single_smoke_medium03.shp
+		BlendMode: Translucent
+		ZOffset: 25
+	single_smoke_darkmedium01:
+		Filename: single_smoke_medium01.shp
+		BlendMode: Subtractive
+		ZOffset: 10
+	single_smoke_darkmedium02:
+		Filename: single_smoke_medium02.shp
+		BlendMode: Subtractive
+		ZOffset: 10
+	single_smoke_darkmedium03:
+		Filename: single_smoke_medium03.shp
+		BlendMode: Subtractive
+		ZOffset: 10
+		
+
+
+particles:
+	largesmoke.cruiser:
+		Filename: trail_smoke01.shp
+		Length: *
+		Tick: 10
+	largesmoke:
+		Filename: trail_smokemin01.shp
+		Length: *
+		Tick: 40
+	smallsmoke:
+		Filename: trail_smoke02.shp
+		Length: *
+		Tick: 10
+	fire:
+		Filename: flame_husk.shp
+		Length: *
+
+120mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: 120mm.shp
+	
+120mmplasma:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: 120mmplasma.shp
+
+80mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: 80mm.shp
+	
+spike_proj:
+	Defaults:
+		Filename: spike_proj.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+
+20mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: 20mm.shp
+	
+graviton_ball:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+		Filename: navig_ball.shp
+
+jotunballmode:
+	idle:
+		Filename: jotunballmode.shp
+		Length: *
+		BlendMode: Additive
+
+gaussringmin:
+	idle:
+		Filename: gaussringmin.shp
+		Length: 35
+		BlendMode: Additive
+		
+quasarballgun:
+	idle:
+		Filename: charge_ballquasargun.shp
+		Start: 39
+		Length: 10
+		Scale: 0.60
+		BlendMode: Additive
+
+gaussringminx2:
+	idle:
+		Filename: gaussringminx2.shp
+		Length: 35
+		BlendMode: Additive
+		
+railgun_spark:
+	idle:
+		Filename: muzzle_railgunmin.shp
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+		
+smoke_missile:
+	idle:
+		Filename: smoke_missile.shp
+		Length: 25
+		BlendMode: Additive
+		
+smoke_missile_large:
+	idle:
+		Filename: smoke_missile_large.shp
+		Length: *
+		BlendMode: Additive
+	idle2:
+		Filename: smoke_missile_large2.shp
+		Length: *
+		BlendMode: Screen
+	idle3:
+		Filename: smoke_missile_large3.shp
+		Length: *
+		BlendMode: Screen
+		
+smoke_missile_min:
+	idle:
+		Filename: smoke_missile_min1.shp
+		Length: *
+		Tick: 15
+		BlendMode: Screen
+	idle2:
+		Filename: smoke_missile_min1.shp
+		Length: *
+		Tick: 15
+		BlendMode: Screen
+	idle3:
+		Filename: smoke_missile_min1.shp
+		Length: *
+		Tick: 15
+		BlendMode: Screen
+
+largesmoke:
+	idle:
+		Filename: largesmoke.shp
+		Length: *
+		
+trail_smokemin03:
+	idle:
+		Filename: trail_smokemin03.shp
+		Length: *
+		BlendMode: Additive
+
+midsmoke:
+	idle:
+		Filename: midsmoke.shp
+		Length: *
+
+minsmoke:
+	idle:
+		Filename: minsmoke.shp
+		Length: *
+		
+smoke_gaz:
+	idle:
+		Filename: smoke_gaz.shp
+		Tick: 30
+		Length: *
+
+redalliance_smoke:
+	smoke_ar01:
+		Filename: smoke_ar01.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar02:
+		Filename: smoke_ar02.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar03:
+		Filename: smoke_ar03.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar01min:
+		Filename: smoke_ar01min.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar02min:
+		Filename: smoke_ar02min.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar03min:
+		Filename: smoke_ar03min.shp
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+
+damage_smoke.min:
+	smoke_damage01:
+		Filename: damage_smokemin01.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	smoke_damage02:
+		Filename: damage_smokemin01.shp
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	smoke_damage03:
+		Filename: damage_smokemin01.shp
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+	smoke_damage04:
+		Filename: damage_smokemin01.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+		
+damage_smoke.large:
+	smoke_damage01:
+		Filename: damage_smokeLarge01.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -15
+	smoke_damage02:
+		Filename: damage_smokeLarge02.shp
+		Tick: 32
+		Length: *
+		Offset: 0, -15
+	smoke_damage03:
+		Filename: damage_smokeLarge03.shp
+		Tick: 28
+		Length: *
+		Offset: 0, -15
+	smoke_damage04:
+		Filename: damage_smokeLarge04.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -15
+		
+smoke_movemin:
+	smoke_movemin01:
+		Filename: smoke_movemin01.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	smoke_movemin02:
+		Filename: smoke_movemin02.shp
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	smoke_movemin03:
+		Filename: smoke_movemin03.shp
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+	smoke_movemin04:
+		Filename: smoke_movemin04.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+
+smoke_moveminspeed:
+	smoke_movemin01:
+		Filename: smoke_movemin01.shp
+		Tick: 20
+		Length: *
+		Offset: 0, -12
+	smoke_movemin02:
+		Filename: smoke_movemin02.shp
+		Tick: 18
+		Length: *
+		Offset: 0, -12
+	smoke_movemin03:
+		Filename: smoke_movemin03.shp
+		Tick: 16
+		Length: *
+		Offset: 0, -12
+	smoke_movemin04:
+		Filename: smoke_movemin04.shp
+		Tick: 19
+		Length: *
+		Offset: 0, -12
+		
+		
+smoke_movelarge:
+	smoke_movelarge01:
+		Filename: smoke_movelarge01.shp
+		Tick: 45
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge02:
+		Filename: smoke_movelarge02.shp
+		Tick: 46
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge03:
+		Filename: smoke_movelarge03.shp
+		Tick: 45
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge04:
+		Filename: smoke_movelarge04.shp
+		Tick: 42
+		Length: *
+		Offset: 0, -16
+		
+flametank:
+	idle:
+		Filename: flametank.shp
+
+scorch_flamming:
+	idle01:
+		Filename: terrain_flamming01.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	idle02:
+		Filename: terrain_flamming02.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	idle03:
+		Filename: terrain_flamming03.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	
+smudge_smoke:
+	idle01:
+		Filename: terrain_smoke01.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	idle02:
+		Filename: terrain_smoke02.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	idle03:
+		Filename: terrain_smoke03.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+	idle04:
+		Filename: terrain_smoke04.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 80
+
+smoke_walkerlarge:
+	walk_smoke01:
+		Filename: walk_smoke01.shp
+		Tick: 45
+		Length: *
+		Offset: 0, -5
+	walk_smoke02:
+		Filename: walk_smoke02.shp
+		Tick: 42
+		Length: *
+		Offset: 0, -5
+	walk_smoke03:
+		Filename: walk_smoke03.shp
+		Tick: 45
+		Length: *
+		Offset: 0, -5
+		
+		
+move_smoke.burning:
+	move_burning01:
+		Filename: expl_tank01.shp
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	move_burning02:
+		Filename: expl_tank02.shp
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	move_burning03:
+		Filename: expl_tank03.shp
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+
+smoke_hovermove:
+	smoke_hovermove02:
+		Filename: smoke_hovermove02.shp
+		Tick: 45
+		Length: *
+		BlendMode: Additive
+	smoke_hovermove03:
+		Filename: smoke_hovermove03.shp
+		Tick: 46
+		Length: *
+		BlendMode: Additive
+	smoke_hovermove04:
+		Filename: smoke_hovermove04.shp
+		Tick: 45
+		Length: *
+		BlendMode: Additive
+		
+spark_effect:
+	spark_husk01:
+		Filename: shake_gerseyflame01.shp
+		Tick: 24
+		Length: *
+		BlendMode: Additive
+	spark_husk02:
+		Filename: shake_gerseyflame02.shp
+		Tick: 24
+		Length: *
+		BlendMode: Additive
+	spark_husk03:
+		Filename: shake_gerseyflame01.shp
+		Tick: 15
+		Length: *
+		BlendMode: Additive
+		
+warp_portail:
+	idle:
+		Filename: warp_weapon.shp
+		Length: *
+		
+zenithball:
+	idle:
+		Filename: zenithball.shp
+		Length: *
+		Tick: 15
+		BlendMode: Additive
+
+plasma_ball:
+	idle:
+		Filename: plasma_ball.shp
+		Length: 17
+		Tick: 80
+		BlendMode: Additive
+		
+photo_ball:
+	idle:
+		Filename: photo_ball.shp
+		Length: *
+		Tick: 20
+		BlendMode: Additive
+		
+photo_balltrail:
+	idle:
+		Filename: muzzle_bluegun.shp
+		Length: *
+		Tick: 8
+		BlendMode: Additive
+
+plasma_ballmin:
+	idle:
+		Filename: plasma_ballmin.shp
+		Length: 17
+		Tick: 80
+		BlendMode: Additive
+
+plasma_expl01:
+	idle:
+		Filename: plasma_expl01.shp
+		Length: 16
+		Tick: 90
+		BlendMode: Additive
+
+plasma_pulseminx2:
+	idle:
+		Filename: plasma_pulseminx2.shp
+		Length: 17
+		Tick: 35
+		BlendMode: Additive
+
+plasmaarty.ball:
+	idle:
+		Filename: plasma_ballmin.shp
+		Start: 0
+		Length: 1
+		BlendMode: Additive
+
+matter_bullet:
+	idle:
+		Filename: matter_bullet.shp
+		Length: *
+		BlendMode: Additive
+		
+matter_bullet02:
+	idle:
+		Filename: matter_bullet02.shp
+		Length: *
+		BlendMode: Additive
+
+quasarshotmin:
+	idle:
+		Filename: quasarshotmin.shp
+		Length: *
+		BlendMode: Additive
+		
+plasma_projectile:
+	idle:
+		Filename: plasma_projectile.shp
+		Length: *
+		BlendMode: Additive
+		
+plasma_jotun:
+	idle:
+		Filename: plasma_projectile.shp
+		Length: *
+		BlendMode: Additive
+		Scale: 0.55
+		
+smoke_plasmamin:
+	idle:
+		Filename: plasma_ball.shp
+		Length: 17
+		Tick: 80
+		Scale: 0.55
+		BlendMode: Additive
+		
+plasmaball:
+	idle:
+		Filename: plasmaball.shp
+		Length: *
+		BlendMode: Additive
+		
+plasmatrail:
+	idle:
+		Filename: plasmatrail.shp
+		Length: *
+		BlendMode: Additive
+		
+plasma_projectilemin:
+	idle:
+		Filename: plasma_projectilemin.shp
+		Length: *
+		BlendMode: Additive
+
+quasarshotmax:
+	idle:
+		Filename: quasarshotmax.shp
+		Length: *
+		BlendMode: Additive
+
+impuls_ball:
+	idle:
+		Filename: impuls_ball.shp
+		Length: *
+		BlendMode: Additive
+		
+		
+bullet:
+	Defaults:
+		Filename: saber_proj.shp
+		ZOffset: 1023
+		Length: 10
+		Tick: 25
+	1:
+		Start: 10
+
+# ///////////////////// Projectile Facing x32 ////////////////////////
+minball_gun:
+	idle:
+		Filename: minball_gun.shp
+		Facings: 32
+		BlendMode: Additive
+		
+saber_proj:
+	idle:
+		Filename: saber_proj.shp
+		Facings: 32
+		BlendMode: Additive
+		
+flame_projectile:
+	idle:
+		Filename: flame_projectile.shp
+		Facings: -32
+		Offset: 0, 5
+		BlendMode: Additive
+		
+ball_gun:
+	idle:
+		Filename: ball_gun.shp
+		Facings: 32
+		BlendMode: Additive
+
+obus_gun:
+	idle:
+		Filename: obus_gun.shp
+		Facings: 32
+		BlendMode: Additive
+		
+obus_gun_min:
+	idle:
+		Filename: obus_gun_min.shp
+		Facings: 32
+		BlendMode: Additive
+
+plasma_gun:
+	idle:
+		Filename: plasma_gun.shp
+		Facings: 32
+		BlendMode: Additive
+
+plasma_gunmin:
+	idle:
+		Filename: plasma_gunmin.shp
+		Facings: 32
+		BlendMode: Additive
+
+bigplasma_gun:
+	idle:
+		Filename: bigplasma_gun.shp
+		Facings: 32
+		BlendMode: Additive
+
+muzzle_railgun:
+	idle:
+		Filename: muzzle_railgun.shp
+		Facings: 32
+		BlendMode: Additive
+
+# ///////////////////// Projectile Facing x64 ////////////////////////
+
+pulse_laser_projectile_red:
+	idle:
+		Filename: pulse_laser_projectile_red.shp
+		Facings: 64
+		ZOffset: 60
+		
+pulse_laser_projectile_blue:
+	idle:
+		Filename: pulse_laser_projectile_blue.shp
+		Facings: 64
+		ZOffset: 60
+		
+impuls_proj:
+	idle:
+		Filename: impuls_proj.shp
+		Facings: 64
+		BlendMode: Additive
+
+mantis_miss:
+	idle:
+		Filename: mantis_miss.shp
+		Facings: 64
+		ZOffset: 128
+		
+psyblast:
+	idle:
+		Filename: psyblast.shp
+		Length: 17
+		Tick: 60
+
+smokecamo: #power
+	idle:
+		Filename: smokecamo.shp
+		Length: *
+		Tick: 18
+		BlendMode: Additive
+		Offset: 0, -125
+
+# ///////////////////// Projectile Facing x128 ////////////////////////
+
+20mm128proj:
+	idle:
+		Filename: 20mm128proj.shp
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+		
+40mm128proj:
+	idle:
+		Filename: 20mm128proj.shp
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+		Scale: 1.25
+
+80mm128proj:
+	idle:
+		Filename: 80mm128proj.shp
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+
+# ////////////////////////////////// Smoke Particle Effet Sequences ///////////////////////////////  
+
+smoke_part:
+	idle:
+		Filename: smoke_part.shp
+		Length: *
+		Tick: 90
+
+# ////////////////////////////////// Lithning Specific Effet Sequences ///////////////////////////////  
+litning:
+	bright:
+		Filename: litning.shp
+		Length: 4
+		ZOffset: 2048
+		BlendMode: Additive
+	dim:
+		Filename: litning.shp
+		Start: 4
+		Length: 4
+		ZOffset: 2048
+		BlendMode: Additive
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# /////////////////////////////////////// Terrain Effet Sequences ////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////// 
+dig:
+	idle:
+		Filename: obus_smokeexpl.shp
+		Length: *
+		ZOffset: 511
+		Offset: 0, 0, 24
+		
+burning:
+	idle:
+		Filename: burning.shp
+		Length: 17
+		
+minburning:
+	flameball1:
+		Filename: flame_ball01.shp
+		Length: *
+		Tick: 23
+		BlendMode: LowAdditive
+	flameball2:
+		Filename: flame_ball02.shp
+		Length: *
+		Tick: 23
+		BlendMode: LowAdditive
+	flameball3:
+		Filename: flame_ball03.shp
+		Length: *
+		Tick: 23
+		BlendMode: LowAdditive
+		
+minburningspeed:
+	idle:
+		Filename: minburning.shp
+		Length: *
+		Tick: 5
+
+fire:
+	1:
+		Filename: smokehusk.shp
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	2:
+		Filename: smokehusk.shp
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	3:
+		Filename: smokehusk.shp
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	4:
+		Filename: smokehusk.shp
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+
+craters:
+	crater01:
+		Filename: crater02.shp
+	crater02:
+		Filename: crater04.shp
+	crater03:
+		Filename: crater05.shp
+	crater04:
+		Filename: crater07.shp
+	crater05:
+		Filename: crater08.shp
+	crater06:
+		Filename: crater09.shp
+	crater07:
+		Filename: crater10.shp
+	crater08:
+		Filename: crater11.shp
+	
+craters_clear:
+	crater01:
+		Filename: crater_clear01.shp
+	crater02:
+		Filename: crater_clear02.shp
+	crater03:
+		Filename: crater_clear03.shp
+	crater04:
+		Filename: crater_clear04.shp
+	crater05:
+		Filename: crater_clear05.shp
+	crater06:
+		Filename: crater_clear06.shp
+	crater07:
+		Filename: crater_clear07.shp
+	crater08:
+		Filename: crater_clear08.shp
+	crater09:
+		Filename: crater_clear09.shp
+
+largecraters_clear:
+	crater01:
+		Filename: largecrater_clear01.shp
+	crater02:
+		Filename: largecrater_clear02.shp
+	crater03:
+		Filename: largecrater_clear03.shp
+	crater04:
+		Filename: largecrater_clear04.shp
+	crater05:
+		Filename: largecrater_clear05.shp
+	crater06:
+		Filename: largecrater_clear06.shp
+	crater07:
+		Filename: largecrater_clear07.shp
+	crater08:
+		Filename: largecrater_clear08.shp
+	
+craters_concrete:
+	crater01:
+		Filename: crater_concrete01.shp
+	crater02:
+		Filename: crater_concrete02.shp
+	crater03:
+		Filename: crater_concrete03.shp
+	crater04:
+		Filename: crater_concrete04.shp
+	crater05:
+		Filename: crater_concrete05.shp
+	crater06:
+		Filename: crater_concrete06.shp
+	crater07:
+		Filename: crater_concrete07.shp
+	crater08:
+		Filename: crater_concrete08.shp
+	crater09:
+		Filename: crater_concrete09.shp
+	crater10:
+		Filename: crater_concrete10.shp
+
+largecraters_concrete:
+	crater01:
+		Filename: largecrater_concrete01.shp
+	crater02:
+		Filename: largecrater_concrete02.shp
+	crater03:
+		Filename: largecrater_concrete03.shp
+	crater04:
+		Filename: largecrater_concrete04.shp
+	crater05:
+		Filename: largecrater_concrete05.shp
+	crater06:
+		Filename: largecrater_concrete06.shp
+	crater07:
+		Filename: largecrater_concrete07.shp
+	crater08:
+		Filename: largecrater_concrete08.shp
+	crater09:
+		Filename: largecrater_concrete09.shp
+
+
+craters_large:
+	crater01:
+		Filename: crater01.shp
+	crater02:
+		Filename: crater03.shp
+	crater03:
+		Filename: crater06.shp
+	crater04:
+		Filename: crater12.shp
+
+scorchs:
+	scorche01:
+		Filename: scorche01.shp
+	scorche02:
+		Filename: scorche02.shp
+	scorche03:
+		Filename: scorche03.shp
+	scorche04:
+		Filename: scorche04.shp
+	scorche05:
+		Filename: scorche05.shp
+	scorche06:
+		Filename: scorche06.shp
+	scorche07:
+		Filename: scorche07.shp
+	scorche08:
+		Filename: scorche08.shp
+	scorche09:
+		Filename: scorche09.shp
+	scorche10:
+		Filename: scorche10.shp
+
+ghusk:
+	ghusk01:
+		Filename: ghusk01.shp
+		Offset: 9, 5
+	ghusk02:
+		Filename: ghusk02.shp
+		Offset: -4, 0
+	ghusk03:
+		Filename: ghusk03.shp
+		Offset: -8, -6
+	ghusk04:
+		Filename: ghusk04.shp
+		Offset: 4, -10
+	ghusk05:
+		Filename: ghusk05.shp
+		Offset: -4, -6
+	ghusk06:
+		Filename: ghusk06.shp
+		Offset: -4, 6
+	ghusk07:
+		Filename: ghusk07.shp
+		Offset: 4, -4
+	ghusk08:
+		Filename: ghusk08.shp
+	
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////// Smoke Effet Sequences /////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+building_smokeparticle:
+	idle01:
+		Filename: smokebuilding_paricle01.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idle02:
+		Filename: smokebuilding_paricle02.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+		
+buildingcivil_smokeparticle:
+	idle01:
+		Filename: smokebuilding_paricle01.shp
+		Length: *
+		Tick: 33
+		Scale: 1.25
+		BlendMode: Additive
+	idle02:
+		Filename: smokebuilding_paricle02.shp
+		Length: *
+		Tick: 33
+		Scale: 1.25
+		BlendMode: Additive
+
+smoke_railgun:
+	idle01:
+		Filename: smoke_railgun01.shp
+		Length: *
+		Tick: 73
+		Scale: 0.15
+	idle02:
+		Filename: smoke_railgun02.shp
+		Length: *
+		Tick: 72
+		Scale: 0.15
+
+smoke_plasmaparticle:
+	idle01:
+		Filename: smoke_plasmaparticle01.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idle02:
+		Filename: smoke_plasmaparticle02.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idle03:
+		Filename: smoke_plasmaparticle03.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idlemin01:
+		Filename: smoke_plasmaparticlemin01.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idlemin02:
+		Filename: smoke_plasmaparticlemin02.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+	idlemin03:
+		Filename: smoke_plasmaparticlemin03.shp
+		Length: *
+		Tick: 33
+		BlendMode: Additive
+		
+smoke_flameparticle:
+	idle01:
+		Filename: smoke_plasmaparticle01.shp
+		Length: *
+		Tick: 33
+	idle02:
+		Filename: smoke_plasmaparticle02.shp
+		Length: *
+		Tick: 33
+	idle03:
+		Filename: smoke_plasmaparticle03.shp
+		Length: *
+		Tick: 33
+	idlemin01:
+		Filename: smoke_plasmaparticlemin01.shp
+		Length: *
+		Tick: 33
+	idlemin02:
+		Filename: smoke_plasmaparticlemin02.shp
+		Length: *
+		Tick: 33
+	idlemin03:
+		Filename: smoke_plasmaparticlemin03.shp
+		Length: *
+		Tick: 33
+
+smoke_flamejotuun:
+	idlemin01:
+		Filename: smoke_plasmaparticlemin01.shp
+		Length: *
+		Tick: 25
+		BlendMode: Additive
+	idlemin02:
+		Filename: smoke_plasmaparticlemin02.shp
+		Length: *
+		Tick: 25
+		BlendMode: Additive
+	idlemin03:
+		Filename: smoke_plasmaparticlemin03.shp
+		Length: *
+		Tick: 25
+		BlendMode: Additive
+
+heat_smokeparticle:
+	idle01:
+		Filename: heat_smokeparticle01.shp
+		Length: *
+		Tick: 26
+		BlendMode: LowAdditive
+	idle02:
+		Filename: heat_smokeparticle02.shp
+		Length: *
+		Tick: 26
+		BlendMode: LowAdditive
+		
+smoke_fireplace:
+	Defaults:
+		Offset: 0, -40
+	idle:
+		Filename: smokebuilding.shp
+		Length: 20
+		Tick: 25
+		BlendMode: DoubleMultiplicative
+	loop:
+		Filename: smokebuilding.shp
+		Start: 20
+		Length: 25
+		Tick: 25
+		BlendMode: DoubleMultiplicative
+	end:
+		Filename: smokebuilding.shp
+		Start: 45
+		Length: 5
+		Tick: 25
+		BlendMode: DoubleMultiplicative
+
+smoke_building:
+	Defaults:
+		Offset: 0, -40
+	idle:
+		Filename: smokebuilding.shp
+		Length: 20
+		Tick: 25
+		BlendMode: Additive
+	loop:
+		Filename: smokebuilding.shp
+		Start: 20
+		Length: 25
+		Tick: 25
+		BlendMode: Additive
+	end:
+		Filename: smokebuilding.shp
+		Start: 45
+		Length: 5
+		Tick: 25
+		BlendMode: Additive
+
+smoke_m:
+	Defaults:
+		Offset: 0, 0
+	idle:
+		Filename: smokebuildingdamage.shp
+		Length: 20
+		Tick: 25
+		BlendMode: Additive
+	loop:
+		Filename: smokebuildingdamage.shp
+		Start: 20
+		Length: 25
+		Tick: 25
+		BlendMode: Additive
+	end:
+		Filename: smokebuildingdamage.shp
+		Start: 45
+		Length: 5
+		Tick: 25
+		BlendMode: Additive
+
+trail_smokemin01:
+	idle:
+		Filename: trail_smokemin01.shp
+		Length: *
+		Tick: 10
+		ZOffset: 512
+
+trail_smoke01:
+	idle:
+		Filename: trail_smoke01.shp
+		Length: *
+		ZOffset: 512
+		
+trail_smoke03:
+	idle:
+		Filename: trail_smoke03.shp
+		Length: *
+		ZOffset: 512
+
+smokey:
+	idle:
+		Filename: smokeymin.shp
+		Length: *
+		BlendMode: Additive
+		ZOffset: 1023
+
+smokeymin:
+	idle:
+		Filename: smokeymin.shp
+		Length: *
+		BlendMode: Additive
+		ZOffset: 1023
+
+smokeyelectro:
+	idle:
+		Filename: smokeyelectro.shp
+		Length: *
+		BlendMode: Additive
+
+gibs_smoke:
+	idle:
+		Filename: gibs_smoke.shp
+		Length: *
+		ZOffset: 1023
+
+smoke_husk:
+	idle:
+		Filename: smokeymin.shp
+		Length: *
+		BlendMode: Alpha
+		ZOffset: 1023
+	
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////// Stat Visual Sequences /////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+stat-effect:
+	stun-overlay:
+		Filename: stun_effet.shp
+	QuakeLow:
+		Filename: quakelow.shp
+	Level21:
+		Filename: level21.shp
+	Level22:
+		Filename: level22.shp
+
+mine_weapon:
+	idle:
+		Filename: mine_stun.shp
+		BlendMode: Additive
+
+overlay: overlay
+	Defaults:
+		Filename: overlay.shp
+	build-valid:
+	build-invalid:
+		Start: 1
+	target-select:
+		Start: 2
+	target-valid:
+	target-invalid:
+		Start: 1
+
+editor-overlay:
+	copy:
+		Filename: overlay.shp
+		Start: 0
+	paste:
+		Filename: overlay.shp
+		Start: 1
+
+pips:
+	Defaults:
+		Filename: pips.shp
+	groups:
+		Start: 8
+		Length: 10
+		Offset: 9, 5
+	medic:
+		Start: 20
+	tag-fake:
+		Start: 18
+		Offset: 0, 2
+	tag-primary:
+		Start: 2
+		Offset: 0, 2
+	pip-empty:
+		Filename: pips2.shp
+	pip-green:
+		Filename: pips2.shp
+		Start: 1
+	pip-yellow:
+		Filename: pips2.shp
+		Start: 2
+	pip-gray:
+		Filename: pips2.shp
+		Start: 3
+	pip-red:
+		Filename: pips2.shp
+		Start: 4
+	pip-blue:
+		Filename: pips2.shp
+		Start: 5
+	pip-ammofull:
+		Filename: pipsammo.shp
+		Start: 0
+	pip-ammoempty:
+		Filename: pipsammo.shp
+		Start: 1
+	pip-disguise:
+		Filename: pip-disguise.shp
+		Length: *
+		Tick: 300
+		Offset: 0, -6
+
+pips.large.ammo:
+	empty:
+		Filename: pips3.shp
+	green:
+		Filename: pips3.shp
+		Start: 1
+	yellow:
+		Filename: pips3.shp
+		Start: 2
+	gray:
+		Filename: pips3.shp
+		Start: 3
+	red:
+		Filename: pips3.shp
+		Start: 4
+	blue:
+		Filename: pips3.shp
+
+clock:
+	idle:
+		Filename: clock.shp
+		Length: *
+		
+selection.point:
+	infantry:
+		Filename: select_inf.shp
+		Length: *
+	vehicle.light:
+		Filename: select_vehlight.shp
+		Length: *
+	vehicle:
+		Filename: select_veh.shp
+
+powerdown:
+	disabled:
+		Filename: speed.shp
+		Start: 3
+
+poweroff:
+	offline:
+		Filename: poweroff.shp
+		Length: *
+		Tick: 160
+
+rank:
+	Defaults:
+		Filename: rank.shp
+	rank-veteran-1:
+	rank-veteran-2:
+		Start: 1
+	rank-veteran-3:
+		Start: 2
+	rank-elite:
+		Start: 3
+		
+affectdecoy:
+	accuracy:
+		Filename: affectdecoy.shp
+		Start: 0
+		Length: 7
+		
+mirror:
+	mirror-1:
+		Filename: damaged.shp
+		
+icon_mobile_building:
+	Defaults:
+		Filename: icon_mobile_building.shp
+	Building:
+		Start: 0
+		Offset: 0,-20
+	Infantry:
+		Start: 1
+		Offset: 0,-20
+	Proc:
+		Start: 3
+		Offset: 0,-20
+	Weap:
+		Start: 2
+		Offset: 0,-20
+	T2:
+		Start: 4
+		Offset: 0,-20
+	T3:
+		Start: 5
+		Offset: 0,-20
+	Aircraft:
+		Start: 6
+		Offset: 0,-20
+		
+rallypoint:
+	flag:
+		Filename: arrow_beacon.shp
+		Length: *
+		Offset: 0,-20
+	circles:
+		Filename: fpls.shp
+		Length: *
+		Offset: 0,0
+
+beacon:
+	arrow:
+		Filename: arrow_beacon.shp
+		Length: *
+		Offset: 0,-20
+	circles:
+		Filename: fpls.shp
+		Length: *
+
+mpspawn:
+	idle:
+		Filename: mpspawn.shp
+
+soundambiance:
+	idle:
+		Filename: sound_amb.shp
+
+waypoint:
+	idle:
+		Filename: waypoint.shp
+		Length: *
+
+camera:
+	idle:
+		Filename: camera.shp
+		Length: *
+
+ico_light:
+	idle:
+		Filename: null.shp
+		Length: *
+	Light:
+		Filename: light_zone_base.shp
+		BlendMode: Additive
+
+shroud:
+	shroud:
+		Filename: shroud.shp
+		Length: *
+
+moveflsh:
+	idle:
+		Filename: moveflh.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-5
+
+stase_effect:
+	idle:
+		Filename: null.shp
+	stase_range:
+		Filename: bubble_stase.shp
+		Scale: 0.50
+		BlendMode: Additive
+		Length: *
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Wolrd Cloud Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+clouds:
+	Defaults:
+		ZOffset: 7500
+	idle1:
+		Filename: clouds01.shp
+		Length: *
+		BlendMode: Additive
+		IgnoreWorldTint: true
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Effets Particles Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+spark_diast_particle: diast_spark01
+	diast_spark01:
+		Filename: diast_spark01.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 30
+	diast_spark02:
+		Filename: diast_spark02.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 30
+	diast_spark03:
+		Filename: diast_spark03.shp
+		Length: *
+		BlendMode: Additive
+		Tick: 30
+
+water_wave_particle:
+	Defaults:
+		Filename: water_wave_particle.shp
+		Length: 20
+		Tick: 150
+		BlendMode: Additive
+		Scale: 0.50
+	idle:
+		Filename: null.shp
+		Length: *
+	wave_n:
+		Start: 0
+	wave_nw:
+		Start: 20
+	wave_nw_iso:
+		Start: 160
+	wave_w:
+		Start: 40
+	wave_sw:
+		Start: 60
+	wave_sw_iso:
+		Start: 180
+	wave_s:
+		Start: 80
+	wave_se:
+		Start: 100
+	wave_se_iso:
+		Start: 200
+	wave_e:
+		Start: 120
+	wave_ne:
+		Start: 140
+	wave_ne_iso:
+		Start: 220
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Ressource Sequences //////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+parachute_vehicle:
+	open:
+		Filename: para_end.shp
+		Length: *
+		Scale: 0.60
+	close:
+		Filename: para_end.shp
+		Length: *
+		Scale: 0.60
+	idle:
+		Filename: para_roll.shp
+		Length: *
+		Scale: 0.60
+        
+parachute_infantry:
+	open:
+		Filename: parainf_end.shp
+		Length: *
+		Scale: 0.40
+	close:
+		Filename: parainf_end.shp
+		Length: *
+		Scale: 0.40
+	idle:
+		Filename: parainf_roll.shp
+		Length: *
+		Scale: 0.40
+
+diastore:
+	idle:
+		Filename: diast.shp
+		Length: *
+		Tick: 65
+
+gisement:
+	idle:
+		Filename: gisement.shp
+		Length: *
+		Tick: 65
+
+resources:
+	Defaults:
+		Length: *
+		ZRamp: 1
+		IgnoreWorldTint: true
+	diast01:
+		Filename: diast01.shp
+	diast02:
+		Filename: diast02.shp
+	diast03:
+		Filename: diast03.shp
+	diast04:
+		Filename: diast04.shp
+	diast05:
+		Filename: diast05.shp
+	diast06:
+		Filename: diast06.shp
+	diast07:
+		Filename: diast07.shp
+
+null:
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: null.shp
+
+crate-effects:
+	speed:
+		Filename: speed.shp
+	dollar:
+		Filename: dollar.shp
+	reveal-map:
+		Filename: earth.shp
+	hide-map:
+		Filename: empulse.shp
+	fpower:
+		Filename: fpower.shp
+	gps:
+		Filename: gpsbox.shp
+	invuln:
+		Filename: invulbox.shp
+	heal:
+		Filename: invun.shp
+	nuke:
+		Filename: missile2.shp
+	parabombs:
+		Filename: parabox.shp
+	sonar:
+		Filename: sonarbox.shp
+	stealth:
+		Filename: stealth2.shp
+	timequake:
+		Filename: tquake.shp
+	armor:
+		Filename: armor.shp
+	chrono:
+		Filename: chronbox.shp
+	airstrike:
+		Filename: deviator.shp
+	levelup:
+		Filename: levelup.shp
+		Tick: 200
+
+powerdirection:
+	arrow-t:
+		Filename: mouse.shp
+		Start: 2
+		Y: -7
+		Offset: 0, -19, 0
+	arrow-tr:
+		Filename: mouse.shp
+		Start: 3
+		X: 6
+		Y: -5
+		Offset: 15, -15, 0
+	arrow-r:
+		Filename: mouse.shp
+		Start: 4
+		X: 7
+		Offset: 19, 0, 0
+	arrow-br:
+		Filename: mouse.shp
+		Start: 5
+		X: 6
+		Y: 5
+		Offset: 15, 15, 0
+	arrow-b:
+		Filename: mouse.shp
+		Start: 6
+		Y: 7
+		Offset: 0, 19, 0
+	arrow-bl:
+		Filename: mouse.shp
+		Start: 7
+		X: -6
+		Y: 5
+		Offset: -15, 15, 0
+	arrow-l:
+		Filename: mouse.shp
+		Start: 8
+		X: -8
+		Offset: -19, 0, 0
+	arrow-tl:
+		Filename: mouse.shp
+		Start: 9
+		X: -6
+		y: 5
+		Offset: -15, -15, 0
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////    WORLD EFFECT CLOUD    ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CloudWorldEffect:
+	Defaults:
+		ZOffset: 7500
+	idle0:
+		Filename: cloud01.png.shp
+		BlendMode: DoubleMultiplicative
+		IgnoreWorldTint: true
+		
+flamebeam:
+	idle:
+		Filename: flamebeam.shp
+		Length: *
+		Offset: 0, -250
+		BlendMode: Additive
+		Tick: 15
+	flameActorEffect:
+		Filename: flamebeameffect.shp
+		Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+		
+target_conclave_actor:
+	idle:
+		Filename: target_mine.shp
+		Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+		Tick: 25
+		Scale: 0.60
+	directon:
+		Filename: targetpowerdirection.shp
+		Length: *
+		Tick: 28
+		BlendMode: Additive
+
+target_mine:
+	idle:
+		Filename: target_alliancemine.shp
+		Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+		Tick: 25
+		Scale: 0.60
+	directon:
+		Filename: targetpowerdirection.shp
+		Length: *
+		Tick: 28
+		BlendMode: Additive
+
+droppod:
+	Defaults:
+		Length: *
+		Scale: 0.65
+	idle:
+		Filename: droppod.shp
+		Length: *
+		Scale: 0.65
+		
+aicraft_carier.superweapons:
+	Defaults:
+		Start: 40
+	idle:
+		Filename: t3_trasportfed.shp
+		Start: 40
+		
+aicraft_cariersupport:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+		Filename: aicraft_cariersupport.shp
+	idle:
+		Filename: t3_trasportfed.shp
+		Start: 40
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	turret:
+		Filename: t1_suricatetur.shp
+		Facings: 64
+	icon:
+		Filename: t1_surricateicon.shp
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Stat & Effet Decoration ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+heal.infantry:
+	idle:
+		Filename: healstat.shp
+	
+repair.heavy:
+	idle:
+		Filename: repairing.shp
+		Length: *

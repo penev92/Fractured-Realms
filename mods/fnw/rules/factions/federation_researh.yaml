@@ -1,0 +1,361 @@
+^affect.electroShield.Federation:
+	GrantConditionOnPrerequisite@research.electroShield.Federation:
+		Prerequisites: research.electroshield.Federation
+		Condition: Upgrade.electroshield.Federation
+	ExternalCondition@Shooting.shield.Federation:
+		Condition: ShieldArmorShoot
+	Targetable@Shooting.shield.Federation:
+		TargetTypes: ShieldAbsorbBlue
+		RequiresCondition: !ShieldArmorShoot && Upgrade.electroshield.Federation
+	DamageMultiplier@ShieldArmor.shoot:
+		Modifier: 0
+		RequiresCondition: !ShieldArmorShoot && Upgrade.electroshield.Federation
+	WithIdleOverlay@plugpowr:
+		Offset: 0,0,0
+		Sequence: shield
+		Palette: powereffect60
+		RequiresCondition: !ShieldArmorShoot && Upgrade.electroshield.Federation
+
+^affect.ImprovedLoader.Federation:
+	GrantConditionOnPrerequisite@research.ImprovedLoader.Federation:
+		Prerequisites: research.ImprovedLoader.Federation
+		Condition: Upgrade.ImprovedLoader.Federation
+	ReloadDelayMultiplier@ImprovedLoader.Federation:
+		Modifier: 80
+		RequiresCondition: Upgrade.ImprovedLoader.Federation
+
+^affect.StrongerTogether.Federation:
+	GrantConditionOnPrerequisite@research.InfantryTogether.Federation:
+		Prerequisites: research.InfantryTogether.Federation
+		Condition: Upgrade.InfantryTogether.Federation
+    # condition generer par l'acteur
+	ProximityExternalCondition@research.InfantryTogether.Federation:
+		Condition: TogetherGroup
+		Range: 7c0
+		AffectsParent: true
+		RequiresCondition: Upgrade.InfantryTogether.Federation
+    # condition / recepption par l'acteur
+	ExternalCondition@TogetherGroup:
+		Condition: TogetherGroup
+        SourceCap: 10
+	WithIdleOverlay@RANK-together:
+		Offset: 0, 0, 0
+		Sequence: affect.aura.federation
+		Palette: powereffect60
+		RequiresCondition: TogetherGroup >= 10
+	FirepowerMultiplier@InfantryTogether.Federation:
+		Modifier: 110
+		RequiresCondition: TogetherGroup >= 10
+	RangeMultiplier@InfantryTogether.Federation:
+		Modifier: 110
+		RequiresCondition: TogetherGroup >= 10
+		
+^affect.Ramjet.Federation:
+	GrantConditionOnPrerequisite@research.ramjet.Federation:
+		Prerequisites: research.ramjet.Federation
+		Condition: Upgrade.ramjet.Federation
+	RangeMultiplier@ramjet.Federation:
+		Modifier: 130
+		RequiresCondition: Upgrade.ramjet.Federation
+		
+^affect.Officer.influence.Federation:
+	ProximityExternalCondition@affect.Officer.influence.Federation:
+		Condition: Officer.influence
+		AffectsParent: false
+	ExternalCondition@TogetherGroup:
+		Condition: Officer.influence
+	DamageMultiplier@affect.Officer.influence.Federation:
+		Modifier: 110
+		RequiresCondition: Officer.influence
+	FirepowerMultiplier@affect.Officer.influence.Federation:
+		Modifier: 110
+		RequiresCondition: Officer.influence
+
+^affect.ChargePower.Federation:
+	ExternalCondition@ChargePower.Federation:
+		Condition: Effect.ChargePower
+	SpeedMultiplier@ChargeSpeedPower.Federation:
+		Modifier: 120
+		RequiresCondition: Effect.ChargePower
+	FirepowerMultiplier@ChargeDamagePower.Federation:
+		Modifier: 120
+		RequiresCondition: Effect.ChargePower
+	WithColoredOverlay@IRONCURTAIN:
+		RequiresCondition: Effect.ChargePower
+		Palette: Red_color
+
+# ////////////////////////////////////// Upgrade Actor Federation ////////////////////////////////////
+
+upgrade.infantry.together.federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.InfantryTogether.federation.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.federation, Research.federation.T2, Research.federation.T3
+		Prerequisites: ~!research.InfantryTogether.Federation
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: upgrade_fedtogether_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.InfantryTogether.Federation
+
+upgrade.improved.loader.federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.ImprovedLoader.federation.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 20
+		Queue: Research.federation, Research.federation.T2, Research.federation.T3
+		Prerequisites: ~!research.ImprovedLoader.Federation
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: upgrade_fedautoloader_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.ImprovedLoader.Federation
+
+upgrade.ramjet.federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.Ramjet.federation.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.federation.T2, Research.federation.T3
+		Prerequisites: ~!research.ramjet.Federation
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: upgrade_fedrangearty_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.ramjet.Federation
+
+upgrade.electro.shield.federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.ElectricShield.federation.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.federation.T3
+		Prerequisites: ~!research.electroshield.Federation
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: upgrade_fed_electroshieldicon
+	ProvidesPrerequisite:
+		Prerequisite: research.electroshield.Federation
+
+upgrade.fusion.reactor.federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.FusionReactor.federation.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.federation.T3
+		Prerequisites: ~!research.FusionReactor.Federation
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: upgrade_fedpowr_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.FusionReactor.Federation
+		
+^BuildingGivePower.Federation:
+	GrantExternalConditionPower@Charged:
+		OrderName: Charged
+		Icons:
+			1: chargedfedicon
+		IconPalette: Federation.Icon
+		Prerequisites:
+			1: fedtech
+		Cursor: abillity
+		ChargeInterval: 6000
+		Names:
+			1: Charge!!!
+		Descriptions:
+			1: Units in the selected area gain +20% damage and +20% moving speed for 20 seconds.
+		AllowMultiple: true
+		Durations:
+			1: 500
+		Conditions:
+			1: Effect.ChargePower
+		Dimensions:
+			1: 3,3
+		Footprints:
+			1: xxx xxx xxx
+		ValidRelationships: Ally
+		SelectTargetSpeechNotification:
+		EndChargeSpeechNotification:
+		LaunchSpeechNotification:
+		IncomingSpeechNotification:
+		EndChargeSound:
+		OnFireSound:
+		EffectImage: explosion
+		EffectSequence: shockwave_large_temp
+		EffectPalette: effect
+		PauseOnCondition: disabled
+	AirstrikePower@Federation.Carpet.bomber:
+		OrderName: Federation.CarpetBomber.module
+		Cursor: ability
+		SquadOffset: -2500, -2500, 0
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: fedtech, ~Unlock.powerlvl2
+		Icons:
+			1: bomberfedicon
+		IconPalette: Federation.Icon
+		ChargeInterval: 6000
+		Names:
+			1: Hellbringer
+		Descriptions:
+			1: Calls a triple carpet bombing at the designated area.\nThe strategic bomber passively damages every enemy aircraft within a certain radius around itself.
+		SelectTargetSpeechNotification:
+		IncomingSpeechNotification:
+		UnitTypes:
+			1: t3_bombardfed
+		SquadSizes:
+			1: 1
+		QuantizedFacings: 64
+		CameraActor: camera
+		CameraRemoveDelay: 25
+		DisplayBeacon: False
+		BeaconPosters:
+			1: null
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
+		DeploySound:
+	DetonateWeaponPower@Thunderstrike.Federation:
+		OrderName: Thunderstrike.Federation
+		Cursor: ability
+		Prerequisites:
+			1: fedtech
+		Icons:
+			1: fedthunderstrikeicon
+		IconPalette: Federation.Icon
+		ChargeInterval: 3750
+		Names:
+			1: Thunderstrike
+		Descriptions:
+			1: Calls a massive artillery barrage that decreases reload speed by 50%, moving speed by 50% and makes units hit by the barrage unselectable for 10 seconds.
+		Weapons:
+			1: ThunderStrike.AbillityPower
+		ActivationSequence:
+	ParatroopersPower@LawOrder:
+		OrderName: Federation.LawOrder
+		Prerequisites:
+			1: fedtech, ~Unlock.powerlvl3
+		Icons:
+			1: paradropfedicon
+		IconPalette: Federation.Icon
+		ChargeInterval: 6000
+		StartFullyCharged: true
+		DamageMultiplier:
+			Modifier: 80
+		Names:
+			1: Law And Order
+		Descriptions:
+			1: Calls for reinforcements at the designated area.\nReinforcements include:\n- 20 Guardsmen\n- 10 Rocket Guardsmen\n- 5 Officers
+		SelectTargetSpeechNotification:
+		EndChargeSpeechNotification:
+		DropItems:
+			1: t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t2_officer.paradrop
+		SquadSizes:
+			1: 1
+		SquadOffset: -2048, 2048, 0
+		QuantizedFacings: 8
+		UnitTypes:
+			1: t3_trasportfed.power
+		CameraActor: camera
+		DisplayBeacon: false
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+# //////////////////////////////////////////////////////// Stat Upgrade Federation ////////////////////////////////////////////////////////
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+^Condition.Abillity.Goliath:
+	GrantConditionOnProduction@Abillity.Goliath.Validate:
+		Condition: Abillity.Validate
+	GrantConditionOnProduction@Abillity.Goliath.broadside:
+		Actors: Upgrade.broadside.Goliath
+		Condition: Goliath.Activate.broadside
+
+^Condition.Abillity.Stalker:
+	GrantConditionOnProduction@Abillity.Stalker.Validate:
+		Condition: Stalker.Activate.FortressModule
+
+# ///////////////////// Goliath
+^System.Abillity.Goliath:
+	Inherits@ConditionAbillity: ^Condition.Abillity.Goliath
+	ProductionBar@Abillity.Goliath:
+		ProductionType: Abillity
+	ProductionQueue@Abillity.Goliath:
+		Type: Abillity
+		Group: Abillity
+		DisplayOrder: 50
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	Production:
+		Produces: Abillity
+		MoveIntoWorld: True
+	Exit:
+
+# ///////////////////// Stalker
+^System.Abillity.Stalker:
+	Inherits@ConditionAbillity: ^Condition.Abillity.Stalker
+	ProductionBar@Abillity.Stalker:
+		ProductionType: Abillity.Stalker
+	Production:
+		Produces: Abillity.Stalker
+		MoveIntoWorld: false
+		PauseOnCondition: empdisable || Abillity.Validate
+	ProductionQueue@Stalker:
+		Type: Abillity.Stalker
+		Group: Abillity.Stalker
+		BuildDurationModifier: 80
+		LowPowerModifier: 200
+		QueuedAudio: Research
+		ReadyAudio: ResearchReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	Exit:
+
+# //////////////////////////////////////////// Goliath Abillity Upgrade Federation /////////////////////////////////////////
+
+Upgrade.broadside.Goliath:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Queue: Abillity
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: blueflameicon
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Goliath.Activate.broadside
+
+# //////////////////////////////////////////// Titan Abillity Upgrade Red Alliance /////////////////////////////////////////
+
+Upgrade.FortressModule.Federation:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Queue: Abillity.Stalker
+		IconPalette: Federation.Icon
+	RenderSprites:
+		Image: fedfortressicon
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Stalker.Activate.FortressModule

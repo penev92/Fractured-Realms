@@ -1,0 +1,60 @@
+# ================================================================================================================================================================
+# =========================================================== |     Building Neutral Civil       |  ==============================================================
+# ================================================================================================================================================================   
+
+# |------------------------------| - Light Material Building - |------------------------------|
+#--Stat Unite--
+^CivilLightMaterial.stat.Building:
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 800
+		
+# |------------------------------| - LMedium Material Building - |------------------------------|
+#--Stat Unite--
+^CivilMediumMaterial.stat.Building:
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 1200
+		
+# |------------------------------| - Light Civil Building - |------------------------------|
+#--Stat Unite--
+^CivilLightBuilding.stat.Building:
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 6000
+
+# |------------------------------| - Medium Civil Building - |------------------------------|
+#--Stat Unite--
+^CivilMediumBuilding.stat.Building:
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 10000
+
+# |------------------------------| - Heavy Civil Building - |------------------------------|
+#--Stat Unite--
+^CivilHeavyBuilding.stat.Building:
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 18000
+
+# |------------------------------| - BOSS-UNITE - |------------------------------|
+#--Stat Unite--
+^mastodonde.stat.unite:
+	Tooltip:
+		Name: Mastodonte Cruiser
+	Valued:
+		Cost: 5000
+	Armor:
+		Type: HeavyAerial
+	Health:
+		HP: 63000
+	Aircraft:
+		TurnSpeed: 8
+		Speed: 60
+	RevealsShroud:
+		Range: 9c0

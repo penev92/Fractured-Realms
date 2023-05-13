@@ -1,0 +1,378 @@
+^Infantry.WeaponRange.Upgrade.Redalliance:
+	Inherits@SpeedInfantry: ^RangeInfantryStat.redalliance.apply
+	GrantConditionOnPrerequisite@Up.Inf.Range:
+		Prerequisites: research.RangeInfantry.Redalliance
+		Condition: upgrade.RangeInfantry.Redalliance
+	RangeMultiplier@Up.Inf.Range:
+		RequiresCondition: upgrade.RangeInfantry.Redalliance
+
+^Affect.Upgrade.FusionSpeed.Redalliance:
+	Inherits@FusionSpeed: ^FusionSpeed.redalliance.apply
+	SpeedMultiplier@Fusion.Engine:
+		RequiresCondition: Upgrade.FusionSpeed.Vehicle
+	GrantConditionOnPrerequisite@research.FusionSpeed.Vehicle:
+		Prerequisites: research.FusionSpeed.Vehicle
+		Condition: Upgrade.FusionSpeed.Vehicle
+		
+^Affect.Upgrade.ChargedRailgun.Redalliance:
+	GrantConditionOnPrerequisite@research.Railgun.Redalliance:
+		Prerequisites: research.Railgun.Redalliance
+		Condition: Upgrade.Railgun.Redalliance
+		
+^Affect.Upgrade.Retrofit.Redalliance:
+	GrantConditionOnPrerequisite@research.Retrofit.Redalliance:
+		Prerequisites: research.Retrofit.Redalliance
+		Condition: Upgrade.Retrofit.Redalliance
+		
+^Affect.Upgrade.ArmorPurge.Redalliance:
+	Inherits@ArmorPurge: ^Stat.ArmorPurge.RedAlliance
+	GrantConditionOnPrerequisite@research.ArmorPurge.Redalliance:
+		Prerequisites: research.ArmorPurge.Redalliance
+		Condition: Upgrade.ArmorPurge.Redalliance
+
+^Aircraft.Upgrade.Redalliance:
+	Inherits@FusionSpeed: ^AircraftSpeed.redalliance.apply
+	SpeedMultiplier@SupersonicAircraft:
+		RequiresCondition: upgrade.Supersonic.Redalliance.Aircraft
+	GrantConditionOnPrerequisite@SupersonicAircraft:
+		Prerequisites: research.Supersonic.Redalliance.Aircraft
+		Condition: upgrade.Supersonic.Redalliance.Aircraft
+
+^FlamerWeapons.UpgradeStat.Redalliance:
+	Inherits@FlameStat: ^FlamerWeapons.redalliance.apply
+	GrantConditionOnPrerequisite@research.WeaponsFlamer.Redalliance:
+		Prerequisites: research.WeaponsFlamer.Redalliance
+		Condition: upgrade.WeaponsFlamer.Redalliance
+	FirepowerMultiplier@WeaponsFlamer:
+		RequiresCondition: upgrade.WeaponsFlamer.Redalliance
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+# //////////////////////////////////////////////////////// Stat Upgrade Red Alliance ////////////////////////////////////////////////////////
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+^Stat.ArmorPurge.RedAlliance:
+	SpeedMultiplier@Damage.heavy.speed:
+		RequiresCondition: damheavyspeed && !Upgrade.ArmorPurge.Redalliance
+		Modifier: 70
+	ExternalCondition@Damage.heavy.speed:
+		Condition: damheavyspeed
+	GrantConditionOnDamageState@Damage.heavy.speed:
+		Condition: damheavyspeed
+		ValidDamageStates: Heavy
+	#/// Critical damage ///
+	SpeedMultiplier@Damage.critical.speed:
+		RequiresCondition: damcritspeed && !Upgrade.ArmorPurge.Redalliance
+		Modifier: 60
+	ExternalCondition@Damage.critical.speed:
+		Condition: damcritspeed
+	GrantConditionOnDamageState@Damage.critical.speed:
+		Condition: damcritspeed
+		ValidDamageStates: Critical
+	#/// UPGRADE ARMOR PURGE ///
+	SpeedMultiplier@Damage.heavy.speed.Armorpurge:
+		RequiresCondition: damheavyspeed && Upgrade.ArmorPurge.Redalliance
+		Modifier: 110
+	ExternalCondition@Damage.heavy.speed.Armorpurge:
+		Condition: damheavyspeed
+	GrantConditionOnDamageState@Damage.heavy.speed.Armorpurge:
+		Condition: damheavyspeed
+		ValidDamageStates: Heavy
+	#/// Critical damage ///
+	SpeedMultiplier@Damage.critical.speed.Armorpurge:
+		RequiresCondition: damcritspeed && Upgrade.ArmorPurge.Redalliance
+		Modifier: 120
+	ExternalCondition@Damage.critical.speed.Armorpurge:
+		Condition: damcritspeed
+	GrantConditionOnDamageState@Damage.critical.speed.Armorpurge:
+		Condition: damcritspeed
+		ValidDamageStates: Critical
+
+^Aspect.Base.Redalliance:
+	Inherits@Research: ^ResearchActor
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Doctrines.RedAlliance
+		BuildDurationModifier: 60
+		IconPalette: RedAlliance.Icon
+		BuildLimit: 1
+	ProvidesPrerequisite:
+	Valued:
+		Cost: 0
+	#Condition Recovery
+	ExternalCondition@RemoveOption:
+		Condition: Revoked
+	#receipt condition
+	ProvidesPrerequisite@RemoveWeapons:
+		Prerequisite: Remove.Weapons
+		RequiresCondition: RemoveBaseWeaponsAR
+	ProvidesPrerequisite@RemoveStat:
+		Prerequisite: Remove.Stat
+		RequiresCondition: RemoveBaseStatsAR
+	GrantConditionOnPrerequisite@RevokedWeapons:
+		Prerequisites: Remove.Weapons
+		Condition: RevokedWeapons
+	GrantConditionOnPrerequisite@RevokedStat:
+		Prerequisites: Remove.Stat
+		Condition: RevokedStat
+	KillsSelf:
+		RemoveInstead: true
+		
+upgrade.range.infantry.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.RangeInfantry.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.RangeInfantry.Redalliance, t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: serumicon
+	ProvidesPrerequisite:
+		Prerequisite: research.RangeInfantry.Redalliance
+
+upgrade.flak.basilisk.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.FlakBasilisk.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 20
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.Retrofit.Redalliance
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: arflakicon
+	ProvidesPrerequisite:
+		Prerequisite: research.Retrofit.Redalliance
+		
+upgrade.armor.purge.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.ArmorPurge.Redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.ArmorPurge.Redalliance
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: upgrade_armor_redalliance_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.ArmorPurge.Redalliance
+
+# T3 
+upgrade.fusion.speed.vehicle.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.FusionSpeed.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 90
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.FusionSpeed.Vehicle, t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: fusion_engineicon
+	ProvidesPrerequisite:
+		Prerequisite: research.FusionSpeed.Vehicle
+
+upgrade.supersonic.redalliance.aircraft:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.Supersonic.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 100
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.Supersonic.Redalliance.Aircraft
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: upgrade_supersonic_redalliance_icon
+	ProvidesPrerequisite:
+		Prerequisite: research.Supersonic.Redalliance.Aircraft
+
+upgrade.weapons.flamer.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.WeaponsFlamer.Redalliance, t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: blueflameicon
+	ProvidesPrerequisite:
+		Prerequisite: research.WeaponsFlamer.Redalliance
+		
+upgrade.super.railgun.redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.SuperchargedRailgun.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 120
+		Queue: Research.RedAlliance
+		Prerequisites: ~!research.Railgun.Redalliance, t3_commandbuilding
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: upgrade_ar_railgunicons
+	ProvidesPrerequisite:
+		Prerequisite: research.Railgun.Redalliance
+
+^BuildingGivePower.Alliance:
+	SpawnActorPower@Mine_strike:
+		OrderName: Mine strike
+		Cursor: ability
+		Actors:
+			1: target_mine
+		LifeTime: -1
+		ChargeInterval: 3750
+		Icons:
+			1: arminstrikepowericon
+		Prerequisites:
+			1: artech
+		IconPalette: RedAlliance.Icon
+		Names:
+			1: Judgment
+		Descriptions:
+			1: Orders the deployment of 12 multi-purpose mines by a laser designator.\nThe laser designator trajectory can be manually adjusted.
+		SelectTargetSpeechNotification:
+	DetonateWeaponPower@Shake_subterean_nuke:
+		OrderName: ShakeSubtereanNuke
+		Cursor: ability
+		Prerequisites:
+			1: t3_commandbuilding
+		Icons:
+			1: shakenukeicon
+		IconPalette: flameeffect
+		ChargeInterval: 3750
+		Names:
+			1: Damnation
+		Descriptions:
+			1: Calls an underground nuclear blast at the selected location.\nAll ground units caught in the area of effect are deactivated and receive tremendous damage.
+		Weapons:
+			1: shake_nuke
+		ActivationSequence:
+	DetonateWeaponPower@Srtike_Nuke_AA:
+		OrderName: StrikeAANuke
+		Cursor: ability
+		Prerequisites:
+			1: artech
+		Icons:
+			1: nukestrikeaaicon
+		IconPalette: flameeffect
+		ChargeInterval: 5250
+		Names:
+			1: Supreme Verdict
+		Descriptions:
+			1: Calls a high-altitude nuclear blast at the selected location.\nAll aircraft caught in the explosion are instantly destroyed (with the exception of super-units).\nThe blast results in nuclear fallouts.
+		Weapons:
+			1: strike_aa_nuke
+		ActivationSequence:
+		LaunchSound: strikenukeaa_alert.aud
+	DetonateWeaponPower@Droppod:
+		OrderName: Droppod
+		PauseOnCondition: disabled
+		Prerequisites:
+			1: t3_commandbuilding
+		Icons:
+			1: ardroppowericon
+		IconPalette: RedAlliance.Icon
+		ChargeInterval: 8250
+		Names:
+			1: Salvation
+		Descriptions:
+			1: Calls an orbital drop at the selected location.\nCan damage ground units around the drop zone.\nReinforcements include:\n- 1 “Satyr” attack bike\n- 2 “Basilisk” main battle tanks\n- 2 “Hydra” SPAAG\n- 1 “Manticore” SPG
+		SelectTargetSpeechNotification:
+		Weapons:
+			1: alliance.droppod
+		ActivationSequence:
+
+alliance.mine:
+	Inherits: ^Mine
+	RenderSprites:
+		Image: plasmine
+	Explodes:
+		Weapon: alliance.mine
+
+Unlocked.droneSpawn.Redalliance:
+	Inherits@1: ^Select.Power.Limit
+	AlwaysVisible:
+	Tooltip:
+		Name: Spawn Drone View
+		Description: ...
+	Buildable:
+		BuildPaletteOrder: 70
+		Queue: nope.RedAlliance
+		Prerequisites: !Unlocked.droneSpawn.Redalliance, !Select.Power3
+	Valued:
+		Cost: 0
+	ProvidesPrerequisite:
+		Prerequisite: Unlocked.droneSpawn.Redalliance
+	ProvidesPrerequisite@SelectPower:
+		Prerequisite: Select.Power
+	RenderSprites:
+		Image: nukeammo_icon
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+# //////////////////////////////////////////////////////// Stat Upgrade Red Alliance ////////////////////////////////////////////////////////
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+^Condition.Abillity.Titan:
+	GrantConditionOnProduction@Abillity.Titan.Validate:
+		Condition: Abillity.Validate
+	GrantConditionOnProduction@Abillity.Titan.ConterMeasure:
+		Actors: Upgrade.CounterMeasure.Redalliance
+		Condition: Titan.Activate.CounterMeasure
+	GrantConditionOnProduction@Abillity.Titan.Fumigene:
+		Actors: Upgrade.Fumigene.Redalliance
+		Condition: Titan.Activate.Fumigene
+
+^System.Abillity.Titan:
+	Inherits@ConditionAbillity: ^Condition.Abillity.Titan
+	ProductionBar@Abillity.Titan:
+		ProductionType: Abillity.Titan
+	Production:
+		Produces: Abillity.Titan
+		MoveIntoWorld: false
+		PauseOnCondition: empdisable || Abillity.Validate
+	ProductionQueue@Research:
+		Type: Abillity.Titan
+		Group: Abillity.Titan
+		BuildDurationModifier: 80
+		LowPowerModifier: 200
+		QueuedAudio: Research
+		ReadyAudio: ResearchReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	Exit:
+
+# //////////////////////////////////////////// Titan Abillity Upgrade Red Alliance /////////////////////////////////////////
+
+Upgrade.CounterMeasure.Redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Queue: Abillity.Titan
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: blueflameicon
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Titan.Activate.CounterMeasure
+		
+Upgrade.Fumigene.Redalliance:
+	Inherits@Research: ^ResearchActor
+	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
+	AlwaysVisible:
+	Buildable:
+		BuildPaletteOrder: 110
+		Queue: Abillity.Titan
+		IconPalette: RedAlliance.Icon
+	RenderSprites:
+		Image: blueflameicon
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Titan.Activate.Fumigene

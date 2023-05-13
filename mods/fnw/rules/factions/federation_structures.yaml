@@ -1,0 +1,1349 @@
+^UnlockTierBuildingPrerequisite:
+	ProvidesPrerequisite@ProductionTech.LVL1:
+		Prerequisite: 1 production buildings
+	ProvidesPrerequisite@ProductionTech.LVL2:
+		Prerequisite: 2 production buildings
+		RequiresPrerequisites: 1 production buildings, 1 production buildings
+	ProvidesPrerequisite@ProductionTech.LVL3:
+		Prerequisite: 3 production buildings
+		RequiresPrerequisites: 2 production buildings, 2 production buildings, 2 production buildings
+	ProvidesPrerequisite@ProductionTech.LVL4:
+		Prerequisite: 4 production buildings
+		RequiresPrerequisites: 3 production buildings, 3 production buildings, 3 production buildings
+		
+^UnlockTierBuildingPrerequisitetech2:
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+        
+fedcnst:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Fortress.federation.stat.building
+	# / Inherit specifity /
+	Inherits@Target: ^AutoTargetAll
+	Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 7168, 4096, 0, 0
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Defence.federation, Warning.federation
+		IconPalette: Federation.Icon
+        BuildLimit: 1
+	Building:
+		Footprint: =xxxx== xxxxxxx xxxxxxx =xxxxx=
+		Dimensions: 7,4
+		BuildSounds: buildingmakeop.aud
+	Power:
+		Amount: 20
+	GrantConditionOnPrerequisite@.Federation.AIBuildableArea:
+		Prerequisites: ~BotOwnerBuild
+		Condition: Federation.AIBuildableArea
+	GivesBuildableArea:
+		AreaTypes: building, defense
+        RequiresCondition: Federation.AIBuildableArea
+	BaseProvider:
+		Cooldown: 75
+		Range: 10c0
+        RequiresCondition: Federation.AIBuildableArea
+	ProvidesPrerequisite@buildingname:
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect20
+		RequiresCondition: !build-incomplete
+	RenderSprites:
+	ProvidesRadar:
+	Production:
+		Produces: Building.federation, Defence.federation
+		PauseOnCondition: empdisable || disabled || build-incomplete
+		MoveIntoWorld: false
+	ProvidesPrerequisite@NoWarning:
+		Prerequisite: NoWarning.prerequisite
+	ProductionQueue@Building:
+		Type: Building.federation
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionQueue@DEFENCE:
+		Type: Defence.federation
+		Group: defence
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	BaseBuilding:
+	PeriodicExplosion@Beam:
+		Weapon: fixedTech.tabsUpgrade
+		LocalOffset: 5c0,0,0c0
+		ResetReloadWhenEnabled: false
+	Exit@base:
+		SpawnOffset: 50,50,0
+		ExitCell: 4,4
+        Facing: 90
+	ProductionBar@Building:
+		ProductionType: Building.federation
+	ProductionBar@DEFENCE:
+		ProductionType: Defence.federation
+    # Turret 01
+	Armament@weapons01:
+		Name: weapons01
+		Weapon: Fortress.maingun
+		Turret: gun01
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun01:
+		Sequence: turret
+		Turret: gun01
+		RequiresCondition: !build-incomplete
+	Turreted@gun01:
+		Turret: gun01
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 1500,1500,2600
+		PauseOnCondition: stunweapons
+    # Turret 011
+	Armament@weapons011:
+		Name: weapons011
+		Weapon: Cobra_Dca
+		Turret: gun011
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun011:
+		Sequence: turret2
+		Turret: gun011
+		RequiresCondition: !build-incomplete
+	Turreted@gun011:
+		Turret: gun011
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 1400,1500,2950
+		PauseOnCondition: stunweapons
+    # Turret 02
+	Armament@weapons02:
+		Name: weapons02
+		Weapon: Fortress.maingun
+		Turret: gun02
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun02:
+		Sequence: turret
+		Turret: gun02
+		RequiresCondition: !build-incomplete
+	Turreted@gun02:
+		Turret: gun02
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 1500,-1500,2600
+		PauseOnCondition: stunweapons
+    # Turret 022
+	Armament@weapons022:
+		Name: weapons022
+		Weapon: Cobra_Dca
+		Turret: gun022
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun022:
+		Sequence: turret2
+		Turret: gun022
+		RequiresCondition: !build-incomplete
+	Turreted@gun022:
+		Turret: gun022
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 1400,-1500,2950
+		PauseOnCondition: stunweapons
+    # Turret 03
+	Armament@weapons03:
+		Name: weapons03
+		Weapon: Fortress.maingun
+		Turret: gun03
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun03:
+		Sequence: turret
+		Turret: gun03
+		RequiresCondition: !build-incomplete
+	Turreted@gun03:
+		Turret: gun03
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 3200,1500,2600
+		PauseOnCondition: stunweapons
+    # Turret 033
+	Armament@weapons033:
+		Name: weapons033
+		Weapon: Cobra_Dca
+		Turret: gun033
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun033:
+		Sequence: turret2
+		Turret: gun033
+		RequiresCondition: !build-incomplete
+	Turreted@gun033:
+		Turret: gun033
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 3200,1500,2950
+		PauseOnCondition: stunweapons
+    # Turret 04
+	Armament@weapons04:
+		Name: weapons04
+		Weapon: Fortress.maingun
+		Turret: gun04
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun04:
+		Sequence: turret
+		Turret: gun04
+		RequiresCondition: !build-incomplete
+	Turreted@gun04:
+		Turret: gun04
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 3200,-1500,2600
+		PauseOnCondition: stunweapons
+    # Turret 044
+	Armament@weapons044:
+		Name: weapons044
+		Weapon: Cobra_Dca
+		Turret: gun044
+		Recoil: 25
+		RecoilRecovery: 25
+		LocalOffset: 500,75,20, 500,-75,20
+		MuzzleSequence: muzzle
+	WithSpriteTurret@gun044:
+		Sequence: turret2
+		Turret: gun044
+		RequiresCondition: !build-incomplete
+	Turreted@gun044:
+		Turret: gun044
+		TurnSpeed: 25
+		RealignDelay: 15
+		Offset: 3200,-1500,2950
+		PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+    RenderSprites:
+        Image: fedfortress
+    AttackTurreted:
+		Turrets: gun01, gun011, gun02, gun022, gun03, gun033, gun04, gun044
+		Armaments: weapons01, weapons011, weapons02, weapons022, weapons03, weapons033, weapons04, weapons044
+		RequiresCondition: !(empdisable || stunweapons)
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedfortress.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedfortress
+		Condition: fedfortress.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedfortress
+	HitShape:
+
+fedcnst_old:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Mcv.federation.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@AiBot.cheat: ^aibotcheat.module
+	Selectable:
+		Bounds: 7168, 4096, 0, -512
+	Building:
+		Footprint: xxxxxxx xxxxxxx xxxxxxx xxxxxxx
+		Dimensions: 7,4
+		BuildSounds: deploy_order.aud
+	Production:
+		Produces: Building.federation, Defence.federation
+		PauseOnCondition: empdisable || disabled || build-incomplete
+		MoveIntoWorld: false
+	ProvidesPrerequisite@NoWarning:
+		Prerequisite: NoWarning.prerequisite
+	ProductionQueue@Building:
+		Type: Building.federation
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	ProductionQueue@DEFENCE:
+		Type: Defence.federation
+		Group: defence
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	BaseBuilding:
+	ProductionBar@Building:
+		ProductionType: Building.federation
+	ProductionBar@DEFENCE:
+		ProductionType: Defence.federation
+	Production@Doctrines:
+		Produces: Doctrine
+	GivesBuildableArea:
+		AreaTypes: building, defense
+	BaseProvider:
+		Cooldown: 75
+		Range: 10c0
+	BaseProvider@areabot:
+		Cooldown: 75
+		Range: 70c0
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+	WithBuildingPlacedAnimation:
+	ProvidesRadar:
+	Power:
+		Amount: 40
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Scale: 1.0
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect
+		RequiresCondition: !build-incomplete
+	Exit:
+	PeriodicExplosion@Beam:
+		Weapon: fixedTech.tabsUpgrade
+		LocalOffset: 5c0,0,0c0
+		ResetReloadWhenEnabled: false
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedcnst.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedcnst
+		Condition: fedcnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedcnst
+	MindControllable:
+		RevokeControlSounds:
+		FallbackOwner: player
+		Condition: Linked
+	WithMindControlArc:
+		UsePlayerColor: true
+		Offset: 0,0,960
+	Targetable@FriendlyWifi:
+		TargetTypes: Wifi.Link
+		RequiresCondition: !Linked && !permamc
+	Capturable@PERMAMC:
+		Types: permamc
+		ValidRelationships: Ally
+		RequiresCondition: !Linked && !permamc
+	CaptureManager:
+	ExternalCondition@PERMAMC:
+		Condition: permamc	
+	HitShape:
+	
+fixed.federation.tech:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^1x1Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Powerplant.federation.stat.building
+	Selectable:
+		Bounds: 100, 100, 0, 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		Adjacent: 10
+		BuildSounds:
+	RenderSprites:
+		Image: null_building
+	Production:
+		Produces: fixed.Federation
+		MoveIntoWorld: false
+	ProductionQueue@fix:
+		Type: fix.Federation
+		Group: Building
+		LowPowerModifier: 200
+		QueuedAudio: Building
+		ReadyAudio: BuildingReady
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+	KillsSelf:
+		Delay: 30
+    -RevealsShroud:
+	-Explodes:
+	-OwnerLostAction:
+	-ShakeOnDeath:
+	HitShape:
+	
+	
+fedpowr:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Powerplant.federation.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		4072, 3072, 0, 0:
+	Buildable:
+		Queue: Building.federation, AvPost.federation
+		BuildPaletteOrder: 10
+		Adjacent: 18
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+		Adjacent: 10
+		BuildSounds: deploy_order.aud
+	InfiltrateForPowerOutage:
+	SmokeParticleEmitter:
+		Image: building_smokeparticle
+		Sequences: idle01, idle02
+		RequiresCondition: !build-incomplete
+		SpawnFrequency: 12, 18
+		Speed: 6
+		Gravity: 60
+		Offset: 0, 0, 1550
+		Palette: flameeffect60
+		Duration: 75
+		RandomFacing: True
+	ProvidesPrerequisite@buildingname:
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	RenderSprites:
+		Scale: 1.0
+	# ///// Upgrade Fusion Reactor /////
+	GrantConditionOnPrerequisite@research.FusionReactor.Federation:
+		Prerequisites: research.FusionReactor.Federation
+		Condition: Upgrade.FusionReactor.Federation
+	WithIdleOverlay@FusionReactor:
+		Offset: 0, 0, 0
+		Sequence: smoke
+		Palette: flameeffect
+		RequiresCondition: !build-incomplete && Upgrade.FusionReactor.Federation
+	Power@Base:
+		Amount: 80
+	Power@Upgrade:
+		Amount: 100
+		RequiresCondition: Upgrade.FusionReactor.Federation
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedpowr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedpowr
+		Condition: fedpowr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedpowr
+	HitShape:
+	
+fedproc:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^5x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Refinery.federation.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		Bounds: 5120, 3072, 0, 0
+	Buildable:
+		Queue: Building.federation, AvPost.federation
+		BuildPaletteOrder: 30
+		IconPalette: Federation.Icon
+	Tooltip:
+		Name: Diastim Refinery
+	Building:
+		Footprint: _xxx_ xxxx_ xxxx_
+		Dimensions: 5,3
+		BuildSounds: buildingmakeop.aud
+		LocalCenterOffset: 0,-512,0
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Sellable:
+		RefundPercent: 90
+	Refinery@1:
+		DockAngle: 640
+		DockOffset: 4,2
+		UseStorage: false
+	CustomSellValue:
+		Value: 600
+	FreeActor@Harvester:
+		Actor: t1_fedharv
+		SpawnOffset: 4,2
+		Facing: 160
+		RequiresCondition: !build-incomplete
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+		Notification: credit1.aud
+	Power:
+		Amount: -40
+	RenderSprites:
+		Scale: 1.0
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	Explodes:
+		Delay: 1
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+		Type: Rectangle
+			TopLeft: -512, -1024
+			BottomRight: 1536, 0
+	HitShape@BOTTOM:
+		Type: Rectangle
+			TopLeft: -1536, 0
+			BottomRight: 512, 1024
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedproc
+		Condition: fedproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedproc
+	
+fedbarr:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Barrack.federation.stat.building
+	#Unlock Tier Upgrade
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 4096, 3072, 0, 0
+	Buildable:
+		BuildPaletteOrder: 20
+		Queue: Building.federation, AvPost.federation
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: =xxxx xxxxx =xxx=
+		Dimensions: 5,3
+		BuildSounds: buildingmakeop.aud
+	ProductionBar@Infantry:
+		ProductionType: Infantry.federation
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,3
+	Power:
+		Amount: -30
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect
+		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+	#Level Tech visual
+	Pluggable@LevelTech2:
+		Conditions:
+			plug.level2: UnlockTech2
+			plug.level3: UnlockTech3
+			plug.dualprod: UnlockDual
+		Requirements:
+			plug.level2: !build-incomplete && !UnlockTech2 && !UnlockTech3 && !UnlockDual
+			plug.level3: !build-incomplete && UnlockTech2 && !UnlockTech3 && !UnlockDual
+			plug.dualprod: !UnlockTech3 || !UnlockTech2
+	WithIdleOverlay@Level1:
+		Offset: 0, 0, 0
+		Sequence: level1
+		RequiresCondition: !build-incomplete  && !UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level2:
+		Offset: 0, 0, 0
+		Sequence: level2
+		RequiresCondition: !build-incomplete && UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level3:
+		Offset: 0, 0, 0
+		Sequence: level3
+		RequiresCondition: !build-incomplete && UnlockTech3
+	#Level Tech rule
+	Production@level1:
+		Produces: Infantry.federation
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !(UnlockTech2 || UnlockTech3 || UnlockDual)
+	Production@level2:
+		Produces: Infantry.federation.T2
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech2 && !UnlockTech3
+	Production@level3:
+		Produces: Infantry.federation.T3
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech3
+	#Level Tech Produce
+	ProductionQueue@InfantryDual:
+		Type: Infantry.DualFederation
+		Group: Infantry
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@InfantryT1:
+		Type: Infantry.federation
+		Group: Infantry
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@InfantryT2:
+		Type: Infantry.federation.T2
+		Group: Infantry
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@InfantryT3:
+		Type: Infantry.federation.T3
+		Group: Infantry
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProximityExternalCondition@HEAL:
+		Condition: HealInfantry
+		Range: 5c0
+		AffectsParent: true
+	RenderSprites:
+		Scale: 1.0
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedbarr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedbarr
+		Condition: fedbarr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedbarr
+	HitShape:
+	
+fedweap:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^6x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Factory.federation.stat.building
+	#Unlock Tier Upgrade
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 6144, 4096, 0, 0
+	Buildable:
+		Queue: Building.federation, AvPost.federation
+		BuildPaletteOrder: 40
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: xxxx__ xxxxxx xxxxx= __xx==
+		Dimensions: 6,4
+		BuildSounds: deploy_order.aud
+		Adjacent: 10
+	ProximityExternalCondition@BuildingRepair:
+		Condition: FactoryRepairVehicle
+		Range: 7c0
+		AffectsParent: true
+		PauseOnCondition: empdisable
+	WithRangeCircle@BuildingRepair:
+		Type: FactoryRepairVehicle
+		Color: fcb415
+		Range: 7c0
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	Exit@base:
+		SpawnOffset: -20,-20,0
+		ExitCell: 5,4
+	Exit@base2:
+		SpawnOffset: -20,-20,0
+		ExitCell: 5,5
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect
+		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+	ProvidesPrerequisite@validtech3:
+		Prerequisite: Tier 3 upgrade building
+		RequiresCondition: UnlockTech3
+	#Level Tech visual
+	Pluggable@LevelTech:
+		Conditions:
+			plug.level2: UnlockTech2
+			plug.level3: UnlockTech3
+			plug.dualprod: UnlockDual
+		Requirements:
+			plug.level2: !build-incomplete && !UnlockTech2 && !UnlockTech3  && !UnlockDual
+			plug.level3: !build-incomplete && UnlockTech2 && !UnlockTech3 && !UnlockDual
+			plug.dualprod: !UnlockTech3 || !UnlockTech2
+	WithIdleOverlay@Level1:
+		Offset: 0, 0, 0
+		Sequence: level1
+		RequiresCondition: !build-incomplete && !UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level2:
+		Offset: 0, 0, 0
+		Sequence: level2
+		RequiresCondition: !build-incomplete && UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level3:
+		Offset: 0, 0, 0
+		Sequence: level3
+		RequiresCondition: !build-incomplete && UnlockTech3
+	#Speed Prod
+	ProductionTimeMultiplier@Speedprod:
+		Multiplier: 150
+		RequiresCondition: UnlockDual
+	#Level Tech rule
+	Production@level1:
+		Produces: Vehicle.federation
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !(UnlockTech2 || UnlockTech3 || UnlockDual)
+	Production@level2:
+		Produces: Vehicle.federation.T2
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech2 && !UnlockTech3
+	Production@level3:
+		Produces: Vehicle.federation.T3
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech3
+	#Onglet de production
+	ProductionQueue@VehicleDual:
+		Type: Vehicle.DualFederation
+		Group: Vehicle
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Vehicle:
+		Type: Vehicle.federation
+		Group: Vehicle
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Vehicle.T2:
+		Type: Vehicle.federation.T2
+		Group: Vehicle
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Vehicle.T3:
+		Type: Vehicle.federation.T3
+		Group: Vehicle
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionBar@Vehicle:
+		ProductionType: Vehicle.federation
+	ProvidesPrerequisite@buildingname:
+	Power:
+		Amount: -30
+	RenderSprites:
+		Scale: 1.0
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedweap
+		Condition: fedweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedweap
+	HitShape:
+	
+federation.dualprod.plug:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^UpgradeDual.federation.stat.upgrade
+	Buildable:
+		Queue: Locked.Federation
+		BuildPaletteOrder: 100
+		BuildDurationModifier: 15
+		IconPalette: Federation.Icon
+	Plug:
+		Type: plug.dualprod
+	Power:
+		Amount: -35
+
+federation.pluglevel2:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^UpgradeT2.federation.stat.upgrade
+	Buildable:
+		Queue: Building.federation
+		BuildPaletteOrder: 100
+		BuildDurationModifier: 15
+		IconPalette: Federation.Icon
+	Plug:
+		Type: plug.level2
+	Power:
+		Amount: -35
+			
+federation.pluglevel3:
+	Inherits: ^BuildingPlugable
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^UpgradeT3.federation.stat.upgrade
+	Buildable:
+		Queue: Building.federation
+		BuildPaletteOrder: 100
+		BuildDurationModifier: 20
+		IconPalette: Federation.Icon
+	Plug:
+		Type: plug.level3
+	Power:
+		Amount: -35
+	
+fedheli:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x5Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Airpad.federation.stat.building
+	#Unlock Tier Upgrade
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 7168, 5096, 0, 0
+	Buildable:
+		Queue: Building.federation
+		BuildPaletteOrder: 80
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: xxxxxxx xxxxx=x xxxxxxx xxx=x=x
+		Dimensions: 7,4
+		Adjacent: 18
+		BuildSounds: deploy_order.aud
+	Armor:
+		Type: Concrete
+	GrantExternalConditionToOwner:
+		Condition: airdock
+	RallyPoint:
+		Path: 3,5
+	LaysMinefield:
+		Mines: gadock
+		Locations: 5,3, 5,1
+	Exit@1:
+		Facing: 896
+		SpawnOffset: -512,-1024,0
+	Exit@2:
+		Facing: 896
+		SpawnOffset: 512,1024,0
+	Reservable:
+	#Level Tech visual
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+	ProvidesPrerequisite@validtech3:
+		Prerequisite: Tier 3 upgrade building
+		RequiresCondition: UnlockTech3
+	#Level Tech visual
+	Pluggable@LevelTech:
+		Conditions:
+			plug.level2: UnlockTech2
+			plug.level3: UnlockTech3
+			plug.dualprod: UnlockDual
+		Requirements:
+			plug.level2: !build-incomplete && !UnlockTech2 && !UnlockTech3  && !UnlockDual
+			plug.level3: !build-incomplete && UnlockTech2 && !UnlockTech3 && !UnlockDual
+			plug.dualprod: !UnlockTech3 || !UnlockTech2
+	WithIdleOverlay@Level1:
+		Offset: 0, 0, 0
+		Sequence: level1
+		RequiresCondition: !build-incomplete && !UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level2:
+		Offset: 0, 0, 0
+		Sequence: level2
+		RequiresCondition: !build-incomplete && UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level3:
+		Offset: 0, 0, 0
+		Sequence: level3
+		RequiresCondition: !build-incomplete && UnlockTech3
+	#Level Tech rule
+	Production@level1:
+		Produces: Aircraft.federation
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !(UnlockTech2 || UnlockTech3 || UnlockDual)
+	Production@level2:
+		Produces: Aircraft.federation.T2
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech2 && !UnlockTech3
+	Production@level3:
+		Produces: Aircraft.federation.T3
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech3
+	#Onglet de production
+	ProductionQueue@Aircraft:
+		Type: Aircraft.federation
+		Group: Aircraft
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Aircraft.T2:
+		Type: Aircraft.federation.T2
+		Group: Aircraft
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Aircraft.T3:
+		Type: Aircraft.federation.T3
+		Group: Aircraft
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		ReadyAudio: UnitReady
+		CancelledAudio: Cancelled
+	WithIdleOverlay@top:
+		Sequence: idle
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@bottom:
+		Sequence: idle-bottom
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@plugpowr:
+		Offset: 0,0,0
+		Sequence: light
+		Palette: powereffect60
+		RequiresCondition: !build-incomplete
+	WithBuildingPlacedAnimation:
+	Power:
+		Amount: -30
+	Reservable:
+	RenderSprites:
+		Scale: 1.0
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedheli.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedheli
+		Condition: fedheli.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedheli
+	HitShape:
+	
+fedlabtech:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Research.federation.stat.building
+	#Unlock Tier Upgrade
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 7168, 4096, 0, 0
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building.federation
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: =xxxx== xxxxxxx xxxxxxx =xxxxx=
+		Dimensions: 7,4
+		BuildSounds: buildingmakeop.aud
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,3
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	#Unlock Tier Upgrade
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+	ProvidesPrerequisite@validtech3:
+		Prerequisite: Tier 3 upgrade building
+		RequiresCondition: UnlockTech3
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: powereffect
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedtech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedtech
+		Condition: fedtech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedtech
+	HitShape:
+
+fedtech:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^7x4Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^Tech.federation.stat.building
+	#Unlock Tier Upgrade
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
+	Selectable:
+		Bounds: 7168, 4096, 0, 0
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building.federation
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: =xxxx== xxxxxxx xxxxxxx =xxxxx=
+		Dimensions: 7,4
+		BuildSounds: buildingmakeop.aud
+	Exit@1:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -850,900,0
+		ExitCell: 0,3
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	#Unlock Tier Upgrade
+	ProvidesPrerequisite@validtech2:
+		Prerequisite: Tier 2 upgrade building
+		RequiresCondition: UnlockTech2
+	ProvidesPrerequisite@validtech3:
+		Prerequisite: Tier 3 upgrade building
+		RequiresCondition: UnlockTech3
+	#Unlock Power tech
+	ProvidesPrerequisite@validpower2:
+		Prerequisite: Unlock.powerlvl2
+		RequiresCondition: UnlockTech2 || UnlockTech3
+	ProvidesPrerequisite@validpower3:
+		Prerequisite: Unlock.powerlvl3
+		RequiresCondition: UnlockTech3
+	#Level Tech visual
+	Pluggable@LevelTech2:
+		Conditions:
+			plug.level2: UnlockTech2
+			plug.level3: UnlockTech3
+		Requirements:
+			plug.level2: !build-incomplete && !UnlockTech2 && !UnlockTech3
+			plug.level3: !build-incomplete && UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level1:
+		Offset: 0, 0, 0
+		Sequence: level1
+		RequiresCondition: !build-incomplete && !UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level2:
+		Offset: 0, 0, 0
+		Sequence: level2
+		RequiresCondition: !build-incomplete && UnlockTech2 && !UnlockTech3
+	WithIdleOverlay@Level3:
+		Offset: 0, 0, 0
+		Sequence: level3
+		RequiresCondition: !build-incomplete && UnlockTech3
+	#Level Tech rule
+	Production@level1:
+		Produces: Research.federation
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: !(UnlockTech2 || UnlockTech3)
+	Production@level2:
+		Produces: Research.federation.T2
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech2 && !UnlockTech3
+	Production@level3:
+		Produces: Research.federation.T3
+		PauseOnCondition: empdisable || disabled
+		RequiresCondition: UnlockTech3
+	#Onglet de production
+	ProductionQueue@Research:
+		Type: Research.federation
+		Group: Research
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Research
+		OnHoldAudio: OnHold
+		ReadyAudio: ResearchReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Research.T2:
+		Type: Research.federation.T2
+		Group: Research
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Research
+		OnHoldAudio: OnHold
+		ReadyAudio: ResearchReady
+		CancelledAudio: Cancelled
+	ProductionQueue@Research.T3:
+		Type: Research.federation.T3
+		Group: Research
+		LowPowerModifier: 200
+		BuildDurationModifier: 85
+		QueuedAudio: Research
+		OnHoldAudio: OnHold
+		ReadyAudio: ResearchReady
+		CancelledAudio: Cancelled
+	#Production Bar
+	ProductionBar@ResearchLVL1:
+		ProductionType: Research.federation
+		RequiresCondition: !(UnlockTech2 || UnlockTech3)
+	ProductionBar@ResearchLVL2:
+		ProductionType: Research.federation.T2
+		RequiresCondition: UnlockTech2 && !UnlockTech3
+	ProductionBar@ResearchLVL3:
+		ProductionType: Research.federation.T3
+		RequiresCondition: UnlockTech3
+	WithIdleOverlay@Spot:
+		Offset: 0, 0, 0
+		Sequence: spot
+		Palette: flameeffect
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedtech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedtech
+		Condition: fedtech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedtech
+	HitShape:
+
+gadock:
+	Interactable:
+	AlwaysVisible:
+	Reservable:
+	GrantExternalConditionToOwner:
+		Condition: airdock
+	GrantCondition:
+		Condition: dontmove
+	Mobile:
+		Speed: 1
+		Locomotor: wheeled
+		PauseOnCondition: dontmove
+	Exit@1:
+		Facing: 896
+		SpawnOffset: 0,0,0
+	RejectsOrders:
+	
+fedbunk:
+	Inherits@1: ^Defence
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^Bunker.federation.stat.building
+	Inherits@2: ^3x2Shape
+	# / Select - Target type /
+	Inherits@Target: ^AutoTargetAll
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: fedbarr
+		Queue: Defence.federation
+		IconPalette: Federation.Icon
+	RequiresBuildableArea:
+		AreaTypes: defense
+		Adjacent: 16
+	Selectable:
+		Bounds: 2048, 2048, 0, 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+		Adjacent: 10
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	WithSpriteBody@GARRISONED:
+		Name: garrisoned
+		Sequence: garrisoned
+		RequiresCondition: loaded
+	# //////// Turret Garrisoned Trait System //////////
+	AttackGarrisoned:
+		Name: garrisonedturret
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 488, 488, 488, 488, 488, 488
+		RequiresCondition: !(empdisable || stunweapons)
+	Turreted:
+		TurnSpeed: 255
+		PauseOnCondition: stunweapons
+	-MustBeDestroyed:
+	HitShape:
+    
+fedsupweapon:
+	Inherits: ^BaseBuilding
+	Inherits@2: ^4x3Shape
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^fedsupweapon.federation.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Selectable:
+		4072, 3072, 0, 0:
+	Buildable:
+		Queue: Building.federation
+		BuildPaletteOrder: 120
+		Adjacent: 18
+		IconPalette: Federation.Icon
+	Building:
+		Footprint: xxxxx xxxxx xxxxx
+		Dimensions: 5,3
+		Adjacent: 10
+		BuildSounds: deploy_order.aud
+	InfiltrateForPowerOutage:
+	ProvidesPrerequisite@buildingname:
+	AffectedByPowerOutage:
+	ScalePowerWithHealth:
+	WithIdleOverlay@Smokemaking:
+		Offset: 0,0,0
+		Sequence: smokemake
+		Palette: flameeffect60
+		RequiresCondition: build-incomplete
+	WithIdleOverlay@Zone_Making:
+		Offset: 0,0,0
+		Sequence: making_zone
+		Palette: player
+		RequiresCondition: build-incomplete
+	RenderSprites:
+	Power@Base:
+		Amount: -200
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: fedpowr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealfedpowr
+		Condition: fedpowr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealfedpowr
+	ParatroopersPower@Federation.Superweapon:
+		OrderName: Federation.Superweapon
+		Prerequisites:
+			1: fedsupweapon
+		Icons:
+			1: massdropfedicon
+		IconPalette: Federation.Icon
+		ChargeInterval: 8250
+		StartFullyCharged: false
+		Names:
+			1: Calls an debarquement
+		Descriptions:
+			1: Reinforcements have arrived, commander!\nReinforcements include:\n- 10 Guardsmen\n- 5 Rocket Guardsmen\n- 2 Officers\n- 5 Exosoldiers\n- 10 “Tick” light tanks\n- 5 “Cobra” SPAAG\n- 1 “Lynx” field command vehicles
+		SelectTargetSpeechNotification:
+		EndChargeSpeechNotification:
+		DropItems:
+			1: t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmen.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t1_guardmenat.paradrop, t2_officer.paradrop, t2_officer.paradrop, t2_locust.paradrop, t2_locust.paradrop, t2_locust.paradrop, t2_locust.paradrop, t2_locust.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t1_tick.paradrop, t2_cobra.paradrop, t2_cobra.paradrop, t2_cobra.paradrop, t2_cobra.paradrop, t2_cobra.paradrop, t2_lynx.paradrop
+		SquadSizes:
+			1: 5
+		SquadOffset: -3048, 3048, 0
+		QuantizedFacings: 8
+		UnitTypes:
+			1: t3_trasportfed.power
+		CameraActor: camera
+		DisplayBeacon: false
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
+        PauseOnCondition: disabled
+	HitShape:

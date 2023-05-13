@@ -1,0 +1,145 @@
+tcmcv:
+	Defaults:
+		Filename: tcmcv.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 33
+		Tick: 35
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: tcmcvicon.shp
+
+prospecteur:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: prospecteur.shp
+		Facings: 64
+	harvest:
+		Filename: harvest_anim.shp
+		Length: *
+		BlendMode: Additive
+	dock:
+		Filename: prospecteur.shp
+	dock-loop:
+		Filename: prospecteur.shp
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: prospecticon.shp
+
+arpenteur:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Filename: arpenteur.shp
+	aura_phie:
+		Filename: aura_phie.shp
+		Length: *
+		BlendMode: Additive
+	aura_omega:
+		Filename: aura_omega.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arpenteuricon.shp
+
+t3_surveyor:
+	Defaults:
+		Filename: t3_surveyor.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 140
+	muzzle:
+		Filename: muzzle_bluegun.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t3_surveyortur.shp
+		Facings: 64
+	aura_phie:
+		Filename: aura_phie.shp
+		Length: *
+		BlendMode: Additive
+	aura_omega:
+		Filename: aura_omega.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: arpenteuricon.shp
+
+t2_rodeur:
+	Defaults:
+		Filename: t2_rodeur.shp
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+		Start: 8
+		Facings: 8
+		Length: 12
+		Tick: 20
+	turret:
+		Filename: t2_rodeurtur.shp
+		Facings: 64
+		Offset: 0, -20
+	turretPhie:
+		Filename: t2_rodeurphietur.shp
+		Facings: 64
+		Offset: 0, -20
+	turretOmega:
+		Filename: t2_rodeuromegatur.shp
+		Facings: 64
+		Offset: 0, -20
+	muzzle:
+		Filename: muzzle_bluegun.shp
+		Length: *
+		BlendMode: Additive
+	muzzle_omega:
+		Filename: muzzle_rodeuromega.shp
+		Length: *
+		BlendMode: Additive
+	x_icon:
+		Filename: artwork|concl_rodeurrart.png
+	icon:
+		Filename: rebornicon.shp
+
+t2_pilgrim:
+	Defaults:
+		Filename: t2_pilgrim.shp
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle:
+		Filename: muzzle_balist_medium.shp
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	damaged-idle:
+		Facings: 64
+	critical-idle:
+		Facings: 64
+	idle-deployed:
+		Filename: t2_pilgrimdeployed.shp
+	turret:
+		Filename: t2_pilgrimtur.shp
+		Facings: 64
+	make:
+		Filename: t2_pilgrimmk.shp
+		Length: *
+		Tick: 30
+	x_icon:
+		Filename: bits/icones_ingame/artwork_icones/comon_unite.png
+	icon:
+		Filename: dcatnkicon.shp
